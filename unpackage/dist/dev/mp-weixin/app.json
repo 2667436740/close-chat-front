@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/friends/friends",
+    "pages/account/account"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#3dc970",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "聊天",
+        "iconPath": "static/img/chat.png",
+        "selectedIconPath": "static/img/chat-active.png"
+      },
+      {
+        "pagePath": "pages/friends/friends",
+        "text": "朋友",
+        "iconPath": "static/img/friends.png",
+        "selectedIconPath": "static/img/friends-active.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "我的",
+        "iconPath": "static/img/account.png",
+        "selectedIconPath": "static/img/account-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

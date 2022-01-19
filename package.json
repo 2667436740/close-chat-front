@@ -1,0 +1,20 @@
+{
+  "name": "close-chat-front",
+  "version": "1.0.0",
+  "description": "closechat 前台",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2667436740/close-chat-front.git"
+  },
+  "author": "qifeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2667436740/close-chat-front/issues"
+  },
+  "homepage": "https://github.com/2667436740/close-chat-front#readme"
+}
