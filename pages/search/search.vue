@@ -9,7 +9,7 @@
 			<u-list>
 				<u-list-item v-for="(item, index) in userArr" :key="item._id">
 					<u-cell>
-						<u-avatar slot="icon" shape="square" size="40" :src="`${BASE_URL}/user/${item.imgUrl}`"
+						<u-avatar slot="icon" shape="square" size="40" :src="`${BASE_URL}/avatar/${item.imgUrl}`"
 							customStyle="margin: -3px 5px -3px 0"></u-avatar>
 						<view class="title" slot="title">
 							<view class="item-title" v-html="searchKeyword(item.username,searchWord)"></view>

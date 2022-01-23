@@ -59,6 +59,7 @@
 				uni.redirectTo({
 					url: '../login/login'
 				})
+				uni.clearStorage()
 			},
 			cancelQuit() {
 				this.isShowQuit = false

@@ -114,7 +114,11 @@
 		},
 		methods: {
 			changeTime(date) {
-				return myfun.dateTime(date)
+				// return myfun.dateTime(date)
+				// return this.Utils.formatDate('YY/MM/dd hh/mm/ss',date)
+				// return myfun.formartTime(date, 1)
+				// return myfun.getTime(date.toString())
+				return myfun.weChatTimeFormat(date)
 			},
 			searchPageJump() {
 				uni.navigateTo({

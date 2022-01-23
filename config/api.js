@@ -41,3 +41,5 @@ export const postGetLastMsg = (params, config = {}) => http.post('/index/getlast
 export const postGetUnreadMsg = (params, config = {}) => http.post('/index/getunreadmsg', params, config)
 //清除消息未读数
 export const postClearUnreadMsg = (params, config = {}) => http.post('/index/clearunreadmsg', params, config)
+//裁剪头像上传
+export const uploadAvatar = (params, config = {}) => http.post('/avatar/upload', params, config)

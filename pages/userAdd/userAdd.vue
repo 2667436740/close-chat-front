@@ -1,7 +1,7 @@
 <template>
 	<view class="user-add">
 		<view class="avatar-box">
-			<image :src="`${BASE_URL}/user/${userInfo.imgUrl}`" mode="" class="avatar"></image>
+			<image :src="`${BASE_URL}/avatar/${userInfo.imgUrl}`" mode="" class="avatar"></image>
 		</view>
 		<view class="info-box">
 			<view class="info">
@@ -10,7 +10,7 @@
 				</view>
 				<view class="intro">
 					<u--text :lines="4"
-						text="关于uView的取名来由，首字母u来自于uni-app首字母，uni-app是基于Vue.js，Vue和View(延伸为UI、视图之意)同音，同时view组件uni-app中 最基础，最重要的组件，故取名uView，表达源于uni-app和Vue之意，同时在此也对它们表示感谢。">
+						:text="userInfo.explain">
 					</u--text>
 				</view>
 				<button class="btn-cancel" @click="cancel">返回</button>
@@ -92,8 +92,11 @@
 					id: fid,
 					token: this.token
 				})
-				this.userInfo = res.data.result
-				console.log(this.userInfo)
+				if(res.data.status == 200) {
+					this.userInfo = res.data.result
+					console.log(this.userInfo)
+				}
+				
 			}
 		}
 	}

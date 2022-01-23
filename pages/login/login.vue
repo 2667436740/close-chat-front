@@ -54,7 +54,6 @@
 						trigger: ['blur', 'change']
 					}
 				},
-				token: '',
 			};
 		},
 		methods: {
