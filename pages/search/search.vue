@@ -7,7 +7,7 @@
 		</view>
 		<view class="search-list">
 			<u-list>
-				<u-list-item v-for="(item, index) in userArr" :key="item._id">
+				<u-list-item v-for="(item, index) in showUserArr" :key="item._id">
 					<u-cell>
 						<u-avatar slot="icon" shape="square" size="40" :src="`${BASE_URL}/avatar/${item.imgUrl}`"
 							customStyle="margin: -3px 5px -3px 0"></u-avatar>
@@ -38,6 +38,7 @@
 			return {
 				userArr: [],
 				searchWord: '',
+				showUserArr: [],
 			};
 		},
 		mixins: [getUserStorage],
@@ -63,6 +64,7 @@
 			//动态搜索
 			async compareName() {
 				this.userArr = []
+				this.showUserArr = []
 				const params = {
 					data: this.searchWord,
 					token: this.token
@@ -83,7 +85,8 @@
 						})
 						item.isFriend = resIsFriend.data.status == 200 ? true : false
 					}
-					console.log(this.userArr)
+					this.showUserArr = this.userArr
+					console.log(this.showUserArr)
 				} else if (res.data.status == 300) {
 					this.$refs.uToast.show({
 						type: 'error',

@@ -13,7 +13,7 @@ const app = new Vue({
 // 引入请求封装，将app参数传递到配置中
 require('./config/request.js')(app)
 
-Vue.prototype.BASE_URL='http://192.168.1.113:3000' //全局后端地址
+Vue.prototype.BASE_URL='http://192.168.8.84:3000' //全局后端地址
 
 app.$mount()
 // #endif

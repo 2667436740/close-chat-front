@@ -3,13 +3,13 @@
 		<view class="head-box">
 			<view class="info-box">
 				<view class="name">
-					柒锋
+					{{username}}
 				</view>
 				<u-avatar :src="imgUrl" size="90"></u-avatar>
 			</view>
 			<view class="intro">
 				<u--text :lines="3"
-					text="只是一个前端小菜鸡罢了...后面测试三行省略~~~活动i哇额u发iOA未必就发货我ID发货IASDHFDAEWFBADFKJAHSDFOIUA瓦数的GIF好吧不HJALDSGPHI回到房间看不JEWBFHOAHEWBFKA">
+					:text="explain">
 				</u--text>
 			</view>
 		</view>
@@ -35,23 +35,47 @@
 				<button type="default" @click="cancelQuit">取消</button>
 			</view>
 		</u-popup>
+		
+		<u-toast ref="uToast"></u-toast>
 	</view>
 </template>
 
 <script>
 	import getUserStorage from '../../mixin/getUserStorage.js'
+	import {postUserDetail} from '../../config/api.js'
 	
 	export default {
 		data() {
 			return {
 				isShowQuit: false,
-				uid: '',
-				imgUrl: '',
-				token: '',
+				uid: "",
+				imgUrl: "",
+				token: "",
+				explain: "",
 			};
 		},
 		mixins: [getUserStorage],
+		onShow() {
+			this.getInformation()
+		},
 		methods: {
+			//获取用户详情
+			async getInformation() {
+				const params = {
+					id: this.uid,
+					token: this.token
+				}
+				const res = await postUserDetail(params)
+				if (res.data.status == 200) {
+					const result = res.data.result
+					this.explain = result.explain ? result.explain : ''
+				} else {
+					this.$refs.uToast.show({
+						type: 'error',
+						message: "获取用户信息失败"
+					})
+				}
+			},
 			showQuitPopup() {
 				this.isShowQuit = true
 			},

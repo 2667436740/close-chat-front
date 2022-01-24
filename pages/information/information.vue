@@ -75,7 +75,7 @@
 				return this.explain == '' ? '暂无个签~' : this.explain
 			}
 		},
-		onLoad() {
+		onShow() {
 			this.getInformation()
 		},
 		methods: {
