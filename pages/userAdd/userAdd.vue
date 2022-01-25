@@ -48,8 +48,10 @@
 		},
 		mixins: [getUserStorage],
 		onLoad(option) {
-			this.getFriendDetail(option.fid)
 			this.fid = option.fid
+		},
+		onShow() {
+			this.getFriendDetail()
 		},
 		methods: {
 			cancel() {
@@ -87,16 +89,15 @@
 				}
 				this.isShowApplyBox = false
 			},
-			async getFriendDetail(fid) {
+			async getFriendDetail() {
 				const res = await postUserDetail({
-					id: fid,
+					id: this.fid,
 					token: this.token
 				})
 				if(res.data.status == 200) {
 					this.userInfo = res.data.result
 					console.log(this.userInfo)
 				}
-				
 			}
 		}
 	}

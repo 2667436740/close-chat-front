@@ -41,18 +41,20 @@
 <style lang="scss">
 	.emoji {
 		display: flex;
-		width: 100%;
+		width: 96%;
+		margin: auto;
 		flex-wrap: wrap;
-		padding: 0 10px;
+		// padding: 0 10px;
 		font-size: 21px;
 		text-align: center;
-		justify-content: start;
+		justify-content: space-between;
 		max-height: 160px;
 		overflow: hidden;
 		overflow-y: auto;
 
 		.emoji-item {
 			padding: 2px;
+			width: 34px;
 		}
 	}
 </style>

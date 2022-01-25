@@ -1,52 +1,82 @@
 <template>
 	<view>
-		<u-navbar title="新的好友" @rightClick="rightClick" @leftClick="leftClick"></u-navbar>
+		<u-navbar title="新的好友" :safeAreaInsetTop="true" fixed :placeholder="true" @leftClick="leftClick">
+		</u-navbar>
 		<view class="box">
-			<u-list>
-				<u-list-item v-for="(item, index) in newAddRequestList" :key="index">
-					<u-cell :title="item.name">
-						<u-avatar slot="icon" shape="square" size="35" :src="item.avatar"
-							customStyle="margin: -3px 5px -3px 0"></u-avatar>
-						<view slot="value">
-							<u-button type="success" size="mini" customStyle="display: inline-block; margin-right: 5px">
-								同意</u-button>
-							<u-button type="error" size="mini" customStyle="display: inline-block">拒绝</u-button>
+			<ul class="list">
+				<li v-for="(item, index) in showList" :key="item.id">
+					<view class="card-top">
+						<view class="disagree-btn">
+							<u-button type="error">拒绝</u-button>
 						</view>
-					</u-cell>
-				</u-list-item>
-			</u-list>
+						<view class="agree-btn">
+							<u-button type="success">同意</u-button>
+						</view>
+						<view class="avatar">
+							<u-avatar shape="circle" size="70" :src="`${BASE_URL}/avatar/${item.imgUrl}`"></u-avatar>
+						</view>
+						<view class="name">
+							{{item.username}}
+						</view>
+					</view>
+					<view class="card-bottom">
+						<view class="message-box">
+							{{item.message}}
+						</view>
+					</view>
+				</li>
+			</ul>
 		</view>
 	</view>
 </template>
 
 <script>
+	import getUserStorage from '../../mixin/getUserStorage.js'
+	import {
+		postGetFriend,
+		postGetLastMsg
+	} from '../../config/api.js'
+
 	export default {
 		data() {
 			return {
-				newAddRequestList: [{
-					name: '阿伟',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					isFriend: true
-				}, {
-					name: '我是大海',
-					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
-					isFriend: true
-				}, {
-					name: '爱你',
-					avatar: 'https://cdn.uviewui.com/uview/album/3.jpg',
-					isFriend: false
-				}, {
-					name: '大宝贝',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					isFriend: false
-				}]
+				newAddRequestList: [],
+				showList: []
 			};
+		},
+		mixins: [getUserStorage],
+		onShow() {
+			this.getAddRequestList()
 		},
 		methods: {
 			leftClick() {
-				uni.navigateBack({
-
+				uni.switchTab({
+					url: '../friends/friends'
 				})
+			},
+			//获取新的收到请求列表
+			async getAddRequestList() {
+				const params = {
+					uid: this.uid,
+					state: 1,
+					token: this.token
+				}
+				const res = await postGetFriend(params)
+				if (res.data.status == 200) {
+					this.newAddRequestList = res.data.result
+					for (let item of this.newAddRequestList) {
+						const params = {
+							uid: this.uid,
+							fid: item.id,
+							token: this.token
+						}
+						const resMsg = await postGetLastMsg(params)
+						if (resMsg.data.status == 200) {
+							item.message = resMsg.data.result.message
+						}
+					}
+					this.showList = this.newAddRequestList
+				}
 			}
 		}
 	}
@@ -54,6 +84,63 @@
 
 <style lang="scss">
 	.box {
-		padding: 0 10px;
+		padding: 0 10px 10px 10px;
+
+		.list {
+			list-style: none;
+			margin: 0;
+			padding: 0 10px;
+
+			li {
+				width: 100%;
+				margin-top: 10px;
+
+				.card-top {
+					width: 100%;
+					padding: 10px 0;
+					background-color: #fae04d;
+					position: relative;
+
+					.agree-btn {
+						width: 20%;
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+
+					.disagree-btn {
+						width: 20%;
+						position: absolute;
+						top: 0;
+					}
+
+					.avatar {
+						text-align: center;
+						display: flex;
+						justify-content: center;
+					}
+
+					.name {
+						text-align: center;
+						font-size: 22px;
+						font-weight: 600;
+						margin-top: 10px;
+					}
+				}
+
+				.card-bottom {
+					width: 100%;
+
+					.message-box {
+						padding: 10px;
+						min-height: 100px;
+						border: 1px solid #f4d84a;
+						// border-radius: 12px;
+						word-break: break-all;
+						word-wrap: break-word;
+					}
+				}
+			}
+		}
 	}
 </style>

@@ -51,6 +51,7 @@
 <script>
 	import getUserStorage from '../../mixin/getUserStorage.js'
 	import avatar from "../../components/yq-avatar/yq-avatar.vue"
+	import myfun from '../../commons/util/myfun.js'
 	import {
 		uploadAvatar,
 		postUserUpdate,
@@ -91,7 +92,8 @@
 					const result = res.data.result
 					this.explain = result.explain ? result.explain : ''
 					this.email = result.email
-					this.regTime = result.time.slice(0, 10) + ' ' + result.time.slice(11, 16)
+					this.regTime = new Date(result.time).valueOf() //转ISODate为时间戳
+					this.regTime = myfun.formatDate('YYYY-MM-dd hh:mm',this.regTime)
 				} else {
 					this.$refs.uToast.show({
 						type: 'error',

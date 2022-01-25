@@ -315,4 +315,35 @@ export default {
 		}
 	},
 
+	//日期格式化
+	formatDate(fmt, mydatecs) {
+		if (!mydatecs) return "";
+		var mydate = new Date(mydatecs);
+		var o = {
+			"Y+": mydate.getFullYear(),
+			"M+": mydate.getMonth() + 1, //月份
+			"d+": mydate.getDate(), //日
+			"h+": mydate.getHours(), //小时
+			"m+": mydate.getMinutes(), //分
+			"s+": mydate.getSeconds(), //秒
+			"q+": Math.floor((mydate.getMonth() + 3) / 3), //季度
+			S: mydate.getMilliseconds() //毫秒
+		};
+		if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1);
+		for (var k in o) {
+			if (new RegExp("(" + k + ")").test(fmt)) {
+				//
+				if (k == "Y+") {
+					fmt = fmt.replace(RegExp.$1, o[k]);
+				}
+				fmt = fmt.replace(
+					RegExp.$1,
+					RegExp.$1.length == 1 ?
+					o[k] :
+					("00" + o[k]).substr(("" + o[k]).length)
+				);
+			}
+		}
+		return fmt;
+	},
 }

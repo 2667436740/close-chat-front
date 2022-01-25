@@ -173,17 +173,51 @@
 		components: {
 			emoji
 		},
+		onShow() {
+			//排序信息先后
+			this.sortMsgs = this.msgs.sort(function(a, b) {
+				return b.tip - a.tip
+			})
+			//准备预览图片列表
+			for (let item of this.sortMsgs) {
+				if (item.types == 1) this.preImgs.push(item.message)
+			}
+			//进入页面时，直接页面底部
+			this.$nextTick(() => {
+				this.pageScrollToBottom(0)
+			});
+		},
+		onReady() {
+			//获取元素高度等
+			this.$nextTick(function() {
+				console.log(this.$refs.dynamicbox.$el.offsetHeight)
+			})
+		},
+		watch: {
+			message(newM, oldM) {
+				// console.log(newM,oldM)
+				this.$nextTick(function() {
+					this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
+				})
+			},
+			dynamicBoxHeight(newM, oldM) {
+				console.log(newM, oldM)
+				this.$nextTick(() => {
+					this.pageScrollToBottom(200)
+				});
+			}
+		},
 		methods: {
 			leftClick() {
-				uni.navigateBack({
-
+				uni.switchTab({
+					url: '../index/index'
 				})
 			},
 			rightClick() {
 				uni.$u.toast('暂未开放')
 			},
 			changeTime(time) {
-				return myfun.dateTime1(time)
+				return myfun.weChatTimeFormat(time)
 			},
 			previewImage(currentMessage) {
 				uni.previewImage({
@@ -347,40 +381,7 @@
 				}]
 			}
 		},
-		onLoad() {
-			//排序信息先后
-			this.sortMsgs = this.msgs.sort(function(a, b) {
-				return b.tip - a.tip
-			})
-			//准备预览图片列表
-			for (let item of this.sortMsgs) {
-				if (item.types == 1) this.preImgs.push(item.message)
-			}
-			//进入页面时，直接页面底部
-			this.$nextTick(() => {
-				this.pageScrollToBottom(0)
-			});
-		},
-		onReady() {
-			//获取元素高度等
-			this.$nextTick(function() {
-				console.log(this.$refs.dynamicbox.$el.offsetHeight)
-			})
-		},
-		watch: {
-			message(newM, oldM) {
-				// console.log(newM,oldM)
-				this.$nextTick(function() {
-					this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
-				})
-			},
-			dynamicBoxHeight(newM, oldM) {
-				console.log(newM, oldM)
-				this.$nextTick(() => {
-					this.pageScrollToBottom(200)
-				});
-			}
-		},
+		
 		// //监听页面显示
 		// onShow() {
 		// 	uni.onKeyboardHeightChange(res => {

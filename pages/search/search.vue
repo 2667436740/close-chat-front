@@ -104,11 +104,11 @@
 					})
 				}
 			},
+			//添加好友
 			userAddPageJump(item) {
 				if (item.isFriend === true) {
 					//跳转发消息界面
 				} else {
-					// uni.$emit('userAdd', item._id)
 					uni.navigateTo({
 						url: '../userAdd/userAdd?fid=' + item._id
 					})

@@ -49,7 +49,7 @@
 					name: 'John',
 					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
 					message: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-					time: 1637325896631
+					time: 1643017470064
 				}, {
 					name: 'Sindy',
 					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
@@ -109,7 +109,7 @@
 			}
 		},
 		mixins: [getUserStorage],
-		onLoad() {
+		onShow() {
 			this.getFriend()
 		},
 		methods: {
@@ -138,7 +138,7 @@
 			async getFriend() {
 				const params = {
 					uid: this.uid,
-					state: 1,
+					state: 0,
 					token: this.token
 				}
 				const res = await postGetFriend(params)
