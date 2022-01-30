@@ -7,16 +7,19 @@
 				<li v-for="(item, index) in showList" :key="item.id">
 					<view class="card-top">
 						<view class="disagree-btn">
-							<u-button type="error">拒绝</u-button>
+							<u-button type="error" @click="refuse(item.id)">拒绝</u-button>
 						</view>
 						<view class="agree-btn">
-							<u-button type="success">同意</u-button>
+							<u-button type="success" @click="agree(item.id)">同意</u-button>
 						</view>
 						<view class="avatar">
 							<u-avatar shape="circle" size="70" :src="`${BASE_URL}/avatar/${item.imgUrl}`"></u-avatar>
 						</view>
 						<view class="name">
 							{{item.username}}
+						</view>
+						<view class="time">
+							{{item.time}}
 						</view>
 					</view>
 					<view class="card-bottom">
@@ -27,6 +30,8 @@
 				</li>
 			</ul>
 		</view>
+
+		<u-toast ref="uToast"></u-toast>
 	</view>
 </template>
 
@@ -34,8 +39,11 @@
 	import getUserStorage from '../../mixin/getUserStorage.js'
 	import {
 		postGetFriend,
-		postGetLastMsg
+		postGetLastMsg,
+		postUpdateFriendState,
+		postDeleteFriend
 	} from '../../config/api.js'
+	import myfun from '../../commons/util/myfun.js'
 
 	export default {
 		data() {
@@ -49,9 +57,15 @@
 			this.getAddRequestList()
 		},
 		methods: {
+			//返回
 			leftClick() {
 				uni.switchTab({
-					url: '../friends/friends'
+					url: '../friends/friends',
+					success: (res) => {
+						let page = getCurrentPages().pop();
+						if (page == undefined || page == null) return;
+						page.getFriend();
+					},
 				})
 			},
 			//获取新的收到请求列表
@@ -73,9 +87,55 @@
 						const resMsg = await postGetLastMsg(params)
 						if (resMsg.data.status == 200) {
 							item.message = resMsg.data.result.message
+							const time = new Date(resMsg.data.result.time).valueOf()
+							item.time = myfun.weChatTimeFormat(time)
 						}
 					}
 					this.showList = this.newAddRequestList
+				}
+			},
+			async agree(fid) {
+				const params = {
+					uid: this.uid,
+					fid: fid,
+					token: this.token
+				}
+				const res = await postUpdateFriendState(params)
+				if (res.data.status == 200) {
+					this.$refs.uToast.show({
+						type: 'success',
+						message: "成功添加好友！"
+					})
+					this.showList = this.showList.filter(item => {
+						return item.id != fid
+					})
+				} else {
+					this.$refs.uToast.show({
+						type: 'error',
+						message: "操作失败！"
+					})
+				}
+			},
+			async refuse(fid) {
+				const params = {
+					uid: this.uid,
+					fid: fid,
+					token: this.token
+				}
+				const res = await postDeleteFriend(params)
+				if (res.data.status == 200) {
+					this.$refs.uToast.show({
+						type: 'success',
+						message: "已拒绝好友申请！"
+					})
+					this.showList = this.showList.filter(item => {
+						return item.id != fid
+					})
+				} else {
+					this.$refs.uToast.show({
+						type: 'error',
+						message: "操作失败！"
+					})
 				}
 			}
 		}
@@ -125,6 +185,14 @@
 						font-size: 22px;
 						font-weight: 600;
 						margin-top: 10px;
+					}
+					
+					.time {
+						text-align: center;
+						font-size: 14px;
+						font-weight: 500;
+						margin-top: 5px;
+						color: gray;
 					}
 				}
 

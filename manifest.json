@@ -76,7 +76,8 @@
 			"proxy": {
 				"/api": {
 					// "target": "http://192.168.1.113:3000",// 需要代理的域名
-					"target": "http://192.168.8.84:3000",// 需要代理的域名
+					// "target": "http://192.168.8.84:3000",// 需要代理的域名
+					 "target": "http://192.168.68.94:3000",// 需要代理的域名
 					"ws": false, // 是否启用websockets
 					"changeOrigin": true,//开启代理
 					"secure": false,

@@ -160,6 +160,10 @@
 								imgUrl: imgUrl,
 								token: this.token
 							});
+							this.$refs.uToast.show({
+								type: 'success',
+								message: "头像修改成功"
+							})
 						} catch (e) {
 							console.log('数据存储出错')
 						}

@@ -9,7 +9,7 @@
 			</view>
 			<view class="intro">
 				<u--text :lines="3"
-					:text="explain">
+					:text="showExplain">
 				</u--text>
 			</view>
 		</view>
@@ -20,10 +20,10 @@
 				</navigator>
 			</view>
 			<view class="cell">
-				<u-cell title="收藏" icon="bookmark" :isLink="true" :border="false"></u-cell>
+				<u-cell title="收藏" icon="bookmark" :isLink="true" :border="false" @click="favClick"></u-cell>
 			</view>
 			<view class="cell">
-				<u-cell title="设置" icon="setting" :isLink="true" :border="false"></u-cell>
+				<u-cell title="设置" icon="setting" :isLink="true" :border="false" @click="setClick"></u-cell>
 			</view>
 		</view>
 		<button type="default" class="quitbtn" @click="showQuitPopup">退出</button>
@@ -58,6 +58,11 @@
 		onShow() {
 			this.getInformation()
 		},
+		computed: {
+			showExplain() {
+				return this.explain == '' ? '快去添加一条个签吧~': this.explain
+			}
+		},
 		methods: {
 			//获取用户详情
 			async getInformation() {
@@ -87,6 +92,16 @@
 			},
 			cancelQuit() {
 				this.isShowQuit = false
+			},
+			favClick() {
+				this.$refs.uToast.show({
+					message: "功能开发中~"
+				})
+			},
+			setClick() {
+				this.$refs.uToast.show({
+					message: "功能开发中~"
+				})
 			},
 			//查看大图头像
 			// imgListPreview() {

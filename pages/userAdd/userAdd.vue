@@ -10,7 +10,7 @@
 				</view>
 				<view class="intro">
 					<u--text :lines="4"
-						:text="userInfo.explain">
+						:text="showExplain">
 					</u--text>
 				</view>
 				<button class="btn-cancel" @click="cancel">返回</button>
@@ -52,6 +52,11 @@
 		},
 		onShow() {
 			this.getFriendDetail()
+		},
+		computed: {
+			showExplain() {
+				return this.userInfo.explain ? this.userInfo.explain: '此用户暂无个签~' ;
+			}
 		},
 		methods: {
 			cancel() {

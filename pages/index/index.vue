@@ -11,16 +11,17 @@
 		</u-navbar>
 
 		<u-list>
-			<u-list-item v-for="(item, index) in indexList" :key="index">
+			<u-list-item v-for="(item, index) in indexList" :key="item.id">
 				<view class="item-style" @click="chatPageJump">
-					<u-avatar shape="square" size="40" :src="item.avatar" customStyle="margin: 0 10px 0 0"></u-avatar>
+					<u-avatar shape="square" size="40" :src="`${BASE_URL}/avatar/${item.imgUrl}`"
+						customStyle="margin: 0 10px 0 0"></u-avatar>
 					<view class="item-text">
 						<view class="item-title">
 							<view class="name">
-								{{item.name}}
+								{{item.username}}
 							</view>
 							<view class="time">
-								{{changeTime(item.time)}}
+								{{changeTime(item.lastTime)}}
 							</view>
 						</view>
 						<u--text :lines="1" :text="item.message"></u--text>
@@ -34,8 +35,11 @@
 <script>
 	import myfun from '../../commons/util/myfun.js'
 	import getUserStorage from '../../mixin/getUserStorage.js'
-	import {postGetFriend} from '../../config/api.js'
-	
+	import {
+		postGetFriend,
+		postGetLastMsg
+	} from '../../config/api.js'
+
 	export default {
 		components: {},
 		data() {
@@ -44,68 +48,7 @@
 				uid: '',
 				imgUrl: '',
 				token: '',
-				// indexList,
-				indexList: [{
-					name: 'John',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					message: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-					time: 1643017470064
-				}, {
-					name: 'Sindy',
-					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
-					message: 'bbbbbbbb',
-					time: 1637125850000
-				}, {
-					name: 'John',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					message: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-					time: 1637425896631
-				}, {
-					name: 'Sindy',
-					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
-					message: 'bbbbbbbb',
-					time: 1637125850000
-				}, {
-					name: 'John',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					message: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-					time: 1637225896631
-				}, {
-					name: 'Sindy',
-					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
-					message: 'bbbbbbbb',
-					time: 1637125850000
-				}, {
-					name: 'John',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					message: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-					time: 1637225896631
-				}, {
-					name: 'Sindy',
-					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
-					message: 'bbbbbbbb',
-					time: 1637125850000
-				}, {
-					name: 'John',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					message: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-					time: 1637225896631
-				}, {
-					name: 'Sindy',
-					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
-					message: 'bbbbbbbb',
-					time: 1637125850000
-				}, {
-					name: 'John',
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					message: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-					time: 1637225896631
-				}, {
-					name: 'Sindy',
-					avatar: 'https://cdn.uviewui.com/uview/album/2.jpg',
-					message: 'bbbbbbbb',
-					time: 1637125850000
-				}]
+				indexList: []
 			}
 		},
 		mixins: [getUserStorage],
@@ -114,10 +57,6 @@
 		},
 		methods: {
 			changeTime(date) {
-				// return myfun.dateTime(date)
-				// return this.Utils.formatDate('YY/MM/dd hh/mm/ss',date)
-				// return myfun.formartTime(date, 1)
-				// return myfun.getTime(date.toString())
 				return myfun.weChatTimeFormat(date)
 			},
 			searchPageJump() {
@@ -135,6 +74,7 @@
 					url: '../chat/chat'
 				})
 			},
+			//获取首页好友列
 			async getFriend() {
 				const params = {
 					uid: this.uid,
@@ -142,12 +82,31 @@
 					token: this.token
 				}
 				const res = await postGetFriend(params)
-				console.log(res)
-				if(res.status == 200) {
-					this.indexList = res.data.result
+				if (res.data.status == 200) {
+					let indexList = res.data.result
+					this.getIndexLastMsg(indexList)
+					indexList.sort((a, b) => {
+						return b.lastTime - a.lastTime
+					})
+					this.indexList = indexList
 					console.log(this.indexList)
 				}
-			}
+			},
+			//获取最后一条消息
+			async getIndexLastMsg(indexList) {
+				for (let item of indexList) {
+					const params = {
+						uid: this.uid,
+						fid: item.id,
+						token: this.token
+					}
+					const resMsg = await postGetLastMsg(params)
+					if (resMsg.data.status == 200) {
+						item.message = resMsg.data.result.message,
+						item.types = resMsg.data.result.types
+					}
+				}
+			},
 		}
 	}
 </script>
