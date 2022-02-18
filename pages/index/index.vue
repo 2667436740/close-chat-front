@@ -25,9 +25,6 @@
 							</view>
 						</view>
 						<u--text :lines="1" :text="item.message"></u--text>
-						<!-- <view class="">
-							{{item.message}}
-						</view> -->
 					</view>
 				</view>
 			</u-list-item>
@@ -54,16 +51,6 @@
 				indexList: []
 			}
 		},
-		// watch: {
-		// 	'indexList': {
-		// 		handler(newName, oldName) {
-		// 			// console.log(newName, oldName)
-		// 			this.$forceUpdate()
-		// 		},
-		// 		deep: true,
-		// 		immediate: true
-		// 	}
-		// },
 		mixins: [getUserStorage],
 		onLoad() {
 			this.getFriend()
@@ -97,29 +84,26 @@
 				const res = await postGetFriend(params)
 				if (res.data.status == 200) {
 					let indexList = res.data.result
-					this.getIndexLastMsg(indexList)
+					//获取每个好友的最后一条消息
+					for (let item of indexList) {
+						const params = {
+							uid: this.uid,
+							fid: item.id,
+							token: this.token
+						}
+						const resMsg = await postGetLastMsg(params)
+						if (resMsg.data.status == 200) {
+							item.message = resMsg.data.result.message
+							item.types = resMsg.data.result.types
+						}
+					}
+					//按聊天时间排序
 					indexList.sort((a, b) => {
 						return b.lastTime - a.lastTime
 					})
 					this.indexList = indexList
-					// this.indexList = JSON.parse(JSON.stringify(indexList))
 				}
-			},
-			//获取最后一条消息
-			async getIndexLastMsg(indexList) {
-				for (let item of indexList) {
-					const params = {
-						uid: this.uid,
-						fid: item.id,
-						token: this.token
-					}
-					const resMsg = await postGetLastMsg(params)
-					if (resMsg.data.status == 200) {
-						item.message = resMsg.data.result.message
-						item.types = resMsg.data.result.types
-					}
-				}
-			},
+			}
 		}
 	}
 </script>
