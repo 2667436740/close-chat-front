@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<u-navbar title="个人信息" :safeAreaInsetTop="true" fixed :placeholder="true" @leftClick="leftClick" />
 		<view class="cells">
 			<view class="cell">
 				<span>头像:</span>
@@ -57,6 +58,9 @@
 		postUserUpdate,
 		postUserDetail,
 	} from '../../config/api.js'
+	import {
+		pathToBase64
+	} from 'image-tools'
 
 	export default {
 		data() {
@@ -64,7 +68,8 @@
 				isShowEditIntro: false,
 				explain: '',
 				email: '',
-				regTime: ''
+				regTime: '',
+				isChangeAvatar: false, //是否修改了头像
 			};
 		},
 		mixins: [getUserStorage],
@@ -80,6 +85,14 @@
 			this.getInformation()
 		},
 		methods: {
+			//返回
+			leftClick() {
+				this.isChangeAvatar == true ? uni.reLaunch({
+					url: '../index/index'
+				}) : uni.switchTab({
+					url: '../index/index'
+				});
+			},
 			//获取用户详情
 			async getInformation() {
 				const params = {
@@ -87,13 +100,12 @@
 					token: this.token
 				}
 				const res = await postUserDetail(params)
-				console.log(res)
 				if (res.data.status == 200) {
 					const result = res.data.result
 					this.explain = result.explain ? result.explain : ''
 					this.email = result.email
 					this.regTime = new Date(result.time).valueOf() //转ISODate为时间戳
-					this.regTime = myfun.formatDate('YYYY-MM-dd hh:mm',this.regTime)
+					this.regTime = myfun.formatDate('YYYY-MM-dd hh:mm', this.regTime)
 				} else {
 					this.$refs.uToast.show({
 						type: 'error',
@@ -131,14 +143,16 @@
 			},
 			//头像裁剪
 			async myUpload(rsp) {
-				console.log(rsp)
+				console.log(await pathToBase64(rsp.path))
 				//存头像文件
 				const params = {
 					url: 'avatar',
 					name: new Date().getTime() + this.uid,
-					base64: rsp.base64,
+					// base64: rsp.base64,
+					base64: await pathToBase64(rsp.path),
 					token: this.token,
 				}
+				// console.log(params)
 				const res = await uploadAvatar(params)
 				//   xxxxxx.png
 				const imgUrl = res.data.result.fileName
@@ -169,6 +183,7 @@
 						}
 						//更新前台视觉上的头像
 						this.imgUrl = rsp.path;
+						this.isChangeAvatar = true
 					}
 				}
 			}

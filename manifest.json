@@ -1,92 +1,110 @@
 {
-	"name": "close chat",
-	"appid": "",
-	"description": "",
-	"versionName": "1.0.0",
-	"versionCode": "100",
-	"transformPx": false,
-	/* 5+App特有相关 */
-	"app-plus": {
-		"usingComponents": true,
-		"nvueStyleCompiler": "uni-app",
-		"compilerVersion": 3,
-		"splashscreen": {
-			"alwaysShowBeforeRender": true,
-			"waiting": true,
-			"autoclose": true,
-			"delay": 0
-		},
-		/* 模块配置 */
-		"modules": {},
-		/* 应用发布信息 */
-		"distribute": {
-			/* android打包配置 */
-			"android": {
-				"permissions": [
-					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
-					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
-					"<uses-feature android:name=\"android.hardware.camera\"/>",
-					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-				]
-			},
-			/* ios打包配置 */
-			"ios": {},
-			/* SDK配置 */
-			"sdkConfigs": {}
-		}
-	},
-	/* 快应用特有相关 */
-	"quickapp": {},
-	/* 小程序特有相关 */
-	"mp-weixin": {
-		"appid": "",
-		"setting": {
-			"urlCheck": false
-		},
-		"usingComponents": true
-	},
-	"mp-alipay": {
-		"usingComponents": true
-	},
-	"mp-baidu": {
-		"usingComponents": true
-	},
-	"mp-toutiao": {
-		"usingComponents": true
-	},
-	"uniStatistics": {
-		"enable": false
-	},
-	"vueVersion": "2",
-	"h5": {
-		"devServer": {
-			"port": 8080,
-			"disableHostCheck": true,//调试时允许内网穿透，让外网的人访问到本地调试的H5页面
-			"proxy": {
-				"/api": {
-					// "target": "http://192.168.1.113:3000",// 需要代理的域名
-					// "target": "http://192.168.8.84:3000",// 需要代理的域名
-					 "target": "http://192.168.68.94:3000",// 需要代理的域名
-					"ws": false, // 是否启用websockets
-					"changeOrigin": true,//开启代理
-					"secure": false,
-					"pathRewrite": {
-						"^/api": ""// 如果你的真实的api路径中没有/api这一个路径，把这句加上，
-						//如果本来就有/api这一路径的话，这句一定要去掉，要不然会导致域名找不到的
-					}
-				}
-			}
-		}
-	}
+    "name" : "close chat",
+    "appid" : "",
+    "description" : "",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Maps" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            /* ios打包配置 */
+            "ios" : {},
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "",
+                        "appkey_android" : "3ad0f11bc3b36a0b477b4f70ea6a4bca"
+                    }
+                },
+                "geolocation" : {}
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "2",
+    "h5" : {
+        "devServer" : {
+            "port" : 8080,
+            "disableHostCheck" : true, //调试时允许内网穿透，让外网的人访问到本地调试的H5页面
+            "proxy" : {
+                "/api" : {
+                    // "target": "http://192.168.1.113:3000",// 需要代理的域名
+                    "target" : "http://192.168.8.84:3000", // 需要代理的域名
+                    // "target": "http://192.168.68.94:3000",// 需要代理的域名
+                    "ws" : false, // 是否启用websockets
+                    "changeOrigin" : true, //开启代理
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/api" : "" // 如果你的真实的api路径中没有/api这一个路径，把这句加上，
+                    }
+                }
+            }
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "VQBBZ-DKW6S-XWLOG-6AAUY-C3UIH-2WBW7"
+                }
+            }
+        }
+    }
 }
+//如果本来就有/api这一路径的话，这句一定要去掉，要不然会导致域名找不到的
+

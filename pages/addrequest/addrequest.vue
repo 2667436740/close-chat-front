@@ -59,13 +59,8 @@
 		methods: {
 			//返回
 			leftClick() {
-				uni.switchTab({
-					url: '../friends/friends',
-					success: (res) => {
-						let page = getCurrentPages().pop();
-						if (page == undefined || page == null) return;
-						page.getFriend();
-					},
+				uni.reLaunch({
+					url: '../friends/friends'
 				})
 			},
 			//获取新的收到请求列表

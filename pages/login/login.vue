@@ -65,7 +65,6 @@
 				const res = await postSignIn(params)
 				if (res.data.status == 200) {
 					const back = res.data.back
-					console.log(back)
 					try {
 						uni.setStorageSync('user', {
 							id: back.id,
@@ -76,14 +75,11 @@
 					} catch (e) {
 						console.log('数据存储出错')
 					}
-					uni.switchTab({
-						url: '../index/index',
-						// success: function(e) {
-						// 	const page = getCurrentPages().pop();
-						// 	if (page == undefined || page == null) return;
-						// 	page.onLoad();
-						// }
+					uni.reLaunch({
+						url: '../index/index'
 					})
+					//---------登录成功后强制刷新一下当前页面---------
+					// window.location.reload(); 
 				} else if (res.data.status == 400 || res.data.status == 401) {
 					this.$refs.uToast.show({
 						type: 'error',

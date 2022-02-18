@@ -25,6 +25,9 @@
 							</view>
 						</view>
 						<u--text :lines="1" :text="item.message"></u--text>
+						<!-- <view class="">
+							{{item.message}}
+						</view> -->
 					</view>
 				</view>
 			</u-list-item>
@@ -51,8 +54,18 @@
 				indexList: []
 			}
 		},
+		// watch: {
+		// 	'indexList': {
+		// 		handler(newName, oldName) {
+		// 			// console.log(newName, oldName)
+		// 			this.$forceUpdate()
+		// 		},
+		// 		deep: true,
+		// 		immediate: true
+		// 	}
+		// },
 		mixins: [getUserStorage],
-		onShow() {
+		onLoad() {
 			this.getFriend()
 		},
 		methods: {
@@ -89,7 +102,7 @@
 						return b.lastTime - a.lastTime
 					})
 					this.indexList = indexList
-					console.log(this.indexList)
+					// this.indexList = JSON.parse(JSON.stringify(indexList))
 				}
 			},
 			//获取最后一条消息
@@ -102,7 +115,7 @@
 					}
 					const resMsg = await postGetLastMsg(params)
 					if (resMsg.data.status == 200) {
-						item.message = resMsg.data.result.message,
+						item.message = resMsg.data.result.message
 						item.types = resMsg.data.result.types
 					}
 				}

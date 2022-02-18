@@ -76,7 +76,7 @@
 		},
 		onTabItemTap(item) {
 			// console.log(item)
-			this.getFriend()
+			// this.getFriend()
 		},
 		methods: {
 			//是否展示单项锚点

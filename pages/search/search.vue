@@ -1,5 +1,16 @@
 <template>
 	<view class="search">
+		<!-- <u-navbar :safeAreaInsetTop="true" fixed :placeholder="true">
+			<view slot="left"/>
+			<view slot="right" class="right-bar">
+				<u-search :show-action="true" shape="square" actionText="取消" @custom="backPageJump"
+					placeholder="请输入要搜索的用户名或邮箱" @change="$u.debounce(compareName, 500)" v-model="searchWord" class="search">
+				</u-search>
+			</view>
+		</u-navbar> -->
+		<u-navbar :safeAreaInsetTop="true" fixed :placeholder="true" title="搜索">
+			<view slot="left"/>
+		</u-navbar>
 		<view class="serach-bar">
 			<u-search :show-action="true" shape="square" actionText="取消" @custom="backPageJump"
 				placeholder="请输入要搜索的用户名或邮箱" @change="$u.debounce(compareName, 500)" v-model="searchWord">
@@ -123,9 +134,21 @@
 		font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
 	}
 
+	// .u-navbar__content__right {
+	// 	width: 90%;
+	// }
+
+	// .right-bar {
+	// 	width: 100%;
+	// }
+	
+	// .search {
+	// 	width: 100%;
+	// }
+
 	.serach-bar {
 		height: 44px;
-		padding: 10px 10px 0;
+		padding: 0 10px;
 		border-bottom: 1px solid $uni-color-border;
 		position: fixed;
 		z-index: 99;

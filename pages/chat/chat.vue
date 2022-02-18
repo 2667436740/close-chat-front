@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<u-navbar title="我是大海" rightIcon="more-dot-fill" @rightClick="rightClick" @leftClick="leftClick" fixed
-			:placeholder="true"></u-navbar>
+			:placeholder="true" :safeAreaInsetTop="true"></u-navbar>
 		<view class="message-box" :style="{paddingBottom: dynamicBoxHeight + 'px'}" @touchstart="closeToolsBox">
 			<view v-for="(item,index) in sortMsgs">
 				<view class="time" v-if="hideSpaceTime(index)">
@@ -381,7 +381,7 @@
 				}]
 			}
 		},
-		
+
 		// //监听页面显示
 		// onShow() {
 		// 	uni.onKeyboardHeightChange(res => {

@@ -7,8 +7,11 @@ export default {
 			username: "",
 		}
 	},
-	onShow() {
+	onLoad() {
 		this.getUserStorage()
+	},
+	onShow() {
+		// this.getUserStorage()
 	},
 	methods: {
 		//获取缓存
