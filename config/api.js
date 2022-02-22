@@ -43,3 +43,5 @@ export const postGetUnreadMsg = (params, config = {}) => http.post('/index/getun
 export const postClearUnreadMsg = (params, config = {}) => http.post('/index/clearunreadmsg', params, config)
 //裁剪头像上传
 export const uploadAvatar = (params, config = {}) => http.post('/avatar/upload', params, config)
+//获取聊天一对一分页消息
+export const getMsg = (params, config = {}) => http.post('/chat/msg', params, config)

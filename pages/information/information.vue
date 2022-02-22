@@ -143,20 +143,18 @@
 			},
 			//头像裁剪
 			async myUpload(rsp) {
-				console.log(await pathToBase64(rsp.path))
+				// console.log(await pathToBase64(rsp.path))
 				//存头像文件
 				const params = {
 					url: 'avatar',
 					name: new Date().getTime() + this.uid,
-					// base64: rsp.base64,
 					base64: await pathToBase64(rsp.path),
 					token: this.token,
 				}
-				// console.log(params)
 				const res = await uploadAvatar(params)
-				//   xxxxxx.png
-				const imgUrl = res.data.result.fileName
 				if (res.data.status == 200) {
+					//   xxxxxx.png
+					const imgUrl = res.data.result.fileName
 					//修改数据库头像信息
 					const editParams = {
 						id: this.uid,

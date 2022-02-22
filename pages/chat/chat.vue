@@ -1,15 +1,15 @@
 <template>
 	<view>
-		<u-navbar title="我是大海" rightIcon="more-dot-fill" @rightClick="rightClick" @leftClick="leftClick" fixed
+		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick" @leftClick="leftClick" fixed
 			:placeholder="true" :safeAreaInsetTop="true"></u-navbar>
 		<view class="message-box" :style="{paddingBottom: dynamicBoxHeight + 'px'}" @touchstart="closeToolsBox">
 			<view v-for="(item,index) in sortMsgs">
 				<view class="time" v-if="hideSpaceTime(index)">
 					{{changeTime(item.time)}}
 				</view>
-				<view class="opposite" v-if="item.id != 'b'">
+				<view class="opposite" v-if="item.fromId != uid">
 					<view class="opposite-avatar">
-						<u-avatar :src="item.imgUrl" shape="square"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square"></u-avatar>
 					</view>
 					<view class="opposite-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="opposite-message-img" v-if="item.types == 1">
@@ -22,9 +22,9 @@
 						</map>
 					</view>
 				</view>
-				<view class="me" v-if="item.id == 'b'">
+				<view class="me" v-if="item.fromId == uid">
 					<view class="me-avatar">
-						<u-avatar :src="item.imgUrl" shape="square"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square"></u-avatar>
 					</view>
 					<view class="me-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="me-message-img" v-if="item.types == 1">
@@ -79,66 +79,31 @@
 <script>
 	import myfun from '../../commons/util/myfun.js'
 	import emoji from '../../components/emoji.vue'
+	import getUserStorage from '../../mixin/getUserStorage.js'
+	import {
+		getMsg,
+		uploadAvatar
+	} from '../../config/api.js'
+	import {
+		pathToBase64
+	} from 'image-tools'
+
 	export default {
 		data() {
 			return {
-				msgs: [{
-						id: 'a',
-						imgUrl: 'https://cdn.uviewui.com/uview/album/1.jpg',
-						message: 'balabala我说了很多',
-						types: 0,
-						time: new Date() - 1000,
-						tip: 0
-					},
-					{
-						id: 'a',
-						imgUrl: 'https://cdn.uviewui.com/uview/album/1.jpg',
-						message: 'hgauewgfjHSALDHAEIFHBAGSHDF我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala',
-						types: 0,
-						time: new Date() - 1000 * 160,
-						tip: 1
-					}, {
-						id: 'b',
-						imgUrl: 'https://cdn.uviewui.com/uview/album/2.jpg',
-						message: 'https://cdn.uviewui.com/uview/album/10.jpg',
-						types: 1,
-						time: new Date() - 1000 * 16 * 1000,
-						tip: 2
-					}, {
-						id: 'b',
-						imgUrl: 'https://cdn.uviewui.com/uview/album/2.jpg',
-						message: '我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala我说了很多balabala',
-						types: 0,
-						time: new Date() - 1000 * 16 * 5000,
-						tip: 3
-					}, {
-						id: 'a',
-						imgUrl: 'https://cdn.uviewui.com/uview/album/1.jpg',
-						message: 'https://cdn.uviewui.com/uview/album/5.jpg',
-						types: 1,
-						time: new Date() - 1000 * 16 * 10000,
-						tip: 4
-					}, {
-						id: 'b',
-						imgUrl: 'https://cdn.uviewui.com/uview/album/2.jpg',
-						message: 'https://cdn.uviewui.com/uview/album/8.jpg',
-						types: 1,
-						time: new Date() - 1000 * 16 * 1000000,
-						tip: 5
-					}, {
-						id: 'b',
-						imgUrl: 'https://cdn.uviewui.com/uview/album/2.jpg',
-						message: {
-							name: '天安门',
-							address: '北京市东城区东长安街',
-							latitude: 39.908821,
-							longitude: 116.397469,
-						},
-						types: 3,
-						time: new Date() - 1000 * 16 * 1000000,
-						tip: 6
-					}
-				],
+				// {
+				// 		id: 'b',
+				// 		imgUrl: 'https://cdn.uviewui.com/uview/album/2.jpg',
+				// 		message: {
+				// 			name: '天安门',
+				// 			address: '北京市东城区东长安街',
+				// 			latitude: 39.908821,
+				// 			longitude: 116.397469,
+				// 		},
+				// 		types: 3,
+				// 		time: new Date() - 1000 * 16 * 1000000,
+				// 		tip: 6
+				// 	}
 				sortMsgs: [],
 				preImgs: [],
 				message: '',
@@ -167,17 +132,24 @@
 				dynamicBoxHeight: 44,
 				keyboardHeight: 0,
 				isShowGrid: true,
-				isShowPhiz: false
+				isShowPhiz: false,
+				fid: '',
+				fimgUrl: '',
+				fusername: ''
 			};
 		},
 		components: {
 			emoji
 		},
+		mixins: [getUserStorage],
+		onLoad(option) {
+			this.fid = option.id
+			this.fimgUrl = option.imgUrl
+			this.fusername = option.username
+			this.getChatMsg(0, 10)
+			this.listenMsg()
+		},
 		onShow() {
-			//排序信息先后
-			this.sortMsgs = this.msgs.sort(function(a, b) {
-				return b.tip - a.tip
-			})
 			//准备预览图片列表
 			for (let item of this.sortMsgs) {
 				if (item.types == 1) this.preImgs.push(item.message)
@@ -208,6 +180,7 @@
 			}
 		},
 		methods: {
+			//返回主页
 			leftClick() {
 				uni.switchTab({
 					url: '../index/index'
@@ -216,6 +189,7 @@
 			rightClick() {
 				uni.$u.toast('暂未开放')
 			},
+			//格式化时间显示
 			changeTime(time) {
 				return myfun.weChatTimeFormat(time)
 			},
@@ -234,6 +208,7 @@
 					}
 				});
 			},
+			//判断两个消息时间差是否过小，隐藏时间
 			hideSpaceTime(index) {
 				if (index == 0) return true
 				else return myfun.spaceTime(this.sortMsgs[index - 1].time, this.sortMsgs[index].time) == '' ? false : true
@@ -272,18 +247,64 @@
 					})
 				}
 			},
-			send(message, types) {
-				let len = this.sortMsgs.length
+			//本地消息列添加消息
+			addMsg(message, types, fromId) {
+				console.log('addmsg')
 				let data = {
-					id: 'b',
-					imgUrl: 'https://cdn.uviewui.com/uview/album/2.jpg',
+					fromId: fromId ? fromId: this.uid,
+					imgUrl: fromId ? this.fimgUrl: this.imgUrl.replace(/(.*\/)*([^.]+).*/ig, "$2") + '.' + this.imgUrl.replace(/.+\./,
+						""), //获取文件名和后缀( 如xxx.png )  
 					message: message,
 					types: types,
-					time: new Date(),
-					tip: len
+					time: new Date().getTime(),
+					// tip: 0 //tip=0自己发的 tip=1后端传的
 				}
 				this.sortMsgs.push(data)
 				this.message = ''
+			},
+			//本地消息列添加消息 和 通过socket发送到服务器
+			async send(message, types) {
+				// let len = this.sortMsgs.length
+				// let data = {
+				// 	fromId: this.uid,
+				// 	imgUrl: this.imgUrl.replace(/(.*\/)*([^.]+).*/ig, "$2") + '.' + this.imgUrl.replace(/.+\./,
+				// 		""), //获取文件名和后缀( 如xxx.png )  
+				// 	message: message,
+				// 	types: types,
+				// 	time: new Date(),
+				// 	tip: 0 //tip=0自己发的 tip=1后端传的
+				// }
+				// this.sortMsgs.push(data)
+				// this.message = ''
+				this.addMsg(message, types)
+
+				//socket提交
+				if (types == 0) { //文字
+					const msgObj = [{
+						message: message,
+						types: types
+					}]
+					this.socket.emit('msg', msgObj, this.uid, this.fid)
+				}
+				if (types == 1) { //图片
+					let imgUrl
+					const res = await uploadAvatar({
+						url: 'chat/',
+						name: new Date().getTime() + this.uid,
+						base64: await pathToBase64(message),
+						token: this.token,
+					})
+					if (res.data.status == 200) {
+						imgUrl = res.data.result.fileName //   xxxxxx.png
+					}
+
+					const msgObj = {
+						message: imgUrl,
+						types: types
+					}
+					this.socket.emit('msg', msgObj, this.uid, this.fid)
+				}
+
 				this.$nextTick(() => {
 					setTimeout(() => {
 						this.isShowPhiz = false
@@ -294,6 +315,7 @@
 					this.pageScrollToBottom(200)
 				});
 			},
+			//发送消息
 			sendMessage(message, types) {
 				switch (types) {
 					case 0: //文字
@@ -312,37 +334,38 @@
 						this.send(message, types)
 						console.log(message)
 						break;
-					case 4:
-						break;
 				}
 			},
 			keyboardHeightChange(e) {
 				// this.dynamicBoxHeight += e.detail.height
 				console.log(e)
 			},
+			//工具栏某功能点击
 			toolClick(index) {
 				switch (index) {
-					case 0:
+					case 0: //表情
 						this.isShowGrid = false
 						this.isShowPhiz = true
 						break;
-					case 1:
+					case 1: //图片
 						this.sendImg('album')
 						break;
-					case 2:
+					case 2: //拍摄
 						this.sendImg('camera')
 						break;
-					case 3:
+					case 3: //文件
 						uni.$u.toast('功能开发中')
 						break;
-					case 4:
+					case 4: //位置
 						this.chooseLocation()
 						break;
 				}
 			},
+			//添加文本emoji
 			emoji(e) {
 				this.message += e
 			},
+			//相册选图 或 拍摄
 			sendImg(type) {
 				let count = 9
 				if (type == 'camera') count = 1
@@ -359,6 +382,7 @@
 					}
 				});
 			},
+			//选择定位
 			chooseLocation() {
 				uni.chooseLocation({
 					success: (res) => {
@@ -372,6 +396,7 @@
 					}
 				});
 			},
+			//定位上的中心图标
 			covers(e) {
 				return [{
 					latitude: e.latitude,
@@ -379,6 +404,30 @@
 					iconPath: '../../static/img/location.png',
 					width: 35
 				}]
+			},
+			//获取聊天消息列表
+			async getChatMsg(nowPage, pageSize) {
+				const params = {
+					uid: this.uid,
+					fid: this.fid,
+					nowPage: nowPage,
+					pageSize: pageSize,
+					token: this.token
+				}
+				const res = await getMsg(params)
+				let msgs = res.data.result
+				this.sortMsgs = msgs.sort(function(a, b) {
+					return a.time - b.time
+				})
+			},
+			//监听接收socket传来的消息
+			listenMsg() {
+				this.socket.on('msg', (msgObj, fromId) => {
+					console.log('接收到了消息,' + msgObj + fromId)
+					if(msgObj[0].types == 0) { //文字
+						this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+					}
+				})
 			}
 		},
 
@@ -430,6 +479,7 @@
 				border-radius: 0 10px 10px 10px;
 				padding: 8px;
 				float: left;
+				word-wrap: break-word;
 			}
 
 			.opposite-message-img {
@@ -455,6 +505,7 @@
 				border-radius: 10px 0 10px 10px;
 				padding: 8px;
 				float: right;
+				word-wrap: break-word;
 			}
 
 			.me-message-img {

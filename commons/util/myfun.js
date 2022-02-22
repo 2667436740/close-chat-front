@@ -303,7 +303,7 @@ export default {
 		const HHmm = `${formatTime2("hh", timeDate)}:${formatTime2("mm", timeDate)}`
 		const showWeekDay = isShowWeekDay(sub, timeDate.getDay())
 		if (currentYear > getYear) {
-			return `${formatTime2("yyyy年MM月dd日", timeDate)} ${todayTimeFormat(timeDate.getHours())} ${formatTime2("hh:mm", timeDate)}`
+			return `${formatTime2("yyyy/MM/dd", timeDate)} ${todayTimeFormat(timeDate.getHours())}${formatTime2("hh:mm", timeDate)}`
 		} else if (showWeekDay) {
 			return `${weekFormat(timeDate.getDay())} ${HHmm}`
 		} else if (sub > day && sub < day * 2) {
@@ -311,7 +311,7 @@ export default {
 		} else if (sub <= day) {
 			return HHmm
 		} else {
-			return `${formatTime2("MM月dd日", timeDate)} ${todayTimeFormat(timeDate.getHours())} ${formatTime2("hh:mm", timeDate)}`
+			return `${formatTime2("MM/dd", timeDate)} ${todayTimeFormat(timeDate.getHours())}${formatTime2("hh:mm", timeDate)}`
 		}
 	},
 
