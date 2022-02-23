@@ -11,4 +11,29 @@ module.exports = (vm) => {
 
 		return config
 	})
+
+	// 响应拦截
+	uni.$u.http.interceptors.response.use((response) => {
+		const data = response.data
+		if (data.status == 300) {
+			// this.$refs.uToast.show({
+			// 	type: 'error',
+			// 	message: "登录状态失效!"
+			// })
+			setTimeout(() => {
+				uni.redirectTo({
+					url: '../login/login'
+				})
+			}, 2000)
+		} else if (data.status == 500) {
+			// this.$refs.uToast.show({
+			// 	type: 'error',
+			// 	message: "服务器出错啦!"
+			// })
+		}
+		return response
+	}, (response) => {
+		// 对响应错误做点什么 （statusCode !== 200）
+		// return Promise.reject(response)
+	})
 }

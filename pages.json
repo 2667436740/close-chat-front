@@ -4,7 +4,8 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app",
-				"navigationStyle": "custom"
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
 			}
 		}, {
 			"path": "pages/login/login",
@@ -74,7 +75,8 @@
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
 			}
 
 		}, {

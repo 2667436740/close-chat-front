@@ -1,45 +1,55 @@
 <template>
 	<view>
 		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick" @leftClick="leftClick" fixed
-			:placeholder="true" :safeAreaInsetTop="true"></u-navbar>
+			:placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
 		<view class="message-box" :style="{paddingBottom: dynamicBoxHeight + 'px'}" @touchstart="closeToolsBox">
 			<view v-for="(item,index) in sortMsgs">
 				<view class="time" v-if="hideSpaceTime(index)">
 					{{changeTime(item.time)}}
 				</view>
+				<!-- 对方 -->
 				<view class="opposite" v-if="item.fromId != uid">
 					<view class="opposite-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJunp(fid)"></u-avatar>
 					</view>
 					<view class="opposite-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="opposite-message-img" v-if="item.types == 1">
-						<image :src="item.message" mode="widthFix" class="chat-img" @click="previewImage(item.message)">
+						<image :src="`${BASE_URL}/chat/${item.message}`" mode="widthFix" class="chat-img"
+							@click="previewImage(item.message)">
 						</image>
 					</view>
 					<view class="opposite-message" v-if="item.types == 3">
-						<map style="max-width: 100%; height: 150px;" :latitude="item.message.latitude"
-							:longitude="item.message.longitude" :markers="item.message.covers">
+						<view class="map-name">
+							{{JSON.parse(item.message).name}}
+						</view>
+						<view class="address">
+							{{JSON.parse(item.message).address}}
+						</view>
+						<map style="max-width: 100%; height: 150px;" :latitude="JSON.parse(item.message).latitude"
+							:longitude="JSON.parse(item.message).longitude" :markers="covers(JSON.parse(item.message))">
 						</map>
 					</view>
 				</view>
+				<!-- 自己 -->
 				<view class="me" v-if="item.fromId == uid">
 					<view class="me-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJunp(uid)"></u-avatar>
 					</view>
 					<view class="me-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="me-message-img" v-if="item.types == 1">
-						<image :src="item.message" mode="widthFix" class="chat-img" @click="previewImage(item.message)">
+						<image :src="`${BASE_URL}/chat/${item.message}`" mode="widthFix" class="chat-img"
+							@click="previewImage(item.message)">
 						</image>
 					</view>
 					<view class="me-message" v-if="item.types == 3">
-						<view class="">
-							{{item.message.name}}
+						<view class="map-name">
+							{{JSON.parse(item.message).name}}
 						</view>
-						<view class="">
-							{{item.message.address}}
+						<view class="address">
+							{{JSON.parse(item.message).address}}
 						</view>
-						<map style="max-width: 100%; height: 150px;" :latitude="item.message.latitude"
-							:longitude="item.message.longitude" :markers="covers(item.message)">
+						<map style="max-width: 100%; height: 150px;" :latitude="JSON.parse(item.message).latitude"
+							:longitude="JSON.parse(item.message).longitude" :markers="covers(JSON.parse(item.message))">
 						</map>
 					</view>
 				</view>
@@ -82,7 +92,8 @@
 	import getUserStorage from '../../mixin/getUserStorage.js'
 	import {
 		getMsg,
-		uploadAvatar
+		uploadAvatar,
+		postClearUnreadMsg,
 	} from '../../config/api.js'
 	import {
 		pathToBase64
@@ -91,19 +102,6 @@
 	export default {
 		data() {
 			return {
-				// {
-				// 		id: 'b',
-				// 		imgUrl: 'https://cdn.uviewui.com/uview/album/2.jpg',
-				// 		message: {
-				// 			name: '天安门',
-				// 			address: '北京市东城区东长安街',
-				// 			latitude: 39.908821,
-				// 			longitude: 116.397469,
-				// 		},
-				// 		types: 3,
-				// 		time: new Date() - 1000 * 16 * 1000000,
-				// 		tip: 6
-				// 	}
 				sortMsgs: [],
 				preImgs: [],
 				message: '',
@@ -131,11 +129,13 @@
 				],
 				dynamicBoxHeight: 44,
 				keyboardHeight: 0,
-				isShowGrid: true,
+				isShowGrid: false,
 				isShowPhiz: false,
 				fid: '',
 				fimgUrl: '',
-				fusername: ''
+				fusername: '',
+				nowPage: 0, 
+				pageSize: 10, 
 			};
 		},
 		components: {
@@ -146,42 +146,61 @@
 			this.fid = option.id
 			this.fimgUrl = option.imgUrl
 			this.fusername = option.username
-			this.getChatMsg(0, 10)
+			this.getChatMsg(this.nowPage, this.pageSize)
 			this.listenMsg()
 		},
 		onShow() {
 			//准备预览图片列表
+			this.preImgs = []
 			for (let item of this.sortMsgs) {
-				if (item.types == 1) this.preImgs.push(item.message)
+				if (item.types == 1) this.preImgs.push(`${this.BASE_URL}/chat/${item.message}`)
 			}
-			//进入页面时，直接页面底部
-			this.$nextTick(() => {
-				this.pageScrollToBottom(0)
-			});
 		},
 		onReady() {
 			//获取元素高度等
 			this.$nextTick(function() {
 				console.log(this.$refs.dynamicbox.$el.offsetHeight)
 			})
+			//进入页面时，直接页面底部
+			this.pageScrollToBottom(0)
 		},
-		watch: {
-			message(newM, oldM) {
-				// console.log(newM,oldM)
-				this.$nextTick(function() {
-					this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
+		//下拉加载数据
+		onPullDownRefresh() {
+			this.getChatMsg(this.nowPage, this.pageSize)
+			setTimeout(()=>{
+				uni.stopPullDownRefresh()
+			},1000)
+		},
+		// watch: {
+		// 	message(newM, oldM) {
+		// 		// console.log(newM,oldM)
+		// 		this.$nextTick(function() {
+		// 			this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
+		// 		})
+		// 	},
+		// 	dynamicBoxHeight(newM, oldM) {
+		// 		console.log(newM, oldM)
+		// 		this.pageScrollToBottom(200)
+		// 	}
+		// },
+		methods: {
+			//跳转个人信息页
+			infoPageJunp(id) {
+				uni.navigateTo({
+					url: '../information/information?id=' + id
 				})
 			},
-			dynamicBoxHeight(newM, oldM) {
-				console.log(newM, oldM)
-				this.$nextTick(() => {
-					this.pageScrollToBottom(200)
-				});
-			}
-		},
-		methods: {
 			//返回主页
-			leftClick() {
+			async leftClick() {
+				const params = {
+					uid: this.uid,
+					fid: this.fid,
+					token: this.token
+				}
+				const res = await postClearUnreadMsg(params)
+				if (res.data.status == 200) {
+					uni.$emit('clearUnreadNum',{clearId: this.fid})
+				}
 				uni.switchTab({
 					url: '../index/index'
 				})
@@ -193,9 +212,11 @@
 			changeTime(time) {
 				return myfun.weChatTimeFormat(time)
 			},
+			//预览图片
 			previewImage(currentMessage) {
+				console.log(currentMessage)
 				uni.previewImage({
-					current: currentMessage, //传当前点击图片的url
+					current: `${this.BASE_URL}/chat/${currentMessage}`, //传当前点击图片的url
 					urls: this.preImgs,
 					longPressActions: {
 						itemList: ['发送给朋友', '保存图片', '收藏'],
@@ -213,73 +234,60 @@
 				if (index == 0) return true
 				else return myfun.spaceTime(this.sortMsgs[index - 1].time, this.sortMsgs[index].time) == '' ? false : true
 			},
+			// 加号‘+’点击
 			moreClick() {
 				this.isShowToolsBox = !this.isShowToolsBox
 				if (this.isShowToolsBox == true) {
 					this.$nextTick(function() {
 						this.isShowGrid = true
 						this.isShowPhiz = false
-						this.dynamicBoxHeight += this.$refs.toolsbox.$el.offsetHeight
+						// this.dynamicBoxHeight += this.$refs.toolsbox.$el.offsetHeight
 					})
 				} else {
-					this.$nextTick(function() {
-						this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
-					})
+					// this.$nextTick(function() {
+					// 	this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
+					// })
 				}
-
-				this.$nextTick(function() {
-					this.pageScrollToBottom(200)
-				})
 			},
 			//滚动到页面底部
 			pageScrollToBottom(delay) {
-				uni.pageScrollTo({
-					scrollTop: 99999,
-					duration: delay //滚动延时
-				});
+				this.$nextTick(function() {
+					uni.pageScrollTo({
+						scrollTop: 99999,
+						duration: delay //滚动延时
+					});
+				})
 			},
 			closeToolsBox() {
 				if (this.isShowToolsBox == true) {
 					this.isShowToolsBox = false
-					this.$nextTick(function() {
-						this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
-						this.pageScrollToBottom(200)
-					})
+					// this.$nextTick(function() {
+					// 	this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
+					// })
+					// this.pageScrollToBottom(200)
 				}
 			},
 			//本地消息列添加消息
 			addMsg(message, types, fromId) {
-				console.log('addmsg')
 				let data = {
-					fromId: fromId ? fromId: this.uid,
-					imgUrl: fromId ? this.fimgUrl: this.imgUrl.replace(/(.*\/)*([^.]+).*/ig, "$2") + '.' + this.imgUrl.replace(/.+\./,
-						""), //获取文件名和后缀( 如xxx.png )  
+					fromId: fromId == this.fid ? this.fid : this.uid,
+					imgUrl: fromId == this.fid ? this.fimgUrl : this.imgUrl.replace(/(.*\/)*([^.]+).*/ig, "$2") + '.' +
+						this.imgUrl.replace(/.+\./,
+							""), //获取文件名和后缀( 如xxx.png )  
 					message: message,
 					types: types,
 					time: new Date().getTime(),
-					// tip: 0 //tip=0自己发的 tip=1后端传的
 				}
 				this.sortMsgs.push(data)
 				this.message = ''
+
+				this.pageScrollToBottom(200)
 			},
 			//本地消息列添加消息 和 通过socket发送到服务器
 			async send(message, types) {
-				// let len = this.sortMsgs.length
-				// let data = {
-				// 	fromId: this.uid,
-				// 	imgUrl: this.imgUrl.replace(/(.*\/)*([^.]+).*/ig, "$2") + '.' + this.imgUrl.replace(/.+\./,
-				// 		""), //获取文件名和后缀( 如xxx.png )  
-				// 	message: message,
-				// 	types: types,
-				// 	time: new Date(),
-				// 	tip: 0 //tip=0自己发的 tip=1后端传的
-				// }
-				// this.sortMsgs.push(data)
-				// this.message = ''
-				this.addMsg(message, types)
-
 				//socket提交
 				if (types == 0) { //文字
+					this.addMsg(message, types)
 					const msgObj = [{
 						message: message,
 						types: types
@@ -289,19 +297,28 @@
 				if (types == 1) { //图片
 					let imgUrl
 					const res = await uploadAvatar({
-						url: 'chat/',
+						url: 'chat',
 						name: new Date().getTime() + this.uid,
 						base64: await pathToBase64(message),
 						token: this.token,
 					})
 					if (res.data.status == 200) {
 						imgUrl = res.data.result.fileName //   xxxxxx.png
+						this.addMsg(imgUrl, types)
+						this.preImgs.push(`${this.BASE_URL}/chat/${imgUrl}`)
+						const msgObj = [{
+							message: imgUrl,
+							types: types
+						}]
+						this.socket.emit('msg', msgObj, this.uid, this.fid)
 					}
-
-					const msgObj = {
-						message: imgUrl,
+				}
+				if(types == 3) { //定位
+					this.addMsg(JSON.stringify(message), types)
+					const msgObj = [{
+						message: JSON.stringify(message),
 						types: types
-					}
+					}]
 					this.socket.emit('msg', msgObj, this.uid, this.fid)
 				}
 
@@ -309,8 +326,8 @@
 					setTimeout(() => {
 						this.isShowPhiz = false
 						this.isShowToolsBox = false
-						this.dynamicBoxHeight = 44
-						console.log('sendok...' + this.dynamicBoxHeight)
+						// this.dynamicBoxHeight = 44
+						// console.log('sendok...' + this.dynamicBoxHeight)
 					}, 100)
 					this.pageScrollToBottom(200)
 				});
@@ -325,7 +342,7 @@
 						break;
 					case 1: //图片
 						this.send(message, types)
-						this.preImgs.push(message)
+						// this.preImgs.push(`${this.BASE_URL}/chat/${message}`)
 						break;
 					case 2: //音频
 						// uni.$u.toast('功能开发中')
@@ -369,7 +386,6 @@
 			sendImg(type) {
 				let count = 9
 				if (type == 'camera') count = 1
-
 				uni.chooseImage({
 					count: count,
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
@@ -377,7 +393,7 @@
 					success: (res) => {
 						const imgPaths = res.tempFilePaths
 						for (let i = 0; i < imgPaths.length; i++) {
-							this.sendMessage(imgPaths[i], 1)
+							this.sendMessage(imgPaths[i], 1) //imgPaths[i]为临时图片地址
 						}
 					}
 				});
@@ -416,16 +432,28 @@
 				}
 				const res = await getMsg(params)
 				let msgs = res.data.result
-				this.sortMsgs = msgs.sort(function(a, b) {
+				let sortMsgs = msgs.sort(function(a, b) {
 					return a.time - b.time
 				})
+				this.sortMsgs = [...sortMsgs, ...this.sortMsgs]
+				this.nowPage ++
 			},
 			//监听接收socket传来的消息
 			listenMsg() {
-				this.socket.on('msg', (msgObj, fromId) => {
-					console.log('接收到了消息,' + msgObj + fromId)
-					if(msgObj[0].types == 0) { //文字
-						this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+				this.socket.on('msg', (msgObj, fromId, tip) => {
+					//一对一判断,只有对方发来的才更新消息
+					if (fromId == this.fid && tip == 0) {
+						console.log('接收到了消息,' + msgObj + fromId)
+						if (msgObj[0].types == 0) { //文字
+							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+						}
+						if (msgObj[0].types == 1) { //图片
+							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+							this.preImgs.push(`${this.BASE_URL}/chat/${msgObj[0].message}`)
+						}
+						if (msgObj[0].types == 3) { //定位
+							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+						}
 					}
 				})
 			}
@@ -453,6 +481,20 @@
 </script>
 
 <style lang="scss">
+	.navbar {
+		z-index: 999;
+	}
+	
+	.map-name {
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	.address {
+		font-size: 12px;
+		color: #333333;
+	}
+
 	.message-box {
 		padding-bottom: 44px;
 

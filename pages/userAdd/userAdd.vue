@@ -62,6 +62,7 @@
 			cancel() {
 				uni.navigateBack()
 			},
+			//发送好友添加申请
 			async addUser() {
 				const params = {
 					uid: this.uid,
@@ -70,30 +71,16 @@
 					token: this.token
 				}
 				const res = await postApplyFriend(params)
-				console.log(res)
 				if (res.data.status == 200) {
+					this.socket.emit('newFriend', this.fid)
 					this.$refs.uToast.show({
 						type: 'success',
 						message: "好友申请已发送!"
 					})
-				} else if (res.data.status == 300) {
-					this.$refs.uToast.show({
-						type: 'error',
-						message: "登录状态失效!"
-					})
-					setTimeout(() => {
-						uni.redirectTo({
-							url: '../login/login'
-						})
-					}, 2000)
-				} else if (res.data.status == 500) {
-					this.$refs.uToast.show({
-						type: 'error',
-						message: "服务器出错啦!"
-					})
 				}
 				this.isShowApplyBox = false
 			},
+			//获取好友详情信息
 			async getFriendDetail() {
 				const res = await postUserDetail({
 					id: this.fid,
@@ -101,7 +88,6 @@
 				})
 				if(res.data.status == 200) {
 					this.userInfo = res.data.result
-					console.log(this.userInfo)
 				}
 			}
 		}

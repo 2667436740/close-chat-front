@@ -7,7 +7,7 @@
 			</view>
 		</u-navbar>
 
-		<u-index-list :index-list="indexList">
+		<u-index-list :index-list="indexList" :customNavHeight="80">
 			<u-cell-group slot="header">
 				<navigator url="../addrequest/addrequest">
 					<u-cell title="新的朋友">
@@ -16,10 +16,6 @@
 						<u-badge slot="value" shape="circle" max="99" :value="newRequestNum"></u-badge>
 					</u-cell>
 				</navigator>
-				<!-- <u-cell title="标签">
-					<u-avatar slot="icon" shape="square" size="35" icon="tags-fill" fontSize="26" randomBgColor
-						customStyle="margin: -3px 5px -3px 0"></u-avatar>
-				</u-cell> -->
 			</u-cell-group>
 			<!-- 索引块（A-Z） -->
 			<u-index-item v-for="(item, index) in indexList" :key="index">
@@ -74,10 +70,6 @@
 			this.getAddRequestList()
 			// this.getFriend()
 		},
-		onTabItemTap(item) {
-			// console.log(item)
-			// this.getFriend()
-		},
 		methods: {
 			//是否展示单项锚点
 			isShowAnchor(item) {
@@ -107,11 +99,6 @@
 			//获取好友列表
 			async getFriend() {
 				this.itemArr = []
-				// const value = uni.getStorageSync('user');
-				// if (value) {
-				// 	this.uid = value.id,
-				// 		this.token = value.token
-				// }
 				const params = {
 					uid: this.uid,
 					state: 0,

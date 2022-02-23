@@ -98,27 +98,15 @@
 					}
 					this.showUserArr = this.userArr
 					console.log(this.showUserArr)
-				} else if (res.data.status == 300) {
-					this.$refs.uToast.show({
-						type: 'error',
-						message: "登录状态失效!"
-					})
-					setTimeout(() => {
-						uni.redirectTo({
-							url: '../login/login'
-						})
-					}, 2000)
-				} else if (res.data.status == 500) {
-					this.$refs.uToast.show({
-						type: 'error',
-						message: "服务器出错啦!"
-					})
 				}
 			},
 			//添加好友
 			userAddPageJump(item) {
 				if (item.isFriend === true) {
 					//跳转发消息界面
+					uni.navigateTo({
+						url: `../chat/chat?id=${item._id}&imgUrl=${item.imgUrl}&username=${item.username}`
+					})
 				} else {
 					uni.navigateTo({
 						url: '../userAdd/userAdd?fid=' + item._id

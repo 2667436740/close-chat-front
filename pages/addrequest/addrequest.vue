@@ -89,6 +89,7 @@
 					this.showList = this.newAddRequestList
 				}
 			},
+			//同意申请
 			async agree(fid) {
 				const params = {
 					uid: this.uid,
@@ -97,6 +98,7 @@
 				}
 				const res = await postUpdateFriendState(params)
 				if (res.data.status == 200) {
+					this.socket.emit('agree', fid)
 					this.$refs.uToast.show({
 						type: 'success',
 						message: "成功添加好友！"
@@ -111,6 +113,7 @@
 					})
 				}
 			},
+			//拒绝申请
 			async refuse(fid) {
 				const params = {
 					uid: this.uid,

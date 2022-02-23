@@ -2,7 +2,7 @@
 	<view class="content">
 		<u-navbar title="Colse Chat" :safeAreaInsetTop="true" fixed :placeholder="true">
 			<view slot="left">
-				<u-avatar :src="imgUrl" size="30" @click="infoPageJunp"></u-avatar>
+				<u-avatar :src="imgUrl" size="30" @click="infoPageJunp(uid)"></u-avatar>
 			</view>
 			<view slot="right" class="icons">
 				<u-icon name="search" size="20" class="icon-1" @click="searchPageJump"></u-icon>
@@ -11,6 +11,26 @@
 		</u-navbar>
 
 		<u-list>
+			<navigator url="../addrequest/addrequest">
+				<u-list-item v-if="newRequestNum != 0">
+					<view class="item-style">
+						<view class="avatar">
+							<u-avatar shape="square" size="40" src="../../static/img/people.png"
+								customStyle="margin: 0 10px 0 0"></u-avatar>
+						</view>
+						<view class="item-text">
+							<view class="item-title">
+								<view class="name">
+									您有新的朋友
+								</view>
+								<view class="new-badge">
+									<u-badge type="error" max="99" :value="newRequestNum" shape="circle"></u-badge>
+								</view>
+							</view>
+						</view>
+					</view>
+				</u-list-item>
+			</navigator>
 			<u-list-item v-for="(item, index) in indexList" :key="item.id">
 				<view class="item-style" @click="chatPageJump(item)">
 					<view class="avatar">
@@ -30,7 +50,7 @@
 						<u--text :lines="1" :text="item.message" color="#666666" size="14" v-if="item.types == 0">
 						</u--text>
 						<u--text :lines="1" text="[图片]" color="#666666" size="14" v-if="item.types == 1"></u--text>
-						<u--text :lines="1" text="[音频]" color="#666666" size="14" v-if="item.types == 2"></u--text>
+						<u--text :lines="1" text="[语音]" color="#666666" size="14" v-if="item.types == 2"></u--text>
 						<u--text :lines="1" text="[位置]" color="#666666" size="14" v-if="item.types == 3"></u--text>
 					</view>
 				</view>
@@ -52,6 +72,7 @@
 		postGetFriend,
 		postGetLastMsg,
 		postGetUnreadMsg,
+		postClearUnreadMsg,
 	} from '../../config/api.js'
 
 	export default {
@@ -62,16 +83,52 @@
 				uid: '',
 				imgUrl: '',
 				token: '',
-				indexList: []
+				indexList: [],
+				newRequestNum: 0
 			}
 		},
 		mixins: [getUserStorage],
 		onLoad() {
 			this.getFriend()
+			this.getAddRequestList()
+			this.clearUnreadMsg()
 			this.join()
 			this.socketTest()
+			this.listenMsg()
+		},
+		//下拉刷新
+		onPullDownRefresh() {
+			this.getFriend()
+			this.getAddRequestList()
+			setTimeout(() => {
+				uni.stopPullDownRefresh()
+			}, 1000)
 		},
 		methods: {
+			//聊天页返回时，清空对应好友未读数
+			clearUnreadMsg() {
+				uni.$on('clearUnreadNum', data => {
+					if (data.clearId) {
+						this.indexList.map(e => {
+							if (e.id == data.clearId) {
+								e.unReadNum = 0
+							}
+						})
+					}
+				})
+			},
+			//获取新的收到请求列表
+			async getAddRequestList() {
+				const params = {
+					uid: this.uid,
+					state: 1,
+					token: this.token
+				}
+				const res = await postGetFriend(params)
+				if (res.data.status == 200) {
+					this.newRequestNum = res.data.result.length
+				}
+			},
 			//格式化时间显示
 			changeTime(date) {
 				return myfun.weChatTimeFormat(date)
@@ -83,16 +140,25 @@
 				})
 			},
 			//个人信息页跳转
-			infoPageJunp() {
+			infoPageJunp(id) {
 				uni.navigateTo({
-					url: '../information/information'
+					url: '../information/information?id=' + id
 				})
 			},
 			//聊天页跳转
-			chatPageJump(item) {
+			async chatPageJump(item) {
 				uni.navigateTo({
 					url: `../chat/chat?id=${item.id}&imgUrl=${item.imgUrl}&username=${item.username}`
 				})
+				const params = {
+					uid: this.uid,
+					fid: item.id,
+					token: this.token
+				}
+				const res = await postClearUnreadMsg(params)
+				if (res.data.status == 200) {
+					item.unReadNum = 0
+				}
 			},
 			//获取首页好友列
 			async getFriend() {
@@ -136,6 +202,44 @@
 			socketTest() {
 				this.socket.on('login', id => {
 					console.log('接收到了消息,' + id)
+				})
+			},
+			//监听接收socket传来的消息
+			listenMsg() {
+				this.socket.on('msg', (msgObj, fromId) => {
+					this.indexList.map((e, i) => {
+						if (e.id == fromId) {
+							switch (msgObj[0].types) {
+								case 0: //文字
+									e.message = msgObj[0].message
+									break;
+								case 1: //图片
+									e.message = '[图片]'
+									break;
+								case 2: //音频
+									e.message = '[语音]'
+									break;
+								case 3: //定位
+									e.message = '[位置]'
+									break;
+							}
+							e.unReadNum++
+							e.lastTime = new Date().getTime()
+							this.indexList.splice(i, 1)
+							this.indexList.unshift(e)
+						}
+					})
+				})
+				this.socket.on('newFriend', (toId) => {
+					if (this.uid == toId) {
+						this.newRequestNum++
+					}
+				})
+				this.socket.on('agree', (toId) => {
+					if (this.uid == toId) {
+						this.getFriend()
+						this.getAddRequestList()
+					}
 				})
 			}
 		}
@@ -187,6 +291,12 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+
+		.new-badge {
+			width: 17px;
+			height: 17px;
+		}
 
 		.name {
 			font-size: 18px;
@@ -195,7 +305,7 @@
 
 		.time {
 			font-size: 12px;
-			padding-top: 5px;
+			// padding-bottom: 5px;
 			color: #666666;
 		}
 	}

@@ -5,9 +5,13 @@
 			<view class="cell">
 				<span>头像:</span>
 				<view class="cell-content">
-					<avatar selWidth="200px" selHeight="400upx" @upload="myUpload" :avatarSrc="imgUrl"
-						avatarStyle="width: 120upx; height: 120upx; border-radius: 20%;">
+					<avatar selWidth="200px" selHeight="400upx" @upload="myUpload"
+						:avatarSrc="`${BASE_URL}/avatar/${imgUrl}`"
+						avatarStyle="width: 120rpx; height: 120rpx; border-radius: 20%;" v-if="id==uid">
 					</avatar>
+					<img :src="`${BASE_URL}/avatar/${imgUrl}`"
+						style="width: 120upx; height: 120upx; border-radius: 20%;" v-if="id!=uid">
+					</img>
 				</view>
 			</view>
 			<view class="cell">
@@ -24,7 +28,10 @@
 			</view>
 			<view class="cell">
 				<span>签名:</span>
-				<view class="cell-content" @click="showEditIntroPopup">
+				<view class="cell-content" @click="showEditIntroPopup" v-if="id==uid">
+					{{showExplain}}
+				</view>
+				<view class="cell-content" v-if="id!=uid">
 					{{showExplain}}
 				</view>
 			</view>
@@ -81,8 +88,11 @@
 				return this.explain == '' ? '暂无个签~' : this.explain
 			}
 		},
+		onLoad(option) {
+			this.id = option.id
+		},
 		onShow() {
-			this.getInformation()
+			this.getInformation(this.id)
 		},
 		methods: {
 			//返回
@@ -94,9 +104,9 @@
 				});
 			},
 			//获取用户详情
-			async getInformation() {
+			async getInformation(id) {
 				const params = {
-					id: this.uid,
+					id: id,
 					token: this.token
 				}
 				const res = await postUserDetail(params)
@@ -106,6 +116,8 @@
 					this.email = result.email
 					this.regTime = new Date(result.time).valueOf() //转ISODate为时间戳
 					this.regTime = myfun.formatDate('YYYY-MM-dd hh:mm', this.regTime)
+					this.username = result.username
+					this.imgUrl = result.imgUrl
 				} else {
 					this.$refs.uToast.show({
 						type: 'error',
@@ -180,7 +192,7 @@
 							console.log('数据存储出错')
 						}
 						//更新前台视觉上的头像
-						this.imgUrl = rsp.path;
+						this.imgUrl = imgUrl;
 						this.isChangeAvatar = true
 					}
 				}
