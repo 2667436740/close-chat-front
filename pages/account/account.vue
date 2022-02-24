@@ -86,6 +86,7 @@
 			},
 			//退出登录账户
 			quitAcoount() {
+				this.socket.emit('quit', this.uid)
 				uni.redirectTo({
 					url: '../login/login'
 				})

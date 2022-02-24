@@ -10971,23 +10971,40 @@ var render = function() {
             ],
             1
           ),
-          _c(
-            "v-uni-button",
-            {
-              staticClass: _vm._$g(21, "sc"),
-              attrs: { type: "default", _i: 21 },
-              on: {
-                click: function($event) {
-                  return _vm.$handleViewEvent($event)
-                }
-              }
-            },
-            [_vm._v("修改密码")]
-          ),
+          _vm._$g(21, "i")
+            ? _c(
+                "v-uni-button",
+                {
+                  staticClass: _vm._$g(21, "sc"),
+                  attrs: { type: "default", _i: 21 },
+                  on: {
+                    click: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
+                },
+                [_vm._v("修改密码")]
+              )
+            : _vm._e(),
+          _vm._$g(22, "i")
+            ? _c(
+                "v-uni-button",
+                {
+                  staticClass: _vm._$g(22, "sc"),
+                  attrs: { type: "warn", _i: 22 },
+                  on: {
+                    click: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
+                },
+                [_vm._v("删除好友")]
+              )
+            : _vm._e(),
           _c(
             "u-popup",
             {
-              attrs: { _i: 22 },
+              attrs: { _i: 23 },
               on: {
                 close: function($event) {
                   return _vm.$handleViewEvent($event)
@@ -10997,13 +11014,13 @@ var render = function() {
             [
               _c(
                 "v-uni-view",
-                { staticClass: _vm._$g(23, "sc"), attrs: { _i: 23 } },
+                { staticClass: _vm._$g(24, "sc"), attrs: { _i: 24 } },
                 [
                   _c("u--textarea", {
                     staticStyle: { "padding-top": "40px" },
-                    attrs: { _i: 24 },
+                    attrs: { _i: 25 },
                     model: {
-                      value: _vm._$g(24, "v-model"),
+                      value: _vm._$g(25, "v-model"),
                       callback: function() {},
                       expression: "explain"
                     }
@@ -11011,7 +11028,7 @@ var render = function() {
                   _c(
                     "v-uni-button",
                     {
-                      attrs: { type: "default", _i: 25 },
+                      attrs: { type: "default", _i: 26 },
                       on: {
                         click: function($event) {
                           return _vm.$handleViewEvent($event)
@@ -11026,11 +11043,11 @@ var render = function() {
             ],
             1
           ),
-          _c("u-toast", { ref: "uToast", attrs: { _i: 26 } }),
+          _c("u-toast", { ref: "uToast", attrs: { _i: 27 } }),
           _c(
             "u-modal",
             {
-              attrs: { _i: 27 },
+              attrs: { _i: 28 },
               on: {
                 cancel: function($event) {
                   return _vm.$handleViewEvent($event)
@@ -11043,33 +11060,44 @@ var render = function() {
             [
               _c(
                 "v-uni-view",
-                { staticClass: _vm._$g(28, "sc"), attrs: { _i: 28 } },
+                { staticClass: _vm._$g(29, "sc"), attrs: { _i: 29 } },
                 [
-                  _c("u--input", {
-                    attrs: { _i: 29 },
-                    model: {
-                      value: _vm._$g(29, "v-model"),
-                      callback: function() {},
-                      expression: "oldPwd"
-                    }
-                  }),
                   _c("u--input", {
                     attrs: { _i: 30 },
                     model: {
                       value: _vm._$g(30, "v-model"),
                       callback: function() {},
+                      expression: "oldPwd"
+                    }
+                  }),
+                  _c("u--input", {
+                    attrs: { _i: 31 },
+                    model: {
+                      value: _vm._$g(31, "v-model"),
+                      callback: function() {},
                       expression: "newPwd"
                     }
                   }),
-                  _vm._$g(31, "i")
-                    ? _c("u--text", { attrs: { _i: 31 } })
+                  _vm._$g(32, "i")
+                    ? _c("u--text", { attrs: { _i: 32 } })
                     : _vm._e()
                 ],
                 1
               )
             ],
             1
-          )
+          ),
+          _c("u-modal", {
+            attrs: { _i: 33 },
+            on: {
+              confirm: function($event) {
+                return _vm.$handleViewEvent($event)
+              },
+              close: function($event) {
+                return _vm.$handleViewEvent($event)
+              }
+            }
+          })
         ],
         1
       )

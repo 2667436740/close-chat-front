@@ -41,7 +41,8 @@
 					{{regTime}}
 				</view>
 			</view>
-			<button type="default" class="btn" @click="changePwd_Click">修改密码</button>
+			<button type="default" class="btn" @click="changePwd_Click" v-if="id==uid">修改密码</button>
+			<button type="warn" class="btn" @click="delFriend_Click" v-if="id!=uid">删除好友</button>
 
 			<u-popup :show="isShowEditIntro" mode="center" :closeable="true" @close="closePopup">
 				<view class="pop">
@@ -60,6 +61,8 @@
 					<u--text type="error" text=" tip: 新密码应不少于6位" v-if="newPwd.length<6"></u--text>
 				</view>
 			</u-modal>
+			<u-modal :show="isShowDelFriend" title="是否删除该好友?" @confirm="delFriend" confirmColor="#cf0000"
+				:closeOnClickOverlay="true" @close="closeDelFriend"></u-modal>
 		</view>
 	</view>
 </template>
@@ -72,6 +75,7 @@
 		uploadAvatar,
 		postUserUpdate,
 		postUserDetail,
+		postDeleteFriend,
 	} from '../../config/api.js'
 	import {
 		pathToBase64
@@ -80,6 +84,7 @@
 	export default {
 		data() {
 			return {
+				id: '', //传入页面的用户id
 				isShowEditIntro: false,
 				explain: '',
 				email: '',
@@ -87,7 +92,8 @@
 				isChangeAvatar: false, //是否修改了头像
 				oldPwd: '',
 				newPwd: '',
-				isShowChangePwd: false
+				isShowChangePwd: false,
+				isShowDelFriend: false
 			};
 		},
 		mixins: [getUserStorage],
@@ -234,11 +240,11 @@
 							message: "密码修改成功,请重新登录"
 						})
 						uni.clearStorageSync()
-						setTimeout(()=>{
+						setTimeout(() => {
 							uni.navigateTo({
 								url: '../login/login'
 							})
-						},1000)
+						}, 1000)
 					} else {
 						this.isShowChangePwd = false
 						this.$refs.uToast.show({
@@ -247,6 +253,30 @@
 						})
 					}
 				}
+			},
+			//删除好友按钮点击
+			delFriend_Click() {
+				this.isShowDelFriend = true
+			},
+			//执行删除好友
+			async delFriend() {
+				const params = {
+					uid: this.uid,
+					fid: this.id,
+					token: this.token
+				}
+				const res = await postDeleteFriend(params)
+				this.isShowDelFriend = false
+				if (res.data.status == 200) {
+					uni.$emit('delId', this.id)
+					uni.switchTab({
+						url: '../index/index'
+					})
+				}
+			},
+			//点击遮罩关闭对话框
+			closeDelFriend() {
+				this.isShowDelFriend = false
 			}
 		}
 	}

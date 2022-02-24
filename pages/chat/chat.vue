@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick" @leftClick="leftClick" fixed
+		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick(fid)" @leftClick="leftClick" fixed
 			:placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
 		<view class="message-box" @touchstart="closeToolsBox">
 			<view v-for="(item,index) in sortMsgs">
@@ -10,7 +10,7 @@
 				<!-- 对方 -->
 				<view class="opposite" v-if="item.fromId != uid">
 					<view class="opposite-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJunp(fid)"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)"></u-avatar>
 					</view>
 					<view class="opposite-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="opposite-message-img" v-if="item.types == 1">
@@ -33,7 +33,7 @@
 				<!-- 自己 -->
 				<view class="me" v-if="item.fromId == uid">
 					<view class="me-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJunp(uid)"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)"></u-avatar>
 					</view>
 					<view class="me-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="me-message-img" v-if="item.types == 1">
@@ -167,7 +167,7 @@
 		},
 		methods: {
 			//跳转个人信息页
-			infoPageJunp(id) {
+			infoPageJump(id) {
 				uni.navigateTo({
 					url: '../information/information?id=' + id
 				})
@@ -187,8 +187,11 @@
 					url: '../index/index'
 				})
 			},
-			rightClick() {
-				uni.$u.toast('暂未开放')
+			//右上角 '···' 点击
+			rightClick(id) {
+				uni.navigateTo({
+					url: '../information/information?id=' + id
+				})
 			},
 			//格式化时间显示
 			changeTime(time) {

@@ -92,6 +92,7 @@
 			this.getFriend()
 			this.getAddRequestList()
 			this.clearUnreadMsg()
+			this.delFriend()
 			this.join()
 			this.socketTest()
 			this.listenMsg()
@@ -112,6 +113,18 @@
 						this.indexList.map(e => {
 							if (e.id == data.clearId) {
 								e.unReadNum = 0
+							}
+						})
+					}
+				})
+			},
+			//删除好友操作返回主页时，前端删除对应好友
+			delFriend() {
+				uni.$on('delId',delId => {
+					if (delId) {
+						this.indexList.map((e,i) => {
+							if (e.id == delId) {
+								this.indexList.splice(i,1)
 							}
 						})
 					}
@@ -208,6 +221,7 @@
 			listenMsg() {
 				this.socket.on('msg', (msgObj, fromId) => {
 					this.indexList.map((e, i) => {
+						//前端更新 对方发来的消息
 						if (e.id == fromId) {
 							switch (msgObj[0].types) {
 								case 0: //文字
@@ -224,6 +238,24 @@
 									break;
 							}
 							e.unReadNum++
+							e.lastTime = new Date().getTime()
+							this.indexList.splice(i, 1)
+							this.indexList.unshift(e)
+						} else if (this.uid == fromId) { //前端更新 自己主页的消息
+							switch (msgObj[0].types) {
+								case 0: //文字
+									e.message = msgObj[0].message
+									break;
+								case 1: //图片
+									e.message = '[图片]'
+									break;
+								case 2: //音频
+									e.message = '[语音]'
+									break;
+								case 3: //定位
+									e.message = '[位置]'
+									break;
+							}
 							e.lastTime = new Date().getTime()
 							this.indexList.splice(i, 1)
 							this.indexList.unshift(e)
