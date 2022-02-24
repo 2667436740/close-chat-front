@@ -41,7 +41,7 @@
 					{{regTime}}
 				</view>
 			</view>
-			<button type="default" class="btn">修改密码</button>
+			<button type="default" class="btn" @click="changePwd_Click">修改密码</button>
 
 			<u-popup :show="isShowEditIntro" mode="center" :closeable="true" @close="closePopup">
 				<view class="pop">
@@ -52,6 +52,14 @@
 			</u-popup>
 
 			<u-toast ref="uToast"></u-toast>
+			<u-modal :show="isShowChangePwd" title="修改密码" :showCancelButton="true" @cancel="cancelChangePwd"
+				@confirm="changePwd" confirmColor="#23c248">
+				<view class="slot-content">
+					<u--input placeholder="请输入原密码" border="surround" v-model="oldPwd" :password="true"></u--input>
+					<u--input placeholder="请输入新密码" border="surround" v-model="newPwd" :password="true"></u--input>
+					<u--text type="error" text=" tip: 新密码应不少于6位" v-if="newPwd.length<6"></u--text>
+				</view>
+			</u-modal>
 		</view>
 	</view>
 </template>
@@ -77,6 +85,9 @@
 				email: '',
 				regTime: '',
 				isChangeAvatar: false, //是否修改了头像
+				oldPwd: '',
+				newPwd: '',
+				isShowChangePwd: false
 			};
 		},
 		mixins: [getUserStorage],
@@ -196,12 +207,56 @@
 						this.isChangeAvatar = true
 					}
 				}
+			},
+			//修改密码按钮点击
+			changePwd_Click() {
+				this.isShowChangePwd = true
+			},
+			//取消修改密码
+			cancelChangePwd() {
+				this.isShowChangePwd = false
+			},
+			//确认修改密码
+			async changePwd() {
+				if (this.newPwd.length >= 6) {
+					const params = {
+						id: this.uid,
+						data: this.newPwd,
+						type: 'password',
+						password: this.oldPwd,
+						token: this.token
+					}
+					const res = await postUserUpdate(params)
+					if (res.data.status == 200) {
+						this.isShowChangePwd = false
+						this.$refs.uToast.show({
+							type: 'success',
+							message: "密码修改成功,请重新登录"
+						})
+						uni.clearStorageSync()
+						setTimeout(()=>{
+							uni.navigateTo({
+								url: '../login/login'
+							})
+						},1000)
+					} else {
+						this.isShowChangePwd = false
+						this.$refs.uToast.show({
+							type: 'error',
+							message: "密码修改出错"
+						})
+					}
+				}
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
+	.toast {
+		z-index: 9999;
+	}
+
 	.cells {
 		margin-top: 20px;
 		border-top: 1px solid $uni-color-border;

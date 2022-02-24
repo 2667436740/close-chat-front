@@ -4,8 +4,10 @@ import Vue from 'vue'
 import io from '@hyoga/uni-socket.io'
 
 Vue.config.productionTip = false
+
 import uView from '@/uni_modules/uview-ui'
 Vue.use(uView)
+
 App.mpType = 'app'
 const app = new Vue({
 	...App

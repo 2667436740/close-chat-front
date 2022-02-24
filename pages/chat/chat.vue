@@ -2,7 +2,7 @@
 	<view>
 		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick" @leftClick="leftClick" fixed
 			:placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
-		<view class="message-box" :style="{paddingBottom: dynamicBoxHeight + 'px'}" @touchstart="closeToolsBox">
+		<view class="message-box" @touchstart="closeToolsBox">
 			<view v-for="(item,index) in sortMsgs">
 				<view class="time" v-if="hideSpaceTime(index)">
 					{{changeTime(item.time)}}
@@ -61,7 +61,7 @@
 				<view class="input-msg">
 					<!-- <u--input v-model="message" shape='circle' size="small" class="input" :autosize="true" type="textarea"></u--input> -->
 					<u--textarea v-model="message" autoHeight class="input" :fixed='true' maxlength='-1'
-						:adjustPosition='true' @focus="keyboardHeightChange"></u--textarea>
+						:adjustPosition='true'></u--textarea>
 				</view>
 				<view class="send-btns">
 					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)">发送</u-button>
@@ -127,8 +127,6 @@
 						title: '位置'
 					}
 				],
-				dynamicBoxHeight: 44,
-				keyboardHeight: 0,
 				isShowGrid: false,
 				isShowPhiz: false,
 				fid: '',
@@ -155,14 +153,10 @@
 			for (let item of this.sortMsgs) {
 				if (item.types == 1) this.preImgs.push(`${this.BASE_URL}/chat/${item.message}`)
 			}
-		},
-		onReady() {
-			//获取元素高度等
-			this.$nextTick(function() {
-				console.log(this.$refs.dynamicbox.$el.offsetHeight)
-			})
 			//进入页面时，直接页面底部
-			this.pageScrollToBottom(0)
+			setTimeout(()=>{
+				this.pageScrollToBottom(0)
+			},500)
 		},
 		//下拉加载数据
 		onPullDownRefresh() {
@@ -171,18 +165,6 @@
 				uni.stopPullDownRefresh()
 			},1000)
 		},
-		// watch: {
-		// 	message(newM, oldM) {
-		// 		// console.log(newM,oldM)
-		// 		this.$nextTick(function() {
-		// 			this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
-		// 		})
-		// 	},
-		// 	dynamicBoxHeight(newM, oldM) {
-		// 		console.log(newM, oldM)
-		// 		this.pageScrollToBottom(200)
-		// 	}
-		// },
 		methods: {
 			//跳转个人信息页
 			infoPageJunp(id) {
@@ -193,8 +175,8 @@
 			//返回主页
 			async leftClick() {
 				const params = {
-					uid: this.uid,
-					fid: this.fid,
+					uid: this.fid,
+					fid: this.uid,
 					token: this.token
 				}
 				const res = await postClearUnreadMsg(params)
@@ -241,19 +223,15 @@
 					this.$nextTick(function() {
 						this.isShowGrid = true
 						this.isShowPhiz = false
-						// this.dynamicBoxHeight += this.$refs.toolsbox.$el.offsetHeight
 					})
 				} else {
-					// this.$nextTick(function() {
-					// 	this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
-					// })
 				}
 			},
 			//滚动到页面底部
 			pageScrollToBottom(delay) {
 				this.$nextTick(function() {
 					uni.pageScrollTo({
-						scrollTop: 99999,
+						scrollTop: 99999999999,
 						duration: delay //滚动延时
 					});
 				})
@@ -261,10 +239,6 @@
 			closeToolsBox() {
 				if (this.isShowToolsBox == true) {
 					this.isShowToolsBox = false
-					// this.$nextTick(function() {
-					// 	this.dynamicBoxHeight = this.$refs.dynamicbox.$el.offsetHeight
-					// })
-					// this.pageScrollToBottom(200)
 				}
 			},
 			//本地消息列添加消息
@@ -326,8 +300,6 @@
 					setTimeout(() => {
 						this.isShowPhiz = false
 						this.isShowToolsBox = false
-						// this.dynamicBoxHeight = 44
-						// console.log('sendok...' + this.dynamicBoxHeight)
 					}, 100)
 					this.pageScrollToBottom(200)
 				});
@@ -352,10 +324,6 @@
 						console.log(message)
 						break;
 				}
-			},
-			keyboardHeightChange(e) {
-				// this.dynamicBoxHeight += e.detail.height
-				console.log(e)
 			},
 			//工具栏某功能点击
 			toolClick(index) {
@@ -458,25 +426,6 @@
 				})
 			}
 		},
-
-		// //监听页面显示
-		// onShow() {
-		// 	uni.onKeyboardHeightChange(res => {
-		// 		//获取键盘高度
-		// 		//键盘高度改变时调用
-		// 		if (this.data.first) { //弹起时第一次的数据是错误的，所以不需要修改keyBoardHeight
-		// 			this.setData({
-		// 				first: false //将first改为false表示不是第一次调用
-		// 			})
-		// 		} else {
-		// 			console.log(res.height)
-		// 			this.keyboardHeight = res.height;
-		// 			this.dynamicBoxHeight += this.keyboardHeight
-		// 			this.pageScrollToBottom(200)
-		// 		}
-
-		// 	})
-		// }
 	}
 </script>
 

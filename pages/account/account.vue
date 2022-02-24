@@ -8,16 +8,14 @@
 				<u-avatar :src="imgUrl" size="90"></u-avatar>
 			</view>
 			<view class="intro">
-				<u--text :lines="3"
-					:text="showExplain">
+				<u--text :lines="3" :text="showExplain">
 				</u--text>
 			</view>
 		</view>
 		<view class="cells-box">
 			<view class="cell">
-				<navigator url="../information/information">
-					<u-cell title="个人信息" icon="file-text" :isLink="true" :border="false"></u-cell>
-				</navigator>
+				<u-cell title="个人信息" icon="file-text" :isLink="true" :border="false" @click="infoPageJunp(uid)">
+				</u-cell>
 			</view>
 			<view class="cell">
 				<u-cell title="收藏" icon="bookmark" :isLink="true" :border="false" @click="favClick"></u-cell>
@@ -35,15 +33,17 @@
 				<button type="default" @click="cancelQuit">取消</button>
 			</view>
 		</u-popup>
-		
+
 		<u-toast ref="uToast"></u-toast>
 	</view>
 </template>
 
 <script>
 	import getUserStorage from '../../mixin/getUserStorage.js'
-	import {postUserDetail} from '../../config/api.js'
-	
+	import {
+		postUserDetail,
+	} from '../../config/api.js'
+
 	export default {
 		data() {
 			return {
@@ -60,7 +60,7 @@
 		},
 		computed: {
 			showExplain() {
-				return this.explain == '' ? '快去添加一条个签吧~': this.explain
+				return this.explain == '' ? '快去添加一条个签吧~' : this.explain
 			}
 		},
 		methods: {
@@ -84,14 +84,22 @@
 			showQuitPopup() {
 				this.isShowQuit = true
 			},
+			//退出登录账户
 			quitAcoount() {
 				uni.redirectTo({
 					url: '../login/login'
 				})
 				uni.clearStorage()
 			},
+			//取消退出
 			cancelQuit() {
 				this.isShowQuit = false
+			},
+			//个人信息页跳转
+			infoPageJunp(id) {
+				uni.navigateTo({
+					url: '../information/information?id=' + id
+				})
 			},
 			favClick() {
 				this.$refs.uToast.show({
