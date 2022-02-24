@@ -241,7 +241,9 @@
 							e.lastTime = new Date().getTime()
 							this.indexList.splice(i, 1)
 							this.indexList.unshift(e)
-						} else if (this.uid == fromId) { //前端更新 自己主页的消息
+						} 
+						//前端更新 自己主页的消息
+						if (this.uid == fromId) { 
 							switch (msgObj[0].types) {
 								case 0: //文字
 									e.message = msgObj[0].message

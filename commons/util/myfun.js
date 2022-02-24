@@ -293,10 +293,12 @@ export default {
 
 	// 仿微信时间显示格式转换 @time 时间戳毫秒
 	weChatTimeFormat(time) {
-		const today = new Date().getTime()
+		// time 为传入某时间点的时间戳
+		const today = new Date().getTime() //现在时间戳
+		const initTime = new Date().setHours(0, 0, 0, 0) //当日凌晨时间戳
 		// 当前时间减去获取到的时间
 		const sub = today - time
-		const day = 1000 * 60 * 60 * 24
+		const day = 1000 * 60 * 60 * 24 //一天的时间戳量
 		const timeDate = new Date(time)
 		const currentYear = new Date().getFullYear()
 		const getYear = new Date(time).getFullYear()
@@ -306,9 +308,13 @@ export default {
 			return `${formatTime2("yyyy/MM/dd", timeDate)} ${todayTimeFormat(timeDate.getHours())}${formatTime2("hh:mm", timeDate)}`
 		} else if (showWeekDay) {
 			return `${weekFormat(timeDate.getDay())} ${HHmm}`
-		} else if (sub > day && sub < day * 2) {
+			// } else if (sub > day && sub < day * 2) {
+			// 	return `昨天 ${HHmm}`
+		} else if (time < initTime && time > initTime - day) {
 			return `昨天 ${HHmm}`
-		} else if (sub <= day) {
+			// } else if (sub <= day) {
+			// 	return HHmm
+		} else if (time > initTime) {
 			return HHmm
 		} else {
 			return `${formatTime2("MM/dd", timeDate)} ${todayTimeFormat(timeDate.getHours())}${formatTime2("hh:mm", timeDate)}`
