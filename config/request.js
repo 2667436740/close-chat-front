@@ -6,7 +6,8 @@ module.exports = (vm) => {
 		config.baseURL = '/api'; /* H5 */
 		// #endif
 		// #ifdef APP-PLUS ||MP
-		config.baseURL = 'http://192.168.8.84:3000'; /* 安卓 */
+		// config.baseURL = 'http://192.168.1.106:3000'; /* 安卓 */
+		config.baseURL = 'http://124.221.144.134:3000'; /* 安卓 */
 		// #endif
 
 		return config
