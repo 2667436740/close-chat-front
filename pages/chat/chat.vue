@@ -1,7 +1,7 @@
 <template>
 	<view>
-		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick(fid)" @leftClick="leftClick" fixed
-			:placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
+		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick(fid)" @leftClick="leftClick"
+			fixed :placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
 		<view class="message-box" @touchstart="closeToolsBox">
 			<view v-for="(item,index) in sortMsgs">
 				<view class="time" v-if="hideSpaceTime(index)">
@@ -10,7 +10,8 @@
 				<!-- 对方 -->
 				<view class="opposite" v-if="item.fromId != uid">
 					<view class="opposite-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)">
+						</u-avatar>
 					</view>
 					<view class="opposite-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="opposite-message-img" v-if="item.types == 1">
@@ -33,7 +34,8 @@
 				<!-- 自己 -->
 				<view class="me" v-if="item.fromId == uid">
 					<view class="me-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)"></u-avatar>
+						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)">
+						</u-avatar>
 					</view>
 					<view class="me-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="me-message-img" v-if="item.types == 1">
@@ -132,8 +134,8 @@
 				fid: '',
 				fimgUrl: '',
 				fusername: '',
-				nowPage: 0, 
-				pageSize: 20, 
+				nowPage: 0,
+				pageSize: 20,
 			};
 		},
 		components: {
@@ -148,22 +150,17 @@
 			this.listenMsg()
 		},
 		onShow() {
-			//准备预览图片列表
-			this.preImgs = []
-			for (let item of this.sortMsgs) {
-				if (item.types == 1) this.preImgs.push(`${this.BASE_URL}/chat/${item.message}`)
-			}
 			//进入页面时，直接页面底部
-			setTimeout(()=>{
+			setTimeout(() => {
 				this.pageScrollToBottom(0)
-			},500)
+			}, 500)
 		},
 		//下拉加载数据
 		onPullDownRefresh() {
 			this.getChatMsg(this.nowPage, this.pageSize)
-			setTimeout(()=>{
+			setTimeout(() => {
 				uni.stopPullDownRefresh()
-			},1000)
+			}, 1000)
 		},
 		methods: {
 			//跳转个人信息页
@@ -181,7 +178,9 @@
 				}
 				const res = await postClearUnreadMsg(params)
 				if (res.data.status == 200) {
-					uni.$emit('clearUnreadNum',{clearId: this.fid})
+					uni.$emit('clearUnreadNum', {
+						clearId: this.fid
+					})
 				}
 				uni.switchTab({
 					url: '../index/index'
@@ -227,8 +226,7 @@
 						this.isShowGrid = true
 						this.isShowPhiz = false
 					})
-				} else {
-				}
+				} else {}
 			},
 			//滚动到页面底部
 			pageScrollToBottom(delay) {
@@ -290,7 +288,7 @@
 						this.socket.emit('msg', msgObj, this.uid, this.fid)
 					}
 				}
-				if(types == 3) { //定位
+				if (types == 3) { //定位
 					this.addMsg(JSON.stringify(message), types)
 					const msgObj = [{
 						message: JSON.stringify(message),
@@ -407,7 +405,12 @@
 					return a.time - b.time
 				})
 				this.sortMsgs = [...sortMsgs, ...this.sortMsgs]
-				this.nowPage ++
+				//准备预览图片列表
+				this.preImgs = []
+				for (let item of this.sortMsgs) {
+					if (item.types == 1) this.preImgs.push(`${this.BASE_URL}/chat/${item.message}`)
+				}
+				this.nowPage++
 			},
 			//监听接收socket传来的消息
 			listenMsg() {
@@ -436,7 +439,7 @@
 	.navbar {
 		z-index: 999;
 	}
-	
+
 	.map-name {
 		font-size: 15px;
 		font-weight: 600;
