@@ -2,6 +2,10 @@ import App from './App'
 import Vue from 'vue'
 //引入weapp.socket.io
 import io from '@hyoga/uni-socket.io'
+//引入vuex
+import store from './store'
+//把vuex定义成全局组件
+Vue.prototype.$store = store
 
 Vue.config.productionTip = false
 
@@ -10,7 +14,8 @@ Vue.use(uView)
 
 App.mpType = 'app'
 const app = new Vue({
-	...App
+	...App,
+	store
 })
 
 // 引入请求封装，将app参数传递到配置中

@@ -25,140 +25,94 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* 间隔、下划线 颜色 */
-view, scroll-view, swiper-item {
-  display: -webkit-box;
-  display: -webkit-flex;
+view.data-v-1c4434ae, scroll-view.data-v-1c4434ae, swiper-item.data-v-1c4434ae {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-          flex-grow: 0;
-  -webkit-flex-basis: auto;
-          flex-basis: auto;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-          align-items: stretch;
-  -webkit-align-content: flex-start;
-          align-content: flex-start;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
 }
-.u-cell__body {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-cell__body.data-v-1c4434ae {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   box-sizing: border-box;
   padding: 10px 15px;
   font-size: 15px;
   color: #303133;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
 }
-.u-cell__body__content {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-cell__body__content.data-v-1c4434ae {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
 }
-.u-cell__body--large {
+.u-cell__body--large.data-v-1c4434ae {
   padding-top: 13px;
   padding-bottom: 13px;
 }
-.u-cell__left-icon-wrap, .u-cell__right-icon-wrap {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-cell__left-icon-wrap.data-v-1c4434ae, .u-cell__right-icon-wrap.data-v-1c4434ae {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   font-size: 16px;
 }
-.u-cell__left-icon-wrap {
+.u-cell__left-icon-wrap.data-v-1c4434ae {
   margin-right: 4px;
 }
-.u-cell__right-icon-wrap {
+.u-cell__right-icon-wrap.data-v-1c4434ae {
   margin-left: 4px;
-  -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.u-cell__right-icon-wrap--up {
+.u-cell__right-icon-wrap--up.data-v-1c4434ae {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-.u-cell__right-icon-wrap--down {
+.u-cell__right-icon-wrap--down.data-v-1c4434ae {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.u-cell__title {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+.u-cell__title.data-v-1c4434ae {
+  flex: 1;
 }
-.u-cell__title-text {
+.u-cell__title-text.data-v-1c4434ae {
   font-size: 15px;
   line-height: 22px;
   color: #303133;
 }
-.u-cell__title-text--large {
+.u-cell__title-text--large.data-v-1c4434ae {
   font-size: 16px;
 }
-.u-cell__label {
+.u-cell__label.data-v-1c4434ae {
   margin-top: 5px;
   font-size: 12px;
   color: #909193;
   line-height: 18px;
 }
-.u-cell__label--large {
+.u-cell__label--large.data-v-1c4434ae {
   font-size: 14px;
 }
-.u-cell__value {
+.u-cell__value.data-v-1c4434ae {
   text-align: right;
   font-size: 14px;
   line-height: 24px;
   color: #606266;
 }
-.u-cell__value--large {
+.u-cell__value--large.data-v-1c4434ae {
   font-size: 15px;
 }
-.u-cell--clickable {
+.u-cell--clickable.data-v-1c4434ae {
   background-color: #f3f4f6;
 }
-.u-cell--disabled {
+.u-cell--disabled.data-v-1c4434ae {
   color: #c8c9cc;
   cursor: not-allowed;
 }
-.u-cell--center {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+.u-cell--center.data-v-1c4434ae {
+  align-items: center;
 }
 

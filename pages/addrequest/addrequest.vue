@@ -13,7 +13,7 @@
 							<u-button type="success" @click="agree(item.id)">同意</u-button>
 						</view>
 						<view class="avatar">
-							<u-avatar shape="circle" size="70" :src="`${BASE_URL}/avatar/${item.imgUrl}`"></u-avatar>
+							<u-avatar shape="circle" size="70" :src="`${baseUrl}/avatar/${item.imgUrl}`"></u-avatar>
 						</view>
 						<view class="name">
 							{{item.username}}

@@ -25,64 +25,41 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* 间隔、下划线 颜色 */
-view, scroll-view, swiper-item {
-  display: -webkit-box;
-  display: -webkit-flex;
+view.data-v-7e596c49, scroll-view.data-v-7e596c49, swiper-item.data-v-7e596c49 {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-          flex-grow: 0;
-  -webkit-flex-basis: auto;
-          flex-basis: auto;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-          align-items: stretch;
-  -webkit-align-content: flex-start;
-          align-content: flex-start;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
 }
-.u-index-list__letter {
+.u-index-list__letter.data-v-7e596c49 {
   position: fixed;
   right: 0;
   text-align: center;
   z-index: 3;
   padding: 0 6px;
 }
-.u-index-list__letter__item {
+.u-index-list__letter__item.data-v-7e596c49 {
   width: 16px;
   height: 16px;
   border-radius: 100px;
   margin: 1px 0;
-
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-.u-index-list__letter__item--active {
+.u-index-list__letter__item--active.data-v-7e596c49 {
   background-color: #3c9cff;
 }
-.u-index-list__letter__item__index {
+.u-index-list__letter__item__index.data-v-7e596c49 {
   font-size: 12px;
   text-align: center;
   line-height: 12px;
 }
-.u-index-list__indicator {
+.u-index-list__indicator.data-v-7e596c49 {
   width: 50px;
   height: 50px;
   border-radius: 100px 100px 0 100px;
@@ -91,23 +68,12 @@ view, scroll-view, swiper-item {
   background-color: #c9c9c9;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.u-index-list__indicator__text {
+.u-index-list__indicator__text.data-v-7e596c49 {
   font-size: 28px;
   line-height: 28px;
   font-weight: bold;

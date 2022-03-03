@@ -11,6 +11,7 @@
 		</u-navbar>
 
 		<u-list>
+			<u-notice-bar :text="noticeMsg" mode="closable"></u-notice-bar>
 			<navigator url="../addrequest/addrequest">
 				<u-list-item v-if="newRequestNum != 0">
 					<view class="item-style">
@@ -31,10 +32,11 @@
 					</view>
 				</u-list-item>
 			</navigator>
+			
 			<u-list-item v-for="(item, index) in indexList" :key="item.id">
 				<view class="item-style" @click="chatPageJump(item)">
 					<view class="avatar">
-						<u-avatar shape="square" size="40" :src="`${BASE_URL}/avatar/${item.imgUrl}`"
+						<u-avatar shape="square" size="40" :src="`${baseUrl}/avatar/${item.imgUrl}`"
 							customStyle="margin: 0 10px 0 0"></u-avatar>
 						<u-badge type="error" max="99" :value="item.unReadNum" class="badge"></u-badge>
 					</view>
@@ -84,7 +86,8 @@
 				imgUrl: '',
 				token: '',
 				indexList: [],
-				newRequestNum: 0
+				newRequestNum: 0,
+				noticeMsg: '本项目试测验中，（温馨提示）聊天内容或许有可能在服务器到期后清空，不要交流重要消息喔~',
 			}
 		},
 		mixins: [getUserStorage],
@@ -120,11 +123,11 @@
 			},
 			//删除好友操作返回主页时，前端删除对应好友
 			delFriend() {
-				uni.$on('delId',delId => {
+				uni.$on('delId', delId => {
 					if (delId) {
-						this.indexList.map((e,i) => {
+						this.indexList.map((e, i) => {
 							if (e.id == delId) {
-								this.indexList.splice(i,1)
+								this.indexList.splice(i, 1)
 							}
 						})
 					}
@@ -241,9 +244,9 @@
 							e.lastTime = new Date().getTime()
 							this.indexList.splice(i, 1)
 							this.indexList.unshift(e)
-						} 
+						}
 						//前端更新 自己主页的消息
-						if (this.uid == fromId) { 
+						if (this.uid == fromId) {
 							switch (msgObj[0].types) {
 								case 0: //文字
 									e.message = msgObj[0].message

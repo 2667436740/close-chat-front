@@ -1,5 +1,13 @@
 {
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-avatar": "/uni_modules/uview-ui/components/u-avatar/u-avatar",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-cell": "/uni_modules/uview-ui/components/u-cell/u-cell",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup",
+    "u-gap": "/uni_modules/uview-ui/components/u-gap/u-gap",
+    "u-toast": "/uni_modules/uview-ui/components/u-toast/u-toast"
+  }
 }

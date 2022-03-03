@@ -3,7 +3,14 @@
     "pages/index/index",
     "pages/login/login",
     "pages/friends/friends",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/reg/reg",
+    "pages/search/search",
+    "pages/userAdd/userAdd",
+    "pages/information/information",
+    "pages/addrequest/addrequest",
+    "pages/chat/chat",
+    "pages/test/test"
   ],
   "subPackages": [],
   "window": {

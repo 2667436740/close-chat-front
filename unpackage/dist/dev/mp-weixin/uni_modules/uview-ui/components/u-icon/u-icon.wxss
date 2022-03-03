@@ -25,111 +25,66 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* 间隔、下划线 颜色 */
-view, scroll-view, swiper-item {
-  display: -webkit-box;
-  display: -webkit-flex;
+view.data-v-2ee87dc9, scroll-view.data-v-2ee87dc9, swiper-item.data-v-2ee87dc9 {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-          flex-grow: 0;
-  -webkit-flex-basis: auto;
-          flex-basis: auto;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-          align-items: stretch;
-  -webkit-align-content: flex-start;
-          align-content: flex-start;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
 }
 @font-face {
   font-family: 'uicon-iconfont';
   src: url("https://at.alicdn.com/t/font_2225171_8kdcwk4po24.ttf") format("truetype");
 }
-.u-icon {
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-icon.data-v-2ee87dc9 {
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
 }
-.u-icon--left {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+.u-icon--left.data-v-2ee87dc9 {
+  flex-direction: row-reverse;
+  align-items: center;
 }
-.u-icon--right {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+.u-icon--right.data-v-2ee87dc9 {
+  flex-direction: row;
+  align-items: center;
 }
-.u-icon--top {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+.u-icon--top.data-v-2ee87dc9 {
+  flex-direction: column-reverse;
+  justify-content: center;
 }
-.u-icon--bottom {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+.u-icon--bottom.data-v-2ee87dc9 {
+  flex-direction: column;
+  justify-content: center;
 }
-.u-icon__icon {
+.u-icon__icon.data-v-2ee87dc9 {
   font-family: uicon-iconfont;
   position: relative;
-
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
-.u-icon__icon--primary {
+.u-icon__icon--primary.data-v-2ee87dc9 {
   color: #3c9cff;
 }
-.u-icon__icon--success {
+.u-icon__icon--success.data-v-2ee87dc9 {
   color: #5ac725;
 }
-.u-icon__icon--error {
+.u-icon__icon--error.data-v-2ee87dc9 {
   color: #f56c6c;
 }
-.u-icon__icon--warning {
+.u-icon__icon--warning.data-v-2ee87dc9 {
   color: #f9ae3d;
 }
-.u-icon__icon--info {
+.u-icon__icon--info.data-v-2ee87dc9 {
   color: #909399;
 }
-.u-icon__img {
+.u-icon__img.data-v-2ee87dc9 {
   height: auto;
   will-change: transform;
 }
-.u-icon__label {
+.u-icon__label.data-v-2ee87dc9 {
   line-height: 1;
 }
 

@@ -24,7 +24,7 @@
 				<!-- 每块内容 -->
 				<u-cell v-for="(item1, index1) in itemArr" :key="item1.id" :title="item1.username"
 					:border="index1 !== item.length - 1" v-if="item1.char == item" @click="chatPageJump(item1)">
-					<u-avatar slot="icon" shape="square" size="35" :src="`${BASE_URL}/avatar/${item1.imgUrl}`"
+					<u-avatar slot="icon" shape="square" size="35" :src="`${baseUrl}/avatar/${item1.imgUrl}`"
 						customStyle="margin: -3px 5px -3px 0"></u-avatar>
 				</u-cell>
 			</u-index-item>

@@ -20,13 +20,13 @@
 			<u-list>
 				<u-list-item v-for="(item, index) in showUserArr" :key="item._id">
 					<u-cell>
-						<u-avatar slot="icon" shape="square" size="40" :src="`${BASE_URL}/avatar/${item.imgUrl}`"
+						<u-avatar slot="icon" shape="square" size="40" :src="`${baseUrl}/avatar/${item.imgUrl}`"
 							customStyle="margin: -3px 5px -3px 0"></u-avatar>
 						<view class="title" slot="title">
 							<view class="item-title" v-html="searchKeyword(item.username,searchWord)"></view>
 							<view class="" v-html="searchKeyword(item.email,searchWord)"></view>
 						</view>
-						<button slot="value" size="mini" :class="dynamicColor(item)"
+						<button slot="value" size="mini" :class="[{'dark': item.isFriend == true}]"
 							@click="userAddPageJump(item)">{{isF(item)}}</button>
 					</u-cell>
 				</u-list-item>
@@ -60,9 +60,9 @@
 			isF(item) {
 				return item.isFriend == true ? '发消息' : '加好友'
 			},
-			dynamicColor(item) {
-				return item.isFriend == true ? 'dark' : 'light'
-			},
+			// dynamicColor(item) {
+			// 	return item.isFriend == true ? 'dark' : 'light'
+			// },
 			//关键字高亮
 			searchKeyword(val, keyword) {
 				val = val + '';

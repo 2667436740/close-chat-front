@@ -5,10 +5,12 @@ export default {
 			imgUrl: "",
 			token: "",
 			username: "",
+			baseUrl: ''
 		}
 	},
 	onLoad() {
 		this.getUserStorage()
+		this.baseUrl = this.$store.state.BASE_URL //从vuex里取 BASE_URL （解决小程序为undefined的bug）
 	},
 	onShow() {
 		// this.getUserStorage()

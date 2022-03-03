@@ -25,97 +25,60 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* 间隔、下划线 颜色 */
-view, scroll-view, swiper-item {
-  display: -webkit-box;
-  display: -webkit-flex;
+view.data-v-50004b49, scroll-view.data-v-50004b49, swiper-item.data-v-50004b49 {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-          flex-grow: 0;
-  -webkit-flex-basis: auto;
-          flex-basis: auto;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-          align-items: stretch;
-  -webkit-align-content: flex-start;
-          align-content: flex-start;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
 }
-.u-text {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-text.data-v-50004b49 {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
 }
-.u-text__price {
+.u-text__price.data-v-50004b49 {
   font-size: 14px;
   color: #606266;
 }
-.u-text__value {
+.u-text__value.data-v-50004b49 {
   font-size: 14px;
-
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   color: #606266;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+  flex-wrap: wrap;
   text-overflow: ellipsis;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
 }
-.u-text__value--primary {
+.u-text__value--primary.data-v-50004b49 {
   color: #3c9cff;
 }
-.u-text__value--warning {
+.u-text__value--warning.data-v-50004b49 {
   color: #f9ae3d;
 }
-.u-text__value--success {
+.u-text__value--success.data-v-50004b49 {
   color: #5ac725;
 }
-.u-text__value--info {
+.u-text__value--info.data-v-50004b49 {
   color: #909399;
 }
-.u-text__value--error {
+.u-text__value--error.data-v-50004b49 {
   color: #f56c6c;
 }
-.u-text__value--main {
+.u-text__value--main.data-v-50004b49 {
   color: #303133;
 }
-.u-text__value--content {
+.u-text__value--content.data-v-50004b49 {
   color: #606266;
 }
-.u-text__value--tips {
+.u-text__value--tips.data-v-50004b49 {
   color: #909193;
 }
-.u-text__value--light {
+.u-text__value--light.data-v-50004b49 {
   color: #c0c4cc;
 }
 

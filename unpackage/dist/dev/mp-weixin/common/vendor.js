@@ -8,10 +8,39 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.createPlugin = createPlugin;exports.createSubpackageApp = createSubpackageApp;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+/* WEBPACK VAR INJECTION */(function(global) {Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.createPlugin = createPlugin;exports.createSubpackageApp = createSubpackageApp;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));
+var _uniI18n = __webpack_require__(/*! @dcloudio/uni-i18n */ 4);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+
+var realAtob;
+
+var b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+var b64re = /^(?:[A-Za-z\d+/]{4})*?(?:[A-Za-z\d+/]{2}(?:==)?|[A-Za-z\d+/]{3}=?)?$/;
+
+if (typeof atob !== 'function') {
+  realAtob = function realAtob(str) {
+    str = String(str).replace(/[\t\n\f\r ]+/g, '');
+    if (!b64re.test(str)) {throw new Error("Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.");}
+
+    // Adding the padding if missing, for semplicity
+    str += '=='.slice(2 - (str.length & 3));
+    var bitmap;var result = '';var r1;var r2;var i = 0;
+    for (; i < str.length;) {
+      bitmap = b64.indexOf(str.charAt(i++)) << 18 | b64.indexOf(str.charAt(i++)) << 12 |
+      (r1 = b64.indexOf(str.charAt(i++))) << 6 | (r2 = b64.indexOf(str.charAt(i++)));
+
+      result += r1 === 64 ? String.fromCharCode(bitmap >> 16 & 255) :
+      r2 === 64 ? String.fromCharCode(bitmap >> 16 & 255, bitmap >> 8 & 255) :
+      String.fromCharCode(bitmap >> 16 & 255, bitmap >> 8 & 255, bitmap & 255);
+    }
+    return result;
+  };
+} else {
+  // 注意atob只能在全局对象上调用，例如：`const Base64 = {atob};Base64.atob('xxxx')`是错误的用法
+  realAtob = atob;
+}
 
 function b64DecodeUnicode(str) {
-  return decodeURIComponent(atob(str).split('').map(function (c) {
+  return decodeURIComponent(realAtob(str).split('').map(function (c) {
     return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
   }).join(''));
 }
@@ -295,7 +324,7 @@ var promiseInterceptor = {
 
 
 var SYNC_API_RE =
-/^\$|Window$|WindowStyle$|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64/;
+/^\$|Window$|WindowStyle$|sendHostEvent|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64|getLocale|setLocale/;
 
 var CONTEXT_API_RE = /^create|Manager$/;
 
@@ -408,6 +437,44 @@ function upx2px(number, newDeviceWidth) {
   return number < 0 ? -result : result;
 }
 
+function getLocale() {
+  // 优先使用 $locale
+  var app = getApp({
+    allowDefault: true });
+
+  if (app && app.$vm) {
+    return app.$vm.$locale;
+  }
+  return wx.getSystemInfoSync().language || 'zh-Hans';
+}
+
+function setLocale(locale) {
+  var app = getApp();
+  if (!app) {
+    return false;
+  }
+  var oldLocale = app.$vm.$locale;
+  if (oldLocale !== locale) {
+    app.$vm.$locale = locale;
+    onLocaleChangeCallbacks.forEach(function (fn) {return fn({
+        locale: locale });});
+
+    return true;
+  }
+  return false;
+}
+
+var onLocaleChangeCallbacks = [];
+function onLocaleChange(fn) {
+  if (onLocaleChangeCallbacks.indexOf(fn) === -1) {
+    onLocaleChangeCallbacks.push(fn);
+  }
+}
+
+if (typeof global !== 'undefined') {
+  global.getLocale = getLocale;
+}
+
 var interceptors = {
   promiseInterceptor: promiseInterceptor };
 
@@ -415,6 +482,9 @@ var interceptors = {
 var baseApi = /*#__PURE__*/Object.freeze({
   __proto__: null,
   upx2px: upx2px,
+  getLocale: getLocale,
+  setLocale: setLocale,
+  onLocaleChange: onLocaleChange,
   addInterceptor: addInterceptor,
   removeInterceptor: removeInterceptor,
   interceptors: interceptors });
@@ -734,18 +804,19 @@ var customize = cached(function (str) {
 });
 
 function initTriggerEvent(mpInstance) {
-  {
-    if (!wx.canIUse || !wx.canIUse('nextTick')) {
-      return;
-    }
-  }
   var oldTriggerEvent = mpInstance.triggerEvent;
-  mpInstance.triggerEvent = function (event) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
+  var newTriggerEvent = function newTriggerEvent(event) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
     return oldTriggerEvent.apply(mpInstance, [customize(event)].concat(args));
   };
+  try {
+    // 京东小程序 triggerEvent 为只读
+    mpInstance.triggerEvent = newTriggerEvent;
+  } catch (error) {
+    mpInstance._triggerEvent = newTriggerEvent;
+  }
 }
 
-function initHook(name, options) {
+function initHook(name, options, isComponent) {
   var oldHook = options[name];
   if (!oldHook) {
     options[name] = function () {
@@ -876,7 +947,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1315,6 +1386,89 @@ function handleEvent(event) {var _this = this;
   }
 }
 
+var messages = {};
+
+var locale;
+
+{
+  locale = wx.getSystemInfoSync().language;
+}
+
+function initI18nMessages() {
+  if (!isEnableLocale()) {
+    return;
+  }
+  var localeKeys = Object.keys(__uniConfig.locales);
+  if (localeKeys.length) {
+    localeKeys.forEach(function (locale) {
+      var curMessages = messages[locale];
+      var userMessages = __uniConfig.locales[locale];
+      if (curMessages) {
+        Object.assign(curMessages, userMessages);
+      } else {
+        messages[locale] = userMessages;
+      }
+    });
+  }
+}
+
+initI18nMessages();
+
+var i18n = (0, _uniI18n.initVueI18n)(
+locale,
+{});
+
+var t = i18n.t;
+var i18nMixin = i18n.mixin = {
+  beforeCreate: function beforeCreate() {var _this2 = this;
+    var unwatch = i18n.i18n.watchLocale(function () {
+      _this2.$forceUpdate();
+    });
+    this.$once('hook:beforeDestroy', function () {
+      unwatch();
+    });
+  },
+  methods: {
+    $$t: function $$t(key, values) {
+      return t(key, values);
+    } } };
+
+
+var setLocale$1 = i18n.setLocale;
+var getLocale$1 = i18n.getLocale;
+
+function initAppLocale(Vue, appVm, locale) {
+  var state = Vue.observable({
+    locale: locale || i18n.getLocale() });
+
+  var localeWatchers = [];
+  appVm.$watchLocale = function (fn) {
+    localeWatchers.push(fn);
+  };
+  Object.defineProperty(appVm, '$locale', {
+    get: function get() {
+      return state.locale;
+    },
+    set: function set(v) {
+      state.locale = v;
+      localeWatchers.forEach(function (watch) {return watch(v);});
+    } });
+
+}
+
+function isEnableLocale() {
+  return typeof __uniConfig !== 'undefined' && __uniConfig.locales && !!Object.keys(__uniConfig.locales).length;
+}
+
+// export function initI18n() {
+//   const localeKeys = Object.keys(__uniConfig.locales || {})
+//   if (localeKeys.length) {
+//     localeKeys.forEach((locale) =>
+//       i18n.add(locale, __uniConfig.locales[locale])
+//     )
+//   }
+// }
+
 var eventChannels = {};
 
 var eventChannelStack = [];
@@ -1362,7 +1516,7 @@ function initScopedSlotsParams() {
     var has = center[vueId];
     if (!has) {
       parents[vueId] = this;
-      this.$on('hook:destory', function () {
+      this.$on('hook:destroyed', function () {
         delete parents[vueId];
       });
     }
@@ -1376,7 +1530,7 @@ function initScopedSlotsParams() {
       return key ? object[key] : object;
     } else {
       parents[vueId] = this;
-      this.$on('hook:destory', function () {
+      this.$on('hook:destroyed', function () {
         delete parents[vueId];
       });
     }
@@ -1488,6 +1642,8 @@ function parseBaseApp(vm, _ref3)
       appOptions[name] = methods[name];
     });
   }
+
+  initAppLocale(_vue.default, vm, wx.getSystemInfoSync().language || 'zh-Hans');
 
   initHooks(appOptions, hooks);
 
@@ -1831,17 +1987,17 @@ function createPlugin(vm) {
   var appOptions = parseApp(vm);
   if (isFn(appOptions.onShow) && wx.onAppShow) {
     wx.onAppShow(function () {for (var _len7 = arguments.length, args = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {args[_key7] = arguments[_key7];}
-      appOptions.onShow.apply(vm, args);
+      vm.__call_hook('onShow', args);
     });
   }
   if (isFn(appOptions.onHide) && wx.onAppHide) {
     wx.onAppHide(function () {for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {args[_key8] = arguments[_key8];}
-      appOptions.onHide.apply(vm, args);
+      vm.__call_hook('onHide', args);
     });
   }
   if (isFn(appOptions.onLaunch)) {
     var args = wx.getLaunchOptionsSync && wx.getLaunchOptionsSync();
-    appOptions.onLaunch.call(vm, args);
+    vm.__call_hook('onLaunch', args);
   }
   return vm;
 }
@@ -1931,9 +2087,40 @@ wx.createPlugin = createPlugin;
 var uni$1 = uni;var _default =
 
 uni$1;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
 /* 2 */
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 3 */
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -6024,10 +6211,10 @@ function updateChildComponent (
     // keep a copy of raw propsData
     vm.$options.propsData = propsData;
   }
-  
+
   // fixed by xxxxxx update properties(mp runtime)
   vm._$updateProperties && vm._$updateProperties(vm);
-  
+
   // update listeners
   listeners = listeners || emptyObject;
   var oldListeners = vm.$options._parentListeners;
@@ -6558,7 +6745,7 @@ function initProps (vm, propsOptions) {
             }
             //fixed by xxxxxx __next_tick_pending,uni://form-field 时不告警
             if(
-                key === 'value' && 
+                key === 'value' &&
                 Array.isArray(vm.$options.behaviors) &&
                 vm.$options.behaviors.indexOf('uni://form-field') !== -1
               ){
@@ -6570,7 +6757,7 @@ function initProps (vm, propsOptions) {
             var $parent = vm.$parent;
             while($parent){
               if($parent.__next_tick_pending){
-                return  
+                return
               }
               $parent = $parent.$parent;
             }
@@ -6898,10 +7085,10 @@ function initMixin (Vue) {
     initEvents(vm);
     initRender(vm);
     callHook(vm, 'beforeCreate');
-    !vm._$fallback && initInjections(vm); // resolve injections before data/props  
+    !vm._$fallback && initInjections(vm); // resolve injections before data/props
     initState(vm);
     !vm._$fallback && initProvide(vm); // resolve provide after data/props
-    !vm._$fallback && callHook(vm, 'created');      
+    !vm._$fallback && callHook(vm, 'created');
 
     /* istanbul ignore if */
     if ( true && config.performance && mark) {
@@ -7460,7 +7647,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7481,14 +7668,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7574,7 +7761,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7627,7 +7814,7 @@ function mountComponent$1(
       }
     }
   }
-  
+
   !vm._$fallback && callHook(vm, 'beforeMount');
 
   var updateComponent = function () {
@@ -7760,7 +7947,7 @@ function internalMixin(Vue) {
 
   Vue.prototype.$emit = function(event) {
     if (this.$scope && event) {
-      this.$scope['triggerEvent'](event, {
+      (this.$scope['_triggerEvent'] || this.$scope['triggerEvent'])(event, {
         __args__: toArray(arguments, 1)
       });
     }
@@ -7826,14 +8013,16 @@ function internalMixin(Vue) {
     if (!target) {
       target = this;
     }
-    target[key] = value;
+    // 解决动态属性添加
+    Vue.set(target, key, value)
   };
 
   Vue.prototype.__set_sync = function(target, key, value) {
     if (!target) {
       target = this;
     }
-    target[key] = value;
+    // 解决动态属性添加
+    Vue.set(target, key, value)
   };
 
   Vue.prototype.__get_orig = function(item) {
@@ -7966,7 +8155,7 @@ Vue.prototype.__patch__ = patch;
 // public mount method
 Vue.prototype.$mount = function(
     el ,
-    hydrating 
+    hydrating
 ) {
     return mountComponent$1(this, el, hydrating)
 };
@@ -7978,55 +8167,488 @@ internalMixin(Vue);
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
-
-/***/ }),
-/* 3 */
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
 /* 4 */
-/*!********************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/pages.json ***!
-  \********************************************************/
+/*!*************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, global) {Object.defineProperty(exports, "__esModule", { value: true });exports.compileI18nJsonStr = compileI18nJsonStr;exports.hasI18nJson = hasI18nJson;exports.initVueI18n = initVueI18n;exports.isI18nStr = isI18nStr;exports.normalizeLocale = normalizeLocale;exports.parseI18nJson = parseI18nJson;exports.resolveLocale = resolveLocale;exports.isString = exports.LOCALE_ZH_HANT = exports.LOCALE_ZH_HANS = exports.LOCALE_FR = exports.LOCALE_ES = exports.LOCALE_EN = exports.I18n = exports.Formatter = void 0;function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var isArray = Array.isArray;
+var isObject = function isObject(val) {return val !== null && typeof val === 'object';};
+var defaultDelimiters = ['{', '}'];var
+BaseFormatter = /*#__PURE__*/function () {
+  function BaseFormatter() {_classCallCheck(this, BaseFormatter);
+    this._caches = Object.create(null);
+  }_createClass(BaseFormatter, [{ key: "interpolate", value: function interpolate(
+    message, values) {var delimiters = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultDelimiters;
+      if (!values) {
+        return [message];
+      }
+      var tokens = this._caches[message];
+      if (!tokens) {
+        tokens = parse(message, delimiters);
+        this._caches[message] = tokens;
+      }
+      return compile(tokens, values);
+    } }]);return BaseFormatter;}();exports.Formatter = BaseFormatter;
+
+var RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
+var RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
+function parse(format, _ref) {var _ref2 = _slicedToArray(_ref, 2),startDelimiter = _ref2[0],endDelimiter = _ref2[1];
+  var tokens = [];
+  var position = 0;
+  var text = '';
+  while (position < format.length) {
+    var char = format[position++];
+    if (char === startDelimiter) {
+      if (text) {
+        tokens.push({ type: 'text', value: text });
+      }
+      text = '';
+      var sub = '';
+      char = format[position++];
+      while (char !== undefined && char !== endDelimiter) {
+        sub += char;
+        char = format[position++];
+      }
+      var isClosed = char === endDelimiter;
+      var type = RE_TOKEN_LIST_VALUE.test(sub) ?
+      'list' :
+      isClosed && RE_TOKEN_NAMED_VALUE.test(sub) ?
+      'named' :
+      'unknown';
+      tokens.push({ value: sub, type: type });
+    }
+    //  else if (char === '%') {
+    //   // when found rails i18n syntax, skip text capture
+    //   if (format[position] !== '{') {
+    //     text += char
+    //   }
+    // }
+    else {
+        text += char;
+      }
+  }
+  text && tokens.push({ type: 'text', value: text });
+  return tokens;
+}
+function compile(tokens, values) {
+  var compiled = [];
+  var index = 0;
+  var mode = isArray(values) ?
+  'list' :
+  isObject(values) ?
+  'named' :
+  'unknown';
+  if (mode === 'unknown') {
+    return compiled;
+  }
+  while (index < tokens.length) {
+    var token = tokens[index];
+    switch (token.type) {
+      case 'text':
+        compiled.push(token.value);
+        break;
+      case 'list':
+        compiled.push(values[parseInt(token.value, 10)]);
+        break;
+      case 'named':
+        if (mode === 'named') {
+          compiled.push(values[token.value]);
+        } else
+        {
+          if (true) {
+            console.warn("Type of token '".concat(token.type, "' and format of value '").concat(mode, "' don't match!"));
+          }
+        }
+        break;
+      case 'unknown':
+        if (true) {
+          console.warn("Detect 'unknown' type of token!");
+        }
+        break;}
+
+    index++;
+  }
+  return compiled;
+}
+
+var LOCALE_ZH_HANS = 'zh-Hans';exports.LOCALE_ZH_HANS = LOCALE_ZH_HANS;
+var LOCALE_ZH_HANT = 'zh-Hant';exports.LOCALE_ZH_HANT = LOCALE_ZH_HANT;
+var LOCALE_EN = 'en';exports.LOCALE_EN = LOCALE_EN;
+var LOCALE_FR = 'fr';exports.LOCALE_FR = LOCALE_FR;
+var LOCALE_ES = 'es';exports.LOCALE_ES = LOCALE_ES;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var hasOwn = function hasOwn(val, key) {return hasOwnProperty.call(val, key);};
+var defaultFormatter = new BaseFormatter();
+function include(str, parts) {
+  return !!parts.find(function (part) {return str.indexOf(part) !== -1;});
+}
+function startsWith(str, parts) {
+  return parts.find(function (part) {return str.indexOf(part) === 0;});
+}
+function normalizeLocale(locale, messages) {
+  if (!locale) {
+    return;
+  }
+  locale = locale.trim().replace(/_/g, '-');
+  if (messages && messages[locale]) {
+    return locale;
+  }
+  locale = locale.toLowerCase();
+  if (locale.indexOf('zh') === 0) {
+    if (locale.indexOf('-hans') > -1) {
+      return LOCALE_ZH_HANS;
+    }
+    if (locale.indexOf('-hant') > -1) {
+      return LOCALE_ZH_HANT;
+    }
+    if (include(locale, ['-tw', '-hk', '-mo', '-cht'])) {
+      return LOCALE_ZH_HANT;
+    }
+    return LOCALE_ZH_HANS;
+  }
+  var lang = startsWith(locale, [LOCALE_EN, LOCALE_FR, LOCALE_ES]);
+  if (lang) {
+    return lang;
+  }
+}var
+I18n = /*#__PURE__*/function () {
+  function I18n(_ref3) {var locale = _ref3.locale,fallbackLocale = _ref3.fallbackLocale,messages = _ref3.messages,watcher = _ref3.watcher,formater = _ref3.formater;_classCallCheck(this, I18n);
+    this.locale = LOCALE_EN;
+    this.fallbackLocale = LOCALE_EN;
+    this.message = {};
+    this.messages = {};
+    this.watchers = [];
+    if (fallbackLocale) {
+      this.fallbackLocale = fallbackLocale;
+    }
+    this.formater = formater || defaultFormatter;
+    this.messages = messages || {};
+    this.setLocale(locale || LOCALE_EN);
+    if (watcher) {
+      this.watchLocale(watcher);
+    }
+  }_createClass(I18n, [{ key: "setLocale", value: function setLocale(
+    locale) {var _this = this;
+      var oldLocale = this.locale;
+      this.locale = normalizeLocale(locale, this.messages) || this.fallbackLocale;
+      if (!this.messages[this.locale]) {
+        // 可能初始化时不存在
+        this.messages[this.locale] = {};
+      }
+      this.message = this.messages[this.locale];
+      // 仅发生变化时，通知
+      if (oldLocale !== this.locale) {
+        this.watchers.forEach(function (watcher) {
+          watcher(_this.locale, oldLocale);
+        });
+      }
+    } }, { key: "getLocale", value: function getLocale()
+    {
+      return this.locale;
+    } }, { key: "watchLocale", value: function watchLocale(
+    fn) {var _this2 = this;
+      var index = this.watchers.push(fn) - 1;
+      return function () {
+        _this2.watchers.splice(index, 1);
+      };
+    } }, { key: "add", value: function add(
+    locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      var curMessages = this.messages[locale];
+      if (curMessages) {
+        if (override) {
+          Object.assign(curMessages, message);
+        } else
+        {
+          Object.keys(message).forEach(function (key) {
+            if (!hasOwn(curMessages, key)) {
+              curMessages[key] = message[key];
+            }
+          });
+        }
+      } else
+      {
+        this.messages[locale] = message;
+      }
+    } }, { key: "f", value: function f(
+    message, values, delimiters) {
+      return this.formater.interpolate(message, values, delimiters).join('');
+    } }, { key: "t", value: function t(
+    key, locale, values) {
+      var message = this.message;
+      if (typeof locale === 'string') {
+        locale = normalizeLocale(locale, this.messages);
+        locale && (message = this.messages[locale]);
+      } else
+      {
+        values = locale;
+      }
+      if (!hasOwn(message, key)) {
+        console.warn("Cannot translate the value of keypath ".concat(key, ". Use the value of keypath as default."));
+        return key;
+      }
+      return this.formater.interpolate(message[key], values).join('');
+    } }]);return I18n;}();exports.I18n = I18n;
+
+
+function watchAppLocale(appVm, i18n) {
+  // 需要保证 watch 的触发在组件渲染之前
+  if (appVm.$watchLocale) {
+    // vue2
+    appVm.$watchLocale(function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  } else
+  {
+    appVm.$watch(function () {return appVm.$locale;}, function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  }
+}
+function getDefaultLocale() {
+  if (typeof uni !== 'undefined' && uni.getLocale) {
+    return uni.getLocale();
+  }
+  // 小程序平台，uni 和 uni-i18n 互相引用，导致访问不到 uni，故在 global 上挂了 getLocale
+  if (typeof global !== 'undefined' && global.getLocale) {
+    return global.getLocale();
+  }
+  return LOCALE_EN;
+}
+function initVueI18n(locale) {var messages = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var fallbackLocale = arguments.length > 2 ? arguments[2] : undefined;var watcher = arguments.length > 3 ? arguments[3] : undefined;
+  // 兼容旧版本入参
+  if (typeof locale !== 'string') {var _ref4 =
+    [
+    messages,
+    locale];locale = _ref4[0];messages = _ref4[1];
+
+  }
+  if (typeof locale !== 'string') {
+    // 因为小程序平台，uni-i18n 和 uni 互相引用，导致此时访问 uni 时，为 undefined
+    locale = getDefaultLocale();
+  }
+  if (typeof fallbackLocale !== 'string') {
+    fallbackLocale =
+    typeof __uniConfig !== 'undefined' && __uniConfig.fallbackLocale ||
+    LOCALE_EN;
+  }
+  var i18n = new I18n({
+    locale: locale,
+    fallbackLocale: fallbackLocale,
+    messages: messages,
+    watcher: watcher });
+
+  var _t = function t(key, values) {
+    if (typeof getApp !== 'function') {
+      // app view
+      /* eslint-disable no-func-assign */
+      _t = function t(key, values) {
+        return i18n.t(key, values);
+      };
+    } else
+    {
+      var isWatchedAppLocale = false;
+      _t = function t(key, values) {
+        var appVm = getApp().$vm;
+        // 可能$vm还不存在，比如在支付宝小程序中，组件定义较早，在props的default里使用了t()函数（如uni-goods-nav），此时app还未初始化
+        // options: {
+        // 	type: Array,
+        // 	default () {
+        // 		return [{
+        // 			icon: 'shop',
+        // 			text: t("uni-goods-nav.options.shop"),
+        // 		}, {
+        // 			icon: 'cart',
+        // 			text: t("uni-goods-nav.options.cart")
+        // 		}]
+        // 	}
+        // },
+        if (appVm) {
+          // 触发响应式
+          appVm.$locale;
+          if (!isWatchedAppLocale) {
+            isWatchedAppLocale = true;
+            watchAppLocale(appVm, i18n);
+          }
+        }
+        return i18n.t(key, values);
+      };
+    }
+    return _t(key, values);
+  };
+  return {
+    i18n: i18n,
+    f: function f(message, values, delimiters) {
+      return i18n.f(message, values, delimiters);
+    },
+    t: function t(key, values) {
+      return _t(key, values);
+    },
+    add: function add(locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      return i18n.add(locale, message, override);
+    },
+    watch: function watch(fn) {
+      return i18n.watchLocale(fn);
+    },
+    getLocale: function getLocale() {
+      return i18n.getLocale();
+    },
+    setLocale: function setLocale(newLocale) {
+      return i18n.setLocale(newLocale);
+    } };
+
+}
+
+var isString = function isString(val) {return typeof val === 'string';};exports.isString = isString;
+var formater;
+function hasI18nJson(jsonObj, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  return walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        return true;
+      }
+    } else
+    {
+      return hasI18nJson(value, delimiters);
+    }
+  });
+}
+function parseI18nJson(jsonObj, values, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        jsonObj[key] = compileStr(value, values, delimiters);
+      }
+    } else
+    {
+      parseI18nJson(value, values, delimiters);
+    }
+  });
+  return jsonObj;
+}
+function compileI18nJsonStr(jsonStr, _ref5) {var locale = _ref5.locale,locales = _ref5.locales,delimiters = _ref5.delimiters;
+  if (!isI18nStr(jsonStr, delimiters)) {
+    return jsonStr;
+  }
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  var localeValues = [];
+  Object.keys(locales).forEach(function (name) {
+    if (name !== locale) {
+      localeValues.push({
+        locale: name,
+        values: locales[name] });
+
+    }
+  });
+  localeValues.unshift({ locale: locale, values: locales[locale] });
+  try {
+    return JSON.stringify(compileJsonObj(JSON.parse(jsonStr), localeValues, delimiters), null, 2);
+  }
+  catch (e) {}
+  return jsonStr;
+}
+function isI18nStr(value, delimiters) {
+  return value.indexOf(delimiters[0]) > -1;
+}
+function compileStr(value, values, delimiters) {
+  return formater.interpolate(value, values, delimiters).join('');
+}
+function compileValue(jsonObj, key, localeValues, delimiters) {
+  var value = jsonObj[key];
+  if (isString(value)) {
+    // 存在国际化
+    if (isI18nStr(value, delimiters)) {
+      jsonObj[key] = compileStr(value, localeValues[0].values, delimiters);
+      if (localeValues.length > 1) {
+        // 格式化国际化语言
+        var valueLocales = jsonObj[key + 'Locales'] = {};
+        localeValues.forEach(function (localValue) {
+          valueLocales[localValue.locale] = compileStr(value, localValue.values, delimiters);
+        });
+      }
+    }
+  } else
+  {
+    compileJsonObj(value, localeValues, delimiters);
+  }
+}
+function compileJsonObj(jsonObj, localeValues, delimiters) {
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    compileValue(jsonObj, key, localeValues, delimiters);
+  });
+  return jsonObj;
+}
+function walkJsonObj(jsonObj, walk) {
+  if (isArray(jsonObj)) {
+    for (var i = 0; i < jsonObj.length; i++) {
+      if (walk(jsonObj, i)) {
+        return true;
+      }
+    }
+  } else
+  if (isObject(jsonObj)) {
+    for (var key in jsonObj) {
+      if (walk(jsonObj, key)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function resolveLocale(locales) {
+  return function (locale) {
+    if (!locale) {
+      return locale;
+    }
+    locale = normalizeLocale(locale) || locale;
+    return resolveLocaleChain(locale).find(function (locale) {return locales.indexOf(locale) > -1;});
+  };
+}
+function resolveLocaleChain(locale) {
+  var chain = [];
+  var tokens = locale.split('-');
+  while (tokens.length) {
+    chain.push(tokens.join('-'));
+    tokens.pop();
+  }
+  return chain;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
+
+/***/ }),
+/* 5 */
+/*!**************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/pages.json ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 5 */,
 /* 6 */,
 /* 7 */,
 /* 8 */,
 /* 9 */,
-/* 10 */
+/* 10 */,
+/* 11 */
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
@@ -8154,45 +8776,1342 @@ function normalizeComponent (
 
 
 /***/ }),
-/* 11 */
-/*!***************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/index.js ***!
-  \***************************************************************************/
+/* 12 */
+/*!***********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/node_modules/@hyoga/uni-socket.io/dist/uni-socket.io.js ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _createForOfIteratorHelper(o, allowArrayLike) {var it;if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {if (it) o = it;var i = 0;var F = function F() {};return { s: F, n: function n() {if (i >= o.length) return { done: true };return { done: false, value: o[i++] };}, e: function e(_e12) {throw _e12;}, f: F };}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}var normalCompletion = true,didErr = false,err;return { s: function s() {it = o[Symbol.iterator]();}, n: function n() {var step = it.next();normalCompletion = step.done;return step;}, e: function e(_e13) {didErr = true;err = _e13;}, f: function f() {try {if (!normalCompletion && it.return != null) it.return();} finally {if (didErr) throw err;}} };}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _get(target, property, receiver) {if (typeof Reflect !== "undefined" && Reflect.get) {_get = Reflect.get;} else {_get = function _get(target, property, receiver) {var base = _superPropBase(target, property);if (!base) return;var desc = Object.getOwnPropertyDescriptor(base, property);if (desc.get) {return desc.get.call(receiver);}return desc.value;};}return _get(target, property, receiver || target);}function _superPropBase(object, property) {while (!Object.prototype.hasOwnProperty.call(object, property)) {object = _getPrototypeOf(object);if (object === null) break;}return object;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}!function (t, e) {if (true) module.exports = e();else { var r, n; }}(window, function () {return function (t) {var e = {};function n(r) {if (e[r]) return e[r].exports;var o = e[r] = { i: r, l: !1, exports: {} };return t[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports;}return n.m = t, n.c = e, n.d = function (t, e, r) {n.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: r });}, n.r = function (t) {"undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(t, "__esModule", { value: !0 });}, n.t = function (t, e) {if (1 & e && (t = n(t)), 8 & e) return t;if (4 & e && "object" == typeof t && t && t.__esModule) return t;var r = Object.create(null);if (n.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: t }), 2 & e && "string" != typeof t) for (var o in t) {n.d(r, o, function (e) {return t[e];}.bind(null, o));}return r;}, n.n = function (t) {var e = t && t.__esModule ? function () {return t.default;} : function () {return t;};return n.d(e, "a", e), e;}, n.o = function (t, e) {return Object.prototype.hasOwnProperty.call(t, e);}, n.p = "", n(n.s = 18);}([function (t, e) {t.exports = function () {return function () {};};}, function (t, e, n) {function r(t) {if (t) return function (t) {for (var e in r.prototype) {t[e] = r.prototype[e];}return t;}(t);}t.exports = r, r.prototype.on = r.prototype.addEventListener = function (t, e) {return this._callbacks = this._callbacks || {}, (this._callbacks["$" + t] = this._callbacks["$" + t] || []).push(e), this;}, r.prototype.once = function (t, e) {function n() {this.off(t, n), e.apply(this, arguments);}return n.fn = e, this.on(t, n), this;}, r.prototype.off = r.prototype.removeListener = r.prototype.removeAllListeners = r.prototype.removeEventListener = function (t, e) {if (this._callbacks = this._callbacks || {}, 0 == arguments.length) return this._callbacks = {}, this;var n,r = this._callbacks["$" + t];if (!r) return this;if (1 == arguments.length) return delete this._callbacks["$" + t], this;for (var o = 0; o < r.length; o++) {if ((n = r[o]) === e || n.fn === e) {r.splice(o, 1);break;}}return 0 === r.length && delete this._callbacks["$" + t], this;}, r.prototype.emit = function (t) {this._callbacks = this._callbacks || {};for (var e = new Array(arguments.length - 1), n = this._callbacks["$" + t], r = 1; r < arguments.length; r++) {e[r - 1] = arguments[r];}if (n) {r = 0;for (var o = (n = n.slice(0)).length; r < o; ++r) {n[r].apply(this, e);}}return this;}, r.prototype.listeners = function (t) {return this._callbacks = this._callbacks || {}, this._callbacks["$" + t] || [];}, r.prototype.hasListeners = function (t) {return !!this.listeners(t).length;};}, function (t, e, n) {var r = n(25),o = n(26),s = String.fromCharCode(30);t.exports = { protocol: 4, encodePacket: r, encodePayload: function encodePayload(t, e) {var n = t.length,o = new Array(n);var i = 0;t.forEach(function (t, a) {r(t, !1, function (t) {o[a] = t, ++i === n && e(o.join(s));});});}, decodePacket: o, decodePayload: function decodePayload(t, e) {var n = t.split(s),r = [];for (var _t = 0; _t < n.length; _t++) {var _s = o(n[_t], e);if (r.push(_s), "error" === _s.type) break;}return r;} };}, function (t, e) {t.exports = "undefined" != typeof self ? self : "undefined" != typeof window ? window : Function("return this")();}, function (t, e, n) {var r = n(2),o = n(1),s = n(0)("engine.io-client:transport");t.exports = /*#__PURE__*/function (_o) {"use strict";_inherits(_class, _o);var _super = _createSuper(_class);function _class(t) {var _this;_classCallCheck(this, _class);_this = _super.call(this), _this.opts = t, _this.query = t.query, _this.readyState = "", _this.socket = t.socket;return _this;}_createClass(_class, [{ key: "onError", value: function onError(t, e) {var n = new Error(t);return n.type = "TransportError", n.description = e, this.emit("error", n), this;} }, { key: "open", value: function open() {return "closed" !== this.readyState && "" !== this.readyState || (this.readyState = "opening", this.doOpen()), this;} }, { key: "close", value: function close() {return "opening" !== this.readyState && "open" !== this.readyState || (this.doClose(), this.onClose()), this;} }, { key: "send", value: function send(t) {"open" === this.readyState ? this.write(t) : s("transport is not open, discarding packets");} }, { key: "onOpen", value: function onOpen() {this.readyState = "open", this.writable = !0, this.emit("open");} }, { key: "onData", value: function onData(t) {var e = r.decodePacket(t, this.socket.binaryType);this.onPacket(e);} }, { key: "onPacket", value: function onPacket(t) {this.emit("packet", t);} }, { key: "onClose", value: function onClose() {this.readyState = "closed", this.emit("close");} }]);return _class;}(o);}, function (t, e) {e.encode = function (t) {var e = "";for (var n in t) {t.hasOwnProperty(n) && (e.length && (e += "&"), e += encodeURIComponent(n) + "=" + encodeURIComponent(t[n]));}return e;}, e.decode = function (t) {for (var e = {}, n = t.split("&"), r = 0, o = n.length; r < o; r++) {var s = n[r].split("=");e[decodeURIComponent(s[0])] = decodeURIComponent(s[1]);}return e;};}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.Decoder = e.Encoder = e.PacketType = e.protocol = void 0;var r = n(1),o = n(38),s = n(16),i = n(0)("socket.io-parser");var a;e.protocol = 5, function (t) {t[t.CONNECT = 0] = "CONNECT", t[t.DISCONNECT = 1] = "DISCONNECT", t[t.EVENT = 2] = "EVENT", t[t.ACK = 3] = "ACK", t[t.CONNECT_ERROR = 4] = "CONNECT_ERROR", t[t.BINARY_EVENT = 5] = "BINARY_EVENT", t[t.BINARY_ACK = 6] = "BINARY_ACK";}(a = e.PacketType || (e.PacketType = {}));e.Encoder = /*#__PURE__*/function () {function _class2() {_classCallCheck(this, _class2);}_createClass(_class2, [{ key: "encode", value: function encode(t) {return i("encoding packet %j", t), t.type !== a.EVENT && t.type !== a.ACK || !s.hasBinary(t) ? [this.encodeAsString(t)] : (t.type = t.type === a.EVENT ? a.BINARY_EVENT : a.BINARY_ACK, this.encodeAsBinary(t));} }, { key: "encodeAsString", value: function encodeAsString(t) {var e = "" + t.type;return t.type !== a.BINARY_EVENT && t.type !== a.BINARY_ACK || (e += t.attachments + "-"), t.nsp && "/" !== t.nsp && (e += t.nsp + ","), null != t.id && (e += t.id), null != t.data && (e += JSON.stringify(t.data)), i("encoded %j as %s", t, e), e;} }, { key: "encodeAsBinary", value: function encodeAsBinary(t) {var e = o.deconstructPacket(t),n = this.encodeAsString(e.packet),r = e.buffers;return r.unshift(n), r;} }]);return _class2;}();var c = /*#__PURE__*/function (_r) {_inherits(c, _r);var _super2 = _createSuper(c);function c() {_classCallCheck(this, c);return _super2.call(this);}_createClass(c, [{ key: "add", value: function add(t) {var e;if ("string" == typeof t) e = this.decodeString(t), e.type === a.BINARY_EVENT || e.type === a.BINARY_ACK ? (this.reconstructor = new h(e), 0 === e.attachments && _get(_getPrototypeOf(c.prototype), "emit", this).call(this, "decoded", e)) : _get(_getPrototypeOf(c.prototype), "emit", this).call(this, "decoded", e);else {if (!s.isBinary(t) && !t.base64) throw new Error("Unknown type: " + t);if (!this.reconstructor) throw new Error("got binary data when not reconstructing a packet");e = this.reconstructor.takeBinaryData(t), e && (this.reconstructor = null, _get(_getPrototypeOf(c.prototype), "emit", this).call(this, "decoded", e));}} }, { key: "decodeString", value: function decodeString(t) {var e = 0;var n = { type: Number(t.charAt(0)) };if (void 0 === a[n.type]) throw new Error("unknown packet type " + n.type);if (n.type === a.BINARY_EVENT || n.type === a.BINARY_ACK) {var _r2 = e + 1;for (; "-" !== t.charAt(++e) && e != t.length;) {;}var _o2 = t.substring(_r2, e);if (_o2 != Number(_o2) || "-" !== t.charAt(e)) throw new Error("Illegal attachments");n.attachments = Number(_o2);}if ("/" === t.charAt(e + 1)) {var _r3 = e + 1;for (; ++e;) {if ("," === t.charAt(e)) break;if (e === t.length) break;}n.nsp = t.substring(_r3, e);} else n.nsp = "/";var r = t.charAt(e + 1);if ("" !== r && Number(r) == r) {var _r4 = e + 1;for (; ++e;) {var _n = t.charAt(e);if (null == _n || Number(_n) != _n) {--e;break;}if (e === t.length) break;}n.id = Number(t.substring(_r4, e + 1));}if (t.charAt(++e)) {var _r5 = function (t) {try {return JSON.parse(t);} catch (t) {return !1;}}(t.substr(e));if (!c.isPayloadValid(n.type, _r5)) throw new Error("invalid payload");n.data = _r5;}return i("decoded %s as %j", t, n), n;} }, { key: "destroy", value: function destroy() {this.reconstructor && this.reconstructor.finishedReconstruction();} }], [{ key: "isPayloadValid", value: function isPayloadValid(t, e) {switch (t) {case a.CONNECT:return "object" == typeof e;case a.DISCONNECT:return void 0 === e;case a.CONNECT_ERROR:return "string" == typeof e || "object" == typeof e;case a.EVENT:case a.BINARY_EVENT:return Array.isArray(e) && "string" == typeof e[0];case a.ACK:case a.BINARY_ACK:return Array.isArray(e);}} }]);return c;}(r);e.Decoder = c;var h = /*#__PURE__*/function () {function h(t) {_classCallCheck(this, h);this.packet = t, this.buffers = [], this.reconPack = t;}_createClass(h, [{ key: "takeBinaryData", value: function takeBinaryData(t) {if (this.buffers.push(t), this.buffers.length === this.reconPack.attachments) {var _t2 = o.reconstructPacket(this.reconPack, this.buffers);return this.finishedReconstruction(), _t2;}return null;} }, { key: "finishedReconstruction", value: function finishedReconstruction() {this.reconPack = null, this.buffers = [];} }]);return h;}();}, function (t, e) {var n = /^(?:(?![^:@]+:[^:@\/]*@)(http|https|ws|wss):\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?((?:[a-f0-9]{0,4}:){2,7}[a-f0-9]{0,4}|[^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/,r = ["source", "protocol", "authority", "userInfo", "user", "password", "host", "port", "relative", "path", "directory", "file", "query", "anchor"];t.exports = function (t) {var e = t,o = t.indexOf("["),s = t.indexOf("]");-1 != o && -1 != s && (t = t.substring(0, o) + t.substring(o, s).replace(/:/g, ";") + t.substring(s, t.length));for (var i, a, c = n.exec(t || ""), h = {}, u = 14; u--;) {h[r[u]] = c[u] || "";}return -1 != o && -1 != s && (h.source = e, h.host = h.host.substring(1, h.host.length - 1).replace(/;/g, ":"), h.authority = h.authority.replace("[", "").replace("]", "").replace(/;/g, ":"), h.ipv6uri = !0), h.pathNames = function (t, e) {var n = e.replace(/\/{2,9}/g, "/").split("/");"/" != e.substr(0, 1) && 0 !== e.length || n.splice(0, 1);"/" == e.substr(e.length - 1, 1) && n.splice(n.length - 1, 1);return n;}(0, h.path), h.queryKey = (i = h.query, a = {}, i.replace(/(?:^|&)([^&=]*)=?([^&]*)/g, function (t, e, n) {e && (a[e] = n);}), a), h;};}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.Manager = void 0;var r = n(21),o = n(15),s = n(1),i = n(6),a = n(17),c = n(39),h = n(0)("socket.io-client:manager");e.Manager = /*#__PURE__*/function (_s2) {_inherits(_class3, _s2);var _super3 = _createSuper(_class3);function _class3(t, e) {var _this2;_classCallCheck(this, _class3);_this2 = _super3.call(this), _this2.nsps = {}, _this2.subs = [], t && "object" == typeof t && (e = t, t = void 0), (e = e || {}).path = e.path || "/socket.io", _this2.opts = e, _this2.reconnection(!1 !== e.reconnection), _this2.reconnectionAttempts(e.reconnectionAttempts || 1 / 0), _this2.reconnectionDelay(e.reconnectionDelay || 1e3), _this2.reconnectionDelayMax(e.reconnectionDelayMax || 5e3), _this2.randomizationFactor(e.randomizationFactor || .5), _this2.backoff = new c({ min: _this2.reconnectionDelay(), max: _this2.reconnectionDelayMax(), jitter: _this2.randomizationFactor() }), _this2.timeout(null == e.timeout ? 2e4 : e.timeout), _this2._readyState = "closed", _this2.uri = t;var n = e.parser || i;_this2.encoder = new n.Encoder(), _this2.decoder = new n.Decoder(), _this2._autoConnect = !1 !== e.autoConnect, _this2._autoConnect && _this2.open();return _this2;}_createClass(_class3, [{ key: "reconnection", value: function reconnection(t) {return arguments.length ? (this._reconnection = !!t, this) : this._reconnection;} }, { key: "reconnectionAttempts", value: function reconnectionAttempts(t) {return void 0 === t ? this._reconnectionAttempts : (this._reconnectionAttempts = t, this);} }, { key: "reconnectionDelay", value: function reconnectionDelay(t) {var e;return void 0 === t ? this._reconnectionDelay : (this._reconnectionDelay = t, null === (e = this.backoff) || void 0 === e || e.setMin(t), this);} }, { key: "randomizationFactor", value: function randomizationFactor(t) {var e;return void 0 === t ? this._randomizationFactor : (this._randomizationFactor = t, null === (e = this.backoff) || void 0 === e || e.setJitter(t), this);} }, { key: "reconnectionDelayMax", value: function reconnectionDelayMax(t) {var e;return void 0 === t ? this._reconnectionDelayMax : (this._reconnectionDelayMax = t, null === (e = this.backoff) || void 0 === e || e.setMax(t), this);} }, { key: "timeout", value: function timeout(t) {return arguments.length ? (this._timeout = t, this) : this._timeout;} }, { key: "maybeReconnectOnOpen", value: function maybeReconnectOnOpen() {!this._reconnecting && this._reconnection && 0 === this.backoff.attempts && this.reconnect();} }, { key: "open", value: function open(t) {var _this3 = this;if (h("readyState %s", this._readyState), ~this._readyState.indexOf("open")) return this;h("opening %s", this.uri), this.engine = r(this.uri, this.opts);var e = this.engine,n = this;this._readyState = "opening", this.skipReconnect = !1;var o = a.on(e, "open", function () {n.onopen(), t && t();}),s = a.on(e, "error", function (e) {h("error"), n.cleanup(), n._readyState = "closed", _get(_getPrototypeOf(_class3.prototype), "emit", _this3).call(_this3, "error", e), t ? t(e) : n.maybeReconnectOnOpen();});if (!1 !== this._timeout) {var _t3 = this._timeout;h("connect attempt will timeout after %d", _t3), 0 === _t3 && o();var _n2 = setTimeout(function () {h("connect attempt timed out after %d", _t3), o(), e.close(), e.emit("error", new Error("timeout"));}, _t3);this.subs.push(function () {clearTimeout(_n2);});}return this.subs.push(o), this.subs.push(s), this;} }, { key: "connect", value: function connect(t) {return this.open(t);} }, { key: "onopen", value: function onopen() {h("open"), this.cleanup(), this._readyState = "open", _get(_getPrototypeOf(_class3.prototype), "emit", this).call(this, "open");var t = this.engine;this.subs.push(a.on(t, "ping", this.onping.bind(this)), a.on(t, "data", this.ondata.bind(this)), a.on(t, "error", this.onerror.bind(this)), a.on(t, "close", this.onclose.bind(this)), a.on(this.decoder, "decoded", this.ondecoded.bind(this)));} }, { key: "onping", value: function onping() {_get(_getPrototypeOf(_class3.prototype), "emit", this).call(this, "ping");} }, { key: "ondata", value: function ondata(t) {this.decoder.add(t);} }, { key: "ondecoded", value: function ondecoded(t) {_get(_getPrototypeOf(_class3.prototype), "emit", this).call(this, "packet", t);} }, { key: "onerror", value: function onerror(t) {h("error", t), _get(_getPrototypeOf(_class3.prototype), "emit", this).call(this, "error", t);} }, { key: "socket", value: function socket(t, e) {var n = this.nsps[t];return n || (n = new o.Socket(this, t, e), this.nsps[t] = n), n;} }, { key: "_destroy", value: function _destroy(t) {var e = Object.keys(this.nsps);for (var _i = 0, _e = e; _i < _e.length; _i++) {var _t4 = _e[_i];if (this.nsps[_t4].active) return void h("socket %s is still active, skipping close", _t4);}this._close();} }, { key: "_packet", value: function _packet(t) {h("writing packet %j", t), t.query && 0 === t.type && (t.nsp += "?" + t.query);var e = this.encoder.encode(t);for (var _n3 = 0; _n3 < e.length; _n3++) {this.engine.write(e[_n3], t.options);}} }, { key: "cleanup", value: function cleanup() {h("cleanup"), this.subs.forEach(function (t) {return t();}), this.subs.length = 0, this.decoder.destroy();} }, { key: "_close", value: function _close() {h("disconnect"), this.skipReconnect = !0, this._reconnecting = !1, "opening" === this._readyState && this.cleanup(), this.backoff.reset(), this._readyState = "closed", this.engine && this.engine.close();} }, { key: "disconnect", value: function disconnect() {return this._close();} }, { key: "onclose", value: function onclose(t) {h("onclose"), this.cleanup(), this.backoff.reset(), this._readyState = "closed", _get(_getPrototypeOf(_class3.prototype), "emit", this).call(this, "close", t), this._reconnection && !this.skipReconnect && this.reconnect();} }, { key: "reconnect", value: function reconnect() {var _this4 = this;if (this._reconnecting || this.skipReconnect) return this;var t = this;if (this.backoff.attempts >= this._reconnectionAttempts) h("reconnect failed"), this.backoff.reset(), _get(_getPrototypeOf(_class3.prototype), "emit", this).call(this, "reconnect_failed"), this._reconnecting = !1;else {var _e2 = this.backoff.duration();h("will wait %dms before reconnect attempt", _e2), this._reconnecting = !0;var _n4 = setTimeout(function () {t.skipReconnect || (h("attempting reconnect"), _get(_getPrototypeOf(_class3.prototype), "emit", _this4).call(_this4, "reconnect_attempt", t.backoff.attempts), t.skipReconnect || t.open(function (e) {e ? (h("reconnect attempt error"), t._reconnecting = !1, t.reconnect(), _get(_getPrototypeOf(_class3.prototype), "emit", _this4).call(_this4, "reconnect_error", e)) : (h("reconnect success"), t.onreconnect());}));}, _e2);this.subs.push(function () {clearTimeout(_n4);});}} }, { key: "onreconnect", value: function onreconnect() {var t = this.backoff.attempts;this._reconnecting = !1, this.backoff.reset(), _get(_getPrototypeOf(_class3.prototype), "emit", this).call(this, "reconnect", t);} }]);return _class3;}(s);}, function (t, e, n) {var r = n(10),o = n(24),s = n(28),i = n(29);e.polling = function (t) {var e,n = !1,i = !1;var a = !1 !== t.jsonp;if ("undefined" != typeof location) {var _e3 = "https:" === location.protocol;var _r6 = location.port;_r6 || (_r6 = _e3 ? 443 : 80), n = t.hostname !== location.hostname || _r6 !== t.port, i = t.secure !== _e3;}if (t.xdomain = n, t.xscheme = i, e = new r(t), "open" in e && !t.forceJSONP) return new o(t);if (!a) throw new Error("JSONP disabled");return new s(t);}, e.websocket = i;}, function (t, e, n) {var r = n(23),o = n(3);t.exports = function (t) {var e = t.xdomain,n = t.xscheme,s = t.enablesXDR;try {if ("undefined" != typeof XMLHttpRequest && (!e || r)) return new XMLHttpRequest();} catch (t) {}try {if ("undefined" != typeof XDomainRequest && !n && s) return new XDomainRequest();} catch (t) {}if (!e) try {return new o[["Active"].concat("Object").join("X")]("Microsoft.XMLHTTP");} catch (t) {}};}, function (t, e, n) {var r = n(4),o = n(5),s = n(2),i = n(13),a = n(0)("engine.io-client:polling");t.exports = /*#__PURE__*/function (_r7) {"use strict";_inherits(_class4, _r7);var _super4 = _createSuper(_class4);function _class4() {_classCallCheck(this, _class4);return _super4.apply(this, arguments);}_createClass(_class4, [{ key: "doOpen", value: function doOpen() {this.poll();} }, { key: "pause", value: function pause(t) {var e = this;function n() {a("paused"), e.readyState = "paused", t();}if (this.readyState = "pausing", this.polling || !this.writable) {var _t5 = 0;this.polling && (a("we are currently polling - waiting to pause"), _t5++, this.once("pollComplete", function () {a("pre-pause polling complete"), --_t5 || n();})), this.writable || (a("we are currently writing - waiting to pause"), _t5++, this.once("drain", function () {a("pre-pause writing complete"), --_t5 || n();}));} else n();} }, { key: "poll", value: function poll() {a("polling"), this.polling = !0, this.doPoll(), this.emit("poll");} }, { key: "onData", value: function onData(t) {var e = this;a("polling got data %s", t);s.decodePayload(t, this.socket.binaryType).forEach(function (t, n, r) {if ("opening" === e.readyState && "open" === t.type && e.onOpen(), "close" === t.type) return e.onClose(), !1;e.onPacket(t);}), "closed" !== this.readyState && (this.polling = !1, this.emit("pollComplete"), "open" === this.readyState ? this.poll() : a('ignoring poll - transport state "%s"', this.readyState));} }, { key: "doClose", value: function doClose() {var t = this;function e() {a("writing close packet"), t.write([{ type: "close" }]);}"open" === this.readyState ? (a("transport open - closing"), e()) : (a("transport not open - deferring close"), this.once("open", e));} }, { key: "write", value: function write(t) {var _this5 = this;this.writable = !1, s.encodePayload(t, function (t) {_this5.doWrite(t, function () {_this5.writable = !0, _this5.emit("drain");});});} }, { key: "uri", value: function uri() {var t = this.query || {};var e = this.opts.secure ? "https" : "http";var n = "";!1 !== this.opts.timestampRequests && (t[this.opts.timestampParam] = i()), this.supportsBinary || t.sid || (t.b64 = 1), t = o.encode(t), this.opts.port && ("https" === e && 443 !== Number(this.opts.port) || "http" === e && 80 !== Number(this.opts.port)) && (n = ":" + this.opts.port), t.length && (t = "?" + t);return e + "://" + (-1 !== this.opts.hostname.indexOf(":") ? "[" + this.opts.hostname + "]" : this.opts.hostname) + n + this.opts.path + t;} }, { key: "name", get: function get() {return "polling";} }]);return _class4;}(r);}, function (t, e) {var n = Object.create(null);n.open = "0", n.close = "1", n.ping = "2", n.pong = "3", n.message = "4", n.upgrade = "5", n.noop = "6";var r = Object.create(null);Object.keys(n).forEach(function (t) {r[n[t]] = t;});t.exports = { PACKET_TYPES: n, PACKET_TYPES_REVERSE: r, ERROR_PACKET: { type: "error", data: "parser error" } };}, function (t, e, n) {"use strict";var r,o = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_".split(""),s = {},i = 0,a = 0;function c(t) {var e = "";do {e = o[t % 64] + e, t = Math.floor(t / 64);} while (t > 0);return e;}function h() {var t = c(+new Date());return t !== r ? (i = 0, r = t) : t + "." + c(i++);}for (; a < 64; a++) {s[o[a]] = a;}h.encode = c, h.decode = function (t) {var e = 0;for (a = 0; a < t.length; a++) {e = 64 * e + s[t.charAt(a)];}return e;}, t.exports = h;}, function (t, e) {t.exports.pick = function (t) {for (var _len = arguments.length, e = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {e[_key - 1] = arguments[_key];}return e.reduce(function (e, n) {return t.hasOwnProperty(n) && (e[n] = t[n]), e;}, {});};}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.Socket = void 0;var r = n(6),o = n(1),s = n(17),i = n(0)("socket.io-client:socket"),a = Object.freeze({ connect: 1, connect_error: 1, disconnect: 1, disconnecting: 1, newListener: 1, removeListener: 1 });e.Socket = /*#__PURE__*/function (_o3) {_inherits(_class5, _o3);var _super5 = _createSuper(_class5);function _class5(t, e, n) {var _this6;_classCallCheck(this, _class5);_this6 = _super5.call(this), _this6.receiveBuffer = [], _this6.sendBuffer = [], _this6.ids = 0, _this6.acks = {}, _this6.flags = {}, _this6.io = t, _this6.nsp = e, _this6.ids = 0, _this6.acks = {}, _this6.receiveBuffer = [], _this6.sendBuffer = [], _this6.connected = !1, _this6.disconnected = !0, _this6.flags = {}, n && n.auth && (_this6.auth = n.auth), _this6.io._autoConnect && _this6.open();return _this6;}_createClass(_class5, [{ key: "subEvents", value: function subEvents() {if (this.subs) return;var t = this.io;this.subs = [s.on(t, "open", this.onopen.bind(this)), s.on(t, "packet", this.onpacket.bind(this)), s.on(t, "error", this.onerror.bind(this)), s.on(t, "close", this.onclose.bind(this))];} }, { key: "connect", value: function connect() {return this.connected || (this.subEvents(), this.io._reconnecting || this.io.open(), "open" === this.io._readyState && this.onopen()), this;} }, { key: "open", value: function open() {return this.connect();} }, { key: "send", value: function send() {for (var _len2 = arguments.length, t = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {t[_key2] = arguments[_key2];}return t.unshift("message"), this.emit.apply(this, t), this;} }, { key: "emit", value: function emit(t) {if (a.hasOwnProperty(t)) throw new Error('"' + t + '" is a reserved event name');for (var _len3 = arguments.length, e = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {e[_key3 - 1] = arguments[_key3];}e.unshift(t);var n = { type: r.PacketType.EVENT, data: e, options: {} };n.options.compress = !1 !== this.flags.compress, "function" == typeof e[e.length - 1] && (i("emitting packet with ack id %d", this.ids), this.acks[this.ids] = e.pop(), n.id = this.ids++);var o = this.io.engine && this.io.engine.transport && this.io.engine.transport.writable;return this.flags.volatile && (!o || !this.connected) ? i("discard packet as the transport is not currently writable") : this.connected ? this.packet(n) : this.sendBuffer.push(n), this.flags = {}, this;} }, { key: "packet", value: function packet(t) {t.nsp = this.nsp, this.io._packet(t);} }, { key: "onopen", value: function onopen() {var _this7 = this;i("transport is open - connecting"), "function" == typeof this.auth ? this.auth(function (t) {_this7.packet({ type: r.PacketType.CONNECT, data: t });}) : this.packet({ type: r.PacketType.CONNECT, data: this.auth });} }, { key: "onerror", value: function onerror(t) {this.connected || _get(_getPrototypeOf(_class5.prototype), "emit", this).call(this, "connect_error", t);} }, { key: "onclose", value: function onclose(t) {i("close (%s)", t), this.connected = !1, this.disconnected = !0, delete this.id, _get(_getPrototypeOf(_class5.prototype), "emit", this).call(this, "disconnect", t);} }, { key: "onpacket", value: function onpacket(t) {if (t.nsp === this.nsp) switch (t.type) {case r.PacketType.CONNECT:if (t.data && t.data.sid) {var _e5 = t.data.sid;this.onconnect(_e5);} else _get(_getPrototypeOf(_class5.prototype), "emit", this).call(this, "connect_error", new Error("It seems you are trying to reach a Socket.IO server in v2.x with a v3.x client, but they are not compatible (more information here: https://socket.io/docs/v3/migrating-from-2-x-to-3-0/)"));break;case r.PacketType.EVENT:case r.PacketType.BINARY_EVENT:this.onevent(t);break;case r.PacketType.ACK:case r.PacketType.BINARY_ACK:this.onack(t);break;case r.PacketType.DISCONNECT:this.ondisconnect();break;case r.PacketType.CONNECT_ERROR:var _e4 = new Error(t.data.message);_e4.data = t.data.data, _get(_getPrototypeOf(_class5.prototype), "emit", this).call(this, "connect_error", _e4);}} }, { key: "onevent", value: function onevent(t) {var e = t.data || [];i("emitting event %j", e), null != t.id && (i("attaching ack callback to event"), e.push(this.ack(t.id))), this.connected ? this.emitEvent(e) : this.receiveBuffer.push(Object.freeze(e));} }, { key: "emitEvent", value: function emitEvent(t) {if (this._anyListeners && this._anyListeners.length) {var _e6 = this._anyListeners.slice();var _iterator = _createForOfIteratorHelper(_e6),_step;try {for (_iterator.s(); !(_step = _iterator.n()).done;) {var _n5 = _step.value;_n5.apply(this, t);}} catch (err) {_iterator.e(err);} finally {_iterator.f();}}_get(_getPrototypeOf(_class5.prototype), "emit", this).apply(this, t);} }, { key: "ack", value: function ack(t) {var e = this;var n = !1;return function () {for (var _len4 = arguments.length, o = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {o[_key4] = arguments[_key4];}n || (n = !0, i("sending ack %j", o), e.packet({ type: r.PacketType.ACK, id: t, data: o }));};} }, { key: "onack", value: function onack(t) {var e = this.acks[t.id];"function" == typeof e ? (i("calling ack %s with %j", t.id, t.data), e.apply(this, t.data), delete this.acks[t.id]) : i("bad ack %s", t.id);} }, { key: "onconnect", value: function onconnect(t) {i("socket connected with id %s", t), this.id = t, this.connected = !0, this.disconnected = !1, _get(_getPrototypeOf(_class5.prototype), "emit", this).call(this, "connect"), this.emitBuffered();} }, { key: "emitBuffered", value: function emitBuffered() {var _this8 = this;this.receiveBuffer.forEach(function (t) {return _this8.emitEvent(t);}), this.receiveBuffer = [], this.sendBuffer.forEach(function (t) {return _this8.packet(t);}), this.sendBuffer = [];} }, { key: "ondisconnect", value: function ondisconnect() {i("server disconnect (%s)", this.nsp), this.destroy(), this.onclose("io server disconnect");} }, { key: "destroy", value: function destroy() {this.subs && (this.subs.forEach(function (t) {return t();}), this.subs = void 0), this.io._destroy(this);} }, { key: "disconnect", value: function disconnect() {return this.connected && (i("performing disconnect (%s)", this.nsp), this.packet({ type: r.PacketType.DISCONNECT })), this.destroy(), this.connected && this.onclose("io client disconnect"), this;} }, { key: "close", value: function close() {return this.disconnect();} }, { key: "compress", value: function compress(t) {return this.flags.compress = t, this;} }, { key: "onAny", value: function onAny(t) {return this._anyListeners = this._anyListeners || [], this._anyListeners.push(t), this;} }, { key: "prependAny", value: function prependAny(t) {return this._anyListeners = this._anyListeners || [], this._anyListeners.unshift(t), this;} }, { key: "offAny", value: function offAny(t) {if (!this._anyListeners) return this;if (t) {var _e7 = this._anyListeners;for (var _n6 = 0; _n6 < _e7.length; _n6++) {if (t === _e7[_n6]) return _e7.splice(_n6, 1), this;}} else this._anyListeners = [];return this;} }, { key: "listenersAny", value: function listenersAny() {return this._anyListeners || [];} }, { key: "active", get: function get() {return !!this.subs;} }, { key: "volatile", get: function get() {return this.flags.volatile = !0, this;} }]);return _class5;}(o);}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.hasBinary = e.isBinary = void 0;var r = "function" == typeof ArrayBuffer,o = Object.prototype.toString,s = "function" == typeof Blob || "undefined" != typeof Blob && "[object BlobConstructor]" === o.call(Blob),i = "function" == typeof File || "undefined" != typeof File && "[object FileConstructor]" === o.call(File);function a(t) {return r && (t instanceof ArrayBuffer || function (t) {return "function" == typeof ArrayBuffer.isView ? ArrayBuffer.isView(t) : t.buffer instanceof ArrayBuffer;}(t)) || s && t instanceof Blob || i && t instanceof File;}e.isBinary = a, e.hasBinary = function t(e, n) {if (!e || "object" != typeof e) return !1;if (Array.isArray(e)) {for (var _n7 = 0, _r8 = e.length; _n7 < _r8; _n7++) {if (t(e[_n7])) return !0;}return !1;}if (a(e)) return !0;if (e.toJSON && "function" == typeof e.toJSON && 1 === arguments.length) return t(e.toJSON(), !0);for (var _n8 in e) {if (Object.prototype.hasOwnProperty.call(e, _n8) && t(e[_n8])) return !0;}return !1;};}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.on = void 0, e.on = function (t, e, n) {return t.on(e, n), function () {t.off(e, n);};};}, function (t, e, n) {t.exports = n(19);}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.Socket = e.io = e.Manager = e.protocol = void 0;var r = n(20),o = n(8),s = n(15);Object.defineProperty(e, "Socket", { enumerable: !0, get: function get() {return s.Socket;} });var i = n(0)("socket.io-client");t.exports = e = c;var a = e.managers = {};function c(t, e) {"object" == typeof t && (e = t, t = void 0), e = e || {};var n = r.url(t),s = n.source,c = n.id,h = n.path,u = a[c] && h in a[c].nsps;var p;return e.forceNew || e["force new connection"] || !1 === e.multiplex || u ? (i("ignoring socket cache for %s", s), p = new o.Manager(s, e)) : (a[c] || (i("new io instance for %s", s), a[c] = new o.Manager(s, e)), p = a[c]), n.query && !e.query && (e.query = n.query), p.socket(n.path, e);}e.io = c;var h = n(6);Object.defineProperty(e, "protocol", { enumerable: !0, get: function get() {return h.protocol;} }), e.connect = c;var u = n(8);Object.defineProperty(e, "Manager", { enumerable: !0, get: function get() {return u.Manager;} });}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.url = void 0;var r = n(7),o = n(0)("socket.io-client:url");e.url = function (t, e) {var n = t;e = e || "undefined" != typeof location && location, null == t && (t = e.protocol + "//" + e.host), "string" == typeof t && ("/" === t.charAt(0) && (t = "/" === t.charAt(1) ? e.protocol + t : e.host + t), /^(https?|wss?):\/\//.test(t) || (o("protocol-less url %s", t), t = void 0 !== e ? e.protocol + "//" + t : "https://" + t), o("parse %s", t), n = r(t)), n.port || (/^(http|ws)$/.test(n.protocol) ? n.port = "80" : /^(http|ws)s$/.test(n.protocol) && (n.port = "443")), n.path = n.path || "/";var s = -1 !== n.host.indexOf(":") ? "[" + n.host + "]" : n.host;return n.id = n.protocol + "://" + s + ":" + n.port, n.href = n.protocol + "://" + s + (e && e.port === n.port ? "" : ":" + n.port), n;};}, function (t, e, n) {var r = n(22);t.exports = function (t, e) {return new r(t, e);}, t.exports.Socket = r, t.exports.protocol = r.protocol, t.exports.Transport = n(4), t.exports.transports = n(9), t.exports.parser = n(2);}, function (t, e, n) {var r = n(9),o = n(1),s = n(0)("engine.io-client:socket"),i = n(2),a = n(7),c = n(5);var h = /*#__PURE__*/function (_o4) {"use strict";_inherits(h, _o4);var _super6 = _createSuper(h);function h(t) {var _this9;var e = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};_classCallCheck(this, h);_this9 = _super6.call(this), t && "object" == typeof t && (e = t, t = null), t ? (t = a(t), e.hostname = t.host, e.secure = "https" === t.protocol || "wss" === t.protocol, e.port = t.port, t.query && (e.query = t.query)) : e.host && (e.hostname = a(e.host).host), _this9.secure = null != e.secure ? e.secure : "undefined" != typeof location && "https:" === location.protocol, e.hostname && !e.port && (e.port = _this9.secure ? "443" : "80"), _this9.hostname = e.hostname || ("undefined" != typeof location ? location.hostname : "localhost"), _this9.port = e.port || ("undefined" != typeof location && location.port ? location.port : _this9.secure ? 443 : 80), _this9.transports = e.transports || ["polling", "websocket"], _this9.readyState = "", _this9.writeBuffer = [], _this9.prevBufferLen = 0, _this9.opts = Object.assign({ path: "/engine.io", agent: !1, withCredentials: !1, upgrade: !0, jsonp: !0, timestampParam: "t", rememberUpgrade: !1, rejectUnauthorized: !0, perMessageDeflate: { threshold: 1024 }, transportOptions: {} }, e), _this9.opts.path = _this9.opts.path.replace(/\/$/, "") + "/", "string" == typeof _this9.opts.query && (_this9.opts.query = c.decode(_this9.opts.query)), _this9.id = null, _this9.upgrades = null, _this9.pingInterval = null, _this9.pingTimeout = null, _this9.pingTimeoutTimer = null, "function" == typeof addEventListener && (addEventListener("beforeunload", function () {_this9.transport && (_this9.transport.removeAllListeners(), _this9.transport.close());}, !1), "localhost" !== _this9.hostname && (_this9.offlineEventListener = function () {_this9.onClose("transport close");}, addEventListener("offline", _this9.offlineEventListener, !1))), _this9.open();return _this9;}_createClass(h, [{ key: "createTransport", value: function createTransport(t) {s('creating transport "%s"', t);var e = function (t) {var e = {};for (var _n9 in t) {t.hasOwnProperty(_n9) && (e[_n9] = t[_n9]);}return e;}(this.opts.query);e.EIO = i.protocol, e.transport = t, this.id && (e.sid = this.id);var n = Object.assign({}, this.opts.transportOptions[t], this.opts, { query: e, socket: this, hostname: this.hostname, secure: this.secure, port: this.port });return s("options: %j", n), new r[t](n);} }, { key: "open", value: function open() {var t;if (this.opts.rememberUpgrade && h.priorWebsocketSuccess && -1 !== this.transports.indexOf("websocket")) t = "websocket";else {if (0 === this.transports.length) {var _t6 = this;return void setTimeout(function () {_t6.emit("error", "No transports available");}, 0);}t = this.transports[0];}this.readyState = "opening";try {t = this.createTransport(t);} catch (t) {return s("error while creating transport: %s", t), this.transports.shift(), void this.open();}t.open(), this.setTransport(t);} }, { key: "setTransport", value: function setTransport(t) {s("setting transport %s", t.name);var e = this;this.transport && (s("clearing existing transport %s", this.transport.name), this.transport.removeAllListeners()), this.transport = t, t.on("drain", function () {e.onDrain();}).on("packet", function (t) {e.onPacket(t);}).on("error", function (t) {e.onError(t);}).on("close", function () {e.onClose("transport close");});} }, { key: "probe", value: function probe(t) {s('probing transport "%s"', t);var e = this.createTransport(t, { probe: 1 }),n = !1;var r = this;function o() {if (r.onlyBinaryUpgrades) {var _t7 = !this.supportsBinary && r.transport.supportsBinary;n = n || _t7;}n || (s('probe transport "%s" opened', t), e.send([{ type: "ping", data: "probe" }]), e.once("packet", function (o) {if (!n) if ("pong" === o.type && "probe" === o.data) {if (s('probe transport "%s" pong', t), r.upgrading = !0, r.emit("upgrading", e), !e) return;h.priorWebsocketSuccess = "websocket" === e.name, s('pausing current transport "%s"', r.transport.name), r.transport.pause(function () {n || "closed" !== r.readyState && (s("changing transport and sending upgrade packet"), f(), r.setTransport(e), e.send([{ type: "upgrade" }]), r.emit("upgrade", e), e = null, r.upgrading = !1, r.flush());});} else {s('probe transport "%s" failed', t);var _n10 = new Error("probe error");_n10.transport = e.name, r.emit("upgradeError", _n10);}}));}function i() {n || (n = !0, f(), e.close(), e = null);}function a(n) {var o = new Error("probe error: " + n);o.transport = e.name, i(), s('probe transport "%s" failed because of error: %s', t, n), r.emit("upgradeError", o);}function c() {a("transport closed");}function u() {a("socket closed");}function p(t) {e && t.name !== e.name && (s('"%s" works - aborting "%s"', t.name, e.name), i());}function f() {e.removeListener("open", o), e.removeListener("error", a), e.removeListener("close", c), r.removeListener("close", u), r.removeListener("upgrading", p);}h.priorWebsocketSuccess = !1, e.once("open", o), e.once("error", a), e.once("close", c), this.once("close", u), this.once("upgrading", p), e.open();} }, { key: "onOpen", value: function onOpen() {if (s("socket open"), this.readyState = "open", h.priorWebsocketSuccess = "websocket" === this.transport.name, this.emit("open"), this.flush(), "open" === this.readyState && this.opts.upgrade && this.transport.pause) {s("starting upgrade probes");var _t8 = 0;var _e8 = this.upgrades.length;for (; _t8 < _e8; _t8++) {this.probe(this.upgrades[_t8]);}}} }, { key: "onPacket", value: function onPacket(t) {if ("opening" === this.readyState || "open" === this.readyState || "closing" === this.readyState) switch (s('socket receive: type "%s", data "%s"', t.type, t.data), this.emit("packet", t), this.emit("heartbeat"), t.type) {case "open":this.onHandshake(JSON.parse(t.data));break;case "ping":this.resetPingTimeout(), this.sendPacket("pong"), this.emit("pong");break;case "error":var _e9 = new Error("server error");_e9.code = t.data, this.onError(_e9);break;case "message":this.emit("data", t.data), this.emit("message", t.data);} else s('packet received with socket readyState "%s"', this.readyState);} }, { key: "onHandshake", value: function onHandshake(t) {this.emit("handshake", t), this.id = t.sid, this.transport.query.sid = t.sid, this.upgrades = this.filterUpgrades(t.upgrades), this.pingInterval = t.pingInterval, this.pingTimeout = t.pingTimeout, this.onOpen(), "closed" !== this.readyState && this.resetPingTimeout();} }, { key: "resetPingTimeout", value: function resetPingTimeout() {var _this10 = this;clearTimeout(this.pingTimeoutTimer), this.pingTimeoutTimer = setTimeout(function () {_this10.onClose("ping timeout");}, this.pingInterval + this.pingTimeout), this.opts.autoUnref && this.pingTimeoutTimer.unref();} }, { key: "onDrain", value: function onDrain() {this.writeBuffer.splice(0, this.prevBufferLen), this.prevBufferLen = 0, 0 === this.writeBuffer.length ? this.emit("drain") : this.flush();} }, { key: "flush", value: function flush() {"closed" !== this.readyState && this.transport.writable && !this.upgrading && this.writeBuffer.length && (s("flushing %d packets in socket", this.writeBuffer.length), this.transport.send(this.writeBuffer), this.prevBufferLen = this.writeBuffer.length, this.emit("flush"));} }, { key: "write", value: function write(t, e, n) {return this.sendPacket("message", t, e, n), this;} }, { key: "send", value: function send(t, e, n) {return this.sendPacket("message", t, e, n), this;} }, { key: "sendPacket", value: function sendPacket(t, e, n, r) {if ("function" == typeof e && (r = e, e = void 0), "function" == typeof n && (r = n, n = null), "closing" === this.readyState || "closed" === this.readyState) return;(n = n || {}).compress = !1 !== n.compress;var o = { type: t, data: e, options: n };this.emit("packetCreate", o), this.writeBuffer.push(o), r && this.once("flush", r), this.flush();} }, { key: "close", value: function close() {var t = this;function e() {t.onClose("forced close"), s("socket closing - telling transport to close"), t.transport.close();}function n() {t.removeListener("upgrade", n), t.removeListener("upgradeError", n), e();}function r() {t.once("upgrade", n), t.once("upgradeError", n);}return "opening" !== this.readyState && "open" !== this.readyState || (this.readyState = "closing", this.writeBuffer.length ? this.once("drain", function () {this.upgrading ? r() : e();}) : this.upgrading ? r() : e()), this;} }, { key: "onError", value: function onError(t) {s("socket error %j", t), h.priorWebsocketSuccess = !1, this.emit("error", t), this.onClose("transport error", t);} }, { key: "onClose", value: function onClose(t, e) {if ("opening" === this.readyState || "open" === this.readyState || "closing" === this.readyState) {s('socket close with reason: "%s"', t);var _n11 = this;clearTimeout(this.pingIntervalTimer), clearTimeout(this.pingTimeoutTimer), this.transport.removeAllListeners("close"), this.transport.close(), this.transport.removeAllListeners(), "function" == typeof removeEventListener && removeEventListener("offline", this.offlineEventListener, !1), this.readyState = "closed", this.id = null, this.emit("close", t, e), _n11.writeBuffer = [], _n11.prevBufferLen = 0;}} }, { key: "filterUpgrades", value: function filterUpgrades(t) {var e = [];var n = 0;var r = t.length;for (; n < r; n++) {~this.transports.indexOf(t[n]) && e.push(t[n]);}return e;} }]);return h;}(o);h.priorWebsocketSuccess = !1, h.protocol = i.protocol, t.exports = h;}, function (t, e) {try {t.exports = "undefined" != typeof XMLHttpRequest && "withCredentials" in new XMLHttpRequest();} catch (e) {t.exports = !1;}}, function (t, e, n) {var r = n(10),o = n(11),s = n(1),_n12 = n(14),i = _n12.pick,a = n(3),c = n(0)("engine.io-client:polling-xhr");function h() {}var u = null != new r({ xdomain: !1 }).responseType;var p = /*#__PURE__*/function (_s3) {"use strict";_inherits(p, _s3);var _super7 = _createSuper(p);function p(t, e) {var _this11;_classCallCheck(this, p);_this11 = _super7.call(this), _this11.opts = e, _this11.method = e.method || "GET", _this11.uri = t, _this11.async = !1 !== e.async, _this11.data = void 0 !== e.data ? e.data : null, _this11.create();return _this11;}_createClass(p, [{ key: "create", value: function create() {var t = i(this.opts, "agent", "enablesXDR", "pfx", "key", "passphrase", "cert", "ca", "ciphers", "rejectUnauthorized", "autoUnref");t.xdomain = !!this.opts.xd, t.xscheme = !!this.opts.xs;var e = this.xhr = new r(t),n = this;try {c("xhr open %s: %s", this.method, this.uri), e.open(this.method, this.uri, this.async);try {if (this.opts.extraHeaders) {e.setDisableHeaderCheck && e.setDisableHeaderCheck(!0);for (var _t9 in this.opts.extraHeaders) {this.opts.extraHeaders.hasOwnProperty(_t9) && e.setRequestHeader(_t9, this.opts.extraHeaders[_t9]);}}} catch (t) {}if ("POST" === this.method) try {e.setRequestHeader("Content-type", "text/plain;charset=UTF-8");} catch (t) {}try {e.setRequestHeader("Accept", "*/*");} catch (t) {}"withCredentials" in e && (e.withCredentials = this.opts.withCredentials), this.opts.requestTimeout && (e.timeout = this.opts.requestTimeout), this.hasXDR() ? (e.onload = function () {n.onLoad();}, e.onerror = function () {n.onError(e.responseText);}) : e.onreadystatechange = function () {4 === e.readyState && (200 === e.status || 1223 === e.status ? n.onLoad() : setTimeout(function () {n.onError("number" == typeof e.status ? e.status : 0);}, 0));}, c("xhr data %s", this.data), e.send(this.data);} catch (t) {return void setTimeout(function () {n.onError(t);}, 0);}"undefined" != typeof document && (this.index = p.requestsCount++, p.requests[this.index] = this);} }, { key: "onSuccess", value: function onSuccess() {this.emit("success"), this.cleanup();} }, { key: "onData", value: function onData(t) {this.emit("data", t), this.onSuccess();} }, { key: "onError", value: function onError(t) {this.emit("error", t), this.cleanup(!0);} }, { key: "cleanup", value: function cleanup(t) {if (void 0 !== this.xhr && null !== this.xhr) {if (this.hasXDR() ? this.xhr.onload = this.xhr.onerror = h : this.xhr.onreadystatechange = h, t) try {this.xhr.abort();} catch (t) {}"undefined" != typeof document && delete p.requests[this.index], this.xhr = null;}} }, { key: "onLoad", value: function onLoad() {var t = this.xhr.responseText;null !== t && this.onData(t);} }, { key: "hasXDR", value: function hasXDR() {return "undefined" != typeof XDomainRequest && !this.xs && this.enablesXDR;} }, { key: "abort", value: function abort() {this.cleanup();} }]);return p;}(s);if (p.requestsCount = 0, p.requests = {}, "undefined" != typeof document) if ("function" == typeof attachEvent) attachEvent("onunload", f);else if ("function" == typeof addEventListener) {addEventListener("onpagehide" in a ? "pagehide" : "unload", f, !1);}function f() {for (var _t10 in p.requests) {p.requests.hasOwnProperty(_t10) && p.requests[_t10].abort();}}t.exports = /*#__PURE__*/function (_o5) {"use strict";_inherits(_class6, _o5);var _super8 = _createSuper(_class6);function _class6(t) {var _this12;_classCallCheck(this, _class6);if (_this12 = _super8.call(this, t), "undefined" != typeof location) {var _e10 = "https:" === location.protocol;var _n13 = location.port;_n13 || (_n13 = _e10 ? 443 : 80), _this12.xd = "undefined" != typeof location && t.hostname !== location.hostname || _n13 !== t.port, _this12.xs = t.secure !== _e10;}var e = t && t.forceBase64;_this12.supportsBinary = u && !e;return _possibleConstructorReturn(_this12);}_createClass(_class6, [{ key: "request", value: function request() {var t = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};return Object.assign(t, { xd: this.xd, xs: this.xs }, this.opts), new p(this.uri(), t);} }, { key: "doWrite", value: function doWrite(t, e) {var n = this.request({ method: "POST", data: t }),r = this;n.on("success", e), n.on("error", function (t) {r.onError("xhr post error", t);});} }, { key: "doPoll", value: function doPoll() {c("xhr poll");var t = this.request(),e = this;t.on("data", function (t) {e.onData(t);}), t.on("error", function (t) {e.onError("xhr poll error", t);}), this.pollXhr = t;} }]);return _class6;}(o), t.exports.Request = p;}, function (t, e, n) {var _n14 = n(12),r = _n14.PACKET_TYPES,o = "function" == typeof Blob || "undefined" != typeof Blob && "[object BlobConstructor]" === Object.prototype.toString.call(Blob),s = "function" == typeof ArrayBuffer,i = function i(t, e) {var n = new FileReader();return n.onload = function () {var t = n.result.split(",")[1];e("b" + t);}, n.readAsDataURL(t);};t.exports = function (_ref, n, a) {var t = _ref.type,e = _ref.data;return o && e instanceof Blob ? n ? a(e) : i(e, a) : s && (e instanceof ArrayBuffer || (c = e, "function" == typeof ArrayBuffer.isView ? ArrayBuffer.isView(c) : c && c.buffer instanceof ArrayBuffer)) ? n ? a(e instanceof ArrayBuffer ? e : e.buffer) : i(new Blob([e]), a) : a(r[t] + (e || ""));var c;};}, function (t, e, n) {var _n15 = n(12),r = _n15.PACKET_TYPES_REVERSE,o = _n15.ERROR_PACKET;var s;"function" == typeof ArrayBuffer && (s = n(27));var i = function i(t, e) {if (s) {var _n16 = s.decode(t);return a(_n16, e);}return { base64: !0, data: t };},a = function a(t, e) {switch (e) {case "blob":return t instanceof ArrayBuffer ? new Blob([t]) : t;case "arraybuffer":default:return t;}};t.exports = function (t, e) {if ("string" != typeof t) return { type: "message", data: a(t, e) };var n = t.charAt(0);if ("b" === n) return { type: "message", data: i(t.substring(1), e) };return r[n] ? t.length > 1 ? { type: r[n], data: t.substring(1) } : { type: r[n] } : o;};}, function (t, e) {!function (t) {"use strict";e.encode = function (e) {var n,r = new Uint8Array(e),o = r.length,s = "";for (n = 0; n < o; n += 3) {s += t[r[n] >> 2], s += t[(3 & r[n]) << 4 | r[n + 1] >> 4], s += t[(15 & r[n + 1]) << 2 | r[n + 2] >> 6], s += t[63 & r[n + 2]];}return o % 3 == 2 ? s = s.substring(0, s.length - 1) + "=" : o % 3 == 1 && (s = s.substring(0, s.length - 2) + "=="), s;}, e.decode = function (e) {var n,r,o,s,i,a = .75 * e.length,c = e.length,h = 0;"=" === e[e.length - 1] && (a--, "=" === e[e.length - 2] && a--);var u = new ArrayBuffer(a),p = new Uint8Array(u);for (n = 0; n < c; n += 4) {r = t.indexOf(e[n]), o = t.indexOf(e[n + 1]), s = t.indexOf(e[n + 2]), i = t.indexOf(e[n + 3]), p[h++] = r << 2 | o >> 4, p[h++] = (15 & o) << 4 | s >> 2, p[h++] = (3 & s) << 6 | 63 & i;}return u;};}("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/");}, function (t, e, n) {var r = n(11),o = n(3),s = /\n/g,i = /\\n/g;var a;t.exports = /*#__PURE__*/function (_r9) {"use strict";_inherits(_class7, _r9);var _super9 = _createSuper(_class7);function _class7(t) {var _this13;_classCallCheck(this, _class7);_this13 = _super9.call(this, t), _this13.query = _this13.query || {}, a || (a = o.___eio = o.___eio || []), _this13.index = a.length;var e = _assertThisInitialized(_this13);a.push(function (t) {e.onData(t);}), _this13.query.j = _this13.index;return _this13;}_createClass(_class7, [{ key: "doClose", value: function doClose() {this.script && (this.script.onerror = function () {}, this.script.parentNode.removeChild(this.script), this.script = null), this.form && (this.form.parentNode.removeChild(this.form), this.form = null, this.iframe = null), _get(_getPrototypeOf(_class7.prototype), "doClose", this).call(this);} }, { key: "doPoll", value: function doPoll() {var t = this,e = document.createElement("script");this.script && (this.script.parentNode.removeChild(this.script), this.script = null), e.async = !0, e.src = this.uri(), e.onerror = function (e) {t.onError("jsonp poll error", e);};var n = document.getElementsByTagName("script")[0];n ? n.parentNode.insertBefore(e, n) : (document.head || document.body).appendChild(e), this.script = e;"undefined" != typeof navigator && /gecko/i.test(navigator.userAgent) && setTimeout(function () {var t = document.createElement("iframe");document.body.appendChild(t), document.body.removeChild(t);}, 100);} }, { key: "doWrite", value: function doWrite(t, e) {var n = this;var r;if (!this.form) {var _t11 = document.createElement("form"),_e11 = document.createElement("textarea"),_n17 = this.iframeId = "eio_iframe_" + this.index;_t11.className = "socketio", _t11.style.position = "absolute", _t11.style.top = "-1000px", _t11.style.left = "-1000px", _t11.target = _n17, _t11.method = "POST", _t11.setAttribute("accept-charset", "utf-8"), _e11.name = "d", _t11.appendChild(_e11), document.body.appendChild(_t11), this.form = _t11, this.area = _e11;}function o() {a(), e();}function a() {if (n.iframe) try {n.form.removeChild(n.iframe);} catch (t) {n.onError("jsonp polling iframe removal error", t);}try {var _t12 = '<iframe src="javascript:0" name="' + n.iframeId + '">';r = document.createElement(_t12);} catch (t) {r = document.createElement("iframe"), r.name = n.iframeId, r.src = "javascript:0";}r.id = n.iframeId, n.form.appendChild(r), n.iframe = r;}this.form.action = this.uri(), a(), t = t.replace(i, "\\\n"), this.area.value = t.replace(s, "\\n");try {this.form.submit();} catch (t) {}this.iframe.attachEvent ? this.iframe.onreadystatechange = function () {"complete" === n.iframe.readyState && o();} : this.iframe.onload = o;} }, { key: "supportsBinary", get: function get() {return !1;} }]);return _class7;}(r);}, function (t, e, n) {(function (e) {var r = n(2),o = n(5),s = n(13),i = n(4),_n18 = n(14),a = _n18.pick,c = n(3),h = n(0)("engine.io-client:websocket");var u = c.WebSocket || c.MozWebSocket,p = !0,f = "arraybuffer";"undefined" == typeof window && (u = n(35), p = !1, f = "nodebuffer");var l = "undefined" != typeof navigator && "string" == typeof navigator.product && "reactnative" === navigator.product.toLowerCase();var d = /*#__PURE__*/function (_i2) {"use strict";_inherits(d, _i2);var _super10 = _createSuper(d);function d(t) {var _this14;_classCallCheck(this, d);_this14 = _super10.call(this, t), _this14.supportsBinary = !t.forceBase64;return _this14;}_createClass(d, [{ key: "doOpen", value: function doOpen() {if (!this.check()) return;var t = this.uri(),e = this.opts.protocols,n = l ? {} : a(this.opts, "agent", "perMessageDeflate", "pfx", "key", "passphrase", "cert", "ca", "ciphers", "rejectUnauthorized", "localAddress", "protocolVersion", "origin", "maxPayload", "family", "checkServerIdentity");this.opts.extraHeaders && (n.headers = this.opts.extraHeaders);try {this.ws = p && !l ? e ? new u(t, e) : new u(t) : new u(t, e, n);} catch (t) {return console.log("error", t), this.emit("error", t);}this.ws.binaryType = this.socket.binaryType || f, this.addEventListeners();} }, { key: "addEventListeners", value: function addEventListeners() {var _this15 = this;this.ws.onopen = function () {_this15.opts.autoUnref && _this15.ws._socket.unref(), _this15.onOpen();}, this.ws.onclose = this.onClose.bind(this), this.ws.onmessage = function (t) {return _this15.onData(t.data);}, this.ws.onerror = function (t) {return _this15.onError("websocket error", t);};} }, { key: "write", value: function write(t) {var n = this;this.writable = !1;var o = t.length,s = 0;var i = o;for (; s < i; s++) {!function (t) {r.encodePacket(t, n.supportsBinary, function (r) {var s = {};if (!p && (t.options && (s.compress = t.options.compress), n.opts.perMessageDeflate)) {("string" == typeof r ? e.byteLength(r) : r.length) < n.opts.perMessageDeflate.threshold && (s.compress = !1);}try {p ? n.ws.send(r) : n.ws.send(r, s);} catch (t) {h("websocket closed before onclose event");}--o || a();});}(t[s]);}function a() {n.emit("flush"), setTimeout(function () {n.writable = !0, n.emit("drain");}, 0);}} }, { key: "onClose", value: function onClose() {i.prototype.onClose.call(this);} }, { key: "doClose", value: function doClose() {void 0 !== this.ws && (this.ws.close(), this.ws = null);} }, { key: "uri", value: function uri() {var t = this.query || {};var e = this.opts.secure ? "wss" : "ws";var n = "";this.opts.port && ("wss" === e && 443 !== Number(this.opts.port) || "ws" === e && 80 !== Number(this.opts.port)) && (n = ":" + this.opts.port), this.opts.timestampRequests && (t[this.opts.timestampParam] = s()), this.supportsBinary || (t.b64 = 1), t = o.encode(t), t.length && (t = "?" + t);return e + "://" + (-1 !== this.opts.hostname.indexOf(":") ? "[" + this.opts.hostname + "]" : this.opts.hostname) + n + this.opts.path + t;} }, { key: "check", value: function check() {return !(!u || "__initialize" in u && this.name === d.prototype.name);} }, { key: "name", get: function get() {return "websocket";} }]);return d;}(i);t.exports = d;}).call(this, n(30).Buffer);}, function (t, e, n) {"use strict";(function (t) {
+      /*!
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * The buffer module from node.js, for the browser.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * @author   Feross Aboukhadijeh <http://feross.org>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * @license  MIT
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        */
+      var r = n(32),o = n(33),s = n(34);function i() {return c.TYPED_ARRAY_SUPPORT ? 2147483647 : 1073741823;}function a(t, e) {if (i() < e) throw new RangeError("Invalid typed array length");return c.TYPED_ARRAY_SUPPORT ? (t = new Uint8Array(e)).__proto__ = c.prototype : (null === t && (t = new c(e)), t.length = e), t;}function c(t, e, n) {if (!(c.TYPED_ARRAY_SUPPORT || this instanceof c)) return new c(t, e, n);if ("number" == typeof t) {if ("string" == typeof e) throw new Error("If encoding is specified then the first argument must be a string");return p(this, t);}return h(this, t, e, n);}function h(t, e, n, r) {if ("number" == typeof e) throw new TypeError('"value" argument must not be a number');return "undefined" != typeof ArrayBuffer && e instanceof ArrayBuffer ? function (t, e, n, r) {if (e.byteLength, n < 0 || e.byteLength < n) throw new RangeError("'offset' is out of bounds");if (e.byteLength < n + (r || 0)) throw new RangeError("'length' is out of bounds");e = void 0 === n && void 0 === r ? new Uint8Array(e) : void 0 === r ? new Uint8Array(e, n) : new Uint8Array(e, n, r);c.TYPED_ARRAY_SUPPORT ? (t = e).__proto__ = c.prototype : t = f(t, e);return t;}(t, e, n, r) : "string" == typeof e ? function (t, e, n) {"string" == typeof n && "" !== n || (n = "utf8");if (!c.isEncoding(n)) throw new TypeError('"encoding" must be a valid string encoding');var r = 0 | d(e, n),o = (t = a(t, r)).write(e, n);o !== r && (t = t.slice(0, o));return t;}(t, e, n) : function (t, e) {if (c.isBuffer(e)) {var n = 0 | l(e.length);return 0 === (t = a(t, n)).length || e.copy(t, 0, 0, n), t;}if (e) {if ("undefined" != typeof ArrayBuffer && e.buffer instanceof ArrayBuffer || "length" in e) return "number" != typeof e.length || (r = e.length) != r ? a(t, 0) : f(t, e);if ("Buffer" === e.type && s(e.data)) return f(t, e.data);}var r;throw new TypeError("First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.");}(t, e);}function u(t) {if ("number" != typeof t) throw new TypeError('"size" argument must be a number');if (t < 0) throw new RangeError('"size" argument must not be negative');}function p(t, e) {if (u(e), t = a(t, e < 0 ? 0 : 0 | l(e)), !c.TYPED_ARRAY_SUPPORT) for (var n = 0; n < e; ++n) {t[n] = 0;}return t;}function f(t, e) {var n = e.length < 0 ? 0 : 0 | l(e.length);t = a(t, n);for (var r = 0; r < n; r += 1) {t[r] = 255 & e[r];}return t;}function l(t) {if (t >= i()) throw new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + i().toString(16) + " bytes");return 0 | t;}function d(t, e) {if (c.isBuffer(t)) return t.length;if ("undefined" != typeof ArrayBuffer && "function" == typeof ArrayBuffer.isView && (ArrayBuffer.isView(t) || t instanceof ArrayBuffer)) return t.byteLength;"string" != typeof t && (t = "" + t);var n = t.length;if (0 === n) return 0;for (var r = !1;;) {switch (e) {case "ascii":case "latin1":case "binary":return n;case "utf8":case "utf-8":case void 0:return Y(t).length;case "ucs2":case "ucs-2":case "utf16le":case "utf-16le":return 2 * n;case "hex":return n >>> 1;case "base64":return q(t).length;default:if (r) return Y(t).length;e = ("" + e).toLowerCase(), r = !0;}}}function y(t, e, n) {var r = !1;if ((void 0 === e || e < 0) && (e = 0), e > this.length) return "";if ((void 0 === n || n > this.length) && (n = this.length), n <= 0) return "";if ((n >>>= 0) <= (e >>>= 0)) return "";for (t || (t = "utf8");;) {switch (t) {case "hex":return C(this, e, n);case "utf8":case "utf-8":return x(this, e, n);case "ascii":return S(this, e, n);case "latin1":case "binary":return P(this, e, n);case "base64":return T(this, e, n);case "ucs2":case "ucs-2":case "utf16le":case "utf-16le":return R(this, e, n);default:if (r) throw new TypeError("Unknown encoding: " + t);t = (t + "").toLowerCase(), r = !0;}}}function g(t, e, n) {var r = t[e];t[e] = t[n], t[n] = r;}function m(t, e, n, r, o) {if (0 === t.length) return -1;if ("string" == typeof n ? (r = n, n = 0) : n > 2147483647 ? n = 2147483647 : n < -2147483648 && (n = -2147483648), n = +n, isNaN(n) && (n = o ? 0 : t.length - 1), n < 0 && (n = t.length + n), n >= t.length) {if (o) return -1;n = t.length - 1;} else if (n < 0) {if (!o) return -1;n = 0;}if ("string" == typeof e && (e = c.from(e, r)), c.isBuffer(e)) return 0 === e.length ? -1 : v(t, e, n, r, o);if ("number" == typeof e) return e &= 255, c.TYPED_ARRAY_SUPPORT && "function" == typeof Uint8Array.prototype.indexOf ? o ? Uint8Array.prototype.indexOf.call(t, e, n) : Uint8Array.prototype.lastIndexOf.call(t, e, n) : v(t, [e], n, r, o);throw new TypeError("val must be string, number or Buffer");}function v(t, e, n, r, o) {var s,i = 1,a = t.length,c = e.length;if (void 0 !== r && ("ucs2" === (r = String(r).toLowerCase()) || "ucs-2" === r || "utf16le" === r || "utf-16le" === r)) {if (t.length < 2 || e.length < 2) return -1;i = 2, a /= 2, c /= 2, n /= 2;}function h(t, e) {return 1 === i ? t[e] : t.readUInt16BE(e * i);}if (o) {var u = -1;for (s = n; s < a; s++) {if (h(t, s) === h(e, -1 === u ? 0 : s - u)) {if (-1 === u && (u = s), s - u + 1 === c) return u * i;} else -1 !== u && (s -= s - u), u = -1;}} else for (n + c > a && (n = a - c), s = n; s >= 0; s--) {for (var p = !0, f = 0; f < c; f++) {if (h(t, s + f) !== h(e, f)) {p = !1;break;}}if (p) return s;}return -1;}function b(t, e, n, r) {n = Number(n) || 0;var o = t.length - n;r ? (r = Number(r)) > o && (r = o) : r = o;var s = e.length;if (s % 2 != 0) throw new TypeError("Invalid hex string");r > s / 2 && (r = s / 2);for (var i = 0; i < r; ++i) {var a = parseInt(e.substr(2 * i, 2), 16);if (isNaN(a)) return i;t[n + i] = a;}return i;}function w(t, e, n, r) {return F(Y(e, t.length - n), t, n, r);}function _(t, e, n, r) {return F(function (t) {for (var e = [], n = 0; n < t.length; ++n) {e.push(255 & t.charCodeAt(n));}return e;}(e), t, n, r);}function E(t, e, n, r) {return _(t, e, n, r);}function k(t, e, n, r) {return F(q(e), t, n, r);}function A(t, e, n, r) {return F(function (t, e) {for (var n, r, o, s = [], i = 0; i < t.length && !((e -= 2) < 0); ++i) {n = t.charCodeAt(i), r = n >> 8, o = n % 256, s.push(o), s.push(r);}return s;}(e, t.length - n), t, n, r);}function T(t, e, n) {return 0 === e && n === t.length ? r.fromByteArray(t) : r.fromByteArray(t.slice(e, n));}function x(t, e, n) {n = Math.min(t.length, n);for (var r = [], o = e; o < n;) {var s,i,a,c,h = t[o],u = null,p = h > 239 ? 4 : h > 223 ? 3 : h > 191 ? 2 : 1;if (o + p <= n) switch (p) {case 1:h < 128 && (u = h);break;case 2:128 == (192 & (s = t[o + 1])) && (c = (31 & h) << 6 | 63 & s) > 127 && (u = c);break;case 3:s = t[o + 1], i = t[o + 2], 128 == (192 & s) && 128 == (192 & i) && (c = (15 & h) << 12 | (63 & s) << 6 | 63 & i) > 2047 && (c < 55296 || c > 57343) && (u = c);break;case 4:s = t[o + 1], i = t[o + 2], a = t[o + 3], 128 == (192 & s) && 128 == (192 & i) && 128 == (192 & a) && (c = (15 & h) << 18 | (63 & s) << 12 | (63 & i) << 6 | 63 & a) > 65535 && c < 1114112 && (u = c);}null === u ? (u = 65533, p = 1) : u > 65535 && (u -= 65536, r.push(u >>> 10 & 1023 | 55296), u = 56320 | 1023 & u), r.push(u), o += p;}return function (t) {var e = t.length;if (e <= 4096) return String.fromCharCode.apply(String, t);var n = "",r = 0;for (; r < e;) {n += String.fromCharCode.apply(String, t.slice(r, r += 4096));}return n;}(r);}e.Buffer = c, e.SlowBuffer = function (t) {+t != t && (t = 0);return c.alloc(+t);}, e.INSPECT_MAX_BYTES = 50, c.TYPED_ARRAY_SUPPORT = void 0 !== t.TYPED_ARRAY_SUPPORT ? t.TYPED_ARRAY_SUPPORT : function () {try {var t = new Uint8Array(1);return t.__proto__ = { __proto__: Uint8Array.prototype, foo: function foo() {return 42;} }, 42 === t.foo() && "function" == typeof t.subarray && 0 === t.subarray(1, 1).byteLength;} catch (t) {return !1;}}(), e.kMaxLength = i(), c.poolSize = 8192, c._augment = function (t) {return t.__proto__ = c.prototype, t;}, c.from = function (t, e, n) {return h(null, t, e, n);}, c.TYPED_ARRAY_SUPPORT && (c.prototype.__proto__ = Uint8Array.prototype, c.__proto__ = Uint8Array, "undefined" != typeof Symbol && Symbol.species && c[Symbol.species] === c && Object.defineProperty(c, Symbol.species, { value: null, configurable: !0 })), c.alloc = function (t, e, n) {return function (t, e, n, r) {return u(e), e <= 0 ? a(t, e) : void 0 !== n ? "string" == typeof r ? a(t, e).fill(n, r) : a(t, e).fill(n) : a(t, e);}(null, t, e, n);}, c.allocUnsafe = function (t) {return p(null, t);}, c.allocUnsafeSlow = function (t) {return p(null, t);}, c.isBuffer = function (t) {return !(null == t || !t._isBuffer);}, c.compare = function (t, e) {if (!c.isBuffer(t) || !c.isBuffer(e)) throw new TypeError("Arguments must be Buffers");if (t === e) return 0;for (var n = t.length, r = e.length, o = 0, s = Math.min(n, r); o < s; ++o) {if (t[o] !== e[o]) {n = t[o], r = e[o];break;}}return n < r ? -1 : r < n ? 1 : 0;}, c.isEncoding = function (t) {switch (String(t).toLowerCase()) {case "hex":case "utf8":case "utf-8":case "ascii":case "latin1":case "binary":case "base64":case "ucs2":case "ucs-2":case "utf16le":case "utf-16le":return !0;default:return !1;}}, c.concat = function (t, e) {if (!s(t)) throw new TypeError('"list" argument must be an Array of Buffers');if (0 === t.length) return c.alloc(0);var n;if (void 0 === e) for (e = 0, n = 0; n < t.length; ++n) {e += t[n].length;}var r = c.allocUnsafe(e),o = 0;for (n = 0; n < t.length; ++n) {var i = t[n];if (!c.isBuffer(i)) throw new TypeError('"list" argument must be an Array of Buffers');i.copy(r, o), o += i.length;}return r;}, c.byteLength = d, c.prototype._isBuffer = !0, c.prototype.swap16 = function () {var t = this.length;if (t % 2 != 0) throw new RangeError("Buffer size must be a multiple of 16-bits");for (var e = 0; e < t; e += 2) {g(this, e, e + 1);}return this;}, c.prototype.swap32 = function () {var t = this.length;if (t % 4 != 0) throw new RangeError("Buffer size must be a multiple of 32-bits");for (var e = 0; e < t; e += 4) {g(this, e, e + 3), g(this, e + 1, e + 2);}return this;}, c.prototype.swap64 = function () {var t = this.length;if (t % 8 != 0) throw new RangeError("Buffer size must be a multiple of 64-bits");for (var e = 0; e < t; e += 8) {g(this, e, e + 7), g(this, e + 1, e + 6), g(this, e + 2, e + 5), g(this, e + 3, e + 4);}return this;}, c.prototype.toString = function () {var t = 0 | this.length;return 0 === t ? "" : 0 === arguments.length ? x(this, 0, t) : y.apply(this, arguments);}, c.prototype.equals = function (t) {if (!c.isBuffer(t)) throw new TypeError("Argument must be a Buffer");return this === t || 0 === c.compare(this, t);}, c.prototype.inspect = function () {var t = "",n = e.INSPECT_MAX_BYTES;return this.length > 0 && (t = this.toString("hex", 0, n).match(/.{2}/g).join(" "), this.length > n && (t += " ... ")), "<Buffer " + t + ">";}, c.prototype.compare = function (t, e, n, r, o) {if (!c.isBuffer(t)) throw new TypeError("Argument must be a Buffer");if (void 0 === e && (e = 0), void 0 === n && (n = t ? t.length : 0), void 0 === r && (r = 0), void 0 === o && (o = this.length), e < 0 || n > t.length || r < 0 || o > this.length) throw new RangeError("out of range index");if (r >= o && e >= n) return 0;if (r >= o) return -1;if (e >= n) return 1;if (this === t) return 0;for (var s = (o >>>= 0) - (r >>>= 0), i = (n >>>= 0) - (e >>>= 0), a = Math.min(s, i), h = this.slice(r, o), u = t.slice(e, n), p = 0; p < a; ++p) {if (h[p] !== u[p]) {s = h[p], i = u[p];break;}}return s < i ? -1 : i < s ? 1 : 0;}, c.prototype.includes = function (t, e, n) {return -1 !== this.indexOf(t, e, n);}, c.prototype.indexOf = function (t, e, n) {return m(this, t, e, n, !0);}, c.prototype.lastIndexOf = function (t, e, n) {return m(this, t, e, n, !1);}, c.prototype.write = function (t, e, n, r) {if (void 0 === e) r = "utf8", n = this.length, e = 0;else if (void 0 === n && "string" == typeof e) r = e, n = this.length, e = 0;else {if (!isFinite(e)) throw new Error("Buffer.write(string, encoding, offset[, length]) is no longer supported");e |= 0, isFinite(n) ? (n |= 0, void 0 === r && (r = "utf8")) : (r = n, n = void 0);}var o = this.length - e;if ((void 0 === n || n > o) && (n = o), t.length > 0 && (n < 0 || e < 0) || e > this.length) throw new RangeError("Attempt to write outside buffer bounds");r || (r = "utf8");for (var s = !1;;) {switch (r) {case "hex":return b(this, t, e, n);case "utf8":case "utf-8":return w(this, t, e, n);case "ascii":return _(this, t, e, n);case "latin1":case "binary":return E(this, t, e, n);case "base64":return k(this, t, e, n);case "ucs2":case "ucs-2":case "utf16le":case "utf-16le":return A(this, t, e, n);default:if (s) throw new TypeError("Unknown encoding: " + r);r = ("" + r).toLowerCase(), s = !0;}}}, c.prototype.toJSON = function () {return { type: "Buffer", data: Array.prototype.slice.call(this._arr || this, 0) };};function S(t, e, n) {var r = "";n = Math.min(t.length, n);for (var o = e; o < n; ++o) {r += String.fromCharCode(127 & t[o]);}return r;}function P(t, e, n) {var r = "";n = Math.min(t.length, n);for (var o = e; o < n; ++o) {r += String.fromCharCode(t[o]);}return r;}function C(t, e, n) {var r = t.length;(!e || e < 0) && (e = 0), (!n || n < 0 || n > r) && (n = r);for (var o = "", s = e; s < n; ++s) {o += D(t[s]);}return o;}function R(t, e, n) {for (var r = t.slice(e, n), o = "", s = 0; s < r.length; s += 2) {o += String.fromCharCode(r[s] + 256 * r[s + 1]);}return o;}function O(t, e, n) {if (t % 1 != 0 || t < 0) throw new RangeError("offset is not uint");if (t + e > n) throw new RangeError("Trying to access beyond buffer length");}function B(t, e, n, r, o, s) {if (!c.isBuffer(t)) throw new TypeError('"buffer" argument must be a Buffer instance');if (e > o || e < s) throw new RangeError('"value" argument is out of bounds');if (n + r > t.length) throw new RangeError("Index out of range");}function L(t, e, n, r) {e < 0 && (e = 65535 + e + 1);for (var o = 0, s = Math.min(t.length - n, 2); o < s; ++o) {t[n + o] = (e & 255 << 8 * (r ? o : 1 - o)) >>> 8 * (r ? o : 1 - o);}}function N(t, e, n, r) {e < 0 && (e = 4294967295 + e + 1);for (var o = 0, s = Math.min(t.length - n, 4); o < s; ++o) {t[n + o] = e >>> 8 * (r ? o : 3 - o) & 255;}}function j(t, e, n, r, o, s) {if (n + r > t.length) throw new RangeError("Index out of range");if (n < 0) throw new RangeError("Index out of range");}function I(t, e, n, r, s) {return s || j(t, 0, n, 4), o.write(t, e, n, r, 23, 4), n + 4;}function M(t, e, n, r, s) {return s || j(t, 0, n, 8), o.write(t, e, n, r, 52, 8), n + 8;}c.prototype.slice = function (t, e) {var n,r = this.length;if ((t = ~~t) < 0 ? (t += r) < 0 && (t = 0) : t > r && (t = r), (e = void 0 === e ? r : ~~e) < 0 ? (e += r) < 0 && (e = 0) : e > r && (e = r), e < t && (e = t), c.TYPED_ARRAY_SUPPORT) (n = this.subarray(t, e)).__proto__ = c.prototype;else {var o = e - t;n = new c(o, void 0);for (var s = 0; s < o; ++s) {n[s] = this[s + t];}}return n;}, c.prototype.readUIntLE = function (t, e, n) {t |= 0, e |= 0, n || O(t, e, this.length);for (var r = this[t], o = 1, s = 0; ++s < e && (o *= 256);) {r += this[t + s] * o;}return r;}, c.prototype.readUIntBE = function (t, e, n) {t |= 0, e |= 0, n || O(t, e, this.length);for (var r = this[t + --e], o = 1; e > 0 && (o *= 256);) {r += this[t + --e] * o;}return r;}, c.prototype.readUInt8 = function (t, e) {return e || O(t, 1, this.length), this[t];}, c.prototype.readUInt16LE = function (t, e) {return e || O(t, 2, this.length), this[t] | this[t + 1] << 8;}, c.prototype.readUInt16BE = function (t, e) {return e || O(t, 2, this.length), this[t] << 8 | this[t + 1];}, c.prototype.readUInt32LE = function (t, e) {return e || O(t, 4, this.length), (this[t] | this[t + 1] << 8 | this[t + 2] << 16) + 16777216 * this[t + 3];}, c.prototype.readUInt32BE = function (t, e) {return e || O(t, 4, this.length), 16777216 * this[t] + (this[t + 1] << 16 | this[t + 2] << 8 | this[t + 3]);}, c.prototype.readIntLE = function (t, e, n) {t |= 0, e |= 0, n || O(t, e, this.length);for (var r = this[t], o = 1, s = 0; ++s < e && (o *= 256);) {r += this[t + s] * o;}return r >= (o *= 128) && (r -= Math.pow(2, 8 * e)), r;}, c.prototype.readIntBE = function (t, e, n) {t |= 0, e |= 0, n || O(t, e, this.length);for (var r = e, o = 1, s = this[t + --r]; r > 0 && (o *= 256);) {s += this[t + --r] * o;}return s >= (o *= 128) && (s -= Math.pow(2, 8 * e)), s;}, c.prototype.readInt8 = function (t, e) {return e || O(t, 1, this.length), 128 & this[t] ? -1 * (255 - this[t] + 1) : this[t];}, c.prototype.readInt16LE = function (t, e) {e || O(t, 2, this.length);var n = this[t] | this[t + 1] << 8;return 32768 & n ? 4294901760 | n : n;}, c.prototype.readInt16BE = function (t, e) {e || O(t, 2, this.length);var n = this[t + 1] | this[t] << 8;return 32768 & n ? 4294901760 | n : n;}, c.prototype.readInt32LE = function (t, e) {return e || O(t, 4, this.length), this[t] | this[t + 1] << 8 | this[t + 2] << 16 | this[t + 3] << 24;}, c.prototype.readInt32BE = function (t, e) {return e || O(t, 4, this.length), this[t] << 24 | this[t + 1] << 16 | this[t + 2] << 8 | this[t + 3];}, c.prototype.readFloatLE = function (t, e) {return e || O(t, 4, this.length), o.read(this, t, !0, 23, 4);}, c.prototype.readFloatBE = function (t, e) {return e || O(t, 4, this.length), o.read(this, t, !1, 23, 4);}, c.prototype.readDoubleLE = function (t, e) {return e || O(t, 8, this.length), o.read(this, t, !0, 52, 8);}, c.prototype.readDoubleBE = function (t, e) {return e || O(t, 8, this.length), o.read(this, t, !1, 52, 8);}, c.prototype.writeUIntLE = function (t, e, n, r) {(t = +t, e |= 0, n |= 0, r) || B(this, t, e, n, Math.pow(2, 8 * n) - 1, 0);var o = 1,s = 0;for (this[e] = 255 & t; ++s < n && (o *= 256);) {this[e + s] = t / o & 255;}return e + n;}, c.prototype.writeUIntBE = function (t, e, n, r) {(t = +t, e |= 0, n |= 0, r) || B(this, t, e, n, Math.pow(2, 8 * n) - 1, 0);var o = n - 1,s = 1;for (this[e + o] = 255 & t; --o >= 0 && (s *= 256);) {this[e + o] = t / s & 255;}return e + n;}, c.prototype.writeUInt8 = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 1, 255, 0), c.TYPED_ARRAY_SUPPORT || (t = Math.floor(t)), this[e] = 255 & t, e + 1;}, c.prototype.writeUInt16LE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? (this[e] = 255 & t, this[e + 1] = t >>> 8) : L(this, t, e, !0), e + 2;}, c.prototype.writeUInt16BE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? (this[e] = t >>> 8, this[e + 1] = 255 & t) : L(this, t, e, !1), e + 2;}, c.prototype.writeUInt32LE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? (this[e + 3] = t >>> 24, this[e + 2] = t >>> 16, this[e + 1] = t >>> 8, this[e] = 255 & t) : N(this, t, e, !0), e + 4;}, c.prototype.writeUInt32BE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? (this[e] = t >>> 24, this[e + 1] = t >>> 16, this[e + 2] = t >>> 8, this[e + 3] = 255 & t) : N(this, t, e, !1), e + 4;}, c.prototype.writeIntLE = function (t, e, n, r) {if (t = +t, e |= 0, !r) {var o = Math.pow(2, 8 * n - 1);B(this, t, e, n, o - 1, -o);}var s = 0,i = 1,a = 0;for (this[e] = 255 & t; ++s < n && (i *= 256);) {t < 0 && 0 === a && 0 !== this[e + s - 1] && (a = 1), this[e + s] = (t / i >> 0) - a & 255;}return e + n;}, c.prototype.writeIntBE = function (t, e, n, r) {if (t = +t, e |= 0, !r) {var o = Math.pow(2, 8 * n - 1);B(this, t, e, n, o - 1, -o);}var s = n - 1,i = 1,a = 0;for (this[e + s] = 255 & t; --s >= 0 && (i *= 256);) {t < 0 && 0 === a && 0 !== this[e + s + 1] && (a = 1), this[e + s] = (t / i >> 0) - a & 255;}return e + n;}, c.prototype.writeInt8 = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 1, 127, -128), c.TYPED_ARRAY_SUPPORT || (t = Math.floor(t)), t < 0 && (t = 255 + t + 1), this[e] = 255 & t, e + 1;}, c.prototype.writeInt16LE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? (this[e] = 255 & t, this[e + 1] = t >>> 8) : L(this, t, e, !0), e + 2;}, c.prototype.writeInt16BE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? (this[e] = t >>> 8, this[e + 1] = 255 & t) : L(this, t, e, !1), e + 2;}, c.prototype.writeInt32LE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 4, 2147483647, -2147483648), c.TYPED_ARRAY_SUPPORT ? (this[e] = 255 & t, this[e + 1] = t >>> 8, this[e + 2] = t >>> 16, this[e + 3] = t >>> 24) : N(this, t, e, !0), e + 4;}, c.prototype.writeInt32BE = function (t, e, n) {return t = +t, e |= 0, n || B(this, t, e, 4, 2147483647, -2147483648), t < 0 && (t = 4294967295 + t + 1), c.TYPED_ARRAY_SUPPORT ? (this[e] = t >>> 24, this[e + 1] = t >>> 16, this[e + 2] = t >>> 8, this[e + 3] = 255 & t) : N(this, t, e, !1), e + 4;}, c.prototype.writeFloatLE = function (t, e, n) {return I(this, t, e, !0, n);}, c.prototype.writeFloatBE = function (t, e, n) {return I(this, t, e, !1, n);}, c.prototype.writeDoubleLE = function (t, e, n) {return M(this, t, e, !0, n);}, c.prototype.writeDoubleBE = function (t, e, n) {return M(this, t, e, !1, n);}, c.prototype.copy = function (t, e, n, r) {if (n || (n = 0), r || 0 === r || (r = this.length), e >= t.length && (e = t.length), e || (e = 0), r > 0 && r < n && (r = n), r === n) return 0;if (0 === t.length || 0 === this.length) return 0;if (e < 0) throw new RangeError("targetStart out of bounds");if (n < 0 || n >= this.length) throw new RangeError("sourceStart out of bounds");if (r < 0) throw new RangeError("sourceEnd out of bounds");r > this.length && (r = this.length), t.length - e < r - n && (r = t.length - e + n);var o,s = r - n;if (this === t && n < e && e < r) for (o = s - 1; o >= 0; --o) {t[o + e] = this[o + n];} else if (s < 1e3 || !c.TYPED_ARRAY_SUPPORT) for (o = 0; o < s; ++o) {t[o + e] = this[o + n];} else Uint8Array.prototype.set.call(t, this.subarray(n, n + s), e);return s;}, c.prototype.fill = function (t, e, n, r) {if ("string" == typeof t) {if ("string" == typeof e ? (r = e, e = 0, n = this.length) : "string" == typeof n && (r = n, n = this.length), 1 === t.length) {var o = t.charCodeAt(0);o < 256 && (t = o);}if (void 0 !== r && "string" != typeof r) throw new TypeError("encoding must be a string");if ("string" == typeof r && !c.isEncoding(r)) throw new TypeError("Unknown encoding: " + r);} else "number" == typeof t && (t &= 255);if (e < 0 || this.length < e || this.length < n) throw new RangeError("Out of range index");if (n <= e) return this;var s;if (e >>>= 0, n = void 0 === n ? this.length : n >>> 0, t || (t = 0), "number" == typeof t) for (s = e; s < n; ++s) {this[s] = t;} else {var i = c.isBuffer(t) ? t : Y(new c(t, r).toString()),a = i.length;for (s = 0; s < n - e; ++s) {this[s + e] = i[s % a];}}return this;};var U = /[^+\/0-9A-Za-z-_]/g;function D(t) {return t < 16 ? "0" + t.toString(16) : t.toString(16);}function Y(t, e) {var n;e = e || 1 / 0;for (var r = t.length, o = null, s = [], i = 0; i < r; ++i) {if ((n = t.charCodeAt(i)) > 55295 && n < 57344) {if (!o) {if (n > 56319) {(e -= 3) > -1 && s.push(239, 191, 189);continue;}if (i + 1 === r) {(e -= 3) > -1 && s.push(239, 191, 189);continue;}o = n;continue;}if (n < 56320) {(e -= 3) > -1 && s.push(239, 191, 189), o = n;continue;}n = 65536 + (o - 55296 << 10 | n - 56320);} else o && (e -= 3) > -1 && s.push(239, 191, 189);if (o = null, n < 128) {if ((e -= 1) < 0) break;s.push(n);} else if (n < 2048) {if ((e -= 2) < 0) break;s.push(n >> 6 | 192, 63 & n | 128);} else if (n < 65536) {if ((e -= 3) < 0) break;s.push(n >> 12 | 224, n >> 6 & 63 | 128, 63 & n | 128);} else {if (!(n < 1114112)) throw new Error("Invalid code point");if ((e -= 4) < 0) break;s.push(n >> 18 | 240, n >> 12 & 63 | 128, n >> 6 & 63 | 128, 63 & n | 128);}}return s;}function q(t) {return r.toByteArray(function (t) {if ((t = function (t) {return t.trim ? t.trim() : t.replace(/^\s+|\s+$/g, "");}(t).replace(U, "")).length < 2) return "";for (; t.length % 4 != 0;) {t += "=";}return t;}(t));}function F(t, e, n, r) {for (var o = 0; o < r && !(o + n >= e.length || o >= t.length); ++o) {e[o + n] = t[o];}return o;}}).call(this, n(31));}, function (t, e) {var n;n = function () {return this;}();try {n = n || new Function("return this")();} catch (t) {"object" == typeof window && (n = window);}t.exports = n;}, function (t, e, n) {"use strict";e.byteLength = function (t) {var e = h(t),n = e[0],r = e[1];return 3 * (n + r) / 4 - r;}, e.toByteArray = function (t) {var e,n,r = h(t),i = r[0],a = r[1],c = new s(function (t, e, n) {return 3 * (e + n) / 4 - n;}(0, i, a)),u = 0,p = a > 0 ? i - 4 : i;for (n = 0; n < p; n += 4) {e = o[t.charCodeAt(n)] << 18 | o[t.charCodeAt(n + 1)] << 12 | o[t.charCodeAt(n + 2)] << 6 | o[t.charCodeAt(n + 3)], c[u++] = e >> 16 & 255, c[u++] = e >> 8 & 255, c[u++] = 255 & e;}2 === a && (e = o[t.charCodeAt(n)] << 2 | o[t.charCodeAt(n + 1)] >> 4, c[u++] = 255 & e);1 === a && (e = o[t.charCodeAt(n)] << 10 | o[t.charCodeAt(n + 1)] << 4 | o[t.charCodeAt(n + 2)] >> 2, c[u++] = e >> 8 & 255, c[u++] = 255 & e);return c;}, e.fromByteArray = function (t) {for (var e, n = t.length, o = n % 3, s = [], i = 0, a = n - o; i < a; i += 16383) {s.push(u(t, i, i + 16383 > a ? a : i + 16383));}1 === o ? (e = t[n - 1], s.push(r[e >> 2] + r[e << 4 & 63] + "==")) : 2 === o && (e = (t[n - 2] << 8) + t[n - 1], s.push(r[e >> 10] + r[e >> 4 & 63] + r[e << 2 & 63] + "="));return s.join("");};for (var r = [], o = [], s = "undefined" != typeof Uint8Array ? Uint8Array : Array, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", a = 0, c = i.length; a < c; ++a) {r[a] = i[a], o[i.charCodeAt(a)] = a;}function h(t) {var e = t.length;if (e % 4 > 0) throw new Error("Invalid string. Length must be a multiple of 4");var n = t.indexOf("=");return -1 === n && (n = e), [n, n === e ? 0 : 4 - n % 4];}function u(t, e, n) {for (var o, s, i = [], a = e; a < n; a += 3) {o = (t[a] << 16 & 16711680) + (t[a + 1] << 8 & 65280) + (255 & t[a + 2]), i.push(r[(s = o) >> 18 & 63] + r[s >> 12 & 63] + r[s >> 6 & 63] + r[63 & s]);}return i.join("");}o["-".charCodeAt(0)] = 62, o["_".charCodeAt(0)] = 63;}, function (t, e) {
+    /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+    e.read = function (t, e, n, r, o) {var s,i,a = 8 * o - r - 1,c = (1 << a) - 1,h = c >> 1,u = -7,p = n ? o - 1 : 0,f = n ? -1 : 1,l = t[e + p];for (p += f, s = l & (1 << -u) - 1, l >>= -u, u += a; u > 0; s = 256 * s + t[e + p], p += f, u -= 8) {;}for (i = s & (1 << -u) - 1, s >>= -u, u += r; u > 0; i = 256 * i + t[e + p], p += f, u -= 8) {;}if (0 === s) s = 1 - h;else {if (s === c) return i ? NaN : 1 / 0 * (l ? -1 : 1);i += Math.pow(2, r), s -= h;}return (l ? -1 : 1) * i * Math.pow(2, s - r);}, e.write = function (t, e, n, r, o, s) {var i,a,c,h = 8 * s - o - 1,u = (1 << h) - 1,p = u >> 1,f = 23 === o ? Math.pow(2, -24) - Math.pow(2, -77) : 0,l = r ? 0 : s - 1,d = r ? 1 : -1,y = e < 0 || 0 === e && 1 / e < 0 ? 1 : 0;for (e = Math.abs(e), isNaN(e) || e === 1 / 0 ? (a = isNaN(e) ? 1 : 0, i = u) : (i = Math.floor(Math.log(e) / Math.LN2), e * (c = Math.pow(2, -i)) < 1 && (i--, c *= 2), (e += i + p >= 1 ? f / c : f * Math.pow(2, 1 - p)) * c >= 2 && (i++, c /= 2), i + p >= u ? (a = 0, i = u) : i + p >= 1 ? (a = (e * c - 1) * Math.pow(2, o), i += p) : (a = e * Math.pow(2, p - 1) * Math.pow(2, o), i = 0)); o >= 8; t[n + l] = 255 & a, l += d, a /= 256, o -= 8) {;}for (i = i << o | a, h += o; h > 0; t[n + l] = 255 & i, l += d, i /= 256, h -= 8) {;}t[n + l - d] |= 128 * y;};}, function (t, e) {var n = {}.toString;t.exports = Array.isArray || function (t) {return "[object Array]" == n.call(t);};}, function (t, e, n) {var r = n(36),o = n(37),s = n(0)("@hyoga/uni-socket"),i = uni || wx;var a = /*#__PURE__*/function (_r10) {"use strict";_inherits(a, _r10);var _super11 = _createSuper(a);function a(t, e, n) {var _this16;_classCallCheck(this, a);_this16 = _super11.call(this), _this16._readyState = a.CONNECTING, _this16._socket = null, null !== t && (Array.isArray(e) ? e = e.join(", ") : "object" == typeof e && null !== e && (n = e, e = void 0), _this16.initAsClient(t, e, n));return _this16;}_createClass(a, [{ key: "initAsClient", value: function initAsClient(t, e, n) {Object.assign(n, { url: t, header: { "content-type": "application/json" }, protocols: e, timeout: 25e3 }), this._socket = this.createConnection(n), this.addSocketEventListeners();} }, { key: "createConnection", value: function createConnection(t) {return i.connectSocket(_objectSpread({ complete: function complete() {} }, t));} }, { key: "addSocketEventListeners", value: function addSocketEventListeners() {var _this17 = this;this._socket.onOpen(function () {_this17._readyState = a.OPEN, _this17.onopen();}), this._socket.onClose(function (t) {s("onclose: ", t), _this17._readyState = a.CLOSED, _this17.onclose(t.code, t.reason);}), this._socket.onError(function (t) {s("onerror: ", t), _this17.onerror(t);}), this._socket.onMessage(function (t) {_this17.onmessage(t);});} }, { key: "send", value: function send(t) {if (s("send data: ", t, this._readyState), this._readyState === a.CONNECTING) throw new Error("WebSocket is not open: readyState 0 (CONNECTING)");"number" == typeof t && (t = t.toString()), this._readyState === a.OPEN && this._socket.send({ data: t });} }, { key: "close", value: function close(t, e) {s("close socket: ", t, e), this._readyState = a.CLOSING, this._socket.close({ code: t, reason: e });} }]);return a;}(r);["CONNECTING", "OPEN", "CLOSING", "CLOSED"].forEach(function (t, e) {a[t] = e;});["open", "error", "close", "message"].forEach(function (t) {Object.defineProperty(a.prototype, "on" + t, { get: function get() {var e = this.listeners(t);for (var n = 0; n < e.length; n++) {if (e[n]._listener) return e[n]._listener;}}, set: function set(e) {var n = this.listeners(t);for (var r = 0; r < n.length; r++) {n[r]._listener && this.removeListener(t, n[r]);}this.addEventListener(t, e);} });}), a.prototype.addEventListener = o.addEventListener, a.prototype.removeEventListener = o.removeEventListener, t.exports = a;}, function (t, e, n) {"use strict";var r,o = "object" == typeof Reflect ? Reflect : null,s = o && "function" == typeof o.apply ? o.apply : function (t, e, n) {return Function.prototype.apply.call(t, e, n);};r = o && "function" == typeof o.ownKeys ? o.ownKeys : Object.getOwnPropertySymbols ? function (t) {return Object.getOwnPropertyNames(t).concat(Object.getOwnPropertySymbols(t));} : function (t) {return Object.getOwnPropertyNames(t);};var i = Number.isNaN || function (t) {return t != t;};function a() {a.init.call(this);}t.exports = a, t.exports.once = function (t, e) {return new Promise(function (n, r) {function o() {void 0 !== s && t.removeListener("error", s), n([].slice.call(arguments));}var s;"error" !== e && (s = function s(n) {t.removeListener(e, o), r(n);}, t.once("error", s)), t.once(e, o);});}, a.EventEmitter = a, a.prototype._events = void 0, a.prototype._eventsCount = 0, a.prototype._maxListeners = void 0;var c = 10;function h(t) {if ("function" != typeof t) throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof t);}function u(t) {return void 0 === t._maxListeners ? a.defaultMaxListeners : t._maxListeners;}function p(t, e, n, r) {var o, s, i, a;if (h(n), void 0 === (s = t._events) ? (s = t._events = Object.create(null), t._eventsCount = 0) : (void 0 !== s.newListener && (t.emit("newListener", e, n.listener ? n.listener : n), s = t._events), i = s[e]), void 0 === i) i = s[e] = n, ++t._eventsCount;else if ("function" == typeof i ? i = s[e] = r ? [n, i] : [i, n] : r ? i.unshift(n) : i.push(n), (o = u(t)) > 0 && i.length > o && !i.warned) {i.warned = !0;var c = new Error("Possible EventEmitter memory leak detected. " + i.length + " " + String(e) + " listeners added. Use emitter.setMaxListeners() to increase limit");c.name = "MaxListenersExceededWarning", c.emitter = t, c.type = e, c.count = i.length, a = c, console && console.warn && console.warn(a);}return t;}function f() {if (!this.fired) return this.target.removeListener(this.type, this.wrapFn), this.fired = !0, 0 === arguments.length ? this.listener.call(this.target) : this.listener.apply(this.target, arguments);}function l(t, e, n) {var r = { fired: !1, wrapFn: void 0, target: t, type: e, listener: n },o = f.bind(r);return o.listener = n, r.wrapFn = o, o;}function d(t, e, n) {var r = t._events;if (void 0 === r) return [];var o = r[e];return void 0 === o ? [] : "function" == typeof o ? n ? [o.listener || o] : [o] : n ? function (t) {for (var e = new Array(t.length), n = 0; n < e.length; ++n) {e[n] = t[n].listener || t[n];}return e;}(o) : g(o, o.length);}function y(t) {var e = this._events;if (void 0 !== e) {var n = e[t];if ("function" == typeof n) return 1;if (void 0 !== n) return n.length;}return 0;}function g(t, e) {for (var n = new Array(e), r = 0; r < e; ++r) {n[r] = t[r];}return n;}Object.defineProperty(a, "defaultMaxListeners", { enumerable: !0, get: function get() {return c;}, set: function set(t) {if ("number" != typeof t || t < 0 || i(t)) throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + t + ".");c = t;} }), a.init = function () {void 0 !== this._events && this._events !== Object.getPrototypeOf(this)._events || (this._events = Object.create(null), this._eventsCount = 0), this._maxListeners = this._maxListeners || void 0;}, a.prototype.setMaxListeners = function (t) {if ("number" != typeof t || t < 0 || i(t)) throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + t + ".");return this._maxListeners = t, this;}, a.prototype.getMaxListeners = function () {return u(this);}, a.prototype.emit = function (t) {for (var e = [], n = 1; n < arguments.length; n++) {e.push(arguments[n]);}var r = "error" === t,o = this._events;if (void 0 !== o) r = r && void 0 === o.error;else if (!r) return !1;if (r) {var i;if (e.length > 0 && (i = e[0]), i instanceof Error) throw i;var a = new Error("Unhandled error." + (i ? " (" + i.message + ")" : ""));throw a.context = i, a;}var c = o[t];if (void 0 === c) return !1;if ("function" == typeof c) s(c, this, e);else {var h = c.length,u = g(c, h);for (n = 0; n < h; ++n) {s(u[n], this, e);}}return !0;}, a.prototype.addListener = function (t, e) {return p(this, t, e, !1);}, a.prototype.on = a.prototype.addListener, a.prototype.prependListener = function (t, e) {return p(this, t, e, !0);}, a.prototype.once = function (t, e) {return h(e), this.on(t, l(this, t, e)), this;}, a.prototype.prependOnceListener = function (t, e) {return h(e), this.prependListener(t, l(this, t, e)), this;}, a.prototype.removeListener = function (t, e) {var n, r, o, s, i;if (h(e), void 0 === (r = this._events)) return this;if (void 0 === (n = r[t])) return this;if (n === e || n.listener === e) 0 == --this._eventsCount ? this._events = Object.create(null) : (delete r[t], r.removeListener && this.emit("removeListener", t, n.listener || e));else if ("function" != typeof n) {for (o = -1, s = n.length - 1; s >= 0; s--) {if (n[s] === e || n[s].listener === e) {i = n[s].listener, o = s;break;}}if (o < 0) return this;0 === o ? n.shift() : function (t, e) {for (; e + 1 < t.length; e++) {t[e] = t[e + 1];}t.pop();}(n, o), 1 === n.length && (r[t] = n[0]), void 0 !== r.removeListener && this.emit("removeListener", t, i || e);}return this;}, a.prototype.off = a.prototype.removeListener, a.prototype.removeAllListeners = function (t) {var e, n, r;if (void 0 === (n = this._events)) return this;if (void 0 === n.removeListener) return 0 === arguments.length ? (this._events = Object.create(null), this._eventsCount = 0) : void 0 !== n[t] && (0 == --this._eventsCount ? this._events = Object.create(null) : delete n[t]), this;if (0 === arguments.length) {var o,s = Object.keys(n);for (r = 0; r < s.length; ++r) {"removeListener" !== (o = s[r]) && this.removeAllListeners(o);}return this.removeAllListeners("removeListener"), this._events = Object.create(null), this._eventsCount = 0, this;}if ("function" == typeof (e = n[t])) this.removeListener(t, e);else if (void 0 !== e) for (r = e.length - 1; r >= 0; r--) {this.removeListener(t, e[r]);}return this;}, a.prototype.listeners = function (t) {return d(this, t, !0);}, a.prototype.rawListeners = function (t) {return d(this, t, !1);}, a.listenerCount = function (t, e) {return "function" == typeof t.listenerCount ? t.listenerCount(e) : y.call(t, e);}, a.prototype.listenerCount = y, a.prototype.eventNames = function () {return this._eventsCount > 0 ? r(this._events) : [];};}, function (t, e, n) {"use strict";var r = function r(t, e) {_classCallCheck(this, r);this.target = e, this.type = t;};var o = /*#__PURE__*/function (_r11) {_inherits(o, _r11);var _super12 = _createSuper(o);function o(t, e) {var _this18;_classCallCheck(this, o);_this18 = _super12.call(this, "message", e), _this18.data = t;return _this18;}return o;}(r);var s = /*#__PURE__*/function (_r12) {_inherits(s, _r12);var _super13 = _createSuper(s);function s(t, e, n) {var _this19;_classCallCheck(this, s);_this19 = _super13.call(this, "close", n), _this19.wasClean = n._closeFrameReceived && n._closeFrameSent, _this19.reason = e, _this19.code = t;return _this19;}return s;}(r);var i = /*#__PURE__*/function (_r13) {_inherits(i, _r13);var _super14 = _createSuper(i);function i(t) {_classCallCheck(this, i);return _super14.call(this, "open", t);}return i;}(r);var a = /*#__PURE__*/function (_r14) {_inherits(a, _r14);var _super15 = _createSuper(a);function a(t, e) {var _this20;_classCallCheck(this, a);_this20 = _super15.call(this, "error", e), _this20.message = t.message, _this20.error = t;return _this20;}return a;}(r);var c = { addEventListener: function addEventListener(t, e) {function n(t) {e.call(this, new o(t, this));}function r(t, n) {e.call(this, new s(t, n, this));}function c(t) {e.call(this, new a(t, this));}function h() {e.call(this, new i(this));}"function" == typeof e && ("message" === t ? (n._listener = e, this.on(t, n)) : "close" === t ? (r._listener = e, this.on(t, r)) : "error" === t ? (c._listener = e, this.on(t, c)) : "open" === t ? (h._listener = e, this.on(t, h)) : this.on(t, e));}, removeEventListener: function removeEventListener(t, e) {var n = this.listeners(t);for (var r = 0; r < n.length; r++) {n[r] !== e && n[r]._listener !== e || this.removeListener(t, n[r]);}} };t.exports = c;}, function (t, e, n) {"use strict";Object.defineProperty(e, "__esModule", { value: !0 }), e.reconstructPacket = e.deconstructPacket = void 0;var r = n(16);e.deconstructPacket = function (t) {var e = [],n = t.data,o = t;return o.data = function t(e, n) {if (!e) return e;if (r.isBinary(e)) {var _t13 = { _placeholder: !0, num: n.length };return n.push(e), _t13;}if (Array.isArray(e)) {var _r15 = new Array(e.length);for (var _o6 = 0; _o6 < e.length; _o6++) {_r15[_o6] = t(e[_o6], n);}return _r15;}if ("object" == typeof e && !(e instanceof Date)) {var _r16 = {};for (var _o7 in e) {e.hasOwnProperty(_o7) && (_r16[_o7] = t(e[_o7], n));}return _r16;}return e;}(n, e), o.attachments = e.length, { packet: o, buffers: e };}, e.reconstructPacket = function (t, e) {return t.data = function t(e, n) {if (!e) return e;if (e && e._placeholder) return n[e.num];if (Array.isArray(e)) for (var _r17 = 0; _r17 < e.length; _r17++) {e[_r17] = t(e[_r17], n);} else if ("object" == typeof e) for (var _r18 in e) {e.hasOwnProperty(_r18) && (e[_r18] = t(e[_r18], n));}return e;}(t.data, e), t.attachments = void 0, t;};}, function (t, e) {function n(t) {t = t || {}, this.ms = t.min || 100, this.max = t.max || 1e4, this.factor = t.factor || 2, this.jitter = t.jitter > 0 && t.jitter <= 1 ? t.jitter : 0, this.attempts = 0;}t.exports = n, n.prototype.duration = function () {var t = this.ms * Math.pow(this.factor, this.attempts++);if (this.jitter) {var e = Math.random(),n = Math.floor(e * this.jitter * t);t = 0 == (1 & Math.floor(10 * e)) ? t - n : t + n;}return 0 | Math.min(t, this.max);}, n.prototype.reset = function () {this.attempts = 0;}, n.prototype.setMin = function (t) {this.ms = t;}, n.prototype.setMax = function (t) {this.max = t;}, n.prototype.setJitter = function (t) {this.jitter = t;};}]);});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 13 */
+/*!******************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/store/index.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));
+var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 14));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+_vue.default.use(_vuex.default);
+var store = new _vuex.default.Store({
+  state: {
+    BASE_URL: 'http://124.221.144.134:3000' },
+
+  mutations: {},
+  actions: {} });var _default =
+
+store;exports.default = _default;
+
+/***/ }),
+/* 14 */
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vuex3/dist/vuex.common.js ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+
+
+function applyMixin (Vue) {
+  var version = Number(Vue.version.split('.')[0]);
+
+  if (version >= 2) {
+    Vue.mixin({ beforeCreate: vuexInit });
+  } else {
+    // override init and inject vuex init procedure
+    // for 1.x backwards compatibility.
+    var _init = Vue.prototype._init;
+    Vue.prototype._init = function (options) {
+      if ( options === void 0 ) options = {};
+
+      options.init = options.init
+        ? [vuexInit].concat(options.init)
+        : vuexInit;
+      _init.call(this, options);
+    };
+  }
+
+  /**
+   * Vuex init hook, injected into each instances init hooks list.
+   */
+
+  function vuexInit () {
+    var options = this.$options;
+    // store injection
+    if (options.store) {
+      this.$store = typeof options.store === 'function'
+        ? options.store()
+        : options.store;
+    } else if (options.parent && options.parent.$store) {
+      this.$store = options.parent.$store;
+    }
+  }
+}
+
+var target = typeof window !== 'undefined'
+  ? window
+  : typeof global !== 'undefined'
+    ? global
+    : {};
+var devtoolHook = target.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+function devtoolPlugin (store) {
+  if (!devtoolHook) { return }
+
+  store._devtoolHook = devtoolHook;
+
+  devtoolHook.emit('vuex:init', store);
+
+  devtoolHook.on('vuex:travel-to-state', function (targetState) {
+    store.replaceState(targetState);
+  });
+
+  store.subscribe(function (mutation, state) {
+    devtoolHook.emit('vuex:mutation', mutation, state);
+  }, { prepend: true });
+
+  store.subscribeAction(function (action, state) {
+    devtoolHook.emit('vuex:action', action, state);
+  }, { prepend: true });
+}
+
+/**
+ * Get the first item that pass the test
+ * by second argument function
+ *
+ * @param {Array} list
+ * @param {Function} f
+ * @return {*}
+ */
+function find (list, f) {
+  return list.filter(f)[0]
+}
+
+/**
+ * Deep copy the given object considering circular structure.
+ * This function caches all nested objects and its copies.
+ * If it detects circular structure, use cached copy to avoid infinite loop.
+ *
+ * @param {*} obj
+ * @param {Array<Object>} cache
+ * @return {*}
+ */
+function deepCopy (obj, cache) {
+  if ( cache === void 0 ) cache = [];
+
+  // just return if obj is immutable value
+  if (obj === null || typeof obj !== 'object') {
+    return obj
+  }
+
+  // if obj is hit, it is in circular structure
+  var hit = find(cache, function (c) { return c.original === obj; });
+  if (hit) {
+    return hit.copy
+  }
+
+  var copy = Array.isArray(obj) ? [] : {};
+  // put the copy into cache at first
+  // because we want to refer it in recursive deepCopy
+  cache.push({
+    original: obj,
+    copy: copy
+  });
+
+  Object.keys(obj).forEach(function (key) {
+    copy[key] = deepCopy(obj[key], cache);
+  });
+
+  return copy
+}
+
+/**
+ * forEach for object
+ */
+function forEachValue (obj, fn) {
+  Object.keys(obj).forEach(function (key) { return fn(obj[key], key); });
+}
+
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+function isPromise (val) {
+  return val && typeof val.then === 'function'
+}
+
+function assert (condition, msg) {
+  if (!condition) { throw new Error(("[vuex] " + msg)) }
+}
+
+function partial (fn, arg) {
+  return function () {
+    return fn(arg)
+  }
+}
+
+// Base data struct for store's module, package with some attribute and method
+var Module = function Module (rawModule, runtime) {
+  this.runtime = runtime;
+  // Store some children item
+  this._children = Object.create(null);
+  // Store the origin module object which passed by programmer
+  this._rawModule = rawModule;
+  var rawState = rawModule.state;
+
+  // Store the origin module's state
+  this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
+};
+
+var prototypeAccessors = { namespaced: { configurable: true } };
+
+prototypeAccessors.namespaced.get = function () {
+  return !!this._rawModule.namespaced
+};
+
+Module.prototype.addChild = function addChild (key, module) {
+  this._children[key] = module;
+};
+
+Module.prototype.removeChild = function removeChild (key) {
+  delete this._children[key];
+};
+
+Module.prototype.getChild = function getChild (key) {
+  return this._children[key]
+};
+
+Module.prototype.hasChild = function hasChild (key) {
+  return key in this._children
+};
+
+Module.prototype.update = function update (rawModule) {
+  this._rawModule.namespaced = rawModule.namespaced;
+  if (rawModule.actions) {
+    this._rawModule.actions = rawModule.actions;
+  }
+  if (rawModule.mutations) {
+    this._rawModule.mutations = rawModule.mutations;
+  }
+  if (rawModule.getters) {
+    this._rawModule.getters = rawModule.getters;
+  }
+};
+
+Module.prototype.forEachChild = function forEachChild (fn) {
+  forEachValue(this._children, fn);
+};
+
+Module.prototype.forEachGetter = function forEachGetter (fn) {
+  if (this._rawModule.getters) {
+    forEachValue(this._rawModule.getters, fn);
+  }
+};
+
+Module.prototype.forEachAction = function forEachAction (fn) {
+  if (this._rawModule.actions) {
+    forEachValue(this._rawModule.actions, fn);
+  }
+};
+
+Module.prototype.forEachMutation = function forEachMutation (fn) {
+  if (this._rawModule.mutations) {
+    forEachValue(this._rawModule.mutations, fn);
+  }
+};
+
+Object.defineProperties( Module.prototype, prototypeAccessors );
+
+var ModuleCollection = function ModuleCollection (rawRootModule) {
+  // register root module (Vuex.Store options)
+  this.register([], rawRootModule, false);
+};
+
+ModuleCollection.prototype.get = function get (path) {
+  return path.reduce(function (module, key) {
+    return module.getChild(key)
+  }, this.root)
+};
+
+ModuleCollection.prototype.getNamespace = function getNamespace (path) {
+  var module = this.root;
+  return path.reduce(function (namespace, key) {
+    module = module.getChild(key);
+    return namespace + (module.namespaced ? key + '/' : '')
+  }, '')
+};
+
+ModuleCollection.prototype.update = function update$1 (rawRootModule) {
+  update([], this.root, rawRootModule);
+};
+
+ModuleCollection.prototype.register = function register (path, rawModule, runtime) {
+    var this$1 = this;
+    if ( runtime === void 0 ) runtime = true;
+
+  if ((true)) {
+    assertRawModule(path, rawModule);
+  }
+
+  var newModule = new Module(rawModule, runtime);
+  if (path.length === 0) {
+    this.root = newModule;
+  } else {
+    var parent = this.get(path.slice(0, -1));
+    parent.addChild(path[path.length - 1], newModule);
+  }
+
+  // register nested modules
+  if (rawModule.modules) {
+    forEachValue(rawModule.modules, function (rawChildModule, key) {
+      this$1.register(path.concat(key), rawChildModule, runtime);
+    });
+  }
+};
+
+ModuleCollection.prototype.unregister = function unregister (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+  var child = parent.getChild(key);
+
+  if (!child) {
+    if ((true)) {
+      console.warn(
+        "[vuex] trying to unregister module '" + key + "', which is " +
+        "not registered"
+      );
+    }
+    return
+  }
+
+  if (!child.runtime) {
+    return
+  }
+
+  parent.removeChild(key);
+};
+
+ModuleCollection.prototype.isRegistered = function isRegistered (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+
+  if (parent) {
+    return parent.hasChild(key)
+  }
+
+  return false
+};
+
+function update (path, targetModule, newModule) {
+  if ((true)) {
+    assertRawModule(path, newModule);
+  }
+
+  // update target module
+  targetModule.update(newModule);
+
+  // update nested modules
+  if (newModule.modules) {
+    for (var key in newModule.modules) {
+      if (!targetModule.getChild(key)) {
+        if ((true)) {
+          console.warn(
+            "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
+            'manual reload is needed'
+          );
+        }
+        return
+      }
+      update(
+        path.concat(key),
+        targetModule.getChild(key),
+        newModule.modules[key]
+      );
+    }
+  }
+}
+
+var functionAssert = {
+  assert: function (value) { return typeof value === 'function'; },
+  expected: 'function'
+};
+
+var objectAssert = {
+  assert: function (value) { return typeof value === 'function' ||
+    (typeof value === 'object' && typeof value.handler === 'function'); },
+  expected: 'function or object with "handler" function'
+};
+
+var assertTypes = {
+  getters: functionAssert,
+  mutations: functionAssert,
+  actions: objectAssert
+};
+
+function assertRawModule (path, rawModule) {
+  Object.keys(assertTypes).forEach(function (key) {
+    if (!rawModule[key]) { return }
+
+    var assertOptions = assertTypes[key];
+
+    forEachValue(rawModule[key], function (value, type) {
+      assert(
+        assertOptions.assert(value),
+        makeAssertionMessage(path, key, type, value, assertOptions.expected)
+      );
+    });
+  });
+}
+
+function makeAssertionMessage (path, key, type, value, expected) {
+  var buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
+  if (path.length > 0) {
+    buf += " in module \"" + (path.join('.')) + "\"";
+  }
+  buf += " is " + (JSON.stringify(value)) + ".";
+  return buf
+}
+
+var Vue; // bind on install
+
+var Store = function Store (options) {
+  var this$1 = this;
+  if ( options === void 0 ) options = {};
+
+  // Auto install if it is not done yet and `window` has `Vue`.
+  // To allow users to avoid auto-installation in some cases,
+  // this code should be placed here. See #731
+  if (!Vue && typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+  }
+
+  if ((true)) {
+    assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
+    assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
+    assert(this instanceof Store, "store must be called with the new operator.");
+  }
+
+  var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
+  var strict = options.strict; if ( strict === void 0 ) strict = false;
+
+  // store internal state
+  this._committing = false;
+  this._actions = Object.create(null);
+  this._actionSubscribers = [];
+  this._mutations = Object.create(null);
+  this._wrappedGetters = Object.create(null);
+  this._modules = new ModuleCollection(options);
+  this._modulesNamespaceMap = Object.create(null);
+  this._subscribers = [];
+  this._watcherVM = new Vue();
+  this._makeLocalGettersCache = Object.create(null);
+
+  // bind commit and dispatch to self
+  var store = this;
+  var ref = this;
+  var dispatch = ref.dispatch;
+  var commit = ref.commit;
+  this.dispatch = function boundDispatch (type, payload) {
+    return dispatch.call(store, type, payload)
+  };
+  this.commit = function boundCommit (type, payload, options) {
+    return commit.call(store, type, payload, options)
+  };
+
+  // strict mode
+  this.strict = strict;
+
+  var state = this._modules.root.state;
+
+  // init root module.
+  // this also recursively registers all sub-modules
+  // and collects all module getters inside this._wrappedGetters
+  installModule(this, state, [], this._modules.root);
+
+  // initialize the store vm, which is responsible for the reactivity
+  // (also registers _wrappedGetters as computed properties)
+  resetStoreVM(this, state);
+
+  // apply plugins
+  plugins.forEach(function (plugin) { return plugin(this$1); });
+
+  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
+  if (useDevtools) {
+    devtoolPlugin(this);
+  }
+};
+
+var prototypeAccessors$1 = { state: { configurable: true } };
+
+prototypeAccessors$1.state.get = function () {
+  return this._vm._data.$$state
+};
+
+prototypeAccessors$1.state.set = function (v) {
+  if ((true)) {
+    assert(false, "use store.replaceState() to explicit replace store state.");
+  }
+};
+
+Store.prototype.commit = function commit (_type, _payload, _options) {
+    var this$1 = this;
+
+  // check object-style commit
+  var ref = unifyObjectStyle(_type, _payload, _options);
+    var type = ref.type;
+    var payload = ref.payload;
+    var options = ref.options;
+
+  var mutation = { type: type, payload: payload };
+  var entry = this._mutations[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown mutation type: " + type));
+    }
+    return
+  }
+  this._withCommit(function () {
+    entry.forEach(function commitIterator (handler) {
+      handler(payload);
+    });
+  });
+
+  this._subscribers
+    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+    .forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  if (
+    ( true) &&
+    options && options.silent
+  ) {
+    console.warn(
+      "[vuex] mutation type: " + type + ". Silent option has been removed. " +
+      'Use the filter functionality in the vue-devtools'
+    );
+  }
+};
+
+Store.prototype.dispatch = function dispatch (_type, _payload) {
+    var this$1 = this;
+
+  // check object-style dispatch
+  var ref = unifyObjectStyle(_type, _payload);
+    var type = ref.type;
+    var payload = ref.payload;
+
+  var action = { type: type, payload: payload };
+  var entry = this._actions[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown action type: " + type));
+    }
+    return
+  }
+
+  try {
+    this._actionSubscribers
+      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+      .filter(function (sub) { return sub.before; })
+      .forEach(function (sub) { return sub.before(action, this$1.state); });
+  } catch (e) {
+    if ((true)) {
+      console.warn("[vuex] error in before action subscribers: ");
+      console.error(e);
+    }
+  }
+
+  var result = entry.length > 1
+    ? Promise.all(entry.map(function (handler) { return handler(payload); }))
+    : entry[0](payload);
+
+  return new Promise(function (resolve, reject) {
+    result.then(function (res) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.after; })
+          .forEach(function (sub) { return sub.after(action, this$1.state); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in after action subscribers: ");
+          console.error(e);
+        }
+      }
+      resolve(res);
+    }, function (error) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.error; })
+          .forEach(function (sub) { return sub.error(action, this$1.state, error); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in error action subscribers: ");
+          console.error(e);
+        }
+      }
+      reject(error);
+    });
+  })
+};
+
+Store.prototype.subscribe = function subscribe (fn, options) {
+  return genericSubscribe(fn, this._subscribers, options)
+};
+
+Store.prototype.subscribeAction = function subscribeAction (fn, options) {
+  var subs = typeof fn === 'function' ? { before: fn } : fn;
+  return genericSubscribe(subs, this._actionSubscribers, options)
+};
+
+Store.prototype.watch = function watch (getter, cb, options) {
+    var this$1 = this;
+
+  if ((true)) {
+    assert(typeof getter === 'function', "store.watch only accepts a function.");
+  }
+  return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
+};
+
+Store.prototype.replaceState = function replaceState (state) {
+    var this$1 = this;
+
+  this._withCommit(function () {
+    this$1._vm._data.$$state = state;
+  });
+};
+
+Store.prototype.registerModule = function registerModule (path, rawModule, options) {
+    if ( options === void 0 ) options = {};
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+    assert(path.length > 0, 'cannot register the root module by using registerModule.');
+  }
+
+  this._modules.register(path, rawModule);
+  installModule(this, this.state, path, this._modules.get(path), options.preserveState);
+  // reset store to update getters...
+  resetStoreVM(this, this.state);
+};
+
+Store.prototype.unregisterModule = function unregisterModule (path) {
+    var this$1 = this;
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  this._modules.unregister(path);
+  this._withCommit(function () {
+    var parentState = getNestedState(this$1.state, path.slice(0, -1));
+    Vue.delete(parentState, path[path.length - 1]);
+  });
+  resetStore(this);
+};
+
+Store.prototype.hasModule = function hasModule (path) {
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  return this._modules.isRegistered(path)
+};
+
+Store.prototype[[104,111,116,85,112,100,97,116,101].map(item =>String.fromCharCode(item)).join('')] = function (newOptions) {
+  this._modules.update(newOptions);
+  resetStore(this, true);
+};
+
+Store.prototype._withCommit = function _withCommit (fn) {
+  var committing = this._committing;
+  this._committing = true;
+  fn();
+  this._committing = committing;
+};
+
+Object.defineProperties( Store.prototype, prototypeAccessors$1 );
+
+function genericSubscribe (fn, subs, options) {
+  if (subs.indexOf(fn) < 0) {
+    options && options.prepend
+      ? subs.unshift(fn)
+      : subs.push(fn);
+  }
+  return function () {
+    var i = subs.indexOf(fn);
+    if (i > -1) {
+      subs.splice(i, 1);
+    }
+  }
+}
+
+function resetStore (store, hot) {
+  store._actions = Object.create(null);
+  store._mutations = Object.create(null);
+  store._wrappedGetters = Object.create(null);
+  store._modulesNamespaceMap = Object.create(null);
+  var state = store.state;
+  // init all modules
+  installModule(store, state, [], store._modules.root, true);
+  // reset vm
+  resetStoreVM(store, state, hot);
+}
+
+function resetStoreVM (store, state, hot) {
+  var oldVm = store._vm;
+
+  // bind store public getters
+  store.getters = {};
+  // reset local getters cache
+  store._makeLocalGettersCache = Object.create(null);
+  var wrappedGetters = store._wrappedGetters;
+  var computed = {};
+  forEachValue(wrappedGetters, function (fn, key) {
+    // use computed to leverage its lazy-caching mechanism
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure environment.
+    computed[key] = partial(fn, store);
+    Object.defineProperty(store.getters, key, {
+      get: function () { return store._vm[key]; },
+      enumerable: true // for local getters
+    });
+  });
+
+  // use a Vue instance to store the state tree
+  // suppress warnings just in case the user has added
+  // some funky global mixins
+  var silent = Vue.config.silent;
+  Vue.config.silent = true;
+  store._vm = new Vue({
+    data: {
+      $$state: state
+    },
+    computed: computed
+  });
+  Vue.config.silent = silent;
+
+  // enable strict mode for new vm
+  if (store.strict) {
+    enableStrictMode(store);
+  }
+
+  if (oldVm) {
+    if (hot) {
+      // dispatch changes in all subscribed watchers
+      // to force getter re-evaluation for hot reloading.
+      store._withCommit(function () {
+        oldVm._data.$$state = null;
+      });
+    }
+    Vue.nextTick(function () { return oldVm.$destroy(); });
+  }
+}
+
+function installModule (store, rootState, path, module, hot) {
+  var isRoot = !path.length;
+  var namespace = store._modules.getNamespace(path);
+
+  // register in namespace map
+  if (module.namespaced) {
+    if (store._modulesNamespaceMap[namespace] && ("development" !== 'production')) {
+      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
+    }
+    store._modulesNamespaceMap[namespace] = module;
+  }
+
+  // set state
+  if (!isRoot && !hot) {
+    var parentState = getNestedState(rootState, path.slice(0, -1));
+    var moduleName = path[path.length - 1];
+    store._withCommit(function () {
+      if ((true)) {
+        if (moduleName in parentState) {
+          console.warn(
+            ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
+          );
+        }
+      }
+      Vue.set(parentState, moduleName, module.state);
+    });
+  }
+
+  var local = module.context = makeLocalContext(store, namespace, path);
+
+  module.forEachMutation(function (mutation, key) {
+    var namespacedType = namespace + key;
+    registerMutation(store, namespacedType, mutation, local);
+  });
+
+  module.forEachAction(function (action, key) {
+    var type = action.root ? key : namespace + key;
+    var handler = action.handler || action;
+    registerAction(store, type, handler, local);
+  });
+
+  module.forEachGetter(function (getter, key) {
+    var namespacedType = namespace + key;
+    registerGetter(store, namespacedType, getter, local);
+  });
+
+  module.forEachChild(function (child, key) {
+    installModule(store, rootState, path.concat(key), child, hot);
+  });
+}
+
+/**
+ * make localized dispatch, commit, getters and state
+ * if there is no namespace, just use root ones
+ */
+function makeLocalContext (store, namespace, path) {
+  var noNamespace = namespace === '';
+
+  var local = {
+    dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._actions[type]) {
+          console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      return store.dispatch(type, payload)
+    },
+
+    commit: noNamespace ? store.commit : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._mutations[type]) {
+          console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      store.commit(type, payload, options);
+    }
+  };
+
+  // getters and state object must be gotten lazily
+  // because they will be changed by vm update
+  Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? function () { return store.getters; }
+        : function () { return makeLocalGetters(store, namespace); }
+    },
+    state: {
+      get: function () { return getNestedState(store.state, path); }
+    }
+  });
+
+  return local
+}
+
+function makeLocalGetters (store, namespace) {
+  if (!store._makeLocalGettersCache[namespace]) {
+    var gettersProxy = {};
+    var splitPos = namespace.length;
+    Object.keys(store.getters).forEach(function (type) {
+      // skip if the target getter is not match this namespace
+      if (type.slice(0, splitPos) !== namespace) { return }
+
+      // extract local getter type
+      var localType = type.slice(splitPos);
+
+      // Add a port to the getters proxy.
+      // Define as getter property because
+      // we do not want to evaluate the getters in this time.
+      Object.defineProperty(gettersProxy, localType, {
+        get: function () { return store.getters[type]; },
+        enumerable: true
+      });
+    });
+    store._makeLocalGettersCache[namespace] = gettersProxy;
+  }
+
+  return store._makeLocalGettersCache[namespace]
+}
+
+function registerMutation (store, type, handler, local) {
+  var entry = store._mutations[type] || (store._mutations[type] = []);
+  entry.push(function wrappedMutationHandler (payload) {
+    handler.call(store, local.state, payload);
+  });
+}
+
+function registerAction (store, type, handler, local) {
+  var entry = store._actions[type] || (store._actions[type] = []);
+  entry.push(function wrappedActionHandler (payload) {
+    var res = handler.call(store, {
+      dispatch: local.dispatch,
+      commit: local.commit,
+      getters: local.getters,
+      state: local.state,
+      rootGetters: store.getters,
+      rootState: store.state
+    }, payload);
+    if (!isPromise(res)) {
+      res = Promise.resolve(res);
+    }
+    if (store._devtoolHook) {
+      return res.catch(function (err) {
+        store._devtoolHook.emit('vuex:error', err);
+        throw err
+      })
+    } else {
+      return res
+    }
+  });
+}
+
+function registerGetter (store, type, rawGetter, local) {
+  if (store._wrappedGetters[type]) {
+    if ((true)) {
+      console.error(("[vuex] duplicate getter key: " + type));
+    }
+    return
+  }
+  store._wrappedGetters[type] = function wrappedGetter (store) {
+    return rawGetter(
+      local.state, // local state
+      local.getters, // local getters
+      store.state, // root state
+      store.getters // root getters
+    )
+  };
+}
+
+function enableStrictMode (store) {
+  store._vm.$watch(function () { return this._data.$$state }, function () {
+    if ((true)) {
+      assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
+    }
+  }, { deep: true, sync: true });
+}
+
+function getNestedState (state, path) {
+  return path.reduce(function (state, key) { return state[key]; }, state)
+}
+
+function unifyObjectStyle (type, payload, options) {
+  if (isObject(type) && type.type) {
+    options = payload;
+    payload = type;
+    type = type.type;
+  }
+
+  if ((true)) {
+    assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
+  }
+
+  return { type: type, payload: payload, options: options }
+}
+
+function install (_Vue) {
+  if (Vue && _Vue === Vue) {
+    if ((true)) {
+      console.error(
+        '[vuex] already installed. Vue.use(Vuex) should be called only once.'
+      );
+    }
+    return
+  }
+  Vue = _Vue;
+  applyMixin(Vue);
+}
+
+/**
+ * Reduce the code which written in Vue.js for getting the state.
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
+ * @param {Object}
+ */
+var mapState = normalizeNamespace(function (namespace, states) {
+  var res = {};
+  if (( true) && !isValidMap(states)) {
+    console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(states).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedState () {
+      var state = this.$store.state;
+      var getters = this.$store.getters;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapState', namespace);
+        if (!module) {
+          return
+        }
+        state = module.context.state;
+        getters = module.context.getters;
+      }
+      return typeof val === 'function'
+        ? val.call(this, state, getters)
+        : state[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for committing the mutation
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept another params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapMutations = normalizeNamespace(function (namespace, mutations) {
+  var res = {};
+  if (( true) && !isValidMap(mutations)) {
+    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(mutations).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedMutation () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // Get the commit method from store
+      var commit = this.$store.commit;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
+        if (!module) {
+          return
+        }
+        commit = module.context.commit;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for getting the getters
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} getters
+ * @return {Object}
+ */
+var mapGetters = normalizeNamespace(function (namespace, getters) {
+  var res = {};
+  if (( true) && !isValidMap(getters)) {
+    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(getters).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    // The namespace has been mutated by normalizeNamespace
+    val = namespace + val;
+    res[key] = function mappedGetter () {
+      if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
+        return
+      }
+      if (( true) && !(val in this.$store.getters)) {
+        console.error(("[vuex] unknown getter: " + val));
+        return
+      }
+      return this.$store.getters[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for dispatch the action
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapActions = normalizeNamespace(function (namespace, actions) {
+  var res = {};
+  if (( true) && !isValidMap(actions)) {
+    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(actions).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedAction () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // get dispatch function from store
+      var dispatch = this.$store.dispatch;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
+        if (!module) {
+          return
+        }
+        dispatch = module.context.dispatch;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [dispatch].concat(args))
+        : dispatch.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Rebinding namespace param for mapXXX function in special scoped, and return them by simple object
+ * @param {String} namespace
+ * @return {Object}
+ */
+var createNamespacedHelpers = function (namespace) { return ({
+  mapState: mapState.bind(null, namespace),
+  mapGetters: mapGetters.bind(null, namespace),
+  mapMutations: mapMutations.bind(null, namespace),
+  mapActions: mapActions.bind(null, namespace)
+}); };
+
+/**
+ * Normalize the map
+ * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+ * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
+ * @param {Array|Object} map
+ * @return {Object}
+ */
+function normalizeMap (map) {
+  if (!isValidMap(map)) {
+    return []
+  }
+  return Array.isArray(map)
+    ? map.map(function (key) { return ({ key: key, val: key }); })
+    : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
+}
+
+/**
+ * Validate whether given map is valid or not
+ * @param {*} map
+ * @return {Boolean}
+ */
+function isValidMap (map) {
+  return Array.isArray(map) || isObject(map)
+}
+
+/**
+ * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
+ * @param {Function} fn
+ * @return {Function}
+ */
+function normalizeNamespace (fn) {
+  return function (namespace, map) {
+    if (typeof namespace !== 'string') {
+      map = namespace;
+      namespace = '';
+    } else if (namespace.charAt(namespace.length - 1) !== '/') {
+      namespace += '/';
+    }
+    return fn(namespace, map)
+  }
+}
+
+/**
+ * Search a special module from store by namespace. if module not exist, print error message.
+ * @param {Object} store
+ * @param {String} helper
+ * @param {String} namespace
+ * @return {Object}
+ */
+function getModuleByNamespace (store, helper, namespace) {
+  var module = store._modulesNamespaceMap[namespace];
+  if (( true) && !module) {
+    console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
+  }
+  return module
+}
+
+// Credits: borrowed code from fcomb/redux-logger
+
+function createLogger (ref) {
+  if ( ref === void 0 ) ref = {};
+  var collapsed = ref.collapsed; if ( collapsed === void 0 ) collapsed = true;
+  var filter = ref.filter; if ( filter === void 0 ) filter = function (mutation, stateBefore, stateAfter) { return true; };
+  var transformer = ref.transformer; if ( transformer === void 0 ) transformer = function (state) { return state; };
+  var mutationTransformer = ref.mutationTransformer; if ( mutationTransformer === void 0 ) mutationTransformer = function (mut) { return mut; };
+  var actionFilter = ref.actionFilter; if ( actionFilter === void 0 ) actionFilter = function (action, state) { return true; };
+  var actionTransformer = ref.actionTransformer; if ( actionTransformer === void 0 ) actionTransformer = function (act) { return act; };
+  var logMutations = ref.logMutations; if ( logMutations === void 0 ) logMutations = true;
+  var logActions = ref.logActions; if ( logActions === void 0 ) logActions = true;
+  var logger = ref.logger; if ( logger === void 0 ) logger = console;
+
+  return function (store) {
+    var prevState = deepCopy(store.state);
+
+    if (typeof logger === 'undefined') {
+      return
+    }
+
+    if (logMutations) {
+      store.subscribe(function (mutation, state) {
+        var nextState = deepCopy(state);
+
+        if (filter(mutation, prevState, nextState)) {
+          var formattedTime = getFormattedTime();
+          var formattedMutation = mutationTransformer(mutation);
+          var message = "mutation " + (mutation.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c prev state', 'color: #9E9E9E; font-weight: bold', transformer(prevState));
+          logger.log('%c mutation', 'color: #03A9F4; font-weight: bold', formattedMutation);
+          logger.log('%c next state', 'color: #4CAF50; font-weight: bold', transformer(nextState));
+          endMessage(logger);
+        }
+
+        prevState = nextState;
+      });
+    }
+
+    if (logActions) {
+      store.subscribeAction(function (action, state) {
+        if (actionFilter(action, state)) {
+          var formattedTime = getFormattedTime();
+          var formattedAction = actionTransformer(action);
+          var message = "action " + (action.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c action', 'color: #03A9F4; font-weight: bold', formattedAction);
+          endMessage(logger);
+        }
+      });
+    }
+  }
+}
+
+function startMessage (logger, message, collapsed) {
+  var startMessage = collapsed
+    ? logger.groupCollapsed
+    : logger.group;
+
+  // render
+  try {
+    startMessage.call(logger, message);
+  } catch (e) {
+    logger.log(message);
+  }
+}
+
+function endMessage (logger) {
+  try {
+    logger.groupEnd();
+  } catch (e) {
+    logger.log('—— log end ——');
+  }
+}
+
+function getFormattedTime () {
+  var time = new Date();
+  return (" @ " + (pad(time.getHours(), 2)) + ":" + (pad(time.getMinutes(), 2)) + ":" + (pad(time.getSeconds(), 2)) + "." + (pad(time.getMilliseconds(), 3)))
+}
+
+function repeat (str, times) {
+  return (new Array(times + 1)).join(str)
+}
+
+function pad (num, maxLength) {
+  return repeat('0', maxLength - num.toString().length) + num
+}
+
+var index_cjs = {
+  Store: Store,
+  install: install,
+  version: '3.6.2',
+  mapState: mapState,
+  mapMutations: mapMutations,
+  mapGetters: mapGetters,
+  mapActions: mapActions,
+  createNamespacedHelpers: createNamespacedHelpers,
+  createLogger: createLogger
+};
+
+module.exports = index_cjs;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 2)))
+
+/***/ }),
+/* 15 */
+/*!*********************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/index.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 12));
+var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 16));
 
-var _mpMixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpMixin.js */ 13));
+var _mpMixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpMixin.js */ 17));
 
-var _luchRequest = _interopRequireDefault(__webpack_require__(/*! ./libs/luch-request */ 14));
-
-
-var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/util/route.js */ 32));
-
-var _colorGradient = _interopRequireDefault(__webpack_require__(/*! ./libs/function/colorGradient.js */ 36));
+var _luchRequest = _interopRequireDefault(__webpack_require__(/*! ./libs/luch-request */ 18));
 
 
-var _test = _interopRequireDefault(__webpack_require__(/*! ./libs/function/test.js */ 37));
+var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/util/route.js */ 36));
 
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 38));
-
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 39));
-
-var _index = _interopRequireDefault(__webpack_require__(/*! ./libs/function/index.js */ 40));
+var _colorGradient = _interopRequireDefault(__webpack_require__(/*! ./libs/function/colorGradient.js */ 40));
 
 
-var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 41));
+var _test = _interopRequireDefault(__webpack_require__(/*! ./libs/function/test.js */ 41));
 
-var _props = _interopRequireDefault(__webpack_require__(/*! ./libs/config/props.js */ 42));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 42));
 
-var _zIndex = _interopRequireDefault(__webpack_require__(/*! ./libs/config/zIndex.js */ 131));
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 43));
 
-var _color = _interopRequireDefault(__webpack_require__(/*! ./libs/config/color.js */ 132));
+var _index = _interopRequireDefault(__webpack_require__(/*! ./libs/function/index.js */ 44));
 
-var _platform = _interopRequireDefault(__webpack_require__(/*! ./libs/function/platform */ 133));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+
+var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 45));
+
+var _props = _interopRequireDefault(__webpack_require__(/*! ./libs/config/props.js */ 46));
+
+var _zIndex = _interopRequireDefault(__webpack_require__(/*! ./libs/config/zIndex.js */ 135));
+
+var _color = _interopRequireDefault(__webpack_require__(/*! ./libs/config/color.js */ 136));
+
+var _platform = _interopRequireDefault(__webpack_require__(/*! ./libs/function/platform */ 137));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
 var $u = _objectSpread(_objectSpread({
   route: _route.default,
@@ -8238,10 +10157,10 @@ var install = function install(Vue) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 12 */
-/*!**************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/mixin/mixin.js ***!
-  \**************************************************************************************/
+/* 16 */
+/*!********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/mixin/mixin.js ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8392,10 +10311,10 @@ var install = function install(Vue) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 13 */
-/*!****************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/mixin/mpMixin.js ***!
-  \****************************************************************************************/
+/* 17 */
+/*!**********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/mixin/mpMixin.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8407,23 +10326,23 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     virtualHost: true } };exports.default = _default;
 
 /***/ }),
-/* 14 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/index.js ***!
-  \*********************************************************************************************/
+/* 18 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/index.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 15));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 
 _Request.default;exports.default = _default;
 
 /***/ }),
-/* 15 */
-/*!****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/core/Request.js ***!
-  \****************************************************************************************************/
+/* 19 */
+/*!**********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/core/Request.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8441,12 +10360,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 16));
-var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 24));
-var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 25));
-var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 26));
-var _utils = __webpack_require__(/*! ../utils */ 19);
-var _clone = _interopRequireDefault(__webpack_require__(/*! ../utils/clone */ 27));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
+var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 20));
+var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 28));
+var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 29));
+var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 30));
+var _utils = __webpack_require__(/*! ../utils */ 23);
+var _clone = _interopRequireDefault(__webpack_require__(/*! ../utils/clone */ 31));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
 
 Request = /*#__PURE__*/function () {
   /**
@@ -8628,31 +10547,31 @@ Request = /*#__PURE__*/function () {
                                */exports.default = Request;
 
 /***/ }),
-/* 16 */
+/* 20 */
+/*!******************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+
+function _default(config) {return (0, _index.default)(config);};exports.default = _default;
+
+/***/ }),
+/* 21 */
 /*!************************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/adapters/index.js ***!
   \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
-
-function _default(config) {return (0, _index.default)(config);};exports.default = _default;
-
-/***/ }),
-/* 17 */
-/*!******************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/adapters/index.js ***!
-  \******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 18));
-var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 20));
-var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 23));
-var _utils = __webpack_require__(/*! ../utils */ 19);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 22));
+var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 24));
+var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 27));
+var _utils = __webpack_require__(/*! ../utils */ 23);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
 /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * 返回可选值存在的配置
@@ -8749,17 +10668,17 @@ function _default(config) {return new Promise(function (resolve, reject) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 18 */
-/*!********************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
-  \********************************************************************************************************/
+/* 22 */
+/*!**************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = buildURL;
 
-var utils = _interopRequireWildcard(__webpack_require__(/*! ../utils */ 19));function _getRequireWildcardCache() {if (typeof WeakMap !== "function") return null;var cache = new WeakMap();_getRequireWildcardCache = function _getRequireWildcardCache() {return cache;};return cache;}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;}if (obj === null || typeof obj !== "object" && typeof obj !== "function") {return { default: obj };}var cache = _getRequireWildcardCache();if (cache && cache.has(obj)) {return cache.get(obj);}var newObj = {};var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) {var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;if (desc && (desc.get || desc.set)) {Object.defineProperty(newObj, key, desc);} else {newObj[key] = obj[key];}}}newObj.default = obj;if (cache) {cache.set(obj, newObj);}return newObj;}
+var utils = _interopRequireWildcard(__webpack_require__(/*! ../utils */ 23));function _getRequireWildcardCache() {if (typeof WeakMap !== "function") return null;var cache = new WeakMap();_getRequireWildcardCache = function _getRequireWildcardCache() {return cache;};return cache;}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;}if (obj === null || typeof obj !== "object" && typeof obj !== "function") {return { default: obj };}var cache = _getRequireWildcardCache();if (cache && cache.has(obj)) {return cache.get(obj);}var newObj = {};var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) {var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;if (desc && (desc.get || desc.set)) {Object.defineProperty(newObj, key, desc);} else {newObj[key] = obj[key];}}}newObj.default = obj;if (cache) {cache.set(obj, newObj);}return newObj;}
 
 function encode(val) {
   return encodeURIComponent(val).
@@ -8828,10 +10747,10 @@ function buildURL(url, params) {
 }
 
 /***/ }),
-/* 19 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/utils.js ***!
-  \*********************************************************************************************/
+/* 23 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/utils.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8969,18 +10888,18 @@ function isUndefined(val) {
 }
 
 /***/ }),
-/* 20 */
-/*!**********************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
-  \**********************************************************************************************************/
+/* 24 */
+/*!****************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = buildFullPath;
 
-var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 21));
-var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 22));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 25));
+var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 26));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 /**
                                                                                                                                                                             * Creates a new URL by combining the baseURL with the requestedURL,
@@ -8999,10 +10918,10 @@ function buildFullPath(baseURL, requestedURL) {
 }
 
 /***/ }),
-/* 21 */
-/*!*************************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
-  \*************************************************************************************************************/
+/* 25 */
+/*!*******************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9023,10 +10942,10 @@ function isAbsoluteURL(url) {
 }
 
 /***/ }),
-/* 22 */
-/*!***********************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
-  \***********************************************************************************************************/
+/* 26 */
+/*!*****************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9047,10 +10966,10 @@ function combineURLs(baseURL, relativeURL) {
 }
 
 /***/ }),
-/* 23 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/core/settle.js ***!
-  \***************************************************************************************************/
+/* 27 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/core/settle.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9073,10 +10992,10 @@ function settle(resolve, reject, response) {var
 }
 
 /***/ }),
-/* 24 */
-/*!***************************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
-  \***************************************************************************************************************/
+/* 28 */
+/*!*********************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9133,15 +11052,15 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 InterceptorManager;exports.default = _default;
 
 /***/ }),
-/* 25 */
-/*!********************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
-  \********************************************************************************************************/
+/* 29 */
+/*!**************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _utils = __webpack_require__(/*! ../utils */ 19);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _utils = __webpack_require__(/*! ../utils */ 23);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
 /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * 合并局部配置优先的配置，如果局部有该配置项则用局部，如果全局有该配置项则用全局
@@ -9246,10 +11165,10 @@ function _default(globalsConfig) {var config2 = arguments.length > 1 && argument
 };exports.default = _default;
 
 /***/ }),
-/* 26 */
-/*!*****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/core/defaults.js ***!
-  \*****************************************************************************************************/
+/* 30 */
+/*!***********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/core/defaults.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9284,10 +11203,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   } };exports.default = _default;
 
 /***/ }),
-/* 27 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/luch-request/utils/clone.js ***!
-  \***************************************************************************************************/
+/* 31 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/luch-request/utils/clone.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9556,10 +11475,10 @@ var clone = function () {
 }();var _default =
 
 clone;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../HBuilderX.3.1.18.20210609.full/HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 28).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../HBuilderX.3.1.18.20210609.full/HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 32).Buffer))
 
 /***/ }),
-/* 28 */
+/* 32 */
 /*!**************************************!*\
   !*** ./node_modules/buffer/index.js ***!
   \**************************************/
@@ -9577,9 +11496,9 @@ clone;exports.default = _default;
 
 
 
-var base64 = __webpack_require__(/*! base64-js */ 29)
-var ieee754 = __webpack_require__(/*! ieee754 */ 30)
-var isArray = __webpack_require__(/*! isarray */ 31)
+var base64 = __webpack_require__(/*! base64-js */ 33)
+var ieee754 = __webpack_require__(/*! ieee754 */ 34)
+var isArray = __webpack_require__(/*! isarray */ 35)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -11357,10 +13276,10 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ 3)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ 2)))
 
 /***/ }),
-/* 29 */
+/* 33 */
 /*!*****************************************!*\
   !*** ./node_modules/base64-js/index.js ***!
   \*****************************************/
@@ -11523,7 +13442,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 30 */
+/* 34 */
 /*!***************************************!*\
   !*** ./node_modules/ieee754/index.js ***!
   \***************************************/
@@ -11617,7 +13536,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 31 */
+/* 35 */
 /*!***************************************!*\
   !*** ./node_modules/isarray/index.js ***!
   \***************************************/
@@ -11632,15 +13551,15 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 32 */
-/*!*************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/util/route.js ***!
-  \*************************************************************************************/
+/* 36 */
+/*!*******************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/util/route.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;} /**
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 37));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;} /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 并且带有路由拦截功能
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */var
@@ -11767,17 +13686,17 @@ new Router().route;exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 33 */
+/* 37 */
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 34);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 38);
 
 /***/ }),
-/* 34 */
+/* 38 */
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -11808,7 +13727,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 35);
+module.exports = __webpack_require__(/*! ./runtime */ 39);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -11824,7 +13743,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 35 */
+/* 39 */
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -12555,10 +14474,10 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 36 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/function/colorGradient.js ***!
-  \*************************************************************************************************/
+/* 40 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/function/colorGradient.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12698,10 +14617,10 @@ function colorToRgba(color, alpha) {
   colorToRgba: colorToRgba };exports.default = _default;
 
 /***/ }),
-/* 37 */
-/*!****************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/function/test.js ***!
-  \****************************************************************************************/
+/* 41 */
+/*!**********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/function/test.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12994,10 +14913,10 @@ function regExp(o) {
   string: string };exports.default = _default;
 
 /***/ }),
-/* 38 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/function/debounce.js ***!
-  \********************************************************************************************/
+/* 42 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/function/debounce.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13033,10 +14952,10 @@ function debounce(func) {var wait = arguments.length > 1 && arguments[1] !== und
 debounce;exports.default = _default;
 
 /***/ }),
-/* 39 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/function/throttle.js ***!
-  \********************************************************************************************/
+/* 43 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/function/throttle.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13073,15 +14992,15 @@ function throttle(func) {var wait = arguments.length > 1 && arguments[1] !== und
 throttle;exports.default = _default;
 
 /***/ }),
-/* 40 */
-/*!*****************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/function/index.js ***!
-  \*****************************************************************************************/
+/* 44 */
+/*!***********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/function/index.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 37));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 41));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 /**
                                                                                                                                                                                                                                                             * 如果value小于min，取min；如果value大于max，取max
@@ -13661,16 +15580,16 @@ function page() {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 41 */
-/*!****************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/config.js ***!
-  \****************************************************************************************/
+/* 45 */
+/*!**********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/config.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 此版本发布于2020-11-16
-var version = '2.0.3';var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 此版本发布于2020-12-01
+var version = '2.0.9';var _default =
 
 {
   v: version,
@@ -13696,10 +15615,10 @@ var version = '2.0.3';var _default =
     'u-light-color': '#c0c4cc' } };exports.default = _default;
 
 /***/ }),
-/* 42 */
-/*!***************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props.js ***!
-  \***************************************************************************************/
+/* 46 */
+/*!*********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13709,96 +15628,96 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _config = _interopRequireDefault(__webpack_require__(/*! ./config */ 41));
+var _config = _interopRequireDefault(__webpack_require__(/*! ./config */ 45));
 
-var _actionSheet = _interopRequireDefault(__webpack_require__(/*! ./props/actionSheet.js */ 43));
-var _album = _interopRequireDefault(__webpack_require__(/*! ./props/album.js */ 44));
-var _alert = _interopRequireDefault(__webpack_require__(/*! ./props/alert.js */ 45));
-var _avatar = _interopRequireDefault(__webpack_require__(/*! ./props/avatar */ 46));
-var _avatarGroup = _interopRequireDefault(__webpack_require__(/*! ./props/avatarGroup */ 47));
-var _backtop = _interopRequireDefault(__webpack_require__(/*! ./props/backtop */ 48));
-var _badge = _interopRequireDefault(__webpack_require__(/*! ./props/badge */ 49));
-var _button = _interopRequireDefault(__webpack_require__(/*! ./props/button */ 50));
-var _calendar = _interopRequireDefault(__webpack_require__(/*! ./props/calendar */ 51));
-var _carKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/carKeyboard */ 52));
-var _cell = _interopRequireDefault(__webpack_require__(/*! ./props/cell */ 53));
-var _cellGroup = _interopRequireDefault(__webpack_require__(/*! ./props/cellGroup */ 54));
-var _checkbox = _interopRequireDefault(__webpack_require__(/*! ./props/checkbox */ 55));
-var _checkboxGroup = _interopRequireDefault(__webpack_require__(/*! ./props/checkboxGroup */ 56));
-var _circleProgress = _interopRequireDefault(__webpack_require__(/*! ./props/circleProgress */ 57));
-var _code = _interopRequireDefault(__webpack_require__(/*! ./props/code */ 58));
-var _codeInput = _interopRequireDefault(__webpack_require__(/*! ./props/codeInput */ 59));
-var _col = _interopRequireDefault(__webpack_require__(/*! ./props/col */ 60));
-var _collapse = _interopRequireDefault(__webpack_require__(/*! ./props/collapse */ 61));
-var _collapseItem = _interopRequireDefault(__webpack_require__(/*! ./props/collapseItem */ 62));
-var _columnNotice = _interopRequireDefault(__webpack_require__(/*! ./props/columnNotice */ 63));
-var _countDown = _interopRequireDefault(__webpack_require__(/*! ./props/countDown */ 64));
-var _countTo = _interopRequireDefault(__webpack_require__(/*! ./props/countTo */ 65));
-var _datetimePicker = _interopRequireDefault(__webpack_require__(/*! ./props/datetimePicker */ 66));
-var _divider = _interopRequireDefault(__webpack_require__(/*! ./props/divider */ 67));
-var _empty = _interopRequireDefault(__webpack_require__(/*! ./props/empty */ 68));
-var _form = _interopRequireDefault(__webpack_require__(/*! ./props/form */ 69));
-var _formItem = _interopRequireDefault(__webpack_require__(/*! ./props/formItem */ 70));
-var _gap = _interopRequireDefault(__webpack_require__(/*! ./props/gap */ 71));
-var _grid = _interopRequireDefault(__webpack_require__(/*! ./props/grid */ 72));
-var _gridItem = _interopRequireDefault(__webpack_require__(/*! ./props/gridItem */ 73));
-var _icon = _interopRequireDefault(__webpack_require__(/*! ./props/icon */ 74));
-var _image = _interopRequireDefault(__webpack_require__(/*! ./props/image */ 75));
-var _indexAnchor = _interopRequireDefault(__webpack_require__(/*! ./props/indexAnchor */ 76));
-var _indexList = _interopRequireDefault(__webpack_require__(/*! ./props/indexList */ 77));
-var _input = _interopRequireDefault(__webpack_require__(/*! ./props/input */ 78));
-var _keyboard = _interopRequireDefault(__webpack_require__(/*! ./props/keyboard */ 79));
-var _line = _interopRequireDefault(__webpack_require__(/*! ./props/line */ 80));
-var _lineProgress = _interopRequireDefault(__webpack_require__(/*! ./props/lineProgress */ 81));
-var _link = _interopRequireDefault(__webpack_require__(/*! ./props/link */ 82));
-var _list = _interopRequireDefault(__webpack_require__(/*! ./props/list */ 83));
-var _listItem = _interopRequireDefault(__webpack_require__(/*! ./props/listItem */ 84));
-var _loadingIcon = _interopRequireDefault(__webpack_require__(/*! ./props/loadingIcon */ 85));
-var _loadingPage = _interopRequireDefault(__webpack_require__(/*! ./props/loadingPage */ 86));
-var _loadmore = _interopRequireDefault(__webpack_require__(/*! ./props/loadmore */ 87));
-var _modal = _interopRequireDefault(__webpack_require__(/*! ./props/modal */ 88));
-var _navbar = _interopRequireDefault(__webpack_require__(/*! ./props/navbar */ 89));
-var _noNetwork = _interopRequireDefault(__webpack_require__(/*! ./props/noNetwork */ 90));
-var _noticeBar = _interopRequireDefault(__webpack_require__(/*! ./props/noticeBar */ 91));
-var _notify = _interopRequireDefault(__webpack_require__(/*! ./props/notify */ 92));
-var _numberBox = _interopRequireDefault(__webpack_require__(/*! ./props/numberBox */ 93));
-var _numberKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/numberKeyboard */ 94));
-var _overlay = _interopRequireDefault(__webpack_require__(/*! ./props/overlay */ 95));
-var _parse = _interopRequireDefault(__webpack_require__(/*! ./props/parse */ 96));
-var _picker = _interopRequireDefault(__webpack_require__(/*! ./props/picker */ 97));
-var _popup = _interopRequireDefault(__webpack_require__(/*! ./props/popup */ 98));
-var _radio = _interopRequireDefault(__webpack_require__(/*! ./props/radio */ 99));
-var _radioGroup = _interopRequireDefault(__webpack_require__(/*! ./props/radioGroup */ 100));
-var _rate = _interopRequireDefault(__webpack_require__(/*! ./props/rate */ 101));
-var _readMore = _interopRequireDefault(__webpack_require__(/*! ./props/readMore */ 102));
-var _row = _interopRequireDefault(__webpack_require__(/*! ./props/row */ 103));
-var _rowNotice = _interopRequireDefault(__webpack_require__(/*! ./props/rowNotice */ 104));
-var _scrollList = _interopRequireDefault(__webpack_require__(/*! ./props/scrollList */ 105));
-var _search = _interopRequireDefault(__webpack_require__(/*! ./props/search */ 106));
-var _section = _interopRequireDefault(__webpack_require__(/*! ./props/section */ 107));
-var _skeleton = _interopRequireDefault(__webpack_require__(/*! ./props/skeleton */ 108));
-var _slider = _interopRequireDefault(__webpack_require__(/*! ./props/slider */ 109));
-var _statusBar = _interopRequireDefault(__webpack_require__(/*! ./props/statusBar */ 110));
-var _steps = _interopRequireDefault(__webpack_require__(/*! ./props/steps */ 111));
-var _stepsItem = _interopRequireDefault(__webpack_require__(/*! ./props/stepsItem */ 112));
-var _sticky = _interopRequireDefault(__webpack_require__(/*! ./props/sticky */ 113));
-var _subsection = _interopRequireDefault(__webpack_require__(/*! ./props/subsection */ 114));
-var _swipeAction = _interopRequireDefault(__webpack_require__(/*! ./props/swipeAction */ 115));
-var _swipeActionItem = _interopRequireDefault(__webpack_require__(/*! ./props/swipeActionItem */ 116));
-var _swiper = _interopRequireDefault(__webpack_require__(/*! ./props/swiper */ 117));
-var _swipterIndicator = _interopRequireDefault(__webpack_require__(/*! ./props/swipterIndicator */ 118));
-var _switch2 = _interopRequireDefault(__webpack_require__(/*! ./props/switch */ 119));
-var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./props/tabbar */ 120));
-var _tabbarItem = _interopRequireDefault(__webpack_require__(/*! ./props/tabbarItem */ 121));
-var _tabs = _interopRequireDefault(__webpack_require__(/*! ./props/tabs */ 122));
-var _tag = _interopRequireDefault(__webpack_require__(/*! ./props/tag */ 123));
-var _text = _interopRequireDefault(__webpack_require__(/*! ./props/text */ 124));
-var _textarea = _interopRequireDefault(__webpack_require__(/*! ./props/textarea */ 125));
-var _toast = _interopRequireDefault(__webpack_require__(/*! ./props/toast */ 126));
-var _toolbar = _interopRequireDefault(__webpack_require__(/*! ./props/toolbar */ 127));
-var _tooltip = _interopRequireDefault(__webpack_require__(/*! ./props/tooltip */ 128));
-var _transition = _interopRequireDefault(__webpack_require__(/*! ./props/transition */ 129));
-var _upload = _interopRequireDefault(__webpack_require__(/*! ./props/upload */ 130));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var
+var _actionSheet = _interopRequireDefault(__webpack_require__(/*! ./props/actionSheet.js */ 47));
+var _album = _interopRequireDefault(__webpack_require__(/*! ./props/album.js */ 48));
+var _alert = _interopRequireDefault(__webpack_require__(/*! ./props/alert.js */ 49));
+var _avatar = _interopRequireDefault(__webpack_require__(/*! ./props/avatar */ 50));
+var _avatarGroup = _interopRequireDefault(__webpack_require__(/*! ./props/avatarGroup */ 51));
+var _backtop = _interopRequireDefault(__webpack_require__(/*! ./props/backtop */ 52));
+var _badge = _interopRequireDefault(__webpack_require__(/*! ./props/badge */ 53));
+var _button = _interopRequireDefault(__webpack_require__(/*! ./props/button */ 54));
+var _calendar = _interopRequireDefault(__webpack_require__(/*! ./props/calendar */ 55));
+var _carKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/carKeyboard */ 56));
+var _cell = _interopRequireDefault(__webpack_require__(/*! ./props/cell */ 57));
+var _cellGroup = _interopRequireDefault(__webpack_require__(/*! ./props/cellGroup */ 58));
+var _checkbox = _interopRequireDefault(__webpack_require__(/*! ./props/checkbox */ 59));
+var _checkboxGroup = _interopRequireDefault(__webpack_require__(/*! ./props/checkboxGroup */ 60));
+var _circleProgress = _interopRequireDefault(__webpack_require__(/*! ./props/circleProgress */ 61));
+var _code = _interopRequireDefault(__webpack_require__(/*! ./props/code */ 62));
+var _codeInput = _interopRequireDefault(__webpack_require__(/*! ./props/codeInput */ 63));
+var _col = _interopRequireDefault(__webpack_require__(/*! ./props/col */ 64));
+var _collapse = _interopRequireDefault(__webpack_require__(/*! ./props/collapse */ 65));
+var _collapseItem = _interopRequireDefault(__webpack_require__(/*! ./props/collapseItem */ 66));
+var _columnNotice = _interopRequireDefault(__webpack_require__(/*! ./props/columnNotice */ 67));
+var _countDown = _interopRequireDefault(__webpack_require__(/*! ./props/countDown */ 68));
+var _countTo = _interopRequireDefault(__webpack_require__(/*! ./props/countTo */ 69));
+var _datetimePicker = _interopRequireDefault(__webpack_require__(/*! ./props/datetimePicker */ 70));
+var _divider = _interopRequireDefault(__webpack_require__(/*! ./props/divider */ 71));
+var _empty = _interopRequireDefault(__webpack_require__(/*! ./props/empty */ 72));
+var _form = _interopRequireDefault(__webpack_require__(/*! ./props/form */ 73));
+var _formItem = _interopRequireDefault(__webpack_require__(/*! ./props/formItem */ 74));
+var _gap = _interopRequireDefault(__webpack_require__(/*! ./props/gap */ 75));
+var _grid = _interopRequireDefault(__webpack_require__(/*! ./props/grid */ 76));
+var _gridItem = _interopRequireDefault(__webpack_require__(/*! ./props/gridItem */ 77));
+var _icon = _interopRequireDefault(__webpack_require__(/*! ./props/icon */ 78));
+var _image = _interopRequireDefault(__webpack_require__(/*! ./props/image */ 79));
+var _indexAnchor = _interopRequireDefault(__webpack_require__(/*! ./props/indexAnchor */ 80));
+var _indexList = _interopRequireDefault(__webpack_require__(/*! ./props/indexList */ 81));
+var _input = _interopRequireDefault(__webpack_require__(/*! ./props/input */ 82));
+var _keyboard = _interopRequireDefault(__webpack_require__(/*! ./props/keyboard */ 83));
+var _line = _interopRequireDefault(__webpack_require__(/*! ./props/line */ 84));
+var _lineProgress = _interopRequireDefault(__webpack_require__(/*! ./props/lineProgress */ 85));
+var _link = _interopRequireDefault(__webpack_require__(/*! ./props/link */ 86));
+var _list = _interopRequireDefault(__webpack_require__(/*! ./props/list */ 87));
+var _listItem = _interopRequireDefault(__webpack_require__(/*! ./props/listItem */ 88));
+var _loadingIcon = _interopRequireDefault(__webpack_require__(/*! ./props/loadingIcon */ 89));
+var _loadingPage = _interopRequireDefault(__webpack_require__(/*! ./props/loadingPage */ 90));
+var _loadmore = _interopRequireDefault(__webpack_require__(/*! ./props/loadmore */ 91));
+var _modal = _interopRequireDefault(__webpack_require__(/*! ./props/modal */ 92));
+var _navbar = _interopRequireDefault(__webpack_require__(/*! ./props/navbar */ 93));
+var _noNetwork = _interopRequireDefault(__webpack_require__(/*! ./props/noNetwork */ 94));
+var _noticeBar = _interopRequireDefault(__webpack_require__(/*! ./props/noticeBar */ 95));
+var _notify = _interopRequireDefault(__webpack_require__(/*! ./props/notify */ 96));
+var _numberBox = _interopRequireDefault(__webpack_require__(/*! ./props/numberBox */ 97));
+var _numberKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/numberKeyboard */ 98));
+var _overlay = _interopRequireDefault(__webpack_require__(/*! ./props/overlay */ 99));
+var _parse = _interopRequireDefault(__webpack_require__(/*! ./props/parse */ 100));
+var _picker = _interopRequireDefault(__webpack_require__(/*! ./props/picker */ 101));
+var _popup = _interopRequireDefault(__webpack_require__(/*! ./props/popup */ 102));
+var _radio = _interopRequireDefault(__webpack_require__(/*! ./props/radio */ 103));
+var _radioGroup = _interopRequireDefault(__webpack_require__(/*! ./props/radioGroup */ 104));
+var _rate = _interopRequireDefault(__webpack_require__(/*! ./props/rate */ 105));
+var _readMore = _interopRequireDefault(__webpack_require__(/*! ./props/readMore */ 106));
+var _row = _interopRequireDefault(__webpack_require__(/*! ./props/row */ 107));
+var _rowNotice = _interopRequireDefault(__webpack_require__(/*! ./props/rowNotice */ 108));
+var _scrollList = _interopRequireDefault(__webpack_require__(/*! ./props/scrollList */ 109));
+var _search = _interopRequireDefault(__webpack_require__(/*! ./props/search */ 110));
+var _section = _interopRequireDefault(__webpack_require__(/*! ./props/section */ 111));
+var _skeleton = _interopRequireDefault(__webpack_require__(/*! ./props/skeleton */ 112));
+var _slider = _interopRequireDefault(__webpack_require__(/*! ./props/slider */ 113));
+var _statusBar = _interopRequireDefault(__webpack_require__(/*! ./props/statusBar */ 114));
+var _steps = _interopRequireDefault(__webpack_require__(/*! ./props/steps */ 115));
+var _stepsItem = _interopRequireDefault(__webpack_require__(/*! ./props/stepsItem */ 116));
+var _sticky = _interopRequireDefault(__webpack_require__(/*! ./props/sticky */ 117));
+var _subsection = _interopRequireDefault(__webpack_require__(/*! ./props/subsection */ 118));
+var _swipeAction = _interopRequireDefault(__webpack_require__(/*! ./props/swipeAction */ 119));
+var _swipeActionItem = _interopRequireDefault(__webpack_require__(/*! ./props/swipeActionItem */ 120));
+var _swiper = _interopRequireDefault(__webpack_require__(/*! ./props/swiper */ 121));
+var _swipterIndicator = _interopRequireDefault(__webpack_require__(/*! ./props/swipterIndicator */ 122));
+var _switch2 = _interopRequireDefault(__webpack_require__(/*! ./props/switch */ 123));
+var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./props/tabbar */ 124));
+var _tabbarItem = _interopRequireDefault(__webpack_require__(/*! ./props/tabbarItem */ 125));
+var _tabs = _interopRequireDefault(__webpack_require__(/*! ./props/tabs */ 126));
+var _tag = _interopRequireDefault(__webpack_require__(/*! ./props/tag */ 127));
+var _text = _interopRequireDefault(__webpack_require__(/*! ./props/text */ 128));
+var _textarea = _interopRequireDefault(__webpack_require__(/*! ./props/textarea */ 129));
+var _toast = _interopRequireDefault(__webpack_require__(/*! ./props/toast */ 130));
+var _toolbar = _interopRequireDefault(__webpack_require__(/*! ./props/toolbar */ 131));
+var _tooltip = _interopRequireDefault(__webpack_require__(/*! ./props/tooltip */ 132));
+var _transition = _interopRequireDefault(__webpack_require__(/*! ./props/transition */ 133));
+var _upload = _interopRequireDefault(__webpack_require__(/*! ./props/upload */ 134));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var
 
 
 color =
@@ -13895,10 +15814,10 @@ _transition.default),
 _upload.default);exports.default = _default;
 
 /***/ }),
-/* 43 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/actionSheet.js ***!
-  \***************************************************************************************************/
+/* 47 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/actionSheet.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13928,10 +15847,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     round: false } };exports.default = _default;
 
 /***/ }),
-/* 44 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/album.js ***!
-  \*********************************************************************************************/
+/* 48 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/album.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13961,10 +15880,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     showMore: true } };exports.default = _default;
 
 /***/ }),
-/* 45 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/alert.js ***!
-  \*********************************************************************************************/
+/* 49 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/alert.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13991,10 +15910,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     fontSize: 14 } };exports.default = _default;
 
 /***/ }),
-/* 46 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/avatar.js ***!
-  \**********************************************************************************************/
+/* 50 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/avatar.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14027,10 +15946,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     name: '' } };exports.default = _default;
 
 /***/ }),
-/* 47 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/avatarGroup.js ***!
-  \***************************************************************************************************/
+/* 51 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/avatarGroup.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14054,13 +15973,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     showMore: true,
     size: 40,
     keyName: '',
-    gap: 0.5 } };exports.default = _default;
+    gap: 0.5,
+    extraValue: 0 } };exports.default = _default;
 
 /***/ }),
-/* 48 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/backtop.js ***!
-  \***********************************************************************************************/
+/* 52 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/backtop.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14091,10 +16011,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         fontSize: '19px' };} } };exports.default = _default;
 
 /***/ }),
-/* 49 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/badge.js ***!
-  \*********************************************************************************************/
+/* 53 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/badge.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14126,10 +16046,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     absolute: false } };exports.default = _default;
 
 /***/ }),
-/* 50 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/button.js ***!
-  \**********************************************************************************************/
+/* 54 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/button.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14175,10 +16095,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     color: '' } };exports.default = _default;
 
 /***/ }),
-/* 51 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/calendar.js ***!
-  \************************************************************************************************/
+/* 55 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/calendar.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14223,10 +16143,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     allowSameDay: false } };exports.default = _default;
 
 /***/ }),
-/* 52 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/carKeyboard.js ***!
-  \***************************************************************************************************/
+/* 56 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/carKeyboard.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14246,10 +16166,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     random: false } };exports.default = _default;
 
 /***/ }),
-/* 53 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/cell.js ***!
-  \********************************************************************************************/
+/* 57 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/cell.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14289,10 +16209,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     name: '' } };exports.default = _default;
 
 /***/ }),
-/* 54 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/cellGroup.js ***!
-  \*************************************************************************************************/
+/* 58 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/cellGroup.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14314,10 +16234,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     customStyle: {} } };exports.default = _default;
 
 /***/ }),
-/* 55 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/checkbox.js ***!
-  \************************************************************************************************/
+/* 59 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/checkbox.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14349,10 +16269,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     labelDisabled: '' } };exports.default = _default;
 
 /***/ }),
-/* 56 */
-/*!*****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
-  \*****************************************************************************************************/
+/* 60 */
+/*!***********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14386,10 +16306,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     borderBottom: false } };exports.default = _default;
 
 /***/ }),
-/* 57 */
-/*!******************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/circleProgress.js ***!
-  \******************************************************************************************************/
+/* 61 */
+/*!************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/circleProgress.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14409,10 +16329,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     percentage: 30 } };exports.default = _default;
 
 /***/ }),
-/* 58 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/code.js ***!
-  \********************************************************************************************/
+/* 62 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/code.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14438,10 +16358,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     uniqueKey: '' } };exports.default = _default;
 
 /***/ }),
-/* 59 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/codeInput.js ***!
-  \*************************************************************************************************/
+/* 63 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/codeInput.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14473,10 +16393,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     borderColor: '#c9cacc' } };exports.default = _default;
 
 /***/ }),
-/* 60 */
-/*!*******************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/col.js ***!
-  \*******************************************************************************************/
+/* 64 */
+/*!*************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/col.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14500,10 +16420,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     textAlign: 'left' } };exports.default = _default;
 
 /***/ }),
-/* 61 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/collapse.js ***!
-  \************************************************************************************************/
+/* 65 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/collapse.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14525,10 +16445,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     border: true } };exports.default = _default;
 
 /***/ }),
-/* 62 */
-/*!****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/collapseItem.js ***!
-  \****************************************************************************************************/
+/* 66 */
+/*!**********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/collapseItem.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14558,10 +16478,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     duration: 300 } };exports.default = _default;
 
 /***/ }),
-/* 63 */
-/*!****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/columnNotice.js ***!
-  \****************************************************************************************************/
+/* 67 */
+/*!**********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/columnNotice.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14590,10 +16510,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     disableTouch: true } };exports.default = _default;
 
 /***/ }),
-/* 64 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/countDown.js ***!
-  \*************************************************************************************************/
+/* 68 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/countDown.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14616,10 +16536,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     millisecond: false } };exports.default = _default;
 
 /***/ }),
-/* 65 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/countTo.js ***!
-  \***********************************************************************************************/
+/* 69 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/countTo.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14649,10 +16569,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     separator: '' } };exports.default = _default;
 
 /***/ }),
-/* 66 */
-/*!******************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/datetimePicker.js ***!
-  \******************************************************************************************************/
+/* 70 */
+/*!************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/datetimePicker.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14693,10 +16613,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     defaultIndex: function defaultIndex() {return [];} } };exports.default = _default;
 
 /***/ }),
-/* 67 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/divider.js ***!
-  \***********************************************************************************************/
+/* 71 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/divider.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14723,10 +16643,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     lineColor: '#dcdfe6' } };exports.default = _default;
 
 /***/ }),
-/* 68 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/empty.js ***!
-  \*********************************************************************************************/
+/* 72 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/empty.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14756,10 +16676,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     marginTop: 0 } };exports.default = _default;
 
 /***/ }),
-/* 69 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/form.js ***!
-  \********************************************************************************************/
+/* 73 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/form.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14778,7 +16698,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   form: {
     model: function model() {return {};},
     rules: function rules() {return {};},
-    errorType: function errorType() {return ['message', 'toast'];},
+    errorType: 'message',
     borderBottom: true,
     labelPosition: 'left',
     labelWidth: 45,
@@ -14786,10 +16706,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     labelStyle: function labelStyle() {return {};} } };exports.default = _default;
 
 /***/ }),
-/* 70 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/formItem.js ***!
-  \************************************************************************************************/
+/* 74 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/formItem.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14815,10 +16735,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     required: false } };exports.default = _default;
 
 /***/ }),
-/* 71 */
-/*!*******************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/gap.js ***!
-  \*******************************************************************************************/
+/* 75 */
+/*!*************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/gap.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14842,10 +16762,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     customStyle: {} } };exports.default = _default;
 
 /***/ }),
-/* 72 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/grid.js ***!
-  \********************************************************************************************/
+/* 76 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/grid.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14867,10 +16787,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     align: 'left' } };exports.default = _default;
 
 /***/ }),
-/* 73 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/gridItem.js ***!
-  \************************************************************************************************/
+/* 77 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/gridItem.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14891,10 +16811,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     bgColor: 'transparent' } };exports.default = _default;
 
 /***/ }),
-/* 74 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/icon.js ***!
-  \********************************************************************************************/
+/* 78 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/icon.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14908,7 +16828,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 41));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /*
+var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 45));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /*
                                                                                                                                                           * @Author       : LQ
                                                                                                                                                           * @Description  :
                                                                                                                                                           * @version      : 1.0
@@ -14935,10 +16855,10 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 41));f
     stop: false } };exports.default = _default;
 
 /***/ }),
-/* 75 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/image.js ***!
-  \*********************************************************************************************/
+/* 79 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/image.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14973,10 +16893,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     bgColor: '#f3f4f6' } };exports.default = _default;
 
 /***/ }),
-/* 76 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/indexAnchor.js ***!
-  \***************************************************************************************************/
+/* 80 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/indexAnchor.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15000,10 +16920,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     height: 32 } };exports.default = _default;
 
 /***/ }),
-/* 77 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/indexList.js ***!
-  \*************************************************************************************************/
+/* 81 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/indexList.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15027,10 +16947,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     customNavHeight: 0 } };exports.default = _default;
 
 /***/ }),
-/* 78 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/input.js ***!
-  \*********************************************************************************************/
+/* 82 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/input.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15071,7 +16991,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     selectionEnd: -1,
     adjustPosition: true,
     inputAlign: 'left',
-    autosize: false,
     fontSize: '15px',
     color: '#303133',
     prefixIcon: '',
@@ -15084,10 +17003,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     formatter: null } };exports.default = _default;
 
 /***/ }),
-/* 79 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/keyboard.js ***!
-  \************************************************************************************************/
+/* 83 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/keyboard.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15122,10 +17041,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     autoChange: false } };exports.default = _default;
 
 /***/ }),
-/* 80 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/line.js ***!
-  \********************************************************************************************/
+/* 84 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/line.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15150,10 +17069,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     dashed: false } };exports.default = _default;
 
 /***/ }),
-/* 81 */
-/*!****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/lineProgress.js ***!
-  \****************************************************************************************************/
+/* 85 */
+/*!**********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/lineProgress.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15177,10 +17096,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     height: 12 } };exports.default = _default;
 
 /***/ }),
-/* 82 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/link.js ***!
-  \********************************************************************************************/
+/* 86 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/link.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15194,7 +17113,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 41));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /*
+var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 45));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /*
                                                                                                                                                           * @Author       : LQ
                                                                                                                                                           * @Description  :
                                                                                                                                                           * @version      : 1.0
@@ -15211,10 +17130,10 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 41));f
     text: '' } };exports.default = _default;
 
 /***/ }),
-/* 83 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/list.js ***!
-  \********************************************************************************************/
+/* 87 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/list.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15247,10 +17166,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     preLoadScreen: 1 } };exports.default = _default;
 
 /***/ }),
-/* 84 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/listItem.js ***!
-  \************************************************************************************************/
+/* 88 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/listItem.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15270,10 +17189,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     anchor: '' } };exports.default = _default;
 
 /***/ }),
-/* 85 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/loadingIcon.js ***!
-  \***************************************************************************************************/
+/* 89 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/loadingIcon.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15287,7 +17206,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 41));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /*
+var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 45));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /*
                                                                                                                                                           * @Author       : LQ
                                                                                                                                                           * @Description  :
                                                                                                                                                           * @version      : 1.0
@@ -15308,10 +17227,10 @@ var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 41));f
     inactiveColor: '' } };exports.default = _default;
 
 /***/ }),
-/* 86 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/loadingPage.js ***!
-  \***************************************************************************************************/
+/* 90 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/loadingPage.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15338,10 +17257,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     loadingColor: '#C8C8C8' } };exports.default = _default;
 
 /***/ }),
-/* 87 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/loadmore.js ***!
-  \************************************************************************************************/
+/* 91 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/loadmore.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15375,10 +17294,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     line: false } };exports.default = _default;
 
 /***/ }),
-/* 88 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/modal.js ***!
-  \*********************************************************************************************/
+/* 92 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/modal.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15413,10 +17332,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     confirmButtonShape: '' } };exports.default = _default;
 
 /***/ }),
-/* 89 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/navbar.js ***!
-  \**********************************************************************************************/
+/* 93 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/navbar.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15447,10 +17366,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     height: '44px' } };exports.default = _default;
 
 /***/ }),
-/* 90 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/noNetwork.js ***!
-  \*************************************************************************************************/
+/* 94 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/noNetwork.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15472,10 +17391,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABLKADAAQAAAABAAABLAAAAADYYILnAABAAElEQVR4Ae29CZhkV3kefNeq6m2W7tn3nl0aCbHIAgmQPGB+sLCNzSID9g9PYrAf57d/+4+DiW0cy8QBJ06c2In/PLFDHJ78+MGCGNsYgyxwIwktwEijAc1ohtmnZ+2Z7p5eq6vu9r/vuXWrq25VdVV1V3dXVX9Hmj73nv285963vvOd75yraeIEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQaD8E9PbrkvRopSMwMBBYRs+5O/yJS68cPnzYXel4tFP/jXbqjPRFEAiCQNe6Bw/6gdFn9Oy9Q90LLG2DgBBW2wyldIQIPPPCte2a5q3jtR+4ff/4wuBuXotrDwSEsNpjHKUXQODppy+udYJMEUEZgbd94DvnNwlA7YGAEFZ7jOOK78Xp06eTTkq7sxwQhmXuf/754VXl4iSstRAQwmqt8ZLWlkHg0UcD49qYfUjXfLtMtOZ7npExJu4iqZWLl7DWQUAIq3XGSlpaAYHD77q8xwuCOSUoXw8Sl0eMux977DGzQjES3AIICGG1wCBJEysj8PXnz230XXdr5RQFMYbRvWnv6w8UhMhliyGwYghr4Pjg3oEXL34ey9zyC9tiD2ml5h47dr1LN7S6CMjz/A3PvHh1Z6UyJby5EVgRhKUe7Kz/JU0LfvrJo5f+Y3MPibSuFgQGBgasYSd9l6GDsup0WS/T/9RTp9fXmU2SNwECdQ92E7S57iaMeJnPQLK6ixkDLfjlb7546RfrLkQyNBcC3dsP6oHWMd9G+V3JgwPHh7rnm1/yLQ8CbU9Y33zp0j+nZFUMb/DHmB7+SHGY3LUKAk8cObtD00xlHDrfNge+Z2ozU3c9dvx4Yr5lSL6lR6CtCWvg6OAPw9z538ZhhZRl6XrwhW8du1KX/iNejtwvPQIDR8+vSRqJ/obU7GupjdNdh2gW0ZDypJBFR6BtB2rg2OVtuub9JcmpHIpBoK1xfffLzx4f7C0XL2HNiYDp6bs9z23Ypn1fC1Y/9PCFDc3ZW2lVHIG2JKzTp4Ok7nv/G6Q054MIvda+bNb74pEgKGtwGAdL7pcfAa8vOKEZ2kyjWuLr7uDh+/qvN6o8KWdxEWhLwroyeek/g4zuqwU6kNrhyZcu/UktaSXN8iNwuL9/RuvVXtJ9PbPQ1vhmcP6t9+47u9ByJP/SIdB2hDVw9MJHQFYfrQdCph84evFX68kjaZcPAZJWwjMXRFpJ2zr91tfuvrh8vZCa54NA2xGWrunvmg8QWCJ/N4ir7fCYDxatkOeBB7an501agXbygVdvv9IK/ZQ2FiPQdi9osGbH+zRNf7y4m9Xu9Me7N9nv0HXdr5ZS4psHgXpJC9P/wDRTx0Vn1TxjWG9LGrbaUm/Fi5meSvcrkxf/Cg/ow9XqAUk91v3qHT97r6471dJKfHMi8Oyzgx1Z03t1YAQVT2MwgsC3u+yXHzi0faQ5eyGtqgWBtpOw2Ol9+/TM+sTOn8L08MtzgQCy+tOHXr3jA0JWc6HU/HF5Scssr4jXcYqfP6V/T8iq+ceyWgvbUsKKOn38eJAYyl56TAuCEr2WYei//9Crd/5GlFb81kdASVopSFrerKRlaoZj9HR+700H10+0fg+lB21NWBxe2lhNHsUpDZr27mi4dV379R9+za4/iO7Fbx8ECknLCPTsTDJ17O33bJpqnx6u7J60PWFxeAcCbMV56dJfQKf1bkMLfuGh1+76zMoe9vbuPUnLsb2DtmOe5HSxvXsrvWtLBEhaTx29+Ma27Jx0ShAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQaEsEVoQdVluO3BJ06ptHL34b1XRjp4Ch6Rq24+kmjG4Nwwg+9uA9u/73EjRBqhAEihAoe3xwUQq5WTYEzp0b3ZnV/Ncf6O/9AvY9wlh/6dy3X7ncN512Zw9BVLXjuAP4np44vnQtkZoEgVkEhLBmsWiKqwsXpjbPBOn3gRfenwnc+7GBe+zsjclvonFDS9nA9Iy/u3x9+vAP3735VPk4CRUEFhcBIazFxbfm0k9fHD7k+v4nQFaPQIrx8Gmyx/GJ0J/t7ez7mw0b9MmaC2pQQgh0/ZSm4g5TwueWWtqLt0HuVy4CQljLPPYnB0depTn+b3t+8B4t0AdBUv93h2H9xc6da0aXs2m+r1WQsLRnl7NdUvfKRkAIa5nG//r1oGtsZvjTgev/kqYHF/TA+AXoqv4npJemOEiQU1Eo2l+G0movBK1UBBPU7s9E1+ILAkuNgKwSLjXiqO/khVtvARH8dxDBRkMzPrF/V+9/BlG5y9CUqlXinHv9mRPXtvuus88L9H3JPv2zD2yXExCqAicJBIFWRwAvv3Xqwq0/Pnn+lv/K+ZvfPH3p9p5W75O0fxaBp793ce3AwIDMWmYhafiVgNtwSMsXeHp4eNXJC8Nf0PAdRCiuf/XgrnWUqsqotcvnl9DmRkCdweX4b9N7+m/ih+mbMraLM14yJVwcXItKpT1VRve+ArC3Qqn+3gM7132jKEGZm6tXg86J7OhDfuA/iHwPUpfUZSfu2L59tXxEoQxeyxkEgjKeOnLxHb4RqC+NY5H3+2953d4XlrNN7Vq3ENYij+yZwbG9jpt9GkBPQ5H9zgP9607OVeWp87cOQtn9zwJf+xDMNFfj+jryPqXpxj8c2Nn7P+SXey70lidu4IXzb0DNB4tr9751+HV7zxSHyd1CERDCWiiCc+QPjUCnsaqmZ62O5IN7N/VUNP48ee7mAZDTf4Tt049iUG4Guv4ZfNLos9UIbo7qJWoJEHjy+bP7fNsoOcnW0A0/aacef8PdG28sQTNWTBVCWIs01OfPj66BpfqTmq732UnjgT1bei+Vq4pTv7HM8Ceg2/o1qLQug7T+FaaM3IqTLZdewpoHgYEjV9fphvOj+OShWa5V+CxvZtpzv/LwG/aNl4uXsPoRwI+4uEYjAJ2GmdG8L0FK2mYa+tsrkdXZy+P7x2ZuHdW14P+BLdank9q6Qwd3rf+ckFWjR6Tx5Q2cP58K9Jm3VCIr1ogt48lO237r3//96YofeG18y9q7RFklXITxPXV+5DchKb3ZDMy37Nu5tuxG4R9cHH6b42QfAzlds+3EPXu2rfrBIjRFilwkBIIR7SHoJDurFU89ZOd680Gke6JaWomvjoBIWNUxqivFD87fej0e0n8Fwvr0/t1rnyqX+QfnRz7g+8FX8Rv8vL3auF/IqhxKzR2WCPxXqKeq3krDTdj2ierpJEUtCIgOqxaUakwzNBR0D09yiqePHOjveyOkpxLr9VMXb73V97S/h3nDXx7Y2fdPkAYbncW1IgIDxy5vM7LZt/hgrnLtxyaBrJNxv/72N+6tuNhSLp+EVUZACKsyNnXHvHL+1qcgNf2KbSXu2bt9dcmS9qlzo/fARgcmCtpzB3b1/Vg5QiuslLowENyDWDn8cSjl98PgdBviu03N+rl9/WufLEwr18uDwLdevLTF1YK3xnVZ2HI1bUxrT7z5zTuXdRP78qCyeLUKYTUI25OXbm4JPO00TBj+6I7+db8ZL3ZwMOiYdG4dA1lN9HWte2iuI2NAVPapC8O/CGPR34Ip/AZIbIMo7yX8G9QMbcS09P+2b1vf5XgdrXaPfiYns9oeLLEd8D1/B7Dp0E1jGP042pXQj7RKf546cmGzp+tv1TRf6YQD35/QO3seP3xow5IfC9QqmM23naJ0ny9ysXwgq98BWc0kVhv/Nhalbqe8kd/Fr8MOSEr3zEVWrwyO3I29hl+E9LUHGf+nAXI6sGPdd8uV2YphIKnE5IyL6bLxk7cn3bdkHHefrpvJAExMZ1uBZmqeNzXtfzUzk/m/ens7LjV7Px+8d9e1579/44l0duZtge+Np5zEEw8c2pBu9na3YvtEwmrAqNE8IZvNHsep5//yjl3r/0O8yFOXbv0QCO05gP0JGIL+fjw+uj91YeRh/Dp/PtCDM7Zpfmjvjt6Xo7hW9ycmJjaYduf7Hdf/8HTGfa3rG9rYxLSWnsloPg7fijZV8oFM2Ja2a9t6EJd7bCztvHP7us4rrdD/r3/7ct9I99jEI4cOiQ3dIg2YEFYDgOUJDFj1e8TqX7cT4kImXuQr5279A4DeBEX8ayvprU4N3rovcALot/TH13T0fXDTJn0qXk4r3k9OTm4y7a6PzjjORzOOvn1kbEqbnEprPhRzwAKzwFLHk05hv6Yd6N+o3R6beG50aPSdr3qV6IJKkVp5ITIlXOCYn4Yexr0w/DO6YXymHFlR0e5r7tsM3fxgJbI6fW1ivTeT+SsYmr54cFff+5Cu5X+hb94Merp6/J/PusGvTE6724eGJ7RpSFOkKPCUZvBPBccoHBet3Rwe13rX9tw/PjXzZ5hKvr8SfhWKkeA2REAIa4GD6p0feRdWBnvxjv2PckVhVfBf4A29uG/X2i+Ui2eYn8n8NryuDr3jPfWSFV5k44UT137eshIP2K7/64cObbheqZ6lCp+Ydt8TBO7vTM5od1+/NR4SFVhoLpKKt410lnE8LTMzo3V2dLznxLkhYgQ9obiVjEDln7mVjEodfYcpw+MAsftg/7qSDbAnb97sCSb0Yei2fqOcbovVqKNnNO8HmAE9Cv3Wp+uoWjt27HpXNqH9WTKR+kBHKqEFbvo5y3N/avfu4g23R45f3WGa1k9ZicTd0zPTf/f6O7f8dT311Jp2fHzmgJlI/N70jPPe4bEZ6Kg4qw0lqlrLiNKBiLWerpTW25PUbkPXZViW62ecHz+4d8PXojTirzwEyhq8rTwYFtRjvpX/rlwJ+iSXugPbMuyKBOHo3geRJtuT7PujcmVUCuPJlhnL/9NUqvMD2eyM5sxMaIlE4n7XML907tyNjcxHQjty4sZv66Z1xEok/xNW5n4uZSf+8sT5m++vVO58wkEu5sR09pd9w/rWyET2vReujiqygrSopn/zKZN5qMeirotKeTyolm7p/+X06Wvr51ue5Gt9BISwFjiGsLl6N6SrvylXDNTK70D4mX071pwtF88w6Jd/DG/1E1u26NOV0pQL71y3/8PJVOcHMzPTWkcCH2YGOaTTaS2RTN6f1fQvvvDK1bdnbO2JZCr1SeRfn05Pa1PTU0gXJBKW+ecnzlxvCGndhFQ1NRP8bcY1/vjS9bF1V26MwHwsVKiXa3etYVw1TNhYJ3TDjQCO42jJVMcez7J+t9YyJF37ISCEtahjGjxkGDr2DJZ31D8h5vUQJL5RPkXlUMM07u3qSGidICvkzzuSlmlZb0olrK9hD9v9JCrPC196JoPMAolFg6CV+PPj54YeyWecx8Vk2v1Q0rSfhFT18LnBmzBRyNalp5qrSuq7kiAsh4SFa7oZ9M0wzI+cPHOjZPo9V1kS1z4ICGEt4lhiCvZrSa2jol7qzPXJPk6nIGbVbWfUvcr7hO9MP97ZVXpggOu6ajplYStj7l1XvbRMXbPAbp6HzSSBlkraNknrvfVCcPt2sHYi7f3pTDb47KUbYxuvKqkKpYBXKBnV869c3WgbDEixAck0FGFFfEzJzbIsO9C1TyrcymWWsLZGIHoW2rqTzdo5dXyykz0NC8l779i5vu4zwM+eHVntGP5jqVTq/6AkVc5NZ3wNH2lVxNWZNIukMSjiNd9z0+CHp5DXAdX4SAg203w8GB5IATtODHzdK8C15kEjhXvNS9rWA11dnfcMDY9prscss48RySakrOLWqODCoIKAgkuVgsS0urtD60haeV1YYVbbtjUn6/74HXvW/11huFy3PwKzT1r797Upe3jq4sib9u9Y+wxe+vh7W1N7jx49v6ZzbffnQD4/Cj1Pfjx54XiBls6GVuTUc9mQsOIO9mPQFdkIRlz4fy5JLm2ZMOqTcJaXIqpcqnixVe+rdbZ3dbc2OT0D0wZIibHSksmklslknvx+//q3PiKnXcTQae/b+LPQ3r1t0969cOL6G7o6E09qgZegdMJBpVQ1DbKCpyUt6oPKz/4NEJalCAuZFIuEVBJd+jgLh4rvAiFqUVGkhJZMWFp3Z0obGSu/d5gSnWmavuO6h+/cvYHSobgVgoAYjrb4QPMUiGtj1/79jBMkLBwiTlMASlYzTkhWCJyTrGAyMOFkst/BoYMmuIIyGJYcMXMMdNwHPhYN1qWS1t6ZLGaKZL8yzFXTr15BooLLMugHMBRNKgW+It8y9TEcJGt4rvcRFCCEVQbFdg0Swmrxkb0+cf2XOzq73kgdFieEXF2jdEUJKQH6SVWQrNjtZDKlpTPp38U58iUbthk/Ph7sN6zg/xudSGvD4xkq6otcnnjyF0XRRTflkyC0IIJE1JG0QbqGNpMNp5xFhRTcZDNoj66988SFm5vv3LX+WkGUXLYxAuXnCW3c4XbqGs9hwjv+a9lsuN+ahOJSCoLjNDAFvVUll0p1aNPp6adTweSflEszPO48oFn+4yOTmR+6enOshKyYhzWpf/jDuuf6x2aV/qNRaPG/1d0gUXWCA0uu7GhMmkqmerEc8KOVU0lMuyFQ+Ylut562YX9Sncmf7Ojo3BDZWbGLtMkiUVXSWTFNuMqWuYG530f7+/tnGFboxsfdd9mm8XdDo9O7rg6NFq0CFqZr5DWlK9qV0fZqGvZchSuPlevB2VmG/hOV4yWm3RAQwmrhEcW64qu4ykfJho52Vp3J8quBYQooqWDKADftBd6HD+5efyoKj/zR8ew/hWXY56/cnFh7a3RCTTGjuMX0SVB9qzu1qfQM+jO3dBW1g6uVSHv/qVNX10Vh4rc3AkJYLTy+WA/8ou9kJjo7bOh+DLVFZ64TEbCyBktxI5PJZj56R//Gx+NdH5vM4vuI+p8NXh9LjU1iw3EZhXc8TyPuuV9wDaaCfBjTM06N0hVWQmHBDzvSDZ5tvqYR7ZAymh8BIazmH6OKLbzv0KZvJEz3ZzEFnEolaEtV2XEaCLKadrIz//TQnk1/EU85NuH8th8Yf4j9gMZUOrNkZEVZCnsbtTU9KW18GqcKFyjh420sd2+j33pg3F8uTsLaDwEhrBYf04O7N/2t7/o/C2FoGnsIy/YGlvAwSfCvZzLOe+8oR1ZT3u/5uvHJC9dGtJlMrfqjslXVHwjpat2aLi2rjFFLjUSrFUjlO0juddXSSXx7ICCE1QbjiHO0/hofbPgwpnDTOR2V6hWNQqGUx34890noet5yaO+Gko3Y45PO7/uB/lvnrwxrWdha1absbgxo1FWtwplXqYSJY5Nn5lU3bLHQmGA/yko0plVSSjMjIITVzKNTR9sO7dv8RSeb/T9BWmMkKv4D+YzBXuljV7yxd+zfte6VeHGKrHTz4+cv38JWmyUmKzSGG5z7VndoE7kz3uPtq+Welvhwm39weVjOyaoFsBZPI4TV4gNY2Pw79mz8KyebeRIH+VEZTaX0sf27+v794TKmCxNTzr/2NOPj5wZBVjjdYSklq6jN69dyKuhqmWztivYob+RTSkPbe/xMdlMUJn77IiCE1W5jq+s4dYEO6mzsYAmvi/+CrH7LDYxPcBq4HGTFVcG1ULLT5orS1ULIkoSFI2cMHKG8obiXcteOCAhhtdmo6gaOh4EWWlkyYU9gvHswXfgV19d/7+LVkSWfBrItJJhObL/p7elQR8fUZnEV70XxPc01sM+xrzhU7toRgZIHuh07uZL6xA3LBaYB+Ar8rBsfz34YX1j+D5eu317QNGy2xPquSE4mDuXb2IujY2AgytNE67RiKFshzuwCR5s9ZSMlsK0QEMJqq+GkBKOF5yFzRoidK5BoFCeMjM/8mG+a//Xy0Li55KYLBRiTrGjwOQ1br4VMBQuKVJeQKVPxMLlvPwSEsNpsTEECmBLSgbHUpwD1YGwse59l2p+9fmuig4fiNZIowrqq/6Xeqm9Vh9JbjcOKvqFtACX7gV8kTVZvkaRoRQSEsFpx1OZoM2iKxxuHLtDcsZlgLzYZfv7m7XSv+r7fIm234XSP/8o5ktWqzqSyZr89PoXPYDTYkZvziw0NLluKayoEyq4iNVULpTF1IaDjHHZmoAW4aep9geN8fiLt998cGYdtVp7K6iqzXGJFUCAi7jdkuapsBJKcPBwgyP8YRyV7B04Q3dDbpY3jg6gupoMNla5U41BbUN9n0sr1ScKaHwEhrOYfo7paCAW0WiWknihhW/0Tabf/6tDtxpIVSIhGnz1dSXUkDL8fSHKi4/lWPId9Kp3Vxqegp8J/m9f14D6DQ/nmb281FwgkZ1Dj7bnSSFx7ICCE1R7jmO8FJJr8jCvjeNrIxFjDJBpKVaSlXhwDw384MyucBoLAGEfHI5ptO6n1YAq4FjorH9IWjUOnFlF3pj62aui3whbI33ZGQAir/UY3XCVEvzgdw/8NcSyGUhSlpVWQrFg2p39xp0JYLyIohaXxdZ2FGofG6yi85/QS32F0Asu8URgu1+2JgCjd22xcsVElPC85169Gaa1YTkRWJKpSqooBiQQzONvq9sRULKKxtzzAEJw1api2EFZjoW3K0oSwmnJY5tcoSD09HanEDztubnfO/IopyUWC6sUmZUpW5aSqkgwgK04DxxaZrFivacCaIdAuH9zaM1rSDgloOwSEsNpoSMenvU93dXb+EE5taFivKElRqd67qrNmsqIF+yjMF/i56MV2JqadYKxXMDXM6+4Wu04pf/kQEMJaPuwbWvPticwj4Il/NnTrdl7JrqaDC5wTUle1GmdWWVCw1+JotjA6PgnThsIdQrXknF8arkJi/+R355dbcrUaArU9ha3WqxXW3tHR9C5dN//T9eEJ3aGdUwP7T0V7F86Mr0VW4mF6o2NTS/ilaB2HDmb8wA2+08AuS1FNjIAQVhMPTi1NgwRkGKbxRxMz3uaJSRzVUkumOtLwo6Zc7aOkVdEhynN9NQ1cyuNqeEqD67mX9TXGyxXbJhFthYAQVosP58S0909czfqJqzdGODVqaG/IUbCWr2p0yukfp4FUtDfeir1yl8IPUGjPHFy/fqJyKolpJwSEsFp4NEfT6Z3YBvOp8MvMc0hAi9hHNQ1cBrJil5TUZxhfXsTuSdFNhoAQVpMNSD3NMTzzU1PZYAM/ProYkg3UV5rHT8lXmA7SwnwEq4FLLVkRI04HM+n0LdvzvlEPZpK2tREQwmrR8ZucCd7hePr7rw2N5PfxLUZXON1zHKz4kb0KnIttP6Njk8tyaimbwXPrsW/yq3v3bhoqaJZctjkCQlgtOMCYCnU4GedTI+NpQ32XbxH7QOmKG5nzdIWZJz8HNkKygqI9TmSL2JSiovGVn0A39c8WBcpN2yMghNWCQ4zPc0HRbr6GEs6chJFnmfl3knZO4/hmII1B6fiFG9br0s6qAeXPp2WUrhzHeXH/jr6n5pNf8rQuAkJYLTZ2kK7Wul7w6zeGx9DyUsZovOodOizosTg1TM9k1Wogpa7lIisOF+w48E/7E5B1Y/cgtdizsBKbK6c1tNioT6X9n3MDcyePOo7OoJqrC6S0+ZIYV+GSOHxvc18PJCxXG4ed13I727axqTp9yk9rX1jutkj9S4+ASFhLj/m8axwdDdbgELxfGsLpoZyqVXPVU1QugVJUV0dC27p+FaaBWWxknq6ceAljTNMiAf/BoUMbJpewWqmqSRAQCatJBqKWZpgJ731Zx9pJM4aK0hXe5vlKVFEbKFlxs3PvqpSSqpbzKztRm+gnEkktnU6/2GFMfa4wXK5XDgJCWC0y1iAR6/Z49iOjY7C5qkG6mk+3SFQGlEP8FFdnygrNFqBsn1OxP5+K5pGHbcBhqhT8fqu/v39mHkVIljZAQAirRQYx7Wj3Zj3tddQjVVJ4l50CMjHe8mqOTJCCvmoTyIrENXx7Uinbm4Gs2PZUqkObnp76i0N7N36tWl8kvn0RaGnCGhgILKPn3B3+xKVXDh8+nPseX3sOlpt13+P4uonv71WeDqLr1ampFB8S1JrulNaHc9rTMxltcpofOeWns0rTLkeIZUHRnpm5YibMf7kc9UudzYNAyyrd8ZLpWvfgQT8w+oyevXeo++bBtaEtQd9s1/ffRsV3I6eDJCp+nourgH04UZQnhIYfWm1o8xdUGCU8/E/bil89sH3dlQUVJplbHoGWJaxnXri2HTvd1nEEcCBS3z++MLi75UejQgcmJjL92ax/gNJPo6QekhVXAbdvXI3D+XQ1Bcxiu02zTAEjKFIdHTQS/S8Hd2/4YhQm/spFoCUJ6+mnL651gkwRQRmBt33gO+c3teNQYin/oG6aKX5rcKEukqqoWN+Ij5vy81v8UATDG0WGC21jlJ96K6wKPpWd8H8jChN/ZSPQcoR1+vTppJPS7iw3bIZl7n/++eFV5eJaOczX9Z2YvM1LPxWpocBHKv8qHHdMqSphGUqqahaThfj40ITBcbLnsDj6oXvu2bS4n96JVy73TYtASxHWo48GxrUx+5Cu+XY5RH3PMzLGxF0ktXLxrRoGNVPPfNtOolIrgElLGYH2wbZqcipdIFVFlDbfGhqfj9bskCaHHS/7gTt3r73Y+BqkxFZFoKUI6/C7Lu/Bl1jmlKB8PUhcHjHufuyxx/g5lbZw+BL7bX4EoiZqyS0T0uM0j1+82QSl+ua+bhxj7GjD2LicwWkLzaarigbKsmDJ7gcTmezMBw/t3ixntUfAiK8QaBmzhq8/f26j77pbaxo3w+jetPf1B5D2RE3pmzyR4/nH+Mti4Wx1dUrCHO0lSVGqskFUnakkpn6mhu086jgYHkWTW3Wbo4Tli6L5gqYHE47vfeDufVv+YflaIjU3KwItIWEdO3a9Szc0ElDNDqcLbHjmxas7a87QxAnX9ljfxcr+Mzs29ykpi1O8iJjoR/cm5o7dnUl89LRLW93dyWmVIip+Kp7pmlWqIvQ8Mga9Gslm3Efu3LX+K008HNK0ZUSgplnGMrZPGxgYsIKeXa/TA61jPu0w0+7xBx/cd3M+eZspD0wbDgWm+RXP13cODY/jWGKuGAb48jG+agNpilbqlKZoWDqDY2AyjtNUlupzYZlKpXgaxIVMNv0zd+/d+uxcaSVuZSPQ/IT13TN34QRvZW81n6HSDdMLUqmjh9tgd//Fi8OHEl3JL3Z2dh3MzGA7XU664llVWRz/QhLjNYmsmaWp/DjCjqIDdlaZTOZZ1/A+fGj7hjP5OLkQBMog0NSE9cSRszuswNhdpt31BRnazM3U9IuPHDrUuG+419eChqU+cvzqjp7u5P9KJpMPpqc51Zv9QntLkFQBEqZluVCw/7nhaP9i376+8YIouRQEyiLQtIQ1cPT8GjOw7vE8tyFtxBrb2MBXdh579FF99g0vC0nzB548ebNHT2l/aFmJj1BPBYyav9EFLaQ+jdPAVNL8/pZ13a8qiJLLOhAAjvrTRy/d0enbF+69d0tzHFhWR/vnk7Rple6mp+9uFFkRGF8LVj/08IUN8wGp2fIcPLh+4sCu9R+F3ucj0MLf4vaVVnChqYWmdaQS2jpY2vd0djh86Vqh7c3Yxm8dudTPxaW0lrn7yJEjZW0Tm7HdC2lT0xKW1xecgHE3FDWNcb7uDh6+r/96Y0prjlIO7ur7TOD5b3ayzt9ylY0Gl83qKFXZsCXrXdOlrV3djf2LBr556JOshLDmMWhPPXV6vav5O5jVxYLUhNl3iIbV8yiqpbI0bQcP85C2Xu0l3dczC0XUN4Pzb71339mFltOM+Q/0rzu5f2fvu1zH+QDOt3uZ0pbVRMRFouJK5qqeTkhVqyBdtdUmhGV5JI4cudrpd5kHiyp3tTU/8s6r+4rC2vCmaQmLWJO0Ep65INJK2tbpt75298U2HLuiLh3oX/95L+0/kHUyvwTieiUJHVEimVzy1UKeWMqv2pCoKEVFRNXT1aHawnBx80eAZj7TwcxdAc5Gi5fiaNnNT37nCk4xaV/X1IRF2B94YHt63qQVaCcfePX2K+07fMU9U7qtHev+xE/7r3cc70O+6w1gxuV0dHZiusgvJS/O7IskRXLs6KCxqj+B26t9a3uUREWi4plbQlTFYzXvu+7tB3EIUGel/L6e3TNw5NS8zYAqldss4YvzBC9C7559drAja3qvDoyg6pwCP+KBZaVOPPjazS1vMLpQKE9fuPnawDB+EqehPwzWuAuSl8LPg90WVxhJJPWQCUmPBAWTBEz1TFUGpqO3wYYvIPgr2az35a2b1/50V6f1e1NTlVcvEzB0xRekj67usu5FmS2/crvQcaol/zeeObfTSOj91dIq28PxiaOHDx9quy8LtQxhcZBqIS0Dhkl2l/3yA4e2j1Qb2JUUD1Iyz1waOQib0vsxKXsAFvH3wMB0JySwtZC+DBPTN5BOCEnhrI1BuKe9l6tIzsVCiD6E0DOabrwI2elZ09aP7N3aNxjheXvK+a1OENa0EFYEyYL9rz072Ju03ZpNQKj7Xd899cKhNrA9LASvZTY/s9GcHoK0XsrakLS8UklLxyl+/rj+/Qfu2367sJNyTS7SuZfneO7ffweBGScu3NwAqWgrTvTc5jjBZmw87tMCfRXYKQWOgula4OiBOQUZ7DZuhrAGdQXxV0zPuCaGnkv3VPGHOpPw7+QPR62OM5HhdNddGOeX2kmCbSnC4mDlSStVTFr4eLljdHV+702vWz9R66Cu5HS5h5hmHvz3QiOxwJTRo2BGgY06dm7OVhewYGAY6s75oD+ZDs4JPY9JyqSCQ7ABqftd5VFM3/j2Ja4mtsWpJQSq6ZXu5UZTKeJnsHpohiYPRqBn04nkS2+CQWW59BK2dAjwS0Y4IHDz2ERWG8Gnwm7iK9W3sFmbvrqGPzw6gW8eTmvTM07XmTPX28KYd7EQ3rjnvv1QFHbPt3zT9DcMPHd+13zzN1s+/hC2rKOo7NjeQdsxT5LEWrYjbdLw05eHtwWe9jl0542u62HZHZIVpalY/yIlP5X3MHYddLLZfy4fmYiBhNuB509vw+rG3tKY+kOwGHLi7W/cS91jS7v4s9TSnZHGLx8CICH9lXNDX+zpWfXuycnaBV2e3e567nAm4973qv0bzy1fD5qr5oEB7KXt0u7B3Loh7yhWVfypbOalh9+wr6U3mbfklLC5Hi1pDRE4ef7Wj+EEiZ+amqpvJT2bzWjJRLIPR3n9riA5i4DZg720DSIrlsrvHXSZ9p7ZGlrzSgirNcetqVp9/vz5FJTqj6JRejTdq6eBMzNpHP9s//QrF4bvrydfO6f1JrCX1mvcXlo98Kembjotr3wXwmrnp36J+pYNeh5JdqRem83O77gxkpxtW3bgOZ/g1HKJmt3U1Rw+3D+zrc89aunagnWzpq6PdxujLz388L4F78tdbtCEsJZ7BFq8/sHBoMPX/I9hyrGgnuDUUZzrnnz7yQu3HlxQQW2Ued++fZmJ1e5LoPB5k5ZpWCPXz+08du+99zrtAI0QVjuM4jL2YcIZeh+2+9wF49MFtYJSlgmHE0g/JlLWLJQPg7RmhtyXsJ18eja0tivsXhj6xy9ve/mRR5TRcG2ZmjyViN9NPkDN3Dz1FW5z9XM4i+s1ME1YcFNpUIrVLHzJzHnwjl0bn1twgW1UwPHjxxPXpztejR0HFTc+F3YXRwxdfdM9W08D0zrs4wtLaM5rkbCac1xaolWOvurhZIPIih0OdVm2haNTfqUlAFjCRnJP4HBn+iUqz6tVa2nGpTe/etsP2o2s2G8hrGqjL/FlEQC5GHghfplSUSMdvwaEA/9+4vjpa3c2stx2KIsfUek2dr+EuXNF2xEjSJx98w/tbFt7NiGsdniSl6EPp84O3W/Z1oPzXRms1GRKWdCJdeCIlJ+vlGYlh997r+70+EPH8NHJEtLCauCph+7bmj81ox1xEsJqx1Fdij4Zxi9AT2KSYBrtslgxhOD2gWOyz7AstFzx6zFHj1mGobYUYAgC9cHge3ddK5uhjQKFsNpoMJeqK6+8cm0X6noXiWUxHA8WxAdWNyQM45HFKL8dyiRpueM7jllmMGpnjO+1w9fNaxmXxiogaqlR0jQdAkeOBPjczrnOiQ6jw88ESSOA6KT7iQzOHEvavu1pZsLQg4QPP/DdZG9Xx/vWrOr+mfR03SvtNffdxleAQIgvTzjBT0w409Mpu2faufZy+vDhw5WPMa25dEnYqggIYbXqyNXY7i/jCyvdfmaVb5hdVsLp9LJGp43j1/1A7/RdvdMwPRzEboRnLVHe9vEvL3eXBOB4ZMta22H+TiqV2LJQ26u5u6Bju44Z3J7O/Lvp6cwPmBanOwQ4uNHRTWMK21bSvh1Mm642nTWCtKkH07rnTE72aOO0XZq7bIltVQSEsFp15HLthg5J/+aJE12m3tVjOPYq1/dW4cTjHnwMYhXOce8xDd3y/PJW6OpMdsTRVy4iK/rKMR/jwvz825VIHFzT3fkx13UW/dnhRy3GJyeeHEs7n1XNibUPFvY6vtGDw5vV9w0Vofn81qGhZfDhi3HX8SfQ/3HPMse9CWcCX0gel2OIFJIt+2fRH7qWRaYJG85NxldGzV4tGayFSLQ24+q9ULyu9gJfMU5ELTn6wUISTl03NHz1KzyiJLqmX657OLLdSJgoXTO7cBxyN172blier4YCvBsFdSNXV2dC35tKJrbzfPfFdjwvC/qs9MSMxxNRsSqmT6LhUDQHE+jUBE7UnATXTuLsrRn01K2l/x6+qItiR3TNG8V59KNB0DGSfNXGUXwJY2Gm+osNhpSvEBDCasIHgVLTt75/aQ0MnXpBNb2QgNYEntfr4wu/nBYpKQLtxtdwAh0SBX3VDe7nM/Ha5vf1Fb/CURS2bCTAWWuxR229qRsbQQQbUed61LfW14JVKKsTJ5sk8WUcHbtlNANyTOhgcmAGKH7p3m1FWpqtuZCu+LByVdKHVMjpKEQrBwIW9tnpXOIH+QTDSH/D9f0bmCLewDn1I4HmwtAypPDZ/oe9oXKf/aMPsWxSs/RR13FHrURiZE1gDR86tKHEdCDMKX+XCwEhrOVCvqBeHNaW6ui11/mWDtLQ1kEiWodXE4rwYgepAPssTPCMOjIdAk94TZ8pMZjch8HjDorGFUTUAwlkh64be0A9/ZCatiDZWtOyE7ClQmIdJICJFYhA+TRV4Fo5/QIHiUvrTEbkVRCxiJfsSBbfYk87OTExXxdazY5yUgiRKfpHQ1YSkONmAZY+gV4NIeVFfCXoLNA5h/Plb5LzWAyzF+IVXdNnvO/6GcsyhjC1vmWZ7s2pO3fdOqzriy9asnJxZREoerDLppDAhiIAEtCfO3F5rW0a6z1PX4/nf53nG5RqqrpieSnULEVh8cx4E7ugH78H8tG9eP/24oVezY+pkpA8b/abhPF8le75BqdsXUtaFeaTlTI2IByEoU1l8oq1mkokcZHElIRoWmpejMMCMyCvQXyy7JjjuUcgOl4tLCzCMpTHgFpcgkViX/dH/ax2Szf8m2Yqc/MN+1r7BM/C/rfCtRDWEozSkbMjq7NTY5t13dqE6dhG3wsSqlp+C9DDi0ifLrqmT1f6BgUaPjiHN0lJAGAfvpWcI4XjiHIMF6ocO/EjmMa9HeelQ1LT1PRpoce/sJwOTCQtc+kfGQp6Uxl+9JWtmL+jNEaJ0gKBgbsygR58B4sHfwV5aliVWg3vCHv6ymHcdG868IzrVsK6pnd71+/dsmXxbD3m3/W2ybn0T1/bQFe5I8euX+9ybuqbXMPbDA7ZCKV4uMOecyz+9OfmWvj9x9zEw6JW+JuOX298WhE6qtwLEV3TL1tb/AWj7sqwfqaro/sdmcyM+vBp2XzzDEzaBiQsNH+e+eeTjQ+ohwqnG0BYhfVzNYKrkOmpyauYYH8KvD8G6RPBszrC6Jq+ystl0ghzXEZjR5+O4+iZwTh+eG7Yqa5rq/3hGzzTSkXKn4YgIITVABjBP+ZzP7i8ydasrZCetuCHvIvFRs92SEdlpnCYE2LOQi12OA7RNf1yjrphHIyE9yOXPnfNMDg70DpdTf8DWDKs5rRvMVwChAWrUgh21HzllD0NrigqlxKVC7bKQuOOWeGiuI7OTkhb6T8C/Xw3xkel9cXxj6eIxiY3Hhx3X9dHsWJwDaa3l1+zd9Mt/F4tUk/ijWnP+/DBb8++LWqvnh0c7NDGta0pO7kl6zpb8AJzEUr91kYEFdeBRCt69Nm4+AsSl6jwjVGckY6VwPwUpLhLURx9xliWvxFHi/w+zB0SWCnLsVpxnoXesSI2ngp4zmRJXPgf/0IleGH51R6uwjeX5MR76qtITh7+8N9Cp4GF7Sm8Zl1s35pVXVomm/5c1vG+Wm284njHJeJq44/FjixUAld8w7uijW6+xo3MhW2S6+oIVHumqpewglJ87+LFtcFUcqur+1vxwPcZJqYPMOyhXw6GKI4+4/GwQpjCBhe+6XDIpFb06PM+np5hhS5eXzw9bLJ2pBLGv4Fe36BU4kA6IQGw8MUY6MJywVeqDs54Z69zrWdY7jI3G1ZtUiSV6zzDI3IqLLew/wu9jspl+yywrA1pEed5QceXPT3jBb/DLrA5ua5UHZ/4eMTbFx+fwvE3DJO8fANrjlctL7giJhRx9MrfR89R+VgJ1Y6currONuwd0FNsxwtV02mPlWGLy1TxlPHf6Hh8PH9xesvw9yRM+5PIRT2ZIgVKKZxWUY/PT8aTFPji0i3m4Ed1hDWV/7uY9bNGtiGqAyorJRWSqCgdkrQiR5KddrwPlsq8xfhG6efvx8dvtiQczDdmmPaldDBxSVYeZ3GJXxUMWzxq5d4fPz7Ym7X1HTAL2A7NqtJHEQ3qtCPjw3LoxB/v+OMZ5VVzR5aHWRuErYA+y4uu6fM+Xl9J/lh7bFvbY+vmv0bWos9tsXAWSLIiaSnyApHxJz6SbFSFuXTw8i86r5vVRW1m+6IHmUREAuI0lcREP5q2ztWPrO9/YK54xsXHI56+cePvj3qBfimZNS+J5FWMcrjptThsRd4dPX9+DcwEd5iQphwozfkCwJKaLv9ewHYKeicfSudwShcnJDBBOD3MTwGRO0cqLIj73jQTaejDBYaPHTBgJ/i5+HyYijd95sFhRzkzB7yL2IrCtGwezj9nOQVTUlfPwiicifnu5J0qHHd8mXHIG6ZD7JQqIk9kJK6QwAokMWRUhMaSeJ0vcfaiXNhs7PyuwpYV51Vh+EM/Pu2M9GckpyiOuZm2Wvtom+Y4me8xPbvIIujzPu6Wbvyt1ejL3U7Sv/v754ZHsORwaX3KGdwiJhO5pzY+Mivk/urVq52jTnIXlEc78LKu8qAMx/G8kHhyOicosz0ovM3IrIDKb15HSvDoOoqv+hMLYCOWI8ash0vmufryZVcqLz4u8fym3ov1xT/EVp4UDUTn4/iS0xW+sZTMojASmLqGp64iH4FRXJQ2TKj+lv7JVRTVxwQkm9APyaboGnGMzSVR6VR87ipsVT645ovOzi5tamb6zzB1/nqzjz+s9YetwLioZW5C8jq08K9+1IxS8yQsfF6ap1WL2BK8VOaJc6NbPcPrx7wJ++hmHQUPvOaQgMJ3ETtVlERDP0wVsQ19uPgcLQyt/Dc+p4jlL6k/1xa2qVyh5ApEzEoErm/DsPOTXV3de6anq36roFyRdYWVbVSshHJEMt98saIXfIu9koplYZL6m/hUz7kS/Jt0/PE8+Jj6X/Y6k+fv2tA1BKIvB/OC8WnGAmp5dpqx3XW36fjgYK/upXbhFd+BrRlqn16MfkrspkoC4hnirYjbUVWzs4rHx8uL3cerjwt0TA4RcBcsuX8Rn97q54okVsCKJJ9YkSvy1gJR4aOtnAr6OJP+L13d+BKBKMEzHhAfgDh6yzD+vqHjTDDvYpAxLqwEfVdbE9bpIEi6V27tdLP+LnzPrWS/XrRTnz5d4e79+LNY7r4kP+Z7Jv7z1LyPL0B4Tb+ci9cXLy+eJ54e8Rw//rqqcUR+HOrgYVprJbBl5E2w63oI64J7k8mUDZLGhmAXs19ucVkxP8gKQu4ptCxbMy2TW3KAGI4u1P207ztH3CDx/7bL+Cdse8h1Zy5ev7Dp8uHD7blJuy0J69TV8XW6l92Dl3cbLG6g98idbhDgdANcY1ZY9o2N4mpNr96GRf1Da3Wui0RW69F1bWslvp81LD2xDTOGu9DhQzBc7AcYfYlkAqo6A6ozqHNBYJTESGitTGShsp0qQSxT4AcoPJQw0LBlEPhBFakHDjoLvY+XgVIyg7WK77tG8n9pvpHXBbXL+OMBd7FN6KLu+uf27esbX9RHdIkLbxvCGhgYsDb3v2a7obt7YHakpKmYiqgE2ioqJbzIOszXcSov/DAzRRNehyJKvPx4+igv/ZLKEaCkoZxUFMYXE1I8f7Xyq/UHp9CkAlfbCF3NdlhS7IQguA0N2wiJYy1ktC5IISb1Okr5jSYruy2SGlYkIkKLSC3yy/WrUWGzSnjaTUX/QEhYQuNewLCdwBFKRkpOuAfr4sBnwwfDg6B0MHagORhBHNqHw5WxTwYav6lAt/42MBLfrYZXHO9w3Ftr/B0Hp0pY+tkD29ddAz5ln8NGjddSlNPyhHV8aKjbzAS7Dd3egRcvgRHJWyrHASw9Pyp+vlSxEluH0jWAGQF9VVZMpxHVRZ/xSKQU4PR5Xy0+/sLQZCFS9DN/XKtSeh5WrL2x+sMyZv+W67+vwz5eC7oDx12rm9pakNg639B68XL3Qh+2Bm94DySxHhg0daBHSQhiCbyyyMS9SDi8RhEHyYP1qD9qak0S4VGn5VYrSTRKEkKHWYYiHuQmCYb/YKYLqS+3H5LYckxJmz6qhSYJ5yNgzgtuclESpncBfN8Fj3lgJdCSGpHcGECoxrouMoHjzO+4evLLMB1VKxJV8Wyj8Q80Ix043jnTu32hlTdkh08Yn7UWcnio9Qs3pzZm0lN7LCOxIdIZxbuQ1+lAVFFxJB7aMeUIiPkiPRPjo2v6dPF4FVjHnxi/oQK0Az/bymf5uI7ayGLj6eM63nrbF5VNXzV7nv3HViQL3JAEaSV1z0iBNJIgJBCYkSKJYbdjEiSHw7a0BI5s6QBBbINUswMUsQ6E11UojZGccA9dcZDBdQY+TgyFTgkiEKYyIBvstAQzIRk8cBJ+A2j4gZFDFWAqjAp3V5IhQYYwwUJ57ByS0QINzMYK8FyrRxt3KNbXb2qG/UVNT5wDyCt6/A0boGbdqzPA4tD21SPquWihPy1FWHjQzYs3xnZkM95ePIZd8RccBx1xez/UPowp46I4+uVcLD9/8Plq0Gfy6Jp+uez5uqPyY+UtNN5DuVQc06drpv4bIDXsjtsMpdkOSC79QK4Xog3PzwF4IBNCBiIhpBSpoE8jioqWaM2KCRuOqwLXgIQItKIe0lCYD/lZjoqgGIo0+J++SsmMKA8eqQ21qHuUh2PfzQHN6vgG6vVK8GfmQhcbr3Yff+AEi3rtdCtNF8u/eIWD2ATXx4Mg0XH1Vr/hm7sDQw8PvyvTrriKWocEE0C6oM/kJRJHrAykgj6WGlq+JUifu6YfS6pu4/UVa6AgQcXKi78ApekhcWFBwMstEkTX9MvVHw+Lt2ex+4+Pg62CxgsHEwZbAdgWIJfA+ICkfDRYtyAwWWB7Ay8F8VT/KB0bOJ4Gx/CQfUKSwZGrJJs8iZHYgB0zMB+zk8hopQ8hEcEog2ERASIBAOL5fIrVIKLxXKtzKPZLgZUckvGf+/nH5HsK0+Uz3316zeAjj3D23Lwu90w0ZwNpiZ72UnvwfO/AXIFnXfLBxLOsHn6yiLqmr3oQ04LHX9hq6TFHI6txrlYWkHj98UT1lh8vryR/rIKq6aO204drdP8hRWF3itmLUw42QnW1CSTSA2IAIXkWOBYKLWw8wjVqNkEaFqjFwLQNJhWI4ZiFoiq6QX0SbsEo6HMoWVFCYprwjw6FP65BXCSoXJwiOwpnFK9A6yiWkQhRDwA9XAfpwLS/AqnqSKP7jwapquiznXFXMn6x8Yg/X/HySvLHKqiaPlZfvf0H6BloAM/v3tpzHkJwUx59Uxb4GE5Lfnt2ZGS16SX3+F5mq4llfegtwnaSR6J5EC8hPUV6IDaS6aDnoZ5DpYe6AtdgOr4pyhXLNPH0KKCo/DDP7N+S+mI6qHzbQr7AbdgW+iylWn0l5cf6E29ftfSN6L9lGl04x30tOtMHklmLhxpClW9BL4S1T+i2uNPRp+0FflD0AN9A9LHnmHGBBfJCE3QL9ALiguoJqiu+64gDzWGIIAlhzhaSDsMV/yjJi3BxyY9khP9BXBSzEMY/AFORGMmM1yyKZfmm+ZKuJf4uMHV1THEj+o+S864E7zYd/8Dliqp2MamvPbt9uw4dY/M4DnXTuMuXx/scK9iHLcbryzfKwvOJBSGNPl10Tb8WV0xYyMFymDdXXv46Kq+ueChJQI4WlSUqf8StOf5CNdXqr9afxe8/Gm6AoLAqGKyCGLSG350ACFzKM2FvaeOseEhFOsjItdQ2S6wYYmkOdl2+CfLBvmpIV55vYY2Qn6uAxAWC40zbhxSmWArcQj0TSIiSU37mx0kgVesgLereOSz8E5EWJa6Qzyh1hZEcO7xY4Ct9WLfNvwa+5xA2h6uGP6vMPxMsZ8WNf0Gf+cOCw9usq51a5+kNG9Sn1IjJsjoO0LI7EpVra/vxhPdFs7JyjYriohlbTAKGxO1C6oJEljseOLqmTxfPX66OucJK66OUNzuDjK7p05UIbGwX25I/vrj4BYrnD0uZ/Rtvfzz9fPsPIkgkbL0DZNMFRVEHFEY2ZCBTcwMLdfCsCCVN4SwpE9YG+ARNgD24IDHYSYB1yNCYDkLRFoC8oOUG40AKQx5IYyAmlQ6SF7dDoSof0hbJiApzqLs43aPc5UG+AvVQ/4T7nGQFQiJ5kdbAkmgH2Sz0FaWB4gLrad22v4nmuvPt/yzCc1+V4t0e4z93r8PYwDCvNANxLSthkai0jmCf5+jq6y6Y4SkjTfoKprgWufj9Dg3AozBmiK7pl3H8WDH3u0YfLY6u6c/HVS2vSvsxoygyTF2q/qNenEyjJ5NJPYGPRidME1M1/JYqwyoNq32Ihu4J0z5M+WA2DoqwEI9wfmEaEhQJzPNsKNOh0jJwrfRVJqbnNOrC6IGwQFzgHiKrpCuq2kE+FizrMXWE7IWCEKemg7hSiimOQchNIC3EchqpHlBO95TshQThkwF5TL9k+Mm/MZLGzVo3AlQdLzagDle1vCYd/wU9/5Z5ZcyZPnNow/J8ZHZZCGtsbKw3rdn7nIzTx42o0WfP1cPKuYJ6XPFs5q7p8zmKx5v8cdcxDeMPOR1fj+gh4X10TV/dukiC+nJPeLy8eH1hrtm/UVvpKxcrP2oL/dlcs1eQ9PCeo73wGcp+R2Xyvlp74vH19B9EkoA2CYKUlcQqJCQj6vkoyBjh/IurcJiy4Zxy2FMptRBO7sK3kClR0UYUZAX+wMqfC1ICiYHMYBsKSQsSFKaAUEqZLoiK00ASFsgpN0UEUWE6yOkiiArE6NmUb91OWwAAEuNJREFUszCNxA0c/uBoF04W86YOarWQAYjGmHBBEIkUiXEqib025hNmInWknv6zKo77Sh3/RvcfSx5Xl4O4yr5Y7NxiuEEQFT4uvs8yrF5VvosX28LLS185vsiRHkc9YPiJtrCbJIzHyx3gJdfpl80flZWPR6qIxJghus7xjSqj4E9UNn2VvN76Csqq6XIR+48OYEeGlcAaXhLfQwxNQcgQEI9IErOOxBUuCuDLz9Arm5iyOTaYy7Jty8hAb2VCm43ZmwnwQTbgFpAWyA4SGEKhaMdgYNpngKAcpeMCAfFjYGE4yAqco3RZ0LorUqOkxVkf6AgzvFBPFbISSsOUD+WRrWijpcwbmI4Gomj4yxAIv4bPVU+q9sfxk/EP36UlfP49N3vNWr/m9CZdX/zzjDDofAoW3XHVr9NPHdB8p2+uORl/mjFLUktMbBTtkSJbpLCRxYyD5OpJps/4+DJuvq5IIgoLqfi3pLzcRuloM7QSzKImsBSWG80LVKkxkSvOkFHaCjL5QvrPN9rwvaSVtEg2ICmQCNRQkGjwnlOpNktMxdds+GxcRFrIyCmhTQMEUJjl4qwtzPbAOVC8o0DUZroGiMmBpEUfRBZ4DvRUJC4/1GOpij1ML9XU0PJdFxIZGsOpJkkOQ0YdFh5CPodKl0WfRqQkVUhTIEf1iN4GkdJU4Rx/xsJfHkpfMv4cd+IAUJb1+YdkfSU7NXp6+/bti7qquKiEdfVq0Gl2TO2DonYzAcUTCv0slCB8FuGia/q8j7iAPl30aNIPHVKq55w+00MvjFLo05WmV8H5P9XLzydVF/H0xbGl9UGfjm226B98po2u6fO+0f3H9M7SbT1h+FoS00ybSmm+5/RZHxzbwWvVHtSvNuLRR4BKl0vPtHRhWh1SESUsNBkH0qjvNiAx4MA1JDBc4yBmTPmwJArJCFM+dA1SE5XsmFIqRTzKUrZYkMio78IUkauFoW6Mcbin1GWrOR8nqOEUEUQFmuK3ZdEw6NFg92s9j3XLp0CIsAuS8VdPkcKhCZ9/KAc81x/c3NdzFjy6KHZc0YPNh7VhDg9jYnh4co9n2dvx1nLalys7Rimx2xLGigfEJBQ0Xr149FkBVb04BQiTlPAFbTiDxRGKM1pJf5AgarPKG0sQu413N07hkCANO5m0fSebtCwziW5DqMISHTRMJCDF23inYbmsauNCHq+Vn1ta5dErzKN8psP/RiIXVpAegKJQ30Y06AQSEXdAIpdL0wbTNsLpoSIeCwRJHZYBpTusIFAIlPC0iqL5AxoCcmLPQkkLdITRCc0dSFqQD1A51g4pLOXmhZCwDMO2BpH9q6ZtDoU4oKQIy5yEynFnv+mzw+0+/q3Sf5yT4aYs89zq1alLIK7wYeQANcCpgW5AOaqIARzxcudrXrMTz+cuFAxBI1Rw06eLKz3xsnDikt+Mmr9mWBlXrbySeJAlTt8MXJImXHRNv0zx2GpWZ3r0KKqzXHlRHH26+fQf+mkbg56ADjppUuihMJl7BEhGtmnj+4Phj1lEUAzjaQcgJkzcqPPmlI/yjdJV8Trf/+hbeYyP0uMS0zSVF8SEaSELxkhR6a7IC1IVHkNMBWEkCljxYQ7YXgWKrDCHw2ohJDDKSkr5Tst3TANBp7DdgkTFKSOpxYMtV2i3hXQoJjwbBo3L4oibAajdXmSbCl01PEvi6x3PetMvwfi3cv+xHpPRk8GZvo6Oq5y5FvZlvtfqQZ5v5igfH7iRdHqrn/H24McyEb6ejCUxkCwqEATi8JDNKtWRIxI6wrLj+aOyQgIqLT/KTZ+OLYnCFGHE60PdSgzIgVmcfrbt5evjYkB97VeNyv8plx/UYoChElhYgB7KtD3PAUWRpejIVNzNAjNzyDuYRqnrMF5dIx4CkTrlAJQRps2FhZIX5lqYwfFLOygTBeSmkUhDEgNvIC7MR5ML6JhozoCpn+858G1utbH4j7BRT0Z9VlZzbTyOKJCKeCjkqYbkFBJh+DXCPVcKuXKIFURlm8WBoZSFOBCYmk6i33ioT+Kw1CegEMspcFfe+M8+rRySNum/YUwm9I7TPT04NWOBDg/nwtz16xMbEp3mPswIOuI6G7wBSlynz1pQWZEIP0smIcEEWN3QsfJDn+nj9FFSPh73wilgdE2f+eOumo4pPqWI2kI/LKu4RVXLq7H/kJopRUFhnkj4joNT9KC/BlZgAIVD1I+cwASVUBgCIsF1KEQxJLpGPKHGP5LYrAs5ikREnmJ61KF4K5cG1+REVS6HC1JauGroYYcOrLWUEp6MSF0UpoZgK5hV2dgEzeNLYbMBnRQZEUPnOwGMT6GOp57Kg/0WTCMYjnsQHpDmlJFTR5IcNt/alvV1PdF5NsKcLSpGG03L6QcjnWDpeIXqgFYb//A9wGi1+fMPDeqY7nae6uvT530KKp+JebkhHJyX6Fqz33X83tCgRr1d6gXBH+XnFtEwDmEVMBfAtbK7UvHxVTb1gGLQokbFVBZMDtUJHmT+dsPxmqSRU2nkrxkWxhfbOfEVwLov4sIaonSRr1qZy6vy8xliPbn+qPjYHxSm6mJwdB357DfaVtJ/BMLeW0/ayVQSR6TA5AB7h8kwmFeRrFBUSFYkJk7GsM+F5SuiCQmFBEriCskHYcxfEM9ozBjBS/yaKD//rBzndjD3BHswAcmqwFdhOWGugCw5owwpEt9sxMlVGWQEK4GlcAOi1XAcL6eLICfdcMFmNDnH7xdO/YTCHTkxM2B6EiSPbuXmHrZO5eJy4Iu6lfo2Gu8orFfA+PM9UMjnHpBIx9v+/Q9Wm8nMfcMTE1d7u7vP4Ec6fzy1wqOGP3xI63JHjgT2/rsy/boTbMP0pe78dVUWS5wjK0VUjIqNN3kA62ZYeIcfxofXDFNFUZBTT4W6m71mWBlXrb4yWSoEYWh0jVIUdJEmzA6o18mRDN7dCplCEkK8IiP4WRAU9OO8j5wimZB3SAhKYlJEphLkJCaSEP7PEdxsfVG5UWFxP6qPPngTlvBED6IWLN8dTPmg8ocFPPRXWBdlFWqqCEmLlhAgLRtKdLaAkpQNfRUM6DUQGOUiTimNEaT7FvRVw/F6K91XG4/mHf9KPaovvJ36jzfSS1mpc6mUdhnvhZL4a0GjZsKBKK+n0+kt0AHvztCAsIzjeeAeUKVPF1l101cBWCICxcGmcPalUeHRnyguIsJYej79fFnpKxdjrKhu+spVK69Ke+OW6SXlh7Xk/8b7D5umJKY6nUiQAEmp5ZKoD5Ay8kTFzcAsJIrL+ZREYCWAaU4ubXRNP8wfpuSuGubHMwCJhSuGPCiYJIMw5GV6xkfY0Wd+WoPiBAlEhvnzNluw3SKZYTkQHIQ5J1RQDg7Lw/QQGUIdFp4wcC9KgQ/7KkxjucEHROVmc3ZaCFfEjMxUvlPvBZ0WhT1Q1zG06hQKyGPA9qEh4bPRJuO/0p//WvoPyXpa77BPr9L1mn64QiJRT0vlP3jg1oyn0/th1dnN6VOkQyh8wVRuPpLUH9GHi+sckD4vLaj43NSHLwfv8cKjbGxdgc97JUpFpIRbpovKYHTUltkpHYkyEqNYf1gWfZU+Vn+JiMZERS4qKyTAMv1hmwoItLT/aL6OL9cn8A4mknhDkR5CUuh43ExhAXjnIQVxRQ9UwnU1JM73meHISINzlY/1Ir3jwNQBtui5IpU3K2mFZbEUEhgJiHlZhkqI8rws7hPFxBHlZ5romu1CGRSv2HyQEQiLPkwefJcSk2o0mU+F8Z46KswbKd8qvRUWiq7BsuoYlF/q+Jd839p4/KNnFHhw+Fbc819r/y3dHO7qsk9D2lLPBvEq59SLXC6CYSCq1OTk5F48g+FxLyQSvvyzhFK8taaYL1ACiYdkkSOg/HVO4irmAySLlR8+yHy5wnaWysTF7YmnRxdyecMXFDcxx3KjNCUEGUtb2r4Iixwh5qebxEG58v2Hkh0ERqlLp5kClNLkngLSyF8XExrZi089SYbFm9DRg1FCbEKyoxQE8sqFkTOgTwrDVIPCP/k8qpRcGrxMEXmxnpwjUeXbhjpgA2bBNsp0HPQWOiwNOnddw5YcNIdSFyzTlUKehEbrLDxDNn7osjCXPw5FO22qgPfKHn/pf8XxxxetvSvYlX8BxBVKCdGDmPPDhz0W+Oijjxof//jHt+Hh2oko/qKqFx4l0BJQmQIwS3RNn/fxZXqGFbq4nQzimI9tKFs+S1S1KJ9XoQkEfUQwtKg98fSzefMMwmx5F28/IqK2RLjM2b54/gX0H0v6+IiDZSVgHJogfYWNzDMUpCtsUkKg4pKIUJAsnNTlkjNWzfBCPMOhi8JAiCSqPBmyMFVQ1OdctQwLywNZ5cPCpDl80D6IhjzBASQF0sUeREpSJCyE4ceSpJXbEO2612AHepaTSRn/YrtEAD3n8xV/ntv4+S96nyGRO9gccQZmEPiBK3bRi5kPHcG+v2T32n2+53bxNY8oQyWIB0SR9OmqxMeTh5lm/8azx8srEbCQNSqTpUTX+eagwCiPqiWeQAXO/olHV2tPaYUFjWCxsQJjt7MV564K6iOB2Xj1adNGa3PqDMFl4XwSSnAQCUIibqFPlwtTwbiOkoSR+JvLx3KYv9BXaSrlLyifSegQBNMFTAWhiIeFArRZnoX+8Y2EzKhbnuNlYO9wFpZXkwoH5Kmj/6qOFTz+0n8+Y4Y/2pVIcJqY35+YJ6wjEN33ZzL9kPY3hWjx6Sv+RcByLIQAZZYQJSn2C944FRF/QkvjQ31XZDcV04GVPOGl+WdJEhVGbaNPV3d7Va7ZP83U/1ACgzTjkg4gjUFvHhGWkrPAPnnBLNeFSEKKfAbzOu9yBAUdVj6cZURpZuU3XOUILioD93x2IEnxxFGc9c6M+M93cHSNZVzHquBQDeMn4x898wQ2us7pgGvAbyU8/z5e5EupVEqtJirCgp4KHxVI7sbrQIYKHyKF3+yvIvEEX8FsQNk9qXwgBpgQwNo7p9OKrukzfdzF08+WTmYrV35YF+tU8bEpYImInGtLVH+8PkzZ8iQcVpjrawXCLOHH5uo/9JmWjbXHJMQcNhVW8bOklbsumnJw7Q+cgtVK2mJxAUNNKKncp54KHuzAwnjCE01B1UIHA1A80ik/IkdIfTj6mE8MXh2sSKZhdHUd+IcDykwFLj4eMv7Fv+il75c8/xEmeHaojD+jZ4LgbsPVVvO5iutg4oSAFCCiAqVp/jrUKRU8mzVexsube05ff3tiD0Q1wkP/ojrYgeiaftiheHsjLKL4GrudTxYvb0H9h94bpzeAwCD4cAqJf5SmlBjFH5D8ChVC1Q8KyIkrjtgbE64y4lqtINJHel5Hq4q4ZdsYzsWBWaU+rkFWtFzQbiNNnWciNbT/qD4+Hitq/FdE/3mWzmvQU+W4hZZPenQuRHRNfylcvfVjpUqz0Tj6dNE1/fm4euufTx1z5am3/hr6z6lj9A9ElneKwPJ3IYEVEpqKys0YFeUhoDBP4TV/+bjVIkfqKuu8/ixC/+tqR73111V4DYnrrb+G8a+h1tkk9dY/m7MxV7XUzwdP3ApBgCYG6Co+L6/+kcB4X0g0ERFFzwXjojBc5q8ZhqOKtWEoROmLEwSWBIHowVySyqSS5kIABEYhisRFEov8SgRWGD6K9OMgq8IwBIkTBBYXASGsxcW3pUoHgfF5iIiLPv9x+03kuLxMqaqsUj1KJL4gsFgICGEtFrJtUG6OwDhtJHHhqLOl+dBAG0AnXRAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBAFBQBAQBAQBQUAQEAQEAUFAEBAEBIGVhMD/D0fV/fpMMM+gAAAAAElFTkSuQmCC' } };exports.default = _default;
 
 /***/ }),
-/* 91 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/noticeBar.js ***!
-  \*************************************************************************************************/
+/* 95 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/noticeBar.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15507,10 +17426,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     linkType: 'navigateTo' } };exports.default = _default;
 
 /***/ }),
-/* 92 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/notify.js ***!
-  \**********************************************************************************************/
+/* 96 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/notify.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15537,10 +17456,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     safeAreaInsetTop: false } };exports.default = _default;
 
 /***/ }),
-/* 93 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/numberBox.js ***!
-  \*************************************************************************************************/
+/* 97 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/numberBox.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15580,10 +17499,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     iconStyle: '' } };exports.default = _default;
 
 /***/ }),
-/* 94 */
-/*!******************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
-  \******************************************************************************************************/
+/* 98 */
+/*!************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15605,10 +17524,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     random: false } };exports.default = _default;
 
 /***/ }),
-/* 95 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/overlay.js ***!
-  \***********************************************************************************************/
+/* 99 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/overlay.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15631,10 +17550,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     opacity: 0.5 } };exports.default = _default;
 
 /***/ }),
-/* 96 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/parse.js ***!
-  \*********************************************************************************************/
+/* 100 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/parse.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15661,10 +17580,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     showImgMenu: true } };exports.default = _default;
 
 /***/ }),
-/* 97 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/picker.js ***!
-  \**********************************************************************************************/
+/* 101 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/picker.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15698,10 +17617,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     defaultIndex: function defaultIndex() {return [];} } };exports.default = _default;
 
 /***/ }),
-/* 98 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/popup.js ***!
-  \*********************************************************************************************/
+/* 102 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/popup.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15722,7 +17641,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     overlay: true,
     mode: 'bottom',
     duration: 300,
-    borderRadius: 0,
     closeable: false,
     overlayStyle: function overlayStyle() {},
     closeOnClickOverlay: true,
@@ -15730,16 +17648,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     safeAreaInsetBottom: true,
     safeAreaInsetTop: false,
     closeIconPos: 'top-right',
-    round: false,
+    round: 0,
     zoom: true,
     bgColor: '',
     overlayOpacity: 0.5 } };exports.default = _default;
 
 /***/ }),
-/* 99 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/radio.js ***!
-  \*********************************************************************************************/
+/* 103 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/radio.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15771,10 +17689,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     placement: '' } };exports.default = _default;
 
 /***/ }),
-/* 100 */
-/*!**************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/radioGroup.js ***!
-  \**************************************************************************************************/
+/* 104 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/radioGroup.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15809,10 +17727,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     iconPlacement: 'left' } };exports.default = _default;
 
 /***/ }),
-/* 101 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/rate.js ***!
-  \********************************************************************************************/
+/* 105 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/rate.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15843,10 +17761,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     touchable: true } };exports.default = _default;
 
 /***/ }),
-/* 102 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/readMore.js ***!
-  \************************************************************************************************/
+/* 106 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/readMore.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15873,10 +17791,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     name: '' } };exports.default = _default;
 
 /***/ }),
-/* 103 */
-/*!*******************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/row.js ***!
-  \*******************************************************************************************/
+/* 107 */
+/*!*************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/row.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15898,10 +17816,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     align: 'center' } };exports.default = _default;
 
 /***/ }),
-/* 104 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/rowNotice.js ***!
-  \*************************************************************************************************/
+/* 108 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/rowNotice.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15927,10 +17845,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     speed: 80 } };exports.default = _default;
 
 /***/ }),
-/* 105 */
-/*!**************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/scrollList.js ***!
-  \**************************************************************************************************/
+/* 109 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/scrollList.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15955,10 +17873,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     indicatorStyle: '' } };exports.default = _default;
 
 /***/ }),
-/* 106 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/search.js ***!
-  \**********************************************************************************************/
+/* 110 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/search.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15999,10 +17917,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     label: null } };exports.default = _default;
 
 /***/ }),
-/* 107 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/section.js ***!
-  \***********************************************************************************************/
+/* 111 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/section.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16031,10 +17949,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     arrow: true } };exports.default = _default;
 
 /***/ }),
-/* 108 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/skeleton.js ***!
-  \************************************************************************************************/
+/* 112 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/skeleton.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16064,10 +17982,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     avatarShape: 'circle' } };exports.default = _default;
 
 /***/ }),
-/* 109 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/slider.js ***!
-  \**********************************************************************************************/
+/* 113 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/slider.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16096,10 +18014,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     blockStyle: function blockStyle() {} } };exports.default = _default;
 
 /***/ }),
-/* 110 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/statusBar.js ***!
-  \*************************************************************************************************/
+/* 114 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/statusBar.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16119,10 +18037,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     bgColor: 'transparent' } };exports.default = _default;
 
 /***/ }),
-/* 111 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/steps.js ***!
-  \*********************************************************************************************/
+/* 115 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/steps.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16148,10 +18066,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     dot: false } };exports.default = _default;
 
 /***/ }),
-/* 112 */
-/*!*************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/stepsItem.js ***!
-  \*************************************************************************************************/
+/* 116 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/stepsItem.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16174,10 +18092,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     error: false } };exports.default = _default;
 
 /***/ }),
-/* 113 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/sticky.js ***!
-  \**********************************************************************************************/
+/* 117 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/sticky.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16202,10 +18120,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     index: '' } };exports.default = _default;
 
 /***/ }),
-/* 114 */
-/*!**************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/subsection.js ***!
-  \**************************************************************************************************/
+/* 118 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/subsection.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16232,10 +18150,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     bgColor: '#eeeeef' } };exports.default = _default;
 
 /***/ }),
-/* 115 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/swipeAction.js ***!
-  \***************************************************************************************************/
+/* 119 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/swipeAction.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16255,10 +18173,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     autoClose: true } };exports.default = _default;
 
 /***/ }),
-/* 116 */
-/*!*******************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
-  \*******************************************************************************************************/
+/* 120 */
+/*!*************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16284,10 +18202,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     duration: 300 } };exports.default = _default;
 
 /***/ }),
-/* 117 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/swiper.js ***!
-  \**********************************************************************************************/
+/* 121 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/swiper.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16330,10 +18248,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     showTitle: false } };exports.default = _default;
 
 /***/ }),
-/* 118 */
-/*!********************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
-  \********************************************************************************************************/
+/* 122 */
+/*!**************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16357,10 +18275,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     indicatorMode: 'line' } };exports.default = _default;
 
 /***/ }),
-/* 119 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/switch.js ***!
-  \**********************************************************************************************/
+/* 123 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/switch.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16389,10 +18307,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     space: 0 } };exports.default = _default;
 
 /***/ }),
-/* 120 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/tabbar.js ***!
-  \**********************************************************************************************/
+/* 124 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/tabbar.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16419,10 +18337,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     placeholder: true } };exports.default = _default;
 
 /***/ }),
-/* 121 */
-/*!**************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/tabbarItem.js ***!
-  \**************************************************************************************************/
+/* 125 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/tabbarItem.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16447,10 +18365,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     badgeStyle: 'top: 6px;right:2px;' } };exports.default = _default;
 
 /***/ }),
-/* 122 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/tabs.js ***!
-  \********************************************************************************************/
+/* 126 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/tabs.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16481,13 +18399,15 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     itemStyle: function itemStyle() {return {
         height: '44px' };},
 
-    scrollable: true } };exports.default = _default;
+    scrollable: true,
+    current: 0,
+    keyName: 'name' } };exports.default = _default;
 
 /***/ }),
-/* 123 */
-/*!*******************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/tag.js ***!
-  \*******************************************************************************************/
+/* 127 */
+/*!*************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/tag.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16512,7 +18432,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     bgColor: '',
     color: '',
     borderColor: '',
-    closeColor: '',
+    closeColor: '#C6C7CB',
     name: '',
     plainFill: false,
     plain: false,
@@ -16521,10 +18441,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     icon: '' } };exports.default = _default;
 
 /***/ }),
-/* 124 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/text.js ***!
-  \********************************************************************************************/
+/* 128 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/text.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16568,10 +18488,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     wordWrap: 'normal' } };exports.default = _default;
 
 /***/ }),
-/* 125 */
-/*!************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/textarea.js ***!
-  \************************************************************************************************/
+/* 129 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/textarea.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16612,10 +18532,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     formatter: null } };exports.default = _default;
 
 /***/ }),
-/* 126 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/toast.js ***!
-  \*********************************************************************************************/
+/* 130 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/toast.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16649,10 +18569,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     back: false } };exports.default = _default;
 
 /***/ }),
-/* 127 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/toolbar.js ***!
-  \***********************************************************************************************/
+/* 131 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/toolbar.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16677,10 +18597,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     title: '' } };exports.default = _default;
 
 /***/ }),
-/* 128 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/tooltip.js ***!
-  \***********************************************************************************************/
+/* 132 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/tooltip.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16710,10 +18630,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     showToast: true } };exports.default = _default;
 
 /***/ }),
-/* 129 */
-/*!**************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/transition.js ***!
-  \**************************************************************************************************/
+/* 133 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/transition.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16736,10 +18656,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     timingFunction: 'ease-out' } };exports.default = _default;
 
 /***/ }),
-/* 130 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/props/upload.js ***!
-  \**********************************************************************************************/
+/* 134 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/props/upload.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16762,6 +18682,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     camera: 'back',
     maxDuration: 60,
     uploadIcon: 'camera-fill',
+    uploadIconColor: '#D3D4D6',
     useBeforeRead: false,
     previewFullImage: true,
     maxCount: 52,
@@ -16779,10 +18700,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     previewImage: true } };exports.default = _default;
 
 /***/ }),
-/* 131 */
-/*!****************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/zIndex.js ***!
-  \****************************************************************************************/
+/* 135 */
+/*!**********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/zIndex.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16808,10 +18729,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   indexListSticky: 965 };exports.default = _default;
 
 /***/ }),
-/* 132 */
-/*!***************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/config/color.js ***!
-  \***************************************************************************************/
+/* 136 */
+/*!*********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/config/color.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16835,10 +18756,10 @@ var color = {
 color;exports.default = _default;
 
 /***/ }),
-/* 133 */
-/*!********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/function/platform.js ***!
-  \********************************************************************************************/
+/* 137 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/function/platform.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16920,21 +18841,153 @@ platform = 'mp';var _default =
 platform;exports.default = _default;
 
 /***/ }),
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
+/* 138 */
+/*!*********************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/config/request.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {module.exports = function (vm) {
+  // 初始化请求配置
+  uni.$u.http.setConfig(function (config) {
+    /* config 为默认全局配置*/
+
+
+
+
+    // config.baseURL = 'http://192.168.1.106:3000'; /* 安卓 */
+    config.baseURL = 'http://124.221.144.134:3000'; /* 安卓 */
+
+
+    return config;
+  });
+
+  // 响应拦截
+  uni.$u.http.interceptors.response.use(function (response) {
+    var data = response.data;
+    if (data.status == 300) {
+      // this.$refs.uToast.show({
+      // 	type: 'error',
+      // 	message: "登录状态失效!"
+      // })
+      setTimeout(function () {
+        uni.redirectTo({
+          url: '../login/login' });
+
+      }, 2000);
+    } else if (data.status == 500) {
+      // this.$refs.uToast.show({
+      // 	type: 'error',
+      // 	message: "服务器出错啦!"
+      // })
+    }
+    return response;
+  }, function (response) {
+    // 对响应错误做点什么 （statusCode !== 200）
+    // return Promise.reject(response)
+  });
+};
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
 /* 139 */,
-/* 140 */
-/*!*******************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/commons/util/myfun.js ***!
-  \*******************************************************************/
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */
+/*!*************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/commons/util/myfun.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 星期格式转换 0-6：周日到周六
+function weekFormat(e) {var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "周";
+  switch (e) {
+    case 0:
+      return prefix + "日";
+      break;
+    case 1:
+      return prefix + "一";
+      break;
+    case 2:
+      return prefix + "二";
+      break;
+    case 3:
+      return prefix + "三";
+      break;
+    case 4:
+      return prefix + "四";
+      break;
+    case 5:
+      return prefix + "五";
+      break;
+    case 6:
+      return prefix + "六";
+      break;
+    default:
+      return "";
+      break;}
+
+}
+// 转换今日的时辰格式
+function todayTimeFormat(e) {
+  if (e >= 0 && e < 7) {
+    return "凌晨";
+  } else if (e >= 7 && e < 11) {
+    return "上午";
+  } else if (e >= 11 && e < 13) {
+    return "中午";
+  } else if (e >= 13 && e < 18) {
+    return "下午";
+  } else if (e >= 18 && e < 24) {
+    return "晚上";
+  } else {
+    return "";
+  }
+}
+// 是否显示周几
+function isShowWeekDay(sub, weekDay) {
+  var currentWeekDay = new Date().getDay();
+  var dayTime = 1000 * 60 * 60 * 24;
+  // 1.当前时间与消息时间相差必须大于2天小于7天
+  // 2.当前时间距离本周一相差必须大于2天且小于当前距离周一的天数
+  // 3.消息时间不可能是0-周日，因为周日没有给后面时间留空间，不会走这里的逻辑，而是走今天的逻辑
+  if (sub >= dayTime * 2 && weekDay !== 0 && sub <= dayTime * currentWeekDay) {
+    return true;
+  } else {
+    return false;
+  }
+}
+//时间格式化兼容 ios
+function formatTime2(fmt, timestamp) {
+  var date = new Date(timestamp); // 兼容safari
+  var o = {
+    'M+': date.getMonth() + 1,
+    'd+': date.getDate(),
+    'h+': date.getHours(),
+    'm+': date.getMinutes(),
+    's+': date.getSeconds(),
+    'q+': Math.floor((date.getMonth() + 3) / 3),
+    'S': date.getMilliseconds() };
+
+  if (/(y+)/.test(fmt)) {
+    fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
+  }
+  for (var k in o) {
+    if (new RegExp('(' + k + ')').test(fmt)) {
+      fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[
+      k]).length));
+    }
+  }
+  return fmt;
+}var _default =
+
+{
   //首页列表时间转化
   dateTime: function dateTime(e) {
     var old = new Date(e);
@@ -16965,7 +19018,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       return h + ':' + m;
     }
 
-    //前天时间
+    //昨天时间
     if (Y === nY && M === nM && D + 1 === nD) {
       if (h < 10) {
         h = '0' + h;
@@ -16973,21 +19026,369 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       if (m < 10) {
         m = '0' + m;
       }
-      return '前天' + h + ':' + m;
+      return '昨天' + h + ':' + m;
     } else {
       //大于两天
       return Y + '/' + M + '/' + D;
     }
+  },
+
+  //聊天界面时间转化
+  dateTime1: function dateTime1(e) {
+    var old = new Date(e);
+    var now = new Date();
+    //获取old时间
+    var d = old.getTime();
+    var h = old.getHours();
+    var m = old.getMinutes();
+    var Y = old.getYear();
+    var M = old.getMonth();
+    var D = old.getDate();
+    //获取now时间
+    var nd = now.getTime();
+    var nh = now.getHours();
+    var nm = now.getMinutes();
+    var nY = now.getYear();
+    var nM = now.getMonth();
+    var nD = now.getDate();
+
+    //当天时间
+    if (Y === nY && M === nM && D === nD) {
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return h + ':' + m;
+    }
+
+    //昨天时间
+    if (Y === nY && M === nM && D + 1 === nD) {
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return '昨天' + h + ':' + m;
+    } else if (Y === nY) {
+      //今年
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return M + '月' + D + '日 ' + h + ':' + m;
+    } else {
+      //大于今年
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return Y + '年' + M + '月' + D + '日 ' + h + ':' + m;
+    }
+  },
+
+  //间隔时间差
+  spaceTime: function spaceTime(old, now) {
+    old = new Date(old);
+    now = new Date(now);
+    var told = old.getTime();
+    var tnow = now.getTime();
+    //大于间隔五分钟
+    if (Math.abs(told - tnow) >= 5 * 60 * 1000) {
+      return now;
+    } else {
+      return '';
+    }
+  },
+
+  //聊天页时间格式化
+  formartTime: function formartTime(t, type) {
+    var oldtime = new Date(t);
+    var date = new Date();
+    var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime(); //今天凌晨
+    var yestday = new Date(today - 24 * 3600 * 1000).getTime();
+    var beforeYestday = new Date(today - 24 * 3600 * 1000 * 2).getTime();
+    var beforeWeek = new Date(today - 24 * 3600 * 1000 * 7).getTime();
+    var Y = oldtime.getFullYear(); //年份
+    var M = oldtime.getMonth() + 1; //月份         
+    var d = oldtime.getDate(); //日         
+    var h = oldtime.getHours() % 12 == 0 ? 12 : oldtime.getHours() % 12; //12小时         
+    var H = oldtime.getHours(); //24小时         
+    var m = oldtime.getMinutes(); //分 
+    var w = toWeek(oldtime.getUTCDay()); //星期
+    var timesolt = toTimeSolt(oldtime.getHours()); //时间段 
+
+    var timeStr = '';
+
+    //当天
+    if (oldtime.getTime() > yestday) {
+      timeStr = H + ':' + m;
+    }
+    //昨天
+    if (oldtime.getTime() < today && yestday <= oldtime.getTime()) {
+      timeStr = '昨天 ' + (type == 1 ? H + ':' + m : '');
+    }
+    // 一周内
+    if (oldtime.getTime() < yestday && beforeWeek <= oldtime.getTime()) {
+      timeStr = w + (type == 1 ? ' ' + H + ':' + m : '');
+    }
+    // 一周前
+    if (oldtime.getTime() < beforeWeek) {
+      timeStr = type == 1 ? Y + '年' + M + '月' + d + '日 ' + timesolt + ' ' + H + ':' + m : Y + '/' + M + '/' +
+      d;
+    }
+    // 比当前时间晚
+    if (oldtime.getTime() > date.getTime()) {
+      timeStr = '手动修改';
+    }
+
+    // 格式化时间段
+    function toTimeSolt(h) {
+      var bt = '';
+      if (0 <= h && h <= 3)
+      bt = '凌晨';
+      if (4 <= h && h <= 8)
+      bt = '早上';
+      if (9 <= h && h <= 11)
+      bt = '上午';
+      if (12 == h)
+      bt = '中午';
+      if (13 <= h && h <= 17)
+      bt = '下午';
+      if (18 <= h && h <= 23)
+      bt = '晚上';
+
+      return bt;
+    }
+
+    // 格式星期
+    function toWeek(w) {
+      var week = '';
+      switch (w) {
+        case 0:
+          week = '星期日';
+          break;
+        case 1:
+          week = '星期一';
+          break;
+        case 2:
+          week = '星期二';
+          break;
+        case 3:
+          week = '星期三';
+          break;
+        case 4:
+          week = '星期四';
+          break;
+        case 5:
+          week = '星期五';
+          break;
+        case 6:
+          week = '星期六';
+          break;}
+
+      return week;
+    }
+    return timeStr;
+  },
+
+  // 仿微信时间显示格式转换 @time 时间戳毫秒
+  weChatTimeFormat: function weChatTimeFormat(time) {
+    // time 为传入某时间点的时间戳
+    var today = new Date().getTime(); //现在时间戳
+    var initTime = new Date().setHours(0, 0, 0, 0); //当日凌晨时间戳
+    // 当前时间减去获取到的时间
+    var sub = today - time;
+    var day = 1000 * 60 * 60 * 24; //一天的时间戳量
+    var timeDate = new Date(time);
+    var currentYear = new Date().getFullYear();
+    var getYear = new Date(time).getFullYear();
+    var HHmm = "".concat(formatTime2("hh", timeDate), ":").concat(formatTime2("mm", timeDate));
+    var showWeekDay = isShowWeekDay(sub, timeDate.getDay());
+    if (currentYear > getYear) {
+      return "".concat(formatTime2("yyyy/MM/dd", timeDate), " ").concat(todayTimeFormat(timeDate.getHours())).concat(formatTime2("hh:mm", timeDate));
+    } else if (showWeekDay) {
+      return "".concat(weekFormat(timeDate.getDay()), " ").concat(HHmm);
+      // } else if (sub > day && sub < day * 2) {
+      // 	return `昨天 ${HHmm}`
+    } else if (time < initTime && time > initTime - day) {
+      return "\u6628\u5929 ".concat(HHmm);
+      // } else if (sub <= day) {
+      // 	return HHmm
+    } else if (time > initTime) {
+      return HHmm;
+    } else {
+      return "".concat(formatTime2("MM/dd", timeDate), " ").concat(todayTimeFormat(timeDate.getHours())).concat(formatTime2("hh:mm", timeDate));
+    }
+  },
+
+  //日期格式化
+  formatDate: function formatDate(fmt, mydatecs) {
+    if (!mydatecs) return "";
+    var mydate = new Date(mydatecs);
+    var o = {
+      "Y+": mydate.getFullYear(),
+      "M+": mydate.getMonth() + 1, //月份
+      "d+": mydate.getDate(), //日
+      "h+": mydate.getHours(), //小时
+      "m+": mydate.getMinutes(), //分
+      "s+": mydate.getSeconds(), //秒
+      "q+": Math.floor((mydate.getMonth() + 3) / 3), //季度
+      S: mydate.getMilliseconds() //毫秒
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1);
+    for (var k in o) {
+      if (new RegExp("(" + k + ")").test(fmt)) {
+        //
+        if (k == "Y+") {
+          fmt = fmt.replace(RegExp.$1, o[k]);
+        }
+        fmt = fmt.replace(
+        RegExp.$1,
+        RegExp.$1.length == 1 ?
+        o[k] :
+        ("00" + o[k]).substr(("" + o[k]).length));
+
+      }
+    }
+    return fmt;
+  },
+
+  //临时图片路径 获取 base64格式图片
+  getBase64: function getBase64(imgUrl) {
+    var base64;
+    window.URL = window.URL || window.webkitURL;
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", imgUrl, true);
+    // 至关重要
+    xhr.responseType = "blob";
+    xhr.onload = function () {
+      if (this.status == 200) {
+        //得到一个blob对象
+        var blob = this.response;
+        // console.log("blob", blob)
+        // 至关重要
+        var oFileReader = new FileReader();
+        oFileReader.onloadend = function (e) {
+          // 此处拿到的已经是 base64的图片了
+          base64 = e.target.result;
+          console.log("方式一》》》》》》》》》", base64);
+          return base64;
+        };
+        oFileReader.readAsDataURL(blob);
+      }
+    };
+    xhr.send();
   } };exports.default = _default;
 
 /***/ }),
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
+/* 146 */
+/*!***************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/mixin/getUserStorage.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  data: function data() {
+    return {
+      uid: "",
+      imgUrl: "",
+      token: "",
+      username: "",
+      baseUrl: '' };
+
+  },
+  onLoad: function onLoad() {
+    this.getUserStorage();
+    this.baseUrl = this.$store.state.BASE_URL; //从vuex里取 BASE_URL （解决小程序为undefined的bug）
+  },
+  onShow: function onShow() {
+    // this.getUserStorage()
+  },
+  methods: {
+    //获取缓存
+    getUserStorage: function getUserStorage() {
+      var value = uni.getStorageSync('user');
+      if (value) {
+        this.uid = value.id,
+        this.imgUrl = "".concat(this.BASE_URL, "/avatar/").concat(value.imgUrl),
+        this.token = value.token,
+        this.username = value.username;
+      } else {
+        uni.redirectTo({
+          url: '../login/login' });
+
+      }
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 147 */
+/*!*****************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/config/api.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.getMsg = exports.uploadAvatar = exports.postClearUnreadMsg = exports.postGetUnreadMsg = exports.postGetLastMsg = exports.postGetFriend = exports.upload = exports.postDeleteFriend = exports.postUpdateFriendState = exports.postApplyFriend = exports.postUserUpdate = exports.postUserDetail = exports.postIsFriend = exports.postSearchUser = exports.postTokenTest = exports.postSignIn = exports.postJudgeValue = exports.postSignUp = exports.postEmail = exports.getTest = exports.getMenu = exports.postMenu = void 0;var http = uni.$u.http;
+
+// post请求，获取菜单
+var postMenu = function postMenu(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/ebapi/public_api/index', params, config);};
+
+// get请求，获取菜单，注意：get请求的配置等，都在第二个参数中，详见前面解释
+exports.postMenu = postMenu;var getMenu = function getMenu(data) {return http.get('/ebapi/public_api/index', data);};exports.getMenu = getMenu;
+
+var getTest = function getTest(data) {return http.get('/test', data);};
+//邮箱测试
+exports.getTest = getTest;var postEmail = function postEmail(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/mail', params, config);};
+//注册
+exports.postEmail = postEmail;var postSignUp = function postSignUp(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/signup/add', params, config);};
+//用户或邮箱是否占用判断
+exports.postSignUp = postSignUp;var postJudgeValue = function postJudgeValue(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/signup/judge', params, config);};
+//登录
+exports.postJudgeValue = postJudgeValue;var postSignIn = function postSignIn(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/signin/match', params, config);};
+//token测试
+exports.postSignIn = postSignIn;var postTokenTest = function postTokenTest(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/signin/test', params, config);};
+//搜索用户
+exports.postTokenTest = postTokenTest;var postSearchUser = function postSearchUser(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/search/user', params, config);};
+//判断是否为好友
+exports.postSearchUser = postSearchUser;var postIsFriend = function postIsFriend(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/search/isfriend', params, config);};
+//用户详情
+exports.postIsFriend = postIsFriend;var postUserDetail = function postUserDetail(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/user/detail', params, config);};
+//用户信息修改
+exports.postUserDetail = postUserDetail;var postUserUpdate = function postUserUpdate(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/user/update', params, config);};
+//好友申请
+exports.postUserUpdate = postUserUpdate;var postApplyFriend = function postApplyFriend(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/friend/applyfriend', params, config);};
+//更新好友状态，同意好友
+exports.postApplyFriend = postApplyFriend;var postUpdateFriendState = function postUpdateFriendState(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/friend/updatefriendstate', params, config);};
+//拒绝好友或删除好友
+exports.postUpdateFriendState = postUpdateFriendState;var postDeleteFriend = function postDeleteFriend(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/friend/deletefriend', params, config);};
+//上传
+exports.postDeleteFriend = postDeleteFriend;var upload = function upload(params) {return http.upload('/files/upload', params);};
+//获取好友
+exports.upload = upload;var postGetFriend = function postGetFriend(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/index/getfriend', params, config);};
+//获取最后一条消息
+exports.postGetFriend = postGetFriend;var postGetLastMsg = function postGetLastMsg(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/index/getlastmsg', params, config);};
+//汇总一对一消息未读数
+exports.postGetLastMsg = postGetLastMsg;var postGetUnreadMsg = function postGetUnreadMsg(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/index/getunreadmsg', params, config);};
+//清除消息未读数
+exports.postGetUnreadMsg = postGetUnreadMsg;var postClearUnreadMsg = function postClearUnreadMsg(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/index/clearunreadmsg', params, config);};
+//裁剪头像上传
+exports.postClearUnreadMsg = postClearUnreadMsg;var uploadAvatar = function uploadAvatar(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/avatar/upload', params, config);};
+//获取聊天一对一分页消息
+exports.uploadAvatar = uploadAvatar;var getMsg = function getMsg(params) {var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return http.post('/chat/msg', params, config);};exports.getMsg = getMsg;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
 /* 148 */,
 /* 149 */,
 /* 150 */,
@@ -17004,14 +19405,2696 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 161 */,
 /* 162 */,
 /* 163 */,
-/* 164 */,
-/* 165 */,
-/* 166 */,
-/* 167 */,
+/* 164 */
+/*!*****************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/node_modules/pinyin/lib/web-pinyin.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// 解压拼音库。
+// @param {Object} dict_combo, 压缩的拼音库。
+// @param {Object} 解压的拼音库。
+function buildPinyinCache(dict_combo) {
+  var hans;
+  var uncomboed = {};
+
+  for (var py in dict_combo) {
+    hans = dict_combo[py];
+    for (var i = 0, han, l = hans.length; i < l; i++) {
+      han = hans.charCodeAt(i);
+      if (!uncomboed.hasOwnProperty(han)) {
+        uncomboed[han] = py;
+      } else {
+        uncomboed[han] += "," + py;
+      }
+    }
+  }
+
+  return uncomboed;
+}
+
+var PINYIN_DICT = buildPinyinCache(__webpack_require__(/*! ../data/dict-zi-web */ 165));
+var Pinyin = __webpack_require__(/*! ./pinyin */ 166);
+var pinyin = new Pinyin(PINYIN_DICT);
+
+module.exports = pinyin.convert.bind(pinyin);
+module.exports.compare = pinyin.compare.bind(pinyin);
+module.exports.STYLE_NORMAL = Pinyin.STYLE_NORMAL;
+module.exports.STYLE_TONE = Pinyin.STYLE_TONE;
+module.exports.STYLE_TONE2 = Pinyin.STYLE_TONE2;
+module.exports.STYLE_TO3NE = Pinyin.STYLE_TO3NE;
+module.exports.STYLE_INITIALS = Pinyin.STYLE_INITIALS;
+module.exports.STYLE_FIRST_LETTER = Pinyin.STYLE_FIRST_LETTER;
+
+/***/ }),
+/* 165 */
+/*!*******************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/node_modules/pinyin/data/dict-zi-web.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "a": "",
+  "ā": "吖锕錒",
+  "á": "嗄",
+  "ǎ": "",
+  "à": "",
+  "āi": "哎哀埃娭溾嗳銰锿噯諰鎄",
+  "ái": "啀娾捱皑凒隑嵦溰嘊敱敳皚磑癌",
+  "ǎi": "毐昹娾欸絠嗳矮蔼躷噯濭藹譪霭靄",
+  "ài": "艾伌欬爱砹硋堨焥隘嗌嗳塧嫒愛碍叆暧瑷僾噯壒嬡懓薆鴱懝曖璦賹餲皧瞹馤礙譺鑀鱫靉",
+  "ān": "安侒峖桉氨偣庵菴谙啽媕萻葊痷腤裺鹌蓭誝鞍鞌盦諳馣鮟盫鵪韽鶕",
+  "án": "玵啽雸儑",
+  "ǎn": "垵俺唵埯铵揞晻罯銨",
+  "àn": "厈屵屽犴岸咹按洝荌案胺豻堓隌晻暗貋儑錌闇黯",
+  "āng": "肮骯",
+  "áng": "卬岇昂昻",
+  "ǎng": "",
+  "àng": "枊盎醠",
+  "āo": "泑柪眑梎軪熝爊",
+  "áo": "敖厫隞嗷嗸嶅廒慠滶獓蔜遨骜摮獒璈磝墽翱聱螯翶謷謸翺鳌鏕鏖鰲鷔鼇",
+  "ǎo": "艹抝芺袄眑郩镺媪媼襖",
+  "ào": "岙扷抝坳垇岰柪傲奡軪奧嫯嶅慠澚隩墺嶴懊擙澳鏊驁",
+  "ba": "罷",
+  "bā": "丷八仈巴叭朳玐夿岜扷芭峇柭疤哱哵捌笆粑羓蚆釟豝鲃魞",
+  "bá": "叐犮抜妭拔茇炦癹胈菝詙跋軷颰魃鼥",
+  "bǎ": "钯鈀靶",
+  "bà": "坝弝爸皅垻跁鲃魞鲅鲌罷鮁鮊覇矲霸壩灞欛",
+  "bāi": "挀掰擘",
+  "bái": "白",
+  "bǎi": "百佰栢瓸捭竡粨絔摆擺襬",
+  "bài": "呗庍拝败拜唄敗猈稗粺薭贁韛",
+  "bān": "扳攽朌肦班般颁斑搬斒頒搫瘢鳻螌褩癍辬",
+  "bǎn": "阪坂岅昄板版瓪钣粄舨鈑蝂魬闆",
+  "bàn": "办半伴扮坢姅怑绊柈秚湴絆跘鉡靽辦瓣",
+  "bāng": "邦垹帮捠梆浜邫幇幚縍幫鞤",
+  "bǎng": "绑綁牓膀髈",
+  "bàng": "玤挷蚄傍棒棓硥谤塝搒稖蒡蛖蜯镑縍艕謗鎊",
+  "bāo": "勹包佨孢苞枹胞剝笣煲龅裦蕔褒襃闁齙",
+  "báo": "窇雹",
+  "bǎo": "宝怉饱保鸨宲珤堢媬葆寚飹飽褓駂鳵緥鴇賲藵寳寶靌",
+  "bào": "勽犳报怉抱豹趵铇菢蚫袌報鉋鲍骲髱虣鮑儤曓嚗曝爆犦忁鑤",
+  "bei": "呗唄",
+  "bēi": "陂卑杯柸盃庳桮悲揹棓椑碑鹎箄諀鞞藣鵯",
+  "běi": "鉳",
+  "bèi": "贝孛狈貝邶备昁杮牬苝郥钡俻倍悖狽偝偹梖珼鄁備僃惫棑棓焙琲軰辈愂碚禙蓓蛽犕褙誖鞁骳輩鋇憊糒鞴鐾",
+  "bēn": "泍贲栟喯犇賁锛漰錛蟦",
+  "běn": "夲本苯奙畚翉楍",
+  "bèn": "坋坌泍炃倴捹桳渀笨逩撪",
+  "bēng": "伻祊奟崩絣閍嗙嵭痭嘣綳繃",
+  "béng": "甮甭",
+  "běng": "埄埲菶琣琫綳繃鞛",
+  "bèng": "泵迸堋逬揼跰塴綳甏镚繃蹦鏰",
+  "bī": "皀屄偪毴逼楅榌豍螕鵖鲾鎞鰏",
+  "bí": "荸鼻嬶",
+  "bǐ": "匕比夶朼佊吡妣沘疕纰彼毞肶柀秕俾娝笔粃紕舭啚崥筆鄙聛貏",
+  "bì": "币必毕闬闭佖坒庇芘诐邲咇妼怭怶畁畀肶苾哔柲毖珌畐疪祕胇荜贲陛毙狴畢笓粊袐铋婢敝旇梐紴翍萆萞閇閈閉堛弼弻愊愎湢皕禆筚詖貱賁赑嗶彃滗滭煏痺痹睤睥腷蓖蓽蜌裨跸鉍閟飶幣弊熚獙碧稫箅箆綼蔽鄪馝幤潷獘罼襅駜髲壁嬖廦篦篳縪薜觱避鮅斃濞蹕鞞髀奰璧鄨鎞鏎饆繴襣襞鞸韠魓躃躄驆鶝朇贔鐴鷝鷩鼊",
+  "biān": "辺边炞砭笾猵编萹煸牑甂箯糄編臱蝙鞕獱邉鍽鳊邊鞭鯾鯿籓籩",
+  "biǎn": "贬疺窆匾貶惼揙碥稨褊糄鴘藊覵鶣",
+  "biàn": "卞弁忭抃汳汴苄釆变峅玣変昪覍徧缏遍閞辡緶艑諚辧辨辩辫辮辯變",
+  "biāo": "灬杓标飑骉髟彪淲猋脿颩僄墂幖摽滮蔈颮骠標熛膔膘麃瘭磦镖飚飙儦檦篻颷瀌藨謤爂臕贆鏢穮镳飈飆飊飇鑣驫",
+  "biáo": "嫑",
+  "biǎo": "表婊裱諘褾錶檦",
+  "biào": "俵摽鳔",
+  "biē": "柭憋蟞癟鳖鱉鼈虌龞",
+  "bié": "別柲莂蛂徶襒蟞蹩",
+  "biě": "癟",
+  "biè": "別彆",
+  "bīn": "汃邠玢砏宾彬梹傧斌椕滨缤槟瑸豩賓賔镔儐濒頻濱濵虨豳檳璸瀕霦繽鑌顮",
+  "bǐn": "",
+  "bìn": "摈殡膑髩儐擯鬂殯臏髌鬓髕鬢",
+  "bīng": "冫仌仒氷冰兵幷栟掤梹蛃絣槟鋲檳",
+  "bǐng": "丙邴陃怲抦秉苪昞昺柄炳饼眪偋屛寎棅琕禀稟鈵鉼鞆餅餠鞞鞸",
+  "bìng": "並併幷枋垪庰倂栤病窉竝偋傡寎摒誁鮩靐",
+  "bo": "啵蔔噃",
+  "bō": "癶拨波癷玻剝哱盋砵趵钵饽紴缽菠袰溊碆鉢僠嶓撥播餑磻礡蹳皪驋鱍",
+  "bó": "仢彴肑驳帛狛瓝苩侼柭胉郣亳挬浡瓟秡袯钹铂桲淿脖舶萡袹博殕渤葧鹁愽搏猼鉑鈸馎鲌僰榑煿牔箔膊艊誖馛駁踣鋍镈壆馞駮鮊穛襏謈嚗懪簙鎛餺鵓糪髆髉欂襮礴鑮",
+  "bǒ": "癷蚾跛",
+  "bò": "孹擗擘檗檘譒蘗",
+  "bū": "峬庯逋钸晡鈽誧餔錻鯆鵏",
+  "bú": "鳪轐醭",
+  "bǔ": "卟补哺捕捬補鸔",
+  "bù": "布佈吥步咘怖抪歩歨柨钚勏埔埗悑捗荹部埠婄瓿鈈廍蔀箁踄郶篰餢",
+  "cā": "嚓擦攃",
+  "cǎ": "礤礸",
+  "cà": "遪囃",
+  "cāi": "偲猜",
+  "cái": "才扐材财財裁纔",
+  "cǎi": "毝倸啋埰婇寀彩採棌睬跴綵踩",
+  "cài": "埰寀菜蔡縩",
+  "cān": "參叄飡骖叅喰湌傪嬠餐爘驂囋",
+  "cán": "残蚕惭殘慚摲蝅慙蠺蠶",
+  "cǎn": "惨朁慘憯穇篸黪黲",
+  "càn": "灿孱傪粲嘇摻儏澯薒燦璨謲鏒",
+  "cāng": "仓仺伧沧苍玱鸧倉舱傖凔嵢滄獊蒼瑲濸篬艙螥鶬",
+  "cáng": "匨臧欌鑶",
+  "càng": "賶",
+  "cāo": "撡操糙",
+  "cáo": "曺曹傮嘈嶆慒漕蓸槽褿艚螬鏪",
+  "cǎo": "屮艸草愺慅懆騲",
+  "cào": "肏鄵襙鼜",
+  "cè": "夨冊册厕恻拺测荝敇畟側厠笧粣萗廁惻測策萴筞筴蓛箣憡簎",
+  "cēn": "參叄叅嵾穇篸",
+  "cén": "岑汵埁涔笒",
+  "cēng": "噌",
+  "céng": "层曽層嶒橧竲驓",
+  "cèng": "蹭",
+  "cī": "呰呲玼疵趀偨跐縒骴髊蠀齹",
+  "cí": "词珁兹垐柌祠茨瓷粢詞辝慈甆辞磁雌鹚糍辤飺餈嬨濨薋鴜礠辭鷀鶿",
+  "cǐ": "此佌泚玼皉啙跐鮆",
+  "cì": "朿次佽刾庛茦栨莿絘蛓赐螆賜",
+  "cōng": "匆囪囱苁忩枞茐怱悤棇焧葱楤漗聡蓯蔥骢暰樅樬潨熜瑽璁聦聪瞛篵聰蟌鍯繱鏓鏦騘驄",
+  "cóng": "丛徔従婃孮徖從悰淙琮碂慒漎潀潈誴賨賩樷錝藂叢灇欉爜",
+  "cǒng": "",
+  "còng": "愡憁謥",
+  "cōu": "",
+  "cóu": "",
+  "cǒu": "",
+  "còu": "凑湊傶楱腠辏輳",
+  "cū": "怚粗觕麁麄橻麆麤",
+  "cú": "徂殂",
+  "cǔ": "皻",
+  "cù": "促猝脨媨瘄蔟誎趗噈憱踧醋瘯踿簇縬趨鼀蹙蹵蹴顣",
+  "cuān": "汆撺鋑镩蹿攛躥鑹",
+  "cuán": "濽櫕巑攢灒欑穳",
+  "cuàn": "窜殩熶窽篡窾簒竄爨",
+  "cuī": "隹崔脺催凗嵟缞墔慛摧榱漼槯磪縗鏙",
+  "cuǐ": "漼熣璀趡皠",
+  "cuì": "伜忰疩倅粋紣翆脃脆啐啛崒悴淬萃椊毳焠琗瘁粹綷翠膵膬濢竁襊顇臎",
+  "cūn": "邨村皴踆澊竴膥",
+  "cún": "存侟拵壿澊",
+  "cǔn": "刌忖",
+  "cùn": "寸吋籿",
+  "cuō": "搓瑳遳磋蹉醝鎈",
+  "cuó": "虘嵯嵳痤睉矬蒫瘥蔖鹾酂鹺酇",
+  "cuǒ": "脞",
+  "cuò": "剉剒厝夎挫莡莝庴措逪锉蓌错縒諎銼錯",
+  "chā": "扠扱芆臿挿偛嗏插揷馇銟锸艖疀嚓鍤鎈餷",
+  "chá": "秅苴垞査茬茶捈梌嵖搽猹靫楂槎詧察摖檫",
+  "chǎ": "紁蹅镲鑔",
+  "chà": "仛奼汊岔侘衩诧剎姹紁詫",
+  "chāi": "芆肞钗釵",
+  "chái": "犲侪柴豺祡喍儕",
+  "chǎi": "茝",
+  "chài": "虿袃訍瘥蠆囆",
+  "chān": "辿觇梴搀覘裧摻緂鋓幨襜攙",
+  "chán": "苂婵谗單孱棎湹禅馋煘缠僝嶃嶄獑蝉誗鋋儃嬋廛潹潺緾澶磛禪毚螹蟐鄽瀍繟蟬儳劖繵蟾酁嚵壥巉瀺欃纏纒躔镵艬讒鑱饞",
+  "chǎn": "产刬旵丳斺浐剗谄啴產産铲阐蒇剷嵼摌滻嘽幝蕆諂閳骣燀簅冁繟醦譂鏟闡囅灛讇",
+  "chàn": "忏刬剗硟摲幝幨燀懴儳懺羼韂顫",
+  "chāng": "伥昌倀娼淐猖菖阊椙琩裮锠錩閶鲳闛鯧鼚",
+  "cháng": "仩仧兏肠苌镸長尝偿常徜瓺萇場甞腸嘗塲嫦瑺膓償嚐鲿鱨",
+  "chǎng": "昶惝場敞僘厰塲廠氅鋹",
+  "chàng": "怅玚畅鬯唱悵焻瑒暢畼誯韔",
+  "chāo": "抄弨怊欩钞訬焯超鈔勦摷綽劋樔窼",
+  "cháo": "牊晁巣巢鄛鼌漅樔潮窲罺鼂轈謿",
+  "chǎo": "炒眧粆焣煼槱麨巐",
+  "chào": "仦仯耖觘",
+  "chē": "伡車俥砗唓莗硨蛼",
+  "ché": "",
+  "chě": "扯偖撦奲",
+  "chè": "屮彻呫坼迠烢烲焎聅掣揊硩頙徹摰撤澈勶瞮爡",
+  "chen": "伧傖",
+  "chēn": "肜抻郴捵棽琛嗔綝瘨瞋諃賝謓",
+  "chén": "尘臣忱沉辰陈迧茞宸栕莀莐陳敐晨桭梣訦谌軙愖跈鈂煁蔯塵敶樄瘎霃螴諶薼麎曟鷐",
+  "chěn": "趻硶碜墋夦磣踸鍖贂醦",
+  "chèn": "衬爯疢龀偁趂趁榇稱齓齔儭嚫穪谶櫬襯讖",
+  "chēng": "朾阷泟柽爯凈棦浾琤偁淨碀蛏晿牚搶赪僜憆摚稱靗撐撑緽橖橕瞠赬頳檉竀罉鎗矃穪蟶鏿鐣饓鐺",
+  "chéng": "氶丞成朾呈承枨诚郕乗城埩娍宬峸洆荿埕挰晟浧珹掁珵窚脭铖堘惩揨棖椉程筬絾裎塍塖溗誠畻酲鋮憕撜澂橙檙鯎瀓懲騬",
+  "chěng": "侱徎悜逞骋庱睈裎騁",
+  "chèng": "秤牚稱竀穪",
+  "chi": "麶",
+  "chī": "吃妛哧彨胵蚩鸱瓻眵笞粚喫訵嗤媸摛痴絺樆噄殦瞝誺噭螭鴟鵄癡魑齝攡彲黐",
+  "chí": "弛池驰迟坻沶狋茌迡持柢竾荎俿歭耛菭蚳赿筂貾遅跢遟馳箈箎墀徲漦踟遲篪謘鍉邌鶗鶙",
+  "chǐ": "叺伬扡呎肔侈卶齿垑奓拸胣恥耻蚇袳豉欼歯袲裭誃鉹褫齒",
+  "chì": "彳叱斥佁杘灻赤饬侙抶勅恜柅炽勑捇眙翄翅敕烾啻湁飭傺痸腟誃鉓雴憏瘈翤遫銐慗慸瘛翨熾懘趩鶒鷘",
+  "chōng": "充忡沖茺浺珫翀舂嘃摏徸憃憧衝罿艟蹖",
+  "chóng": "虫崈崇痋隀漴褈緟蝩蟲爞",
+  "chǒng": "宠埫寵",
+  "chòng": "铳揰銃",
+  "chou": "鮘",
+  "chōu": "抽牰婤掫紬搊跾瘳篘醔犨犫",
+  "chóu": "怞俦诪帱栦惆梼畤紬绸菗椆畴絒愁皗稠筹裯詶酧酬綢踌儔雔嚋嬦幬懤盩薵檮燽雠疇籌躊醻讐讎雦",
+  "chǒu": "丒丑吜杽杻偢瞅醜矁魗",
+  "chòu": "臰遚殠",
+  "chu": "橻",
+  "chū": "出岀初榋摢摴樗貙櫖齣",
+  "chú": "刍除芻耝厨滁蒢豠锄媰耡蒭蜍趎鉏雏犓廚篨鋤橱幮櫉藸蟵躇雛櫥蹰鶵躕",
+  "chǔ": "処杵础椘處储楮禇楚褚濋儲檚璴礎齭齼",
+  "chù": "亍処竌怵泏绌豖欪炪竐俶敊埱珿絀菆傗鄐慉搐滀触閦儊嘼諔憷斶歜臅黜觸矗",
+  "chuā": "欻",
+  "chuǎ": "",
+  "chuà": "",
+  "chuāi": "搋",
+  "chuái": "膗",
+  "chuǎi": "",
+  "chuài": "啜欼膪踹",
+  "chuān": "巛川氚穿猭瑏",
+  "chuán": "舡舩剶船圌遄傳椯椽歂暷篅膞輲",
+  "chuǎn": "舛荈喘堾歂僢踳",
+  "chuàn": "汌串玔钏釧猭賗鶨",
+  "chuāng": "刅疮窓創窗牎摐牕瘡窻",
+  "chuáng": "床牀喠噇朣橦",
+  "chuǎng": "闯傸磢闖",
+  "chuàng": "怆刱剏剙創愴",
+  "chuī": "吹炊龡",
+  "chuí": "垂倕埀桘陲捶菙圌搥棰腄槌硾锤箠錘鎚顀",
+  "chuǐ": "",
+  "chuì": "惙",
+  "chūn": "芚旾杶春萅媋暙椿槆瑃箺蝽橁輴櫄鰆鶞",
+  "chún": "纯肫陙唇浱純莼脣湻犉滣蒓鹑漘蓴膞醇醕錞鯙鶉",
+  "chǔn": "朐偆萶惷睶賰蠢",
+  "chuō": "逴趠踔戳繛",
+  "chuò": "辶吷辵拺哾娖娕啜婥婼惙涰淖辍酫綽踀箹輟鋜龊擉磭餟繛歠鏃嚽齪鑡孎",
+  "da": "繨",
+  "dā": "咑哒耷笚嗒搭褡噠墶撘鎝鎉",
+  "dá": "达迏迖迚呾妲怛沓垯炟羍荅荙畗剳匒惮畣笪逹溚詚達跶靼憚薘鞑燵蟽鐽韃龖龘",
+  "dǎ": "",
+  "dà": "亣汏眔",
+  "dāi": "呆呔獃懛",
+  "dǎi": "歹逮傣",
+  "dài": "代诒轪侢垈岱帒甙绐迨带怠柋殆玳贷帯貣軑埭帶紿蚮袋軚逮釱棣詒貸軩瑇跢廗箉叇曃緿蝳駘鮘鴏戴艜黛簤蹛瀻霴襶黱靆",
+  "dān": "丹妉単眈砃耼耽郸聃躭酖單媅愖殚瘅匰箪褝鄲頕儋勯擔殫甔癉襌簞聸",
+  "dǎn": "伔刐抌玬瓭胆衴疸紞赕亶馾撢撣賧燀黕膽皽黵",
+  "dàn": "旦但帎呾沊泹狚诞唌柦疍訑啗啖惔惮淡萏蛋啿弾氮腅蜑觛亶瘅窞蓞誕僤噉馾髧儋嘾彈憚醈憺擔澹禫餤駳鴠癉膻癚嚪繵贉霮饏黮",
+  "dāng": "珰裆筜當儅噹澢璫襠簹艡蟷鐺闣",
+  "dǎng": "党谠當擋譡黨攩灙欓讜",
+  "dàng": "氹凼圵宕砀垱荡档偒菪婸崵愓瓽逿嵣當雼潒碭儅瞊蕩趤壋擋檔璗盪礑簜蘯闣",
+  "dāo": "刀刂忉朷氘舠釖鱽裯魛螩",
+  "dáo": "捯",
+  "dǎo": "导岛陦島捣祷禂搗隝嘄嶋嶌槝導隯壔嶹擣蹈檮禱",
+  "dào": "辺到帱悼梼焘盗菿椡盜絩道稲箌翢噵稻艔衜檤衟幬燾翿軇瓙纛",
+  "de": "旳",
+  "dē": "嘚",
+  "dé": "恴淂蚮悳惪棏锝徳德鍀",
+  "dēi": "嘚",
+  "děi": "",
+  "dèn": "扥扽",
+  "dēng": "灯登豋僜噔嬁燈璒竳簦艠蹬",
+  "děng": "等戥",
+  "dèng": "邓凳鄧隥墱嶝憕瞪磴镫櫈瀓覴鐙",
+  "dī": "氐仾低奃岻彽秪袛啲埞羝隄堤渧趆滴碮樀磾鞮鏑",
+  "dí": "扚廸旳狄肑籴苖迪唙敌浟涤荻啇梑笛觌靮滌蓧馰髢嘀嫡翟蔋蔐頔敵篴镝嚁藡豴蹢鏑糴覿鸐",
+  "dǐ": "氐厎坘诋邸阺呧坻弤抵拞枑柢牴砥掋菧觝詆軧楴聜骶鯳",
+  "dì": "坔旳杕玓怟枤苐俤哋埅帝埊娣逓递偙梊焍珶眱祶第菂谛釱媂揥棣渧睇缔蒂遆僀楴禘腣遞鉪墆墑墬嵽摕疐碲蔕蝃遰慸甋締蝭嶳諦諟踶螮",
+  "diǎ": "嗲",
+  "diān": "佔敁掂傎厧嵮滇槇槙瘨窴颠蹎巅顚顛癫巓攧巔癲齻",
+  "dián": "",
+  "diǎn": "典奌点婰敟椣跕碘蒧蕇踮點嚸",
+  "diàn": "电阽坫店垫扂玷痁钿婝惦淀奠琔殿痶蜔鈿電墊壂橂橝澱靛磹癜簟驔",
+  "diāo": "刁叼汈刟虭凋奝弴彫蛁椆琱貂碉鳭瞗錭雕鮉鲷簓鼦鯛鵰",
+  "diǎo": "扚屌鳥",
+  "diào": "弔伄吊钓盄窎訋掉釣铞铫絩鈟竨蓧誂銚銱雿魡調瘹窵鋽藋鑃",
+  "diē": "爹跌褺",
+  "dié": "佚怢泆苵迭咥垤峌恎挕昳柣绖胅瓞眣耊啑戜眰谍喋堞崼幉惵揲畳絰耋臷詄趃跕軼镻叠楪殜牃牒跮嵽碟蜨褋槢艓蝶疂諜蹀鴩螲鲽鞢曡疉鰈疊氎",
+  "diě": "",
+  "diè": "哋",
+  "dīng": "仃叮奵帄玎甼町疔盯耵虰酊釘靪",
+  "dǐng": "奵艼顶酊頂鼎嵿鼑濎薡鐤",
+  "dìng": "订忊饤矴定訂釘飣啶掟萣铤椗腚碇锭碠聢蝊鋌錠磸顁",
+  "diū": "丟丢铥颩銩",
+  "dōng": "东冬咚岽東苳昸氡倲鸫埬娻崬崠涷笗菄徚氭蝀鮗鼕鯟鶇鶫",
+  "dǒng": "揰董墥嬞懂箽蕫諌",
+  "dòng": "动冻侗垌姛峒恫挏栋洞狪胨迵凍戙烔胴動娻崠硐棟湩絧腖働勭燑駧霘",
+  "dōu": "吺枓侸唗兜兠蔸橷瞗篼",
+  "dóu": "唞",
+  "dǒu": "乧阧抖钭陡蚪鈄",
+  "dòu": "吋豆郖浢狵荳逗饾鬥梪毭渎脰酘痘閗窦鬦鋀餖斣瀆闘竇鬪鬬鬭",
+  "dū": "厾剢阇嘟督醏闍",
+  "dú": "独涜渎椟牍犊裻読獨錖凟匵嬻瀆櫝殰牘犢瓄皾騳黩讀豄贕韣髑鑟韇韥黷讟",
+  "dǔ": "竺笃堵暏琽赌睹覩賭篤",
+  "dù": "芏妒杜妬姤荰秺晵渡靯镀螙斁殬鍍蠧蠹",
+  "duān": "耑偳剬媏端褍鍴",
+  "duǎn": "短",
+  "duàn": "段断塅缎葮椴煅瑖腶碫锻緞毈簖鍛斷躖籪",
+  "duī": "垖堆塠痽磓镦鴭鐓鐜",
+  "duǐ": "啍頧",
+  "duì": "队对兊兌対杸祋怼陮敓敚隊碓綐對憞憝濧濻薱懟瀢瀩譈譵轛",
+  "dūn": "吨惇蜳墪墫墩撴獤噸撉橔犜礅蹾蹲驐",
+  "dǔn": "盹趸躉",
+  "dùn": "伅坉庉忳沌炖盾砘逇钝顿遁鈍楯頓碷遯憞潡燉踲",
+  "duo": "",
+  "duō": "夛多咄哆畓剟掇敠敪毲裰跢嚉",
+  "duó": "仛夺沰铎剫敓敚喥痥鈬奪凙踱鐸",
+  "duǒ": "朵朶哚垜挆埵崜缍袳椯硾趓躱躲綞亸軃鬌嚲奲",
+  "duò": "杕杝刴剁枤沲陊陏饳垜尮挆挅柁柂柮桗舵隋媠惰隓跢跥跺飿馱墮憜駄墯隳鵽",
+  "ē": "妸妿娿婀屙痾",
+  "é": "讹吪囮迗俄峉哦娥峩峨涐莪珴訛皒睋鈋锇鹅磀誐鋨頟额魤額鵞鵝譌",
+  "ě": "枙娿砨惡頋噁騀鵈",
+  "è": "厄戹歺岋阨呃扼苊阸呝枙砐轭咢咹垩姶洝砈匎敋蚅饿偔卾堊娾悪硆谔軛鄂阏堮堨崿惡愕湂萼豟軶遌遏鈪廅搕搤搹琧痷腭僫蝁锷鹗蕚遻頞颚餓噩擜覨諤閼餩鍔鳄歞顎礘櫮鰐鶚鰪讍齃鑩齶鱷",
+  "ēi": "诶欸誒",
+  "éi": "诶欸誒",
+  "ěi": "诶欸誒",
+  "èi": "诶欸誒",
+  "ēn": "奀恩蒽煾",
+  "ěn": "峎",
+  "èn": "摁",
+  "ēng": "鞥",
+  "ér": "儿而児杒侕兒陑峏洏耏荋栭胹唲梕袻鸸粫聏輀鲕隭髵鮞鴯轜",
+  "ěr": "尒尓尔耳迩洱饵栮毦珥铒衈爾鉺餌駬薾邇趰",
+  "èr": "二弍弐佴刵咡贰貮貳誀樲髶",
+  "fā": "冹沷発發彂醗醱",
+  "fá": "乏伐姂坺垡浌疺罚茷阀栰笩傠筏瞂罰閥墢罸橃藅",
+  "fǎ": "佱法峜砝鍅灋",
+  "fà": "珐琺髪蕟髮",
+  "fān": "帆忛犿拚畨勫噃嬏幡憣旙旛繙翻藩轓颿籓飜鱕",
+  "fán": "凢凣凡匥杋柉矾籵钒舤烦舧笲釩棥煩緐墦樊蕃燔璠膰薠襎羳蹯瀿礬蘩鐇鐢蠜鷭",
+  "fǎn": "反払仮返橎",
+  "fàn": "氾犯奿汎泛饭范贩畈訉軓婏桳梵盕笵販軬飰飯滼嬎範輽瀪",
+  "fāng": "匚方邡汸芳枋牥祊钫淓蚄堏趽鈁錺鴋",
+  "fáng": "防妨房肪埅鲂魴",
+  "fǎng": "仿访彷纺昉昘瓬眆倣旊眪紡舫訪髣鶭",
+  "fàng": "放趽",
+  "fēi": "飞妃非飛啡婓婔渄绯扉斐暃猆靟裶緋蜚霏鲱餥馡騑騛鯡飝",
+  "féi": "肥疿淝腓痱蜰",
+  "fěi": "朏胐匪诽奜悱斐棐榧翡蕜誹篚",
+  "fèi": "吠犻芾废杮柹沸狒肺胏昲胇费俷剕厞疿砩陫屝笰萉廃費痱镄廢曊橃橨癈鼣濷蟦櫠鐨靅",
+  "fēn": "吩帉纷芬昐氛玢砏竕衯紛翂梤棻訜躮酚鈖雰馚朆餴饙",
+  "fén": "坆坟妢岎汾朌枌炃羒蚠蚡棼焚蒶隫墳幩濆獖蕡魵鳻橨燌燓豮鼢羵鼖豶轒鐼馩黂",
+  "fěn": "粉黺",
+  "fèn": "坋弅奋忿秎偾愤粪僨憤獖瞓奮橨膹糞鲼瀵鱝",
+  "fēng": "丰仹凨凬夆妦沣沨凮枫炐封疯盽砜風埄峰峯莑偑桻烽琒堼崶渢猦葑锋楓犎蜂熢瘋碸僼篈鄷鋒檒豐鎽鏠酆寷灃蘴霻蠭靊飌麷",
+  "féng": "夆浲逢堸溄馮摓漨綘艂縫",
+  "fěng": "讽風覂唪諷",
+  "fèng": "凤奉俸桻湗焨煈赗鳯鳳鴌縫賵",
+  "fó": "仏仸坲梻",
+  "fōu": "",
+  "fóu": "紑",
+  "fǒu": "缶妚炰缹缻殕雬鴀",
+  "fū": "伕邞呋妋抙姇枎玞肤怤柎砆胕荂衭娐尃捊荴旉琈紨趺酜麸稃跗鈇筟綒鄜孵粰蓲敷膚鳺麩糐麬麱懯璷",
+  "fú": "乀巿弗払伏凫甶刜孚扶芣芙芾咈姇宓岪帗怫枎泭绂绋苻茀俘垘枹柫柭氟洑炥玸畉畐祓罘胕茯郛韨鳬哹垺栿浮畗砩莩蚨袚匐桴涪烰琈符笰紱紼翇艴菔虙袱幅棴絥罦葍福綍艀蜉辐鉘鉜颫鳧榑稪箁箙粰褔豧韍颰幞澓蝠髴鴔諨踾輻鮄癁襆鮲黻襥鵩纀鶝",
+  "fǔ": "阝呒抚甫乶府弣拊斧俌俛柎郙俯蚥釡釜捬脯辅椨焤盙腑滏蜅腐輔嘸撫頫鬴簠黼",
+  "fù": "讣付妇负附咐坿彿竎阜驸复峊柎洑祔訃負赴蚥袝偩冨婏婦捬紨蚹傅媍富復秿萯蛗覄詂赋椱缚腹鲋榑禣複褔赙緮蕧蝜蝮賦駙嬔縛輹鮒賻鍑鍢鳆覆馥鰒",
+  "gā": "旮伽夾嘎嘠",
+  "gá": "钆軋尜釓嘎嘠噶錷",
+  "gǎ": "尕玍朒嘎嘠",
+  "gà": "尬魀",
+  "gāi": "侅该郂陔垓姟峐荄晐赅畡祴絯隑該豥賅賌",
+  "gǎi": "忋改絠",
+  "gài": "丐乢匄匃杚钙摡溉葢鈣戤概槩蓋漑槪瓂",
+  "gān": "甘忓迀攼玕肝咁坩泔矸苷柑玵竿疳酐粓凲尲尴筸漧鳱尶尷魐",
+  "gǎn": "仠芉皯秆衦赶敢桿稈感澉趕橄擀澸篢簳鳡鱤",
+  "gàn": "佄旰汵盰绀倝凎淦紺詌骭幹榦檊簳贑赣贛灨",
+  "gāng": "冈冮刚纲肛岡牨疘矼缸剛罡堈崗掆釭棡犅堽摃碙綱罁鋼鎠",
+  "gǎng": "岗犺崗",
+  "gàng": "焵焹筻槓鋼戅戆戇",
+  "gāo": "皋羔羙高皐髙臯睪槔睾槹獋橰篙糕餻櫜韟鷎鼛鷱",
+  "gǎo": "夰杲菒稁搞缟槀槁稾稿镐縞藁檺藳鎬",
+  "gào": "吿告勂诰郜峼祮祰锆筶禞誥鋯",
+  "gē": "戈仡圪扢犵纥戓肐牫咯紇饹哥袼鸽割彁滒戨歌鴚擱謌鴿鎶",
+  "gé": "呄佮佫匌挌阁革敋格鬲愅猲臵蛒裓隔颌嗝塥滆觡搿槅膈閣閤獦镉鞈韐骼臈諽輵擱鮥鮯櫊鎑鎘韚轕鞷騔",
+  "gě": "個哿笴舸嘅嗰蓋鲄",
+  "gè": "亇吤茖虼個硌铬箇鉻",
+  "gěi": "給",
+  "gēn": "根跟",
+  "gén": "哏",
+  "gěn": "",
+  "gèn": "亙亘艮茛揯搄",
+  "gēng": "刯庚畊浭耕菮椩焿絙絚赓鹒緪縆羮賡羹鶊",
+  "gěng": "郠哽埂峺挭绠耿莄梗綆鲠骾鯁",
+  "gèng": "堩緪縆",
+  "gōng": "工弓公厷功攻杛侊糿糼肱宫紅宮恭躬龚匑塨幊愩觥躳慐匔碽篢髸觵龏龔",
+  "gǒng": "廾巩汞拱唝拲栱珙嗊輁澒銾鞏",
+  "gòng": "贡羾唝貢嗊愩慐熕",
+  "gōu": "佝沟芶钩痀袧缑鈎溝鉤緱褠篝簼鞲韝",
+  "gǒu": "芶岣狗苟枸玽耉耇笱耈蚼豿",
+  "gòu": "呴坸构诟购垢姤冓啂夠够傋訽媾彀搆詬遘雊構煹觏撀糓覯購",
+  "gū": "杚呱咕姑孤沽泒苽巭巬柧轱唃唂罛鸪笟菇菰蛄蓇觚軱軲辜酤稒鈲磆箍箛嫴篐橭鮕鴣",
+  "gú": "",
+  "gǔ": "夃古扢抇汩诂谷股牯罟羖逧钴傦啒淈脵蛊嗗尳愲詁馉毂賈鈷鼔鼓嘏榖皷鹘穀縎糓薣濲皼臌轂餶櫎瀔盬瞽鶻蠱",
+  "gù": "固怘故凅顾堌崓崮梏牿棝祻雇榾痼锢僱錮鲴鯝顧",
+  "guā": "瓜刮呱胍栝桰铦鸹歄煱颪趏劀緺銛諣踻銽颳鴰騧",
+  "guá": "",
+  "guǎ": "冎叧呙呱咼剐剮寡",
+  "guà": "卦坬诖挂啩掛罣袿絓罫褂詿",
+  "guāi": "乖",
+  "guái": "叏",
+  "guǎi": "拐枴柺罫箉",
+  "guài": "夬怪恠",
+  "guān": "关纶官矜覌倌矝莞涫棺蒄窤閞綸関瘝癏観闗鳏關鰥觀鱞",
+  "guǎn": "莞馆琯痯筦斡管輨璭舘錧館鳤",
+  "guàn": "卝毌丱贯泴覌悺惯掼淉貫悹祼慣摜潅遦樌盥罆雚観躀鏆灌爟瓘矔礶鹳罐觀鑵欟鱹鸛",
+  "guāng": "光灮炚炛炗咣垙姯挄洸茪桄烡珖胱硄僙輄潢銧黆",
+  "guǎng": "広犷廣獷臩",
+  "guàng": "俇桄逛臦撗",
+  "guī": "归圭妫规邽皈茥闺帰珪胿亀硅窐袿規媯廆椝瑰郌嫢摫閨鲑嬀嶲槣槻槼鳺璝瞡龜鮭巂歸雟鬶騩櫰櫷瓌蘬鬹",
+  "guǐ": "宄氿朹轨庋佹匦诡陒垝姽恑攱癸軌鬼庪祪軓匭晷湀蛫觤詭厬簋蟡",
+  "guì": "攰刿刽昋炅攱贵桂桧匮眭硊趹椢猤筀貴溎蓕跪匱瞆劊劌嶡撌槶螝樻檜瞶禬簂櫃癐襘鐀鳜鞼鑎鱖鱥",
+  "gǔn": "丨衮惃硍绲袞辊滚蓘裷滾緄蔉磙緷輥鲧鮌鯀",
+  "gùn": "睔謴",
+  "guo": "",
+  "guō": "呙咼咶埚郭啯堝崞渦猓楇聒鈛锅墎瘑嘓彉濄蝈鍋彍蟈懖矌",
+  "guó": "囗囯囶囻国圀敋喐國帼掴腘摑幗慖漍聝蔮膕虢簂馘",
+  "guǒ": "果惈淉菓馃椁褁槨粿綶蜾裹輠餜櫎",
+  "guò": "過腂鐹",
+  "hā": "虾紦铪鉿蝦",
+  "há": "",
+  "hǎ": "奤",
+  "hà": "",
+  "hāi": "咍嗨",
+  "hái": "郂孩骸還嚡",
+  "hǎi": "海胲烸塰酼醢",
+  "hài": "亥妎拸骇害氦猲絯嗐餀駭駴饚",
+  "han": "兯爳",
+  "hān": "犴佄顸哻蚶酣頇嫨谽憨馠魽歛鼾",
+  "hán": "邗含汵邯函肣凾虷唅圅娢浛笒崡晗梒涵焓琀寒嵅韩椷甝筨馯蜬澏鋡韓",
+  "hǎn": "丆罕浫喊豃闞",
+  "hàn": "仠厈汉屽忓扞闬攼旰旱肣唅垾悍捍涆猂莟晘焊菡釬閈皔睅傼蛿颔馯撖漢蔊蜭鳱暵熯輚銲鋎憾撼翰螒頷顄駻譀雗瀚鶾",
+  "hāng": "",
+  "háng": "邟妔苀迒斻杭垳绗桁笐航蚢颃裄貥筕絎頏魧",
+  "hàng": "忼沆笐",
+  "hāo": "茠蒿嚆薅薧",
+  "háo": "乚毜呺竓皋蚝毫椃嗥獆號貉噑獔豪嘷獋諕儫嚎壕濠籇蠔譹",
+  "hǎo": "郝",
+  "hào": "昊侴昦秏哠恏悎浩耗晧淏傐皓鄗滈滜聕號暠暤暭澔皜皞镐曍皡薃皥藃鎬颢灏顥鰝灝",
+  "hē": "诃抲欱訶嗬蠚",
+  "hé": "禾纥呙劾咊咼姀河郃峆曷柇狢盇籺紇阂饸敆盉盍荷釛啝涸渮盒菏萂龁喛惒粭訸颌楁毼澕蓋詥貈貉鉌阖鲄朅熆閡閤餄鹖麧噈頜篕翮螛魺礉闔鞨齕覈鶡皬鑉龢",
+  "hě": "",
+  "hè": "咊抲垎贺哬袔隺寉焃惒猲賀嗃煂碋熇褐赫鹤翯嚇壑癋謞燺爀鶮鶴靍靎鸖靏",
+  "hēi": "黒黑嗨潶",
+  "hén": "拫痕鞎",
+  "hěn": "佷哏很狠詪噷",
+  "hèn": "恨噷",
+  "hēng": "亨哼悙涥脝",
+  "héng": "姮恆恒桁烆珩胻鸻撗橫衡鴴鵆蘅鑅",
+  "hèng": "悙啈橫",
+  "hng": "哼",
+  "hōng": "叿吽呍灴轰訇烘軣揈渹焢硡谾薨輷嚝鍧巆轟",
+  "hóng": "厷仜弘叿妅屸吰宏汯玒瓨纮闳宖泓玜苰垬娂沗洪竑紅羾荭虹浤浲紘翃耾硔紭谹鸿渱溄竤粠葓葒鈜閎綋翝谼潂鉷鞃魟篊鋐彋霐黉霟鴻黌",
+  "hǒng": "唝晎嗊愩慐",
+  "hòng": "讧訌閧撔澒銾蕻闂鬨闀",
+  "hōu": "齁",
+  "hóu": "矦鄇喉帿猴葔瘊睺銗篌糇翭骺翵鍭餱鯸",
+  "hǒu": "吼吽犼呴",
+  "hòu": "后郈厚垕後洉矦茩逅候堠豞鲎鲘鮜鱟",
+  "hū": "乎乯匢虍芴呼垀忽昒曶泘苸恗烀芔轷匫唿惚淴虖軤雽嘑寣滹雐幠戯歑戱膴戲謼",
+  "hú": "囫抇弧狐瓳胡壶隺壷斛焀喖壺媩搰湖猢絗葫鹄楜煳瑚瓡嘝蔛鹕鹘槲箶縎蝴衚魱縠螜醐頶觳鍸餬礐鵠瀫鬍鰗鶘鶦鶻鶮",
+  "hǔ": "乕汻虎浒俿淲萀琥虝滸錿鯱",
+  "hù": "互弖戶戸户冱芐帍护沍沪岵怙戽昈曶枑姱怘祜笏粐婟扈瓠楛嗃嗀綔鄠雽嫭嫮摢滬蔰槴熩鳸濩簄豰鍙嚛鹱觷護鳠頀鱯鸌",
+  "huā": "吪芲花砉埖婲華椛硴蒊嘩糀誮錵蘤",
+  "huá": "呚姡骅華釪釫铧滑猾嘩搳撶劃磆蕐螖鋘譁鏵驊鷨",
+  "huà": "夻杹枠画话崋桦華婳畫嬅畵觟話劃摦樺嫿槬澅諙諣黊繣舙譮",
+  "huái": "怀佪徊淮槐褢踝懐褱懷瀤櫰耲蘹",
+  "huài": "咶壊壞蘾",
+  "huān": "欢犿狟貆歓鴅懁鵍酄嚾孉懽獾歡讙貛驩",
+  "huán": "环郇峘洹狟荁垸桓萈萑堚寏絙雈獂綄羦蒝貆锾瞏圜嬛寰澴缳還阛環豲鍰雚镮鹮糫繯鐶闤鬟瓛",
+  "huǎn": "睆缓緩",
+  "huàn": "幻奂肒奐宦唤换浣涣烉患梙焕逭喚喛嵈愌換渙痪煥瑍綄豢漶瘓槵鲩擐澣藧鯇攌嚾轘鯶鰀",
+  "huāng": "巟肓荒衁宺朚塃慌",
+  "huáng": "皇偟凰隍黄喤堭媓崲徨惶揘湟葟遑黃楻煌瑝墴潢獚锽熿璜篁艎蝗癀磺穔諻簧蟥鍠餭鳇趪韹鐄騜鰉鱑鷬",
+  "huǎng": "汻怳恍炾宺晄奛谎幌詤熀熿縨謊兤櫎爌",
+  "huàng": "愰滉榥曂皝鎤皩",
+  "hui": "",
+  "huī": "灰灳诙咴恢拻挥洃虺袆晖烣珲豗婎媈揮翚辉隓暉椲楎煇琿睢禈詼墮幑睳褘噅噕撝翬輝麾徽隳瀈蘳孈鰴",
+  "huí": "囘回囬佪廻廽恛洄茴迴烠蚘逥痐缋蛕蛔蜖藱鮰繢",
+  "huǐ": "虺悔烠毀毁螝毇檓燬譭",
+  "huì": "卉屷屶汇讳泋哕浍绘芔荟诲恚恵桧烩贿彗晦秽喙廆惠湏絵缋翙阓匯彚彙會滙詯賄颒僡嘒瘣蔧誨銊圚寭慧憓暳槥潓潰蕙噦嬒徻橞殨澮濊獩璤薈薉諱頮檅檜燴璯篲藱餯嚖懳瞺穢繢蟪櫘繪翽譓儶鏸闠鐬靧譿顪",
+  "hūn": "昏昬荤婚惛涽焄阍棔殙湣葷睧睯蔒閽轋",
+  "hún": "忶浑珲馄渾湷琿魂餛鼲",
+  "hǔn": "",
+  "hùn": "诨俒眃倱圂婫掍焝溷尡慁睴觨諢",
+  "huō": "吙秴耠劐攉騞",
+  "huó": "佸姡活秮秳趏",
+  "huǒ": "灬火伙邩钬鈥漷煷夥",
+  "huò": "沎或货咟俰捇眓获閄剨喐掝祸貨惑旤湱禍漷窢蒦锪嚄奯擭濊濩獲篧鍃霍檴謋雘矆礊穫镬嚯彟瀖耯艧藿蠖嚿曤臛癨矐鑊韄靃彠",
+  "jī": "丌讥击刉叽饥乩刏圾机玑肌芨矶鸡枅苙咭剞唧姬屐积笄飢基庴喞嵆嵇幾攲敧朞犄筓缉赍嗘畸稘跻鳮僟毄箕綨緁銈嘰撃槣樭畿緝觭諅賫踑躸齑墼撽機激璣禨積錤隮懠擊磯簊羁賷櫅耭雞譏韲鶏譤鐖饑癪躋鞿魕鶺鷄羇虀鑇覉鑙齏羈鸄覊",
+  "jí": "乁亽亼及尐伋吉岌彶忣汲级即极皀亟佶诘郆卽叝姞急皍笈級堲揤疾觙偮卙唶楖淁焏谻戢棘極殛湒集塉嫉愱楫蒺蝍趌辑槉耤膌銡嶯潗濈瘠箿蕀蕺諔趞踖鞊鹡檝螏輯磼簎藉襋蹐鍓艥籍轚鏶霵齎躤雧",
+  "jǐ": "己丮妀屰犱泲虮挤脊掎済鱾幾戟給嵴麂魢撠憿橶擠濟穖蟣",
+  "jì": "彐彑旡计记伎坖妓忌技汥芰际剂季哜垍既洎紀茍茤荠計迹剤畟紒继觊記偈寄寂帺徛悸旣梞済绩塈惎臮葪蔇兾勣痵継蓟裚跡際鬾魝摖暨漃漈禝稩穊誋跽霁魥鲚暩瞉稷諅鲫冀劑曁禨穄薊襀髻嚌懠檕濟穖績繋罽薺覬鮆檵櫅櫭璾蹟鯽鵋齌廭懻癠穧繫蘎骥鯚瀱繼蘮鱀蘻霽鰶鰿鷑鱭驥",
+  "jia": "",
+  "jiā": "加乫伽夾宊抸佳拁泇徍枷毠浃珈哿埉挾浹痂梜笳耞袈傢猳葭跏椵犌腵鉫嘉擖镓糘豭貑鴐鎵麚",
+  "jiá": "圿夾忦扴郏拮荚郟唊恝莢戛脥袷铗戞猰蛱裌颉颊蛺鋏頬頰鴶鵊",
+  "jiǎ": "甲岬叚玾胛斚钾婽徦斝椵賈鉀榎槚瘕檟",
+  "jià": "驾架嫁幏賈榢價稼駕",
+  "jiān": "戋奸尖幵坚歼冿戔玪肩艰姧姦兼堅帴惤猏笺菅菺豜傔揃湔牋犍缄葌閒間雃靬搛椷椾煎瑊睷碊缣蒹豣漸監箋蔪樫熞稴緘蕑蕳鋑鲣鳽鹣熸篯縑鋻艱鞬餰馢麉瀐濺鞯鳒鵑殱礛籈鵳攕瀸鰔櫼殲譼鰜鶼礷籛韀鰹囏虃鑯韉",
+  "jiǎn": "囝拣枧俭柬茧倹挸捡笕减剪帴揵梘检湕趼堿揀揃検減睑硷裥詃锏弿暕瑐筧简絸谫彅戩戬碱儉翦鋄撿橏篯檢藆襇襉謇蹇瞼礆簡繭謭鎫鬋鰎鹸瀽蠒鐗鐧鹻籛譾襺鹼",
+  "jiàn": "件見侟建饯剑洊牮荐贱俴健剣栫涧珔舰剱徤揵袸谏釰釼寋旔朁楗毽腱臶跈践閒間賎鉴键僣僭榗槛漸監劎劍墹澗箭糋諓賤趝踐踺劒劔薦諫鋻鍵餞瞷瞯磵礀螹鍳鞬擶檻濺繝瀳覵覸譛鏩聻艦轞鐱鑒鑑鑬鑳",
+  "jiāng": "江姜茳畕豇將葁畺摪翞僵漿螀壃缰薑橿殭螿鳉疅礓繮韁鱂",
+  "jiǎng": "讲奖桨傋塂蒋奨奬蔣槳獎耩膙講顜",
+  "jiàng": "匞匠夅弜洚绛將弶強絳畺酱勥滰嵹摾漿彊犟糡醤糨醬櫤謽",
+  "jiāo": "艽交郊姣娇峧浇茮茭骄胶敎喬椒焦蛟跤僬嘐虠鲛嬌嶕嶣憍憢澆膠蕉燋膲礁穚鮫鵁鹪簥蟭轇鐎驕鷦鷮",
+  "jiáo": "矯",
+  "jiǎo": "臫佼恔挢狡绞饺捁晈烄笅皎脚釥铰搅湫筊絞勦敫湬煍腳賋僥摎摷暞踋鉸餃儌劋徺撟撹樔徼憿敽敿燞曒璬矯皦蟜繳譑孂纐攪灚鱎龣",
+  "jiào": "叫呌峤挍訆悎珓窌笅轿较敎斍覐窖筊覚滘較嘂嘄嘦斠漖酵噍嶠潐噭嬓徼獥癄藠趭轎醮灂覺譥皭釂",
+  "jie": "價",
+  "jiē": "阶疖哜皆袓接掲痎秸菨階喈喼嗟堦媘嫅椄湝結脻街裓楬煯瑎稭鞂擑蝔嚌癤謯鶛",
+  "jié": "卩卪孑尐讦扢刧刦劫岊昅杢刼劼杰疌衱诘拮洁狤迼倢桀桔桝洯紒莭訐偈偼啑婕崨捷掶袷袺傑媫嵑結絜蛣颉嵥搩楶滐睫節蜐詰趌跲鉣截榤碣竭蓵鲒嶱潔羯誱踕镼鞊頡幯擳嶻擮礍鍻鮚巀蠞蠘蠽",
+  "jiě": "姐毑媎觧飷檞",
+  "jiè": "丯介吤妎岕庎戒屆届斺玠畍界疥砎衸诫借悈紒蚧唶徣堺楐琾蛶觧骱犗耤誡褯魪嶰藉鎅鶡",
+  "jīn": "巾今仐斤钅竻釒金津矜砛荕衿觔埐珒矝紟惍琎菳堻琻筋釿璡鹶黅襟",
+  "jǐn": "侭卺巹紧堇婜菫僅厪谨锦嫤廑慬漌緊蓳馑槿瑾儘錦謹饉",
+  "jìn": "伒劤妗近进枃勁浕荩晉晋浸烬笒紟赆唫祲進煡臸僅寖搢溍缙靳墐嫤慬榗瑨盡馸僸凚歏殣觐噤嬐濅縉賮嚍壗嬧濜藎燼璶覲贐齽",
+  "jīng": "坕坙巠京泾经茎亰秔荊荆涇粇婛惊旍旌猄経菁晶稉腈葏睛粳經兢箐精綡聙鋞橸鲸鯨鶁鶄麖鼱驚麠",
+  "jǐng": "井丼阱刭坓宑汫汬肼剄穽殌儆頚幜憬擏澋璄憼暻璟璥頸蟼警",
+  "jìng": "劤妌弪径迳俓勁婙浄胫倞凈弳徑痉竞莖逕婧桱梷殑淨竟竫脛敬痙竧靓傹靖境獍誩踁静靚憼曔镜靜瀞鵛鏡競竸",
+  "jiōng": "冂冋坰扃埛扄浻絅銄駉駫蘏蘔",
+  "jiǒng": "冏囧泂炅迥侰炯逈浻烱絅煚窘颎綗臦僒煛熲澃褧燛顈臩",
+  "jiòng": "",
+  "jiū": "丩勼纠朻牞究糺鸠糾赳阄萛啾揂揪剹揫鳩摎稵樛鬏鬮",
+  "jiú": "",
+  "jiǔ": "九乆久乣氿奺汣杦灸玖糺舏韭紤酒镹韮",
+  "jiù": "匛旧臼咎疚柩柾倃捄桕匓厩救就廄廐舅僦廏慦殧舊鹫匶鯦麔欍齨鷲",
+  "jū": "凥伡抅車匊居岨泃狙苴驹俥毩疽眗砠罝陱娵婮崌掬梮涺揟椐毱琚腒趄跔跙锔裾雎艍蜛諊踘躹鋦駒據鋸鮈鴡檋鞠鞫鶋",
+  "jú": "局泦侷狊挶桔啹婅淗焗菊郹椈湨犑輂僪粷蓻跼閰趜鋦橘駶繘鵙蹫鵴巈蘜鶪鼰鼳驧",
+  "jǔ": "咀岨弆举枸矩莒挙椇筥榉榘蒟龃聥舉踽擧櫸齟欅襷",
+  "jù": "巨乬巪讵姖岠怇拒洰苣邭具怐怚拠昛歫炬珇秬钜俱倨倶剧烥粔耟蚷袓埧埾惧詎距焣犋跙鉅飓蒩虡豦锯寠愳窭聚駏劇勮屦踞鮔壉懅據澽窶螶遽鋸屨颶瞿貗簴躆醵忂懼鐻",
+  "juān": "姢勌娟捐涓朘梋焆瓹脧圏裐鹃勬鋑鋗镌鞙鎸鐫蠲",
+  "juǎn": "呟巻帣埍捲菤锩臇錈闂",
+  "juàn": "奆劵奍巻帣弮倦勌悁桊狷绢隽婘惓淃瓹眷鄄圏棬椦睊絭罥腃雋睠絹飬慻蔨嶲鋗餋獧縳巂羂讂",
+  "juē": "噘撅撧屩屫",
+  "jué": "亅孒孓决刔氒诀吷妜弡抉決芵叕泬玨玦挗珏疦砄绝虳埆捔欮蚗袦崫崛掘斍桷覐觖訣赽趹傕厥焳矞絕絶覚趉鈌劂瑴谲駃噊嶡嶥憰撅熦爴獗瘚蕝蕨觮鴂鴃噱壆憠橜橛燋璚爵臄镢櫭繘蟨蟩爑譎蹷蹶髉匷矍覺鐍鐝鳜灍爝觼穱彏戄攫玃鷢矡貜躩钁",
+  "juě": "蹶",
+  "juè": "誳",
+  "jūn": "军君均汮姰袀軍钧莙蚐桾皲鈞碅筠皸皹覠銁銞鲪頵麇龜鍕鮶麏麕",
+  "jǔn": "",
+  "jùn": "呁俊郡陖埈峻捃浚隽馂骏晙焌珺棞畯竣葰雋儁箘箟蜠賐寯懏餕燇濬駿鵘鵔鵕攈攟",
+  "kā": "喀",
+  "kǎ": "佧咔咯垰胩裃鉲",
+  "kāi": "开奒揩锎開鐦",
+  "kǎi": "凯剀垲恺闿豈铠凱剴嘅慨蒈塏嵦愷輆暟锴鍇鎧闓颽",
+  "kài": "忾炌欯欬烗勓愒愾濭鎎",
+  "kān": "刊栞勘龛堪嵁戡龕",
+  "kǎn": "凵冚坎扻侃砍莰偘埳惂欿歁槛輡檻顑竷轗",
+  "kàn": "衎崁墈阚瞰磡闞竷鬫矙",
+  "kāng": "忼闶砊粇康閌嫝嵻慷漮槺穅糠躿鏮鱇",
+  "káng": "",
+  "kǎng": "",
+  "kàng": "亢伉匟邟囥抗犺闶炕钪鈧閌",
+  "kāo": "尻嵪髛",
+  "kǎo": "丂攷考拷洘栲烤薧",
+  "kào": "洘铐犒銬鲓靠鮳鯌",
+  "kē": "匼柯牁牱珂科轲疴砢趷钶蚵铪嵙棵痾萪軻颏嗑搕犐稞窠鈳榼薖鉿颗樖瞌磕蝌頦窼醘顆髁礚",
+  "ké": "殻揢殼翗",
+  "kě": "岢炣渇嵑敤渴軻閜磆嶱",
+  "kè": "克刻剋勀勊客峇恪娔尅悈袔课堁氪骒愘硞缂衉嗑愙歁溘锞碦緙艐課濭錁礊騍",
+  "kēi": "剋尅",
+  "kēn": "",
+  "kěn": "肎肯肻垦恳啃龂豤貇龈墾錹懇",
+  "kèn": "珢掯硍裉褃",
+  "kēng": "劥阬坈坑妔挳硁殸牼揁硜铿硻摼誙銵鍞鏗",
+  "kěng": "硻",
+  "kōng": "倥埪崆悾涳椌硿箜躻錓鵼",
+  "kǒng": "孔倥恐悾",
+  "kòng": "矼控羫鞚",
+  "kōu": "抠芤眍眗剾彄摳瞘",
+  "kǒu": "口劶竘",
+  "kòu": "叩扣佝怐敂冦宼寇釦窛筘滱蔲蔻瞉簆鷇",
+  "kū": "扝刳矻郀朏枯胐哭桍秙窋堀圐跍窟骷鮬",
+  "kú": "",
+  "kǔ": "狜苦楛",
+  "kù": "库俈绔庫捁秙焅袴喾硞絝裤瘔酷廤褲嚳",
+  "kuā": "咵姱恗晇絓舿誇",
+  "kuǎ": "侉垮楇銙",
+  "kuà": "胯趶誇跨骻",
+  "kuǎi": "蒯擓",
+  "kuài": "巜凷圦块快侩郐哙浍狯脍欳塊蒉會筷駃鲙儈墤鄶噲廥澮獪璯膾旝糩鱠",
+  "kuān": "宽寛寬臗髋鑧髖",
+  "kuǎn": "梡欵款歀窽窾",
+  "kuàn": "",
+  "kuāng": "匡迋劻诓邼匩哐恇洭硄筐筺誆軭",
+  "kuáng": "忹抂狅狂诳軖軠誑鵟",
+  "kuǎng": "夼儣懭",
+  "kuàng": "卝丱邝圹纩况旷岲況矿昿贶框眖砿眶絋絖貺軦鉱鋛鄺壙黋懬曠爌矌礦穬纊鑛",
+  "kuī": "亏刲岿悝盔窥聧窺虧顝闚巋",
+  "kuí": "奎晆逵鄈隗馗喹揆葵骙戣暌楏楑魁睽蝰頯櫆藈鍨鍷騤夔蘷巙虁犪躨",
+  "kuǐ": "尯煃跬頍磈蹞",
+  "kuì": "尯胿匮喟媿愧愦蒉馈匱瞆嘳嬇憒潰篑聭聩蕢殨膭謉瞶餽簣聵籄饋",
+  "kūn": "坤昆堃堒婫崑崐晜猑菎裈焜琨髠裩貇锟髡鹍潉蜫褌髨熴瑻醌錕鲲騉鯤鵾鶤",
+  "kǔn": "悃捆阃壸梱祵硱稇裍壼稛綑閫閸",
+  "kùn": "困涃睏",
+  "kuò": "扩拡挄适秮秳铦筈萿葀蛞阔廓漷銛噋銽頢髺擴濶闊鞟韕霩鞹鬠",
+  "la": "鞡",
+  "lā": "垃柆砬菈搚磖邋",
+  "lá": "旯剌砬揦磖嚹",
+  "lǎ": "喇藞",
+  "là": "剌翋揦溂揧楋瘌蜡蝋辢辣蝲臈擸攋爉臘鬎櫴瓎镴鯻蠟鑞",
+  "lái": "来來俫倈崃徕涞莱郲婡崍庲徠梾淶猍萊逨棶琜筙铼箂錸騋鯠鶆麳",
+  "lǎi": "襰",
+  "lài": "疠娕徕唻婡徠赉睐睞赖誺賚濑賴頼癘顂癞鵣攋瀨瀬籁藾櫴癩籟",
+  "lán": "兰岚拦栏啉婪惏嵐葻阑暕蓝谰厱澜褴儖斓篮懢燣燷藍襕镧闌璼幱襤譋攔瀾灆籃繿蘫蘭斕欄襴囒灡籣欗讕躝襽鑭韊",
+  "lǎn": "览浨揽缆榄漤罱醂壈懒覧擥嬾懶孄覽孏攬灠欖爦顲纜",
+  "làn": "坔烂滥燗嚂壏濫爁爛瓓爤爦糷钄",
+  "lāng": "啷",
+  "láng": "勆郞哴欴狼嫏廊斏桹琅蓈榔瑯硠稂锒筤艆蜋郒樃螂躴鋃鎯駺",
+  "lǎng": "崀朗朖烺塱蓢誏朤",
+  "làng": "埌浪莨阆筤蒗誏閬",
+  "lāo": "捞粩撈",
+  "láo": "労劳牢窂哰崂浶勞痨铹僗嘮嶗憦憥朥癆磱簩蟧醪鐒顟髝",
+  "lǎo": "耂老佬咾恅狫荖栳珯硓铑蛯銠鮱轑",
+  "lào": "涝絡嗠耢酪嫪嘮憦樂澇躼橯耮軂",
+  "le": "饹",
+  "lē": "嘞",
+  "lè": "仂阞叻忇扐氻艻牞玏泐竻砳楽韷餎樂簕鳓鰳鱳",
+  "lei": "嘞",
+  "lēi": "",
+  "léi": "絫雷嫘缧蔂樏畾磥檑縲攂礌镭櫑瓃羸礧纍罍蘲鐳轠儽鑘靁虆鱩欙纝鼺",
+  "lěi": "厽耒诔垒洡塁絫傫誄瘣樏磊蕌磥蕾儡壘癗礌藟櫑櫐矋礨礧灅蠝蘽讄壨鑸鸓",
+  "lèi": "泪洡类涙淚祱絫酹銇頛頪錑攂颣類礧纇蘱禷",
+  "lēng": "稜",
+  "léng": "唥崚塄楞碐稜薐",
+  "lěng": "冷",
+  "lèng": "倰堎愣睖踜",
+  "li": "",
+  "lī": "",
+  "lí": "刕杝厘柂剓狸离荲骊悡梨梸犁琍菞喱棃犂鹂剺漓睝筣缡艃蓠嫠孷樆璃盠竰貍犛糎蔾褵鋫鲡黎篱縭罹錅蟍謧醨嚟藜邌釐離鯏斄瓈蟸鏫鯬鵹麗黧囄灕蘺蠫孋廲劙鑗穲籬纚驪鱺鸝",
+  "lǐ": "礼李里俚峛峢娌峲悝浬逦理裡锂粴裏豊鋰鲤澧禮鯉醴蠡鳢邐鱧欚纚鱱",
+  "lì": "力历厉屴扐立吏扚朸利励叓呖坜杝沥苈例叕岦戾枥沴沵疠苙迣俐俪栃栎疬砅茘荔赲轹郦唎娳悧栛栗浰涖猁珕砬砺砾秝莉莅鬲唳婯悷笠粒粝脷蚸蛎傈凓厤棙痢蛠詈跞雳厯塛慄搮溧睙蒞蒚蜊鉝鳨厲暦歴瑮綟蜧銐蝷镉勵曆歷篥隷鴗巁檪濿癘磿隸鬁儮擽曞櫔爄犡禲蠇鎘嚦壢攊櫟瀝瓅礪藶麗櫪爏瓑皪盭礫糲蠣儷癧礰纅酈鷅麜囇孋攦觻躒轢欐讈轣攭瓥靂靋",
+  "liǎ": "俩倆",
+  "lián": "奁连帘怜涟莲連梿联裢亷嗹廉慩溓漣蓮匲奩槏槤熑覝劆匳噒嫾憐磏聨聫褳鲢濂濓縺翴聮薕螊櫣燫聯臁謰蹥檶鎌镰瀮簾蠊鬑鐮鰱籢籨",
+  "liǎn": "莶敛梿琏脸裣慩摙溓槤璉蔹嬚薟斂櫣歛臉鄻襝羷蘞蘝醶",
+  "liàn": "练炼恋殓僆堜媡湅萰链摙楝煉瑓潋稴練澰錬殮鍊鏈瀲鰊戀纞",
+  "liāng": "",
+  "liáng": "良俍莨梁涼椋辌粱粮墚踉樑輬駺糧",
+  "liǎng": "両两兩俩倆唡啢掚脼裲緉蜽魉魎",
+  "liàng": "亮倞哴悢谅涼辆喨晾湸靓輌踉諒輛鍄",
+  "liāo": "蹽",
+  "liáo": "辽疗窌聊尞僚寥嵺憀摎漻膋嘹嫽寮嶚嶛憭敹樛獠缭遼暸橑璙膫療竂鹩屪廫簝繚藔蟟蟧豂賿蹘爎爒飂髎飉鷯",
+  "liǎo": "钌釕鄝缪蓼憭繆曢爎镽爒",
+  "liào": "尥尦钌炓料釕廖撂窷镣鐐",
+  "lie": "",
+  "liē": "",
+  "lié": "",
+  "liě": "忚毟挘",
+  "liè": "列劣劦冽劽姴挒洌茢迾哷埓埒栵浖烈烮捩猎猟脟棙蛚煭聗趔綟巤獦颲燤儠巁鮤鴷擸爄獵爉犣躐鬛鬣鱲",
+  "līn": "拎",
+  "lín": "厸邻阾林临冧啉崊惏晽琳粦碄箖粼綝鄰隣嶙潾獜遴斴暽燐璘辚霖疄瞵磷臨繗翷麐轔壣瀶鏻鳞驎鱗麟",
+  "lǐn": "菻亃僯箖凜凛撛廩廪懍懔澟檁檩癝癛",
+  "lìn": "吝恡悋赁焛亃痳賃蔺獜橉甐膦閵疄藺蹸躏躙躪轥",
+  "líng": "伶刢灵呤囹坽夌姈岺彾泠狑苓昤朎柃玲瓴〇凌皊砱秢竛羐袊铃陵鸰婈崚掕棂淩琌笭紷绫羚翎聆舲菱蛉衑祾詅跉軨稜蓤裬鈴閝零龄綾蔆輘霊駖澪蕶錂霗魿鲮鴒鹷燯霝霛齢酃鯪孁齡櫺醽靈欞爧麢龗",
+  "lǐng": "岺袊领領嶺",
+  "lìng": "另炩蘦",
+  "liū": "熘澑蹓",
+  "liú": "刘畄斿浏流留旈琉畱硫裗媹嵧旒蒥蓅骝摎榴漻瑠飗劉瑬瘤磂镏駠鹠橊璢疁镠癅蟉駵嚠懰瀏藰鎏鎦麍鏐飀鐂騮飅鰡鶹驑",
+  "liǔ": "柳栁桞珋桺绺锍綹熮罶鋶橮嬼懰羀藰",
+  "liù": "窌翏塯廇遛澑磂磟鹨鎦霤餾雡飂鬸鷚",
+  "lo": "咯",
+  "lóng": "龙屸尨咙泷茏昽栊珑胧眬砻竜聋隆湰滝嶐槞漋癃窿篭龍儱蘢鏧霳嚨巃巄瀧曨朧櫳爖瓏襱矓礲礱蠬蠪龓龒籠聾豅躘靇鑨驡鸗",
+  "lǒng": "陇垅垄拢篢篭龍隴儱徿壟壠攏竉龓籠躘",
+  "lòng": "哢梇硦儱徿贚",
+  "lou": "喽嘍瞜",
+  "lōu": "摟",
+  "lóu": "剅娄偻婁喽溇蒌僂楼嘍寠廔慺漊蔞遱樓熡耧蝼瞜耬艛螻謱貗軁髅鞻髏鷜",
+  "lǒu": "嵝塿嶁摟甊篓簍",
+  "lòu": "陋屚漏瘘镂瘻瘺鏤",
+  "lū": "噜撸謢嚕擼",
+  "lú": "卢庐芦垆枦泸炉栌胪轳舮鸬玈舻颅鈩鲈馿魲盧嚧壚廬攎瀘獹璷蘆曥櫨爐瓐臚矑籚纑罏艫蠦轤鑪顱髗鱸鸕黸",
+  "lǔ": "卤虏掳鹵硵鲁虜塷滷蓾樐澛魯擄橹氇磠穞镥瀂櫓氌艣鏀艪鐪鑥",
+  "lù": "圥甪陆侓坴彔录峍勎赂辂陸娽淕淥渌硉菉逯鹿椂琭祿禄僇剹勠盝睩稑賂路輅塶廘摝漉箓粶緑蓼蔍戮樚熝膔趢踛辘醁潞穋蕗錄錴録璐簏螰鴼簶蹗轆騄鹭簬簵鏕鯥鵦鵱麓鏴騼籙觻虂鷺",
+  "luán": "娈孪峦挛栾鸾脔滦銮鵉圝奱孌孿巒攣曫欒灓羉臡臠圞灤虊鑾癴癵鸞",
+  "luǎn": "卵覶",
+  "luàn": "乱釠乿亂薍灓",
+  "lūn": "掄",
+  "lún": "仑伦囵沦纶芲侖轮倫陯圇婨崘崙掄淪菕棆腀碖綸耣蜦論踚輪磮錀鯩",
+  "lǔn": "埨惀碖稐耣",
+  "lùn": "惀溣碖論",
+  "luo": "囉囖",
+  "luō": "捋頱囉囖",
+  "luó": "寽罗猡脶萝逻椤腡锣箩骡镙螺攎羅覶鏍儸覼騾囉攞玀蘿邏欏驘鸁籮鑼饠囖",
+  "luǒ": "剆倮砢捰蓏裸躶瘰蠃臝曪攭癳",
+  "luò": "泺咯峈洛荦骆洜珞捰渃硌硦笿絡蛒跞詻摞漯犖雒駱磱鮥鵅擽濼攊皪躒纙",
+  "lǘ": "驴闾榈閭氀膢瞜櫚藘驢",
+  "lǚ": "吕呂侣郘侶挔捛捋旅梠焒祣偻稆铝屡絽缕僂屢慺膂褛鋁履膐褸儢縷穭鷜",
+  "lǜ": "垏律哷虑嵂氯葎滤綠緑慮箻膟勴繂濾櫖爈卛鑢",
+  "lüè": "寽掠畧略锊稤圙鋢鋝",
+  "ma": "嗎嘛麽",
+  "mā": "亇妈孖庅媽嫲榪螞",
+  "má": "菻麻嗎痲痳嘛嫲蔴犘蟇",
+  "mǎ": "马犸杩玛码馬嗎溤獁遤瑪碼螞鎷鰢鷌",
+  "mà": "杩祃閁骂傌睰嘜榪禡罵螞駡鬕",
+  "mái": "薶霾",
+  "mǎi": "买荬買嘪蕒鷶",
+  "mài": "劢迈佅売麦卖唛脈麥衇勱賣邁霡霢",
+  "mān": "颟顢",
+  "mán": "姏悗蛮絻谩慲摱馒樠瞞鞔謾饅鳗鬘鬗鰻矕蠻",
+  "mǎn": "娨屘満满滿螨襔蟎鏋矕",
+  "màn": "曼僈鄤墁嫚幔慢摱漫獌缦蔄槾澫熳澷镘縵鏝蘰",
+  "māng": "牤",
+  "máng": "邙吂忙汒芒尨杗杧盲盳厖恾笀茫哤娏庬浝狵朚牻硭釯铓痝蛖鋩駹蘉",
+  "mǎng": "莽莾硥茻壾漭蟒蠎",
+  "màng": "",
+  "māo": "貓",
+  "máo": "毛矛芼枆牦茅茆旄罞渵軞酕堥嵍楙锚緢鉾髦氂犛蝥貓髳錨蟊鶜",
+  "mǎo": "冇卯夘乮峁戼泖昴铆笷蓩鉚",
+  "mào": "冃皃芼冐茂柕眊秏贸旄耄袤覒媢帽萺貿鄚愗暓毷瑁瞀貌鄮蝐懋",
+  "me": "庅麽麼嚜",
+  "mē": "嚒",
+  "mè": "濹嚰",
+  "méi": "坆沒枚玫苺栂眉脄莓梅珻脢郿堳媒嵋湄湈猸睂葿楣楳煤瑂禖腜塺槑酶镅鹛鋂霉穈徾鎇攗鶥黴",
+  "měi": "毎每凂美挴浼羙媄嵄渼媺镁嬍燘躾鎂黣",
+  "mèi": "妹抺沬旀昧祙袂眛媚寐殙痗跊鬽煝睸韎魅篃蝞嚜櫗",
+  "mēn": "悶椚",
+  "mén": "门们扪汶怋玧钔門們閅捫菛璊瞞穈鍆亹斖虋",
+  "mèn": "悗惛焖悶暪燜鞔懑懣",
+  "mēng": "掹擝矇",
+  "méng": "尨甿虻庬莔萌溕盟雺甍鄳儚橗瞢蕄蝱鄸鋂髳幪懜懞濛獴曚朦檬氋礞鯍鹲艨矒靀霿饛顭鸏",
+  "měng": "黾冡勐猛黽锰艋蜢瞢懜懞蟒錳懵蠓鯭矒鼆",
+  "mèng": "孟梦夢夣懜霥癦",
+  "mī": "咪瞇",
+  "mí": "冞祢迷袮猕谜蒾詸摵瞇謎醚彌擟瞴縻藌麊麋麿檷禰靡瀰獼蘪麛镾戂攠瓕蘼爢醾醿鸍釄",
+  "mǐ": "米芈侎沵羋弭洣敉粎脒渳葞蔝銤彌濔孊攠灖",
+  "mì": "冖糸汨沕宓怽枈觅峚祕宻密淧覔覓幂谧塓幎覛嘧榓滵漞熐蔤蜜鼏冪樒幦濗謐櫁簚羃",
+  "mián": "宀芇杣眠婂绵媔棉綿緜臱蝒嬵檰櫋矈矊矏",
+  "miǎn": "丏汅免沔黾勉眄娩莬偭冕勔渑喕媔愐湎睌缅葂黽絻腼澠緬靦鮸",
+  "miàn": "靣面牑糆麫麪麺麵",
+  "miāo": "喵",
+  "miáo": "苗媌描瞄鹋嫹緢鶓",
+  "miǎo": "厸仯劰杪眇秒淼渺缈篎緲藐邈",
+  "miào": "妙庙玅竗庿缪廟繆",
+  "miē": "乜吀咩哶孭",
+  "mié": "",
+  "miè": "灭烕眜覕搣滅蔑薎鴓幭懱瀎篾櫗簚礣蠛衊鑖鱴",
+  "mín": "民忟垊姄岷忞怋旻旼玟苠珉盿砇罠崏捪渂琘琝缗暋瑉痻碈鈱緍緡賯錉鴖鍲",
+  "mǐn": "皿冺刡忟闵呡忞抿泯黾勄敃闽悯敏笢笽惽湏湣閔黽愍敯暋僶閩慜憫潣簢鳘蠠鰵",
+  "míng": "名明鸣洺眀茗冥朙眳铭鄍嫇溟猽蓂詺暝榠銘鳴瞑螟覭",
+  "mǐng": "佲姳凕嫇慏酩",
+  "mìng": "命掵",
+  "miǔ": "",
+  "miù": "谬缪繆謬",
+  "mō": "摸嚤",
+  "mó": "庅尛谟嫫馍摹膜骳麽麼魹橅糢嬤嬷謨謩擵饃蘑髍魔劘戂攠饝",
+  "mǒ": "懡",
+  "mò": "末圽沒妺帓殁歿歾沫茉陌帞昩枺狢皌眜眿砞秣莈眽絈袹絔蛨貃嗼塻寞漠獏蓦貈貊貉銆靺墨嫼瘼瞐瞙镆魩黙縸默瀎貘嚜藦蟔鏌爅驀礳纆耱",
+  "mōu": "哞",
+  "móu": "牟侔劺呣恈敄桙眸谋堥蛑缪踎謀繆鍪鴾麰鞪",
+  "mǒu": "厶某",
+  "mòu": "",
+  "mú": "毪氁",
+  "mǔ": "母亩牡坶姆拇畂峔牳畆畒胟娒畝畞砪畮鉧踇",
+  "mù": "木仫目凩朷牟沐狇坶炑牧苜毣莯蚞钼募雮墓幙幕慔楘睦鉬慕暯暮缪樢艒霂穆縸繆鞪",
+  "n": "",
+  "ń": "唔嗯",
+  "ň": "嗯",
+  "na": "",
+  "nā": "",
+  "ná": "秅拏拿挐嗱蒘搻誽镎鎿",
+  "nǎ": "乸雫",
+  "nà": "吶妠抐纳肭郍衲钠納袦捺笚笝豽軜貀鈉蒳靹魶",
+  "nái": "腉搱摨孻",
+  "nǎi": "乃奶艿氖疓妳廼迺倷釢嬭",
+  "nài": "佴奈柰耏耐萘渿鼐褦螚錼",
+  "nān": "囝囡",
+  "nán": "男抩枏侽柟娚畘莮喃遖暔楠諵難",
+  "nǎn": "赧揇湳萳煵腩嫨蝻戁",
+  "nàn": "妠婻諵難",
+  "nāng": "儾囔",
+  "náng": "乪涳搑憹嚢蠰饟馕欜饢",
+  "nǎng": "搑擃瀼曩攮灢馕",
+  "nàng": "儾齉",
+  "nāo": "孬",
+  "náo": "呶怓挠峱桡硇铙猱蛲詉碙摎撓嶩憹橈獶蟯夒譊鐃巎獿",
+  "nǎo": "垴恼悩脑匘脳堖惱嫐瑙腦碯憹獶",
+  "nào": "闹婥淖閙鬧臑",
+  "ne": "",
+  "né": "",
+  "nè": "疒讷吶抐眲訥",
+  "néi": "",
+  "něi": "娞浽馁脮腇餒鮾鯘",
+  "nèi": "內氝氞錗",
+  "nèn": "恁媆嫩嫰",
+  "néng": "",
+  "něng": "螚",
+  "nèng": "",
+  "ńg": "唔嗯",
+  "ňg": "嗯",
+  "nī": "妮",
+  "ní": "尼坭怩抳籾倪屔秜郳铌埿婗淣猊蚭棿蛪跜鈮聣蜺馜觬貎輗霓鲵鯢麑齯臡",
+  "nǐ": "伱伲你拟妳抳狔苨柅婗掜旎晲棿孴儞儗隬懝擬濔薿檷聻",
+  "nì": "屰氼伲抐昵胒逆匿眤秜堄惄嫟愵睨腻暱縌誽膩嬺",
+  "niān": "拈蔫",
+  "nián": "年秊哖姩秥粘溓鲇鮎鲶鵇黏鯰",
+  "niǎn": "涊淰焾辇榐辗撚撵碾輦簐蹍攆蹨躎",
+  "niàn": "卄廿念姩唸埝悥惗艌",
+  "niáng": "娘嬢孃釀",
+  "niǎng": "",
+  "niàng": "酿醸釀",
+  "niǎo": "鸟茑袅鳥嫋裊蔦樢嬝褭嬲",
+  "niào": "脲",
+  "niē": "捏揑",
+  "nié": "苶",
+  "niě": "",
+  "niè": "乜帇圼峊枿陧涅痆聂臬啮掜菍隉敜湼嗫嵲踂噛摰槷踗踙銸镊镍嶭篞臲鋷錜颞蹑嚙聶鎳闑孼孽櫱籋蘖囁攝齧巕糱糵蠥鑈囐囓讘躡鑷顳钀",
+  "nín": "囜恁脌您",
+  "nǐn": "拰",
+  "níng": "咛狞苧柠聍寍寕甯寗寜寧儜凝橣嚀嬣擰獰薴檸聹鑏鬡鸋",
+  "nǐng": "擰矃",
+  "nìng": "佞侫泞倿寍寕甯寗寜寧澝擰濘",
+  "niū": "妞孧",
+  "niú": "牜牛汼怓",
+  "niǔ": "忸扭沑狃纽杻炄钮紐莥鈕靵",
+  "niù": "抝",
+  "nóng": "农侬哝浓脓秾農儂辳噥濃蕽檂燶禯膿癑穠襛譨醲欁鬞",
+  "nǒng": "繷",
+  "nòng": "挊挵癑齈",
+  "nóu": "羺",
+  "nǒu": "",
+  "nòu": "搙槈耨獳檽鎒鐞",
+  "nú": "奴伮孥帑驽笯駑",
+  "nǔ": "伮努弩砮胬",
+  "nù": "怒傉搙",
+  "nuán": "奻渜",
+  "nuǎn": "渜湪暖煖煗餪",
+  "nuàn": "",
+  "nuó": "挪梛傩橠難儺",
+  "nuǒ": "袳袲",
+  "nuò": "耎诺喏掿毭逽愞搙搦锘搻榒稬諾蹃糑鍩懧懦糥穤糯",
+  "nǘ": "",
+  "nǚ": "钕籹釹",
+  "nǜ": "沑衂恧朒衄聏",
+  "nüè": "虐婩硸瘧",
+  "o": "筽",
+  "ō": "喔噢",
+  "ó": "哦",
+  "ǒ": "嚄",
+  "ò": "哦",
+  "ou": "",
+  "ōu": "讴吽沤欧殴瓯鸥區嘔塸漚歐毆熰甌膒鴎櫙藲謳鏂鷗",
+  "óu": "",
+  "ǒu": "吘禺偶腢嘔熰耦蕅藕",
+  "òu": "怄沤嘔慪漚",
+  "pā": "汃妑苩皅趴舥啪葩",
+  "pá": "杷爬钯掱琶筢潖",
+  "pǎ": "",
+  "pà": "汃帊帕怕袙",
+  "pāi": "拍",
+  "pái": "俳徘猅棑牌箄輫簲簰犤",
+  "pǎi": "廹",
+  "pài": "沠哌派渒湃蒎鎃",
+  "pān": "眅畨萠潘攀籓",
+  "pán": "丬爿肨柈洀胖眫湴盘跘媻幋蒰搫槃盤磐縏膰磻蹒瀊蟠蹣鎜鞶",
+  "pǎn": "坢盻",
+  "pàn": "冸判沜拚泮炍肨叛牉盼胖畔聁袢詊溿頖鋬闆鵥襻鑻",
+  "pāng": "乓汸沗胮雱滂膖霶",
+  "páng": "厐夆尨彷庞逄庬趽舽嫎徬膀篣螃鳑龎龐鰟",
+  "pǎng": "嗙耪覫",
+  "pàng": "炐肨胖眫",
+  "pāo": "抛拋脬萢藨穮",
+  "páo": "咆垉庖狍炰爮瓟袍铇匏烰袌跁軳鉋鞄褜麃麅",
+  "pǎo": "",
+  "pào": "奅疱皰砲袌靤麭嚗礟礮",
+  "pēi": "妚呸怌抷肧柸胚衃醅",
+  "péi": "阫陪培婄毰赔锫裵裴賠錇",
+  "pěi": "俖琣",
+  "pèi": "伂妃沛犻佩帔姵斾柭旆浿珮配淠棑媐蓜辔馷嶏霈攈轡",
+  "pēn": "噴濆歕",
+  "pén": "瓫盆湓葐",
+  "pěn": "呠翸",
+  "pèn": "喯噴",
+  "pēng": "亨匉怦抨泙恲胓砰梈烹硑絣軯剻閛漰嘭駍磞",
+  "péng": "芃朋挷竼倗捀莑堋弸淜袶棚椖傰塜塳搒漨痭硼稝蓬鹏樥熢憉澎輣篣篷膨錋韸髼蟚蟛鬅纄蘕韼鵬騯鬔鑝",
+  "pěng": "捧淎皏摓",
+  "pèng": "掽椪碰閛槰踫磞",
+  "pi": "榌",
+  "pī": "丕伓伾妚批纰邳坯岯怶披抷枈炋狉狓砒悂秛秠紕铍陴旇翍耚豾釽鈚鉟銔磇駓髬噼錃錍魾憵礕礔鎞霹",
+  "pí": "皮仳阰纰芘陂枇肶毘毗疲笓紕蚍郫铍啤埤崥猈蚾蚽豼焷琵禆脾腗裨鈹鲏罴膍蜱罷隦魮壀螕鮍篺螷貔鞞鵧羆朇鼙蠯",
+  "pǐ": "匹庀疋仳圮吡苉悂脴痞銢嶏諀鴄擗噽癖嚭",
+  "pì": "屁埤淠揊嫓媲睥潎稫僻澼嚊濞甓疈譬闢鷿鸊",
+  "piān": "囨偏媥楄犏篇翩鍂鶣",
+  "pián": "骈胼缏腁楩賆跰瑸緶骿蹁駢璸騈",
+  "piǎn": "覑谝貵諞",
+  "piàn": "猵骗魸獱騗騙",
+  "piāo": "剽勡嘌嫖彯慓缥飘旚縹翲螵犥飃飄魒",
+  "piáo": "嫖瓢薸闝",
+  "piǎo": "莩殍缥瞟篻縹醥皫顠",
+  "piào": "僄彯徱骠驃鰾",
+  "piē": "氕覕潎撆暼瞥",
+  "piě": "丿苤鐅",
+  "piè": "嫳",
+  "pīn": "拚姘拼砏礗穦馪驞",
+  "pín": "玭贫娦貧琕嫔嬪薲嚬矉蘋蠙颦顰",
+  "pǐn": "品榀",
+  "pìn": "牝汖聘",
+  "pīng": "乒甹俜娉涄砯聠艵頩",
+  "píng": "平评凭呯坪岼泙郱帡庰枰洴玶胓荓瓶帲淜硑萍蚲塀幈焩甁缾蓱蛢評馮軿鲆凴竮鉼慿箳輧憑鮃檘簈蘋",
+  "pǐng": "屛",
+  "pìng": "",
+  "pō": "钋陂坡岥泺泼釙翍颇溌酦頗潑醗濼醱鏺",
+  "pó": "婆嘙搫蔢鄱皤櫇嚩",
+  "pǒ": "叵尀钷笸鉕箥駊髲",
+  "pò": "廹岶敀昢洦珀哱烞砶破粕奤湐猼蒪魄",
+  "pōu": "抙剖娝捊",
+  "póu": "抔抙垺捊掊裒箁",
+  "pǒu": "咅哣婄掊棓犃",
+  "pū": "攵攴扑抪炇柨陠痡秿噗撲潽鋪鯆",
+  "pú": "圤匍捗莆菩菐葡蒲蒱僕箁酺墣獛璞濮瞨穙镤贌纀鏷",
+  "pǔ": "圃埔浦烳普圑溥暜谱諩擈樸氆檏镨譜蹼鐠",
+  "pù": "痡舗舖鋪曝",
+  "qi": "啐",
+  "qī": "七迉沏恓柒倛凄桤郪娸悽戚捿桼淒萋喰攲敧棲欹欺紪缉傶褄僛嘁墄慽榿漆緀慼緝諆踦螇霋蹊魌鏚鶈",
+  "qí": "丌亓伎祁圻岓岐忯芪亝斉歧畁祇祈肵俟疧荠剘斊旂竒耆脐蚔蚑蚚陭颀埼崎帺掑淇猉畦萁萕跂軝釮骐骑嵜棊棋琦琪祺蛴隑愭碁碕稘褀锜頎鬿旗粸綥綨綦蜝蜞齊璂禥蕲觭螧錡鲯懠濝薺藄鄿檱櫀簯簱臍騎騏鳍蘄鯕鵸鶀麒籏艩蠐鬐騹鰭玂麡",
+  "qǐ": "乞邔企屺芑启呇杞玘盀唘豈起啔啓啟婍梩绮袳跂晵棨綮綺諬闙",
+  "qì": "气讫忔扱気汔迄呚弃汽矵芞亟呮泣炁盵咠洓竐栔欫氣訖唭焏夡愒棄湆湇葺滊碛摖暣甈碶噐憇槭趞器憩磜磧磩藒礘罊蟿鐑",
+  "qiā": "抲掐袷揢葜擖",
+  "qiá": "",
+  "qiǎ": "拤峠跒酠鞐",
+  "qià": "圶冾匼咭帢恰洽胢殎硈愘磍髂",
+  "qiān": "千仟阡圱圲奷扦汘芊迁佥岍杄汧茾欦竏臤钎拪牵粁悭挳蚈谸婜孯牽釺掔谦鈆僉愆签鉛骞鹐慳搴摼撁厱磏諐遷鳽褰謙顅檶攐攑櫏簽鏲鵮孅攓騫籖鬜鬝籤韆",
+  "qián": "仱岒忴扲拑玪乹前炶荨钤歬虔蚙钱钳偂掮揵軡亁媊朁犍葥鈐煔鉗墘榩箝銭撍潛潜羬蕁橬錢黔鎆黚騝濳騚灊鰬",
+  "qiǎn": "凵肷唊淺嵰遣槏膁蜸谴缱繾譴鑓",
+  "qiàn": "欠刋伣芡俔茜倩悓堑掅傔棈椠欿嗛慊皘蒨塹歉綪蔳儙槧篏輤篟壍嬱縴",
+  "qiāng": "羌戕戗斨枪玱矼羗猐啌跄嗴椌溬獇腔嗆搶蜣锖嶈戧摤槍牄瑲羫锵篬謒蹌蹡鎗鏘鏹鶬",
+  "qiáng": "強墙嫱蔷樯漒蔃墻嬙廧彊薔檣牆艢蘠",
+  "qiǎng": "強羟搶羥墏彊繈襁镪繦鏹",
+  "qiàng": "戗炝唴跄嗆戧摪熗羻",
+  "qiāo": "帩硗郻喿嵪煍跷鄥鄡劁勪幓敲毃踍锹墝碻磝頝骹墽幧橇燆缲橾磽鍬鍫礉繑繰趬蹺蹻鏒鐰",
+  "qiáo": "乔侨峤荍荞桥硚菬喬睄僑摮槗谯嘺墧嫶嶠憔潐蕎鞒樵橋燋犞癄瞧礄翹櫵藮譙趫鐈鞽顦",
+  "qiǎo": "丂巧釥愀髜",
+  "qiào": "诮陗峭窍偢殻殼誚髚僺嘺撬箾噭撽鞘韒礉竅翹鞩躈",
+  "qiē": "苆",
+  "qié": "癿伽茄聺",
+  "qiě": "",
+  "qiè": "厒妾怯疌郄匧窃悏挈栔洯帹惬淁笡愜椄猰蛪趄跙嗛慊朅稧箧锲篋踥穕鍥鯜竊籡",
+  "qīn": "兓侵钦衾骎菳媇嵚欽嵰綅誛嶔親顉駸鮼寴",
+  "qín": "庈忴扲芩芹肣矜埐珡矝秦耹菦蚙捦菳琴琹禽覃鈙鈫雂勤嗪嫀溱靲廑慬噙嶜擒斳鳹懄檎澿瘽螓懃蠄鵭",
+  "qǐn": "坅昑笉梫赾寑锓寝寖寢鋟螼",
+  "qìn": "吢吣抋沁唚菣揿搇撳寴瀙藽",
+  "qīng": "靑青氢轻倾卿郬圊埥寈氫淸清軽傾綪蜻輕錆鲭鯖鑋",
+  "qíng": "夝甠剠勍啨情殑硘晴棾氰葝暒擏樈擎檠黥",
+  "qǐng": "苘顷请庼頃廎漀請檾謦",
+  "qìng": "庆凊掅殸渹碃箐綮靘慶磬親儬濪罄櫦",
+  "qiōng": "",
+  "qióng": "卭邛宆穷穹茕桏惸琁筇笻赹焪焭琼舼蛬蛩煢熍睘跫銎瞏窮儝嬛憌橩璚藑瓊竆藭瓗",
+  "qiòng": "",
+  "qiū": "丘丠邱坵恘秌秋恷蚯媝湫萩楸湬塸蓲鹙篍緧蝵穐趥龜橚鳅蟗鞦鞧蘒鰌鰍鶖蠤龝",
+  "qiú": "厹叴囚扏犰玌艽芁朹汓肍求虬泅牫虯俅觓訅訄酋唒浗紌莍逎逑釚梂殏毬球赇釻頄崷巯渞湭皳盚遒煪絿蛷裘巰觩賕璆蝤銶醔鮂鼽鯄鰽",
+  "qiǔ": "搝糗",
+  "qiù": "",
+  "qū": "伹佉匤岖诎阹驱呿坥屈岴抾浀祛胠袪區焌紶蛆躯煀筁粬蛐詘趍嶇憈駆敺觑誳駈麹髷魼趨麯覰覷軀鶌麴黢覻驅鰸鱋",
+  "qú": "佢劬斪朐胊菃衐鸲淭絇翑蚼葋軥蕖璖磲螶鴝璩翵蟝瞿鼩蘧忂灈戵欋氍爠籧臞癯欔蠷衢躣蠼鑺鸜",
+  "qǔ": "苣取竘娶紶詓竬蝺龋齲",
+  "qù": "去厺刞欪耝阒觑閴麮闃鼁覰覷覻",
+  "quān": "奍弮悛圏棬椦箞鐉",
+  "quán": "全权佺狋诠姾峑恮泉洤荃拳牷辁啳埢婘惓捲痊硂铨椦湶犈筌絟葲搼楾瑔觠詮跧輇蜷銓槫権踡縓醛駩闎鳈鬈騡孉巏鰁權齤矔蠸颧顴灥",
+  "quǎn": "犭犬犮畎烇绻綣虇",
+  "quàn": "劝牶勧韏勸灥",
+  "quē": "炔缺缼蚗蒛阙闕",
+  "qué": "瘸",
+  "què": "汋却卻埆崅悫琷傕敠敪棤硞确阕塙搉皵碏阙鹊愨榷墧慤碻確趞燩闋礐闕鵲礭",
+  "qūn": "夋囷逡箘歏",
+  "qún": "宭峮帬裙羣群裠麇",
+  "qǔn": "",
+  "rán": "呥肰衻袇蚦袡蚺然髥嘫髯燃繎",
+  "rǎn": "冄冉姌苒染珃媣蒅熯橪",
+  "ràn": "",
+  "rāng": "",
+  "ráng": "穣儴勷瀼獽蘘禳瓤穰躟鬤",
+  "rǎng": "壌壤攘爙纕",
+  "ràng": "让懹譲讓",
+  "ráo": "娆荛饶桡嬈蕘橈襓饒",
+  "rǎo": "扰娆隢嬈擾",
+  "rào": "绕遶穘繞",
+  "ré": "捼",
+  "rě": "喏惹",
+  "rè": "热渃熱",
+  "rén": "亻人仁壬忈朲忎秂芢魜銋鵀",
+  "rěn": "忍荏栠栣荵秹菍棯稔綛躵銋",
+  "rèn": "刃刄认仞仭讱屻岃扨纫妊杒牣纴肕轫韧饪祍姙紉衽紝訒軔梕袵釰釼絍腍鈓靱靭韌飪認餁",
+  "rēng": "扔",
+  "réng": "仍辸礽芿陾",
+  "rì": "日驲囸氜衵釰釼鈤馹",
+  "róng": "戎肜栄狨绒茙茸荣容峵毧烿傛媶嵘搑絨羢嫆嵤搈榵溶蓉榕榮熔瑢穁槦縙蝾褣镕螎融駥嬫嶸爃鎔瀜曧蠑",
+  "rǒng": "冗宂坈傇軵縙氄",
+  "ròng": "穃縙",
+  "róu": "厹禸柔粈脜媃揉渘葇楺煣瑈腬糅蝚蹂輮鍒鞣瓇騥鰇鶔",
+  "rǒu": "韖",
+  "ròu": "肉宍楺譳",
+  "rū": "嶿",
+  "rú": "邚如吺侞帤茹挐桇袽铷渪筎蒘銣蕠蝡儒鴑嚅嬬孺濡獳薷鴽曘檽襦繻蠕颥醹顬鱬",
+  "rǔ": "汝肗乳辱鄏擩",
+  "rù": "入扖杁洳嗕媷溽缛蓐鳰褥縟",
+  "ruán": "堧撋壖",
+  "ruǎn": "阮朊软耎偄軟媆瑌腝碝緛輭檽瓀礝",
+  "ruàn": "緛",
+  "ruí": "苼桵甤緌蕤",
+  "ruǐ": "惢蕋蕊橤繠壡蘃蘂",
+  "ruì": "兊兌抐汭芮枘笍蚋锐瑞蜹睿銳鋭叡鏸",
+  "rún": "瞤",
+  "rǔn": "",
+  "rùn": "闰润閏閠潤橍膶",
+  "ruó": "挼捼",
+  "ruò": "叒偌弱鄀婼渃焫楉嵶蒻箬篛爇鰙鰯鶸",
+  "sa": "",
+  "sā": "仨",
+  "sǎ": "訯靸潵鞈攃灑躠纚",
+  "sà": "卅泧钑飒脎萨鈒摋隡馺蕯颯薩櫒鏾",
+  "sāi": "毢愢揌毸腮嘥噻鳃顋鰓",
+  "sǎi": "嗮",
+  "sài": "赛僿賽簺",
+  "san": "壭",
+  "sān": "三弎叁參叄叅毶毵厁毿犙鬖",
+  "sǎn": "仐伞傘糁馓糝糤糣繖鏒鏾饊",
+  "sàn": "俕帴閐潵",
+  "sāng": "桒桑喪槡",
+  "sǎng": "嗓搡磉褬颡鎟顙",
+  "sàng": "喪",
+  "sāo": "掻慅搔溞缫懆缲螦繅鳋颾騒繰騷鰠鱢",
+  "sǎo": "埽掃嫂",
+  "sào": "埽掃瘙懆氉矂髞",
+  "sē": "閪",
+  "sè": "色拺洓栜涩啬渋粣铯雭歮琗嗇瑟摵歰銫槭澁廧懎擌濇濏瘷穑薔澀璱瀒穡鎍繬穯轖鏼闟譅飋",
+  "sēn": "森椮槮襂",
+  "sěn": "",
+  "sēng": "僧鬙",
+  "sèng": "",
+  "sī": "厶纟丝司糹糸私咝泀俬恖虒鸶偲傂媤愢斯絲缌蛳楒禗鉰飔凘厮禠罳蜤銯锶嘶噝廝撕澌磃緦蕬鋖燍螄鍶蟖蟴颸騦鯣鐁鷥鼶",
+  "sí": "",
+  "sǐ": "死愢",
+  "sì": "巳亖四寺汜佀兕姒泤祀価孠杫泗饲驷俟娰枱柶洠牭洍涘肂飤梩笥耛耜釲竢覗嗣肆貄鈶鈻飴飼榹銉禩駟蕼儩騃瀃",
+  "sōng": "忪枀松枩娀柗倯凇崧庺梥淞菘愡揔棇嵩硹憽濍檧鬆",
+  "sóng": "",
+  "sǒng": "怂悚捒耸竦傱愯楤嵷摗漎慫聳駷",
+  "sòng": "吅讼宋诵送颂訟頌誦鎹餸",
+  "sōu": "凁捒捜鄋嗖廀廋搜溲獀蒐蓃馊摉飕摗锼撨艘螋醙鎪餿颼颾鏉騪",
+  "sǒu": "叜叟傁棷蓃嗾瞍擞薮擻藪櫢籔",
+  "sòu": "欶嗽擞瘶擻",
+  "sū": "甦酥稡稣窣穌鯂蘇蘓櫯囌",
+  "sú": "圱俗",
+  "sǔ": "",
+  "sù": "玊夙诉泝肃洬涑珟素莤速埣梀殐粛骕傃棴粟訴谡嗉塑塐嫊愫溯溸肅遡鹔僳愬摵榡膆蔌觫趚遬憟樕樎潥碿鋉餗潚縤橚璛簌縮藗謖蹜驌鱐鷫",
+  "suān": "狻痠酸",
+  "suǎn": "匴篹",
+  "suàn": "祘笇筭蒜算",
+  "suī": "夊芕虽倠哸娞浽荾荽眭毸滖睢缞嗺熣濉縗鞖雖",
+  "suí": "绥隋随遀綏隨瓍髄",
+  "suǐ": "膸瀡髓",
+  "suì": "亗岁砕祟谇埣嵗遂歲歳煫睟碎隧嬘澻穂誶賥檖燧璲禭穗穟繀襚邃旞繐繸譢鐆鏸鐩韢",
+  "sūn": "狲荪孫喰飧飱搎猻蓀槂蕵薞",
+  "sǔn": "扻损笋隼筍損榫箰簨鎨鶽",
+  "sùn": "摌",
+  "suō": "唆娑挱莏莎傞挲桫梭睃嗍嗦羧蓑摍趖簑簔縮鮻",
+  "suó": "",
+  "suǒ": "所乺唢索琑琐嫅惢锁嗩暛溑獕瑣褨璅縒鎍鎖鎻鏁",
+  "suò": "逤溹蜶",
+  "shā": "杀杉纱乷剎砂唦挱殺猀粆紗莎挲桬毮铩痧硰摋蔱裟榝樧魦鲨閷髿鎩鯊鯋繺",
+  "shá": "啥",
+  "shǎ": "傻儍",
+  "shà": "倽唼啑帹菨萐喢嗄廈歃翜歰箑翣濈閯霎",
+  "shāi": "筛篩諰簁簛籭",
+  "shǎi": "摋",
+  "shài": "晒攦曬",
+  "shān": "山彡邖圸删刪杉芟姍姗衫钐埏挻柵炶狦珊舢痁脠軕笘釤閊傓跚剼搧煔嘇幓煽潸澘穇檆縿膻鯅羴羶",
+  "shán": "",
+  "shǎn": "闪陕炶陝閃閄晱煔睒摻熌覢",
+  "shàn": "讪汕姍姗疝钐剡訕赸掞釤善單椫禅銏骟僐鄯儃墡墠撣潬缮嬗嶦擅敾樿歚禪膳磰謆赡繕蟮蟺譱贍鐥饍騸鳝鳣灗鱓鱔",
+  "shang": "",
+  "shāng": "伤殇商愓湯觞傷禓墒慯滳漡蔏殤熵螪觴謪鬺",
+  "shǎng": "垧扄晌埫赏樉賞鋿鏛贘鑜",
+  "shàng": "丄尙尚恦绱緔鞝",
+  "shāo": "娋弰烧莦焼萷旓筲艄輎蕱燒鞘髾鮹",
+  "sháo": "勺芍杓苕柖玿韶",
+  "shǎo": "",
+  "shào": "佋劭卲邵绍柖哨娋袑紹睄綤潲",
+  "shē": "奓奢猞赊畭畬畲輋賒賖檨",
+  "shé": "舌佘虵阇揲蛥闍磼",
+  "shě": "舍捨",
+  "shè": "厍设社泏舎舍厙挕涉涻渉設赦弽慑摂滠慴蔎歙蠂韘騇懾攝灄麝欇",
+  "shéi": "誰",
+  "shēn": "申屾扟伸身侁冞呻妽籶绅罙诜姺柛氠珅穼籸娠峷甡眒砷莘參叄堔敒深紳兟叅棽葠裑訷嫀搷罧蓡詵幓甧糁蔘糂燊薓駪鲹曑糝糣鯓鵢鯵鰺",
+  "shén": "神榊鉮鰰",
+  "shěn": "邥吲弞抌审矤哂矧宷谂谉婶淰渖訠棯審諗頣魫曋瞫嬸瀋覾讅",
+  "shèn": "肾侺昚胂涁眘渗祳脤谌腎葚愼慎椹瘆蜄蜃滲鋠瘮黮",
+  "shēng": "升生阩呏声斘昇枡泩狌苼殅牲珄竔陞曻陹殸笙湦焺甥鉎聲鍟鼪鵿",
+  "shéng": "渑绳憴澠縄繉繩譝",
+  "shěng": "眚偗渻",
+  "shèng": "圣乗娍胜晠晟剰剩勝椉貹嵊琞聖墭榺蕂橳賸",
+  "shi": "辻籂",
+  "shī": "尸失师厔呞虱诗邿鸤屍施浉狮師絁釶湤湿葹溮溼獅蒒蓍詩鉇嘘瑡酾鳲噓箷蝨鳾褷鲺濕鍦鯴鰤鶳襹釃",
+  "shí": "十饣乭时竍実实旹飠姼峕炻祏蚀埘宲時莳寔湜遈塒嵵溡蒔鉐實榯碩蝕鲥鮖鼫識鼭鰣",
+  "shǐ": "史矢乨豕使始驶兘宩屎狶痑笶榁鉂駛",
+  "shì": "士礻丗世仕市示卋式忕亊忯戺事侍势呩柹视试饰冟咶室峙恀恃拭昰是枾柿狧眂贳适栻烒眎眡耆舐莳轼逝铈啫埶畤秲視釈崼崻弑徥惿揓谥貰释勢嗜弒楴煶睗筮蒔觢試軾鈰鉃飾舓誓適鉽馶奭銴餝餙噬嬕澨澤諡諟遾檡螫謚簭襫醳釋鰘",
+  "shōu": "収收敊",
+  "shóu": "熟",
+  "shǒu": "扌手守垨首艏",
+  "shòu": "寿受狩兽售授涭绶痩膄壽夀瘦綬嘼獣獸鏉",
+  "shū": "书殳疋忬抒纾叔杸枢陎姝倐倏捈書殊紓婌悆掓梳淑焂菽軗鄃琡疎疏舒摅毹毺綀输瑹跾踈樞緰蔬輸橾鮛儵攄瀭鵨",
+  "shú": "朮尗秫孰赎蒣塾熟璹贖",
+  "shǔ": "鼡暏暑稌黍署蜀鼠數潻薥薯曙癙藷襡糬襩屬籔蠴鱪鱰",
+  "shù": "朮戍束沭述侸俞兪咰怸怷树竖荗恕捒庻庶絉蒁術隃尌裋竪腧鉥墅漱潄數澍豎樹濖錰霔鏣鶐虪",
+  "shuā": "唰",
+  "shuǎ": "耍",
+  "shuà": "誜",
+  "shuāi": "缞摔縗",
+  "shuǎi": "甩",
+  "shuài": "帅帥蟀卛",
+  "shuān": "闩拴閂栓絟",
+  "shuàn": "涮腨槫",
+  "shuāng": "双泷霜雙孀瀧骦孇騻欆礵鷞鹴艭驦鸘",
+  "shuǎng": "爽塽慡漺縔鏯",
+  "shuàng": "灀",
+  "shuí": "谁脽誰",
+  "shuǐ": "氵水氺閖",
+  "shuì": "帨挩捝涗涚娷祱稅税裞睡說説",
+  "shǔn": "吮楯",
+  "shùn": "顺眴舜順蕣橓瞚瞤瞬鬊",
+  "shuō": "說説",
+  "shuò": "妁洬烁朔铄欶矟搠蒴銏愬槊獡碩數箾鎙爍鑠",
+  "ta": "侤",
+  "tā": "他它牠祂趿铊塌榙溻鉈褟闧",
+  "tá": "",
+  "tǎ": "塔溚墖獭鮙鳎獺鰨",
+  "tà": "沓挞狧闼粏崉涾傝嗒搨遝遢阘榻毾漯禢撻澾誻踏鞈嚃橽錔濌蹋鞜鎉鎑闒鞳蹹躂嚺闟闥譶躢",
+  "tāi": "囼孡珆胎",
+  "tái": "旲邰坮抬骀枱炱炲菭跆鲐箈臺颱駘儓鮐嬯擡薹檯斄籉",
+  "tǎi": "奤",
+  "tài": "太冭夳忕汏忲汰汱态肽钛泰舦酞鈦溙態燤",
+  "tān": "坍贪怹啴痑舑貪摊滩嘽潬瘫擹攤灘癱",
+  "tán": "坛昙倓谈郯埮婒惔弾覃榃痰锬谭嘾墰墵彈憛潭談醈壇曇橝澹燂錟檀顃罈藫壜繵譚貚醰譠罎",
+  "tǎn": "忐坦袒钽菼毯僋鉭嗿緂儃憳憻暺醓璮襢",
+  "tàn": "叹炭倓埮探傝湠僋嘆碳舕歎",
+  "tāng": "铴湯嘡劏羰蝪薚镗蹚鏜闛鞺鼞",
+  "táng": "坣唐堂傏啺愓棠鄌塘嵣搪溏蓎隚榶漟煻瑭禟膅樘磄糃膛橖篖糖螗踼糛螳赯醣鎕餹鏜闛饄鶶",
+  "tǎng": "伖帑偒傥耥躺镋鎲儻戃灙曭爣矘钂",
+  "tàng": "烫铴摥燙鐋",
+  "tāo": "夲夵弢抭涛绦掏涭絛詜嫍幍慆搯滔槄瑫韬飸縚縧濤謟轁鞱韜饕",
+  "táo": "匋迯咷洮逃桃陶啕梼淘绹萄祹裪綯蜪鞀醄鞉鋾駣檮饀騊鼗",
+  "tǎo": "讨討",
+  "tào": "套",
+  "tè": "忑忒特脦犆铽慝鋱蟘",
+  "tēng": "熥膯鼟",
+  "téng": "疼痋幐腾誊漛滕邆縢螣駦謄儯藤騰籐鰧籘虅驣",
+  "tèng": "霯",
+  "tī": "剔梯锑踢銻擿鷉鷈體",
+  "tí": "苐厗荑桋绨偍珶啼媂媞崹惿渧稊缇罤遆鹈嗁瑅禔綈睼碮褆徲漽磃緹蕛题趧蹄醍謕蹏鍗鳀題鮷鵜騠鯷鶗鶙禵鷤",
+  "tǐ": "挮徥躰骵醍軆體",
+  "tì": "戻奃屉剃朑俶倜悌挮涕眣绨逖啑屜悐惕掦笹逷屟惖揥替棣綈裼褅歒殢髰薙嚏鬀嚔瓋鬄籊趯",
+  "tiān": "天兲呑婖添酟靔黇靝",
+  "tián": "田屇沺恬畑畋盷胋钿甛甜菾湉塡搷阗瑱碵緂磌窴鴫璳闐鷆鷏",
+  "tiǎn": "奵忝殄倎栝唺悿淟紾铦晪琠腆觍痶睓舔銛餂覥賟銽錪",
+  "tiàn": "掭菾琠瑱舚",
+  "tiāo": "旫佻庣恌條祧聎",
+  "tiáo": "芀朷岧岹苕迢祒條笤萔铫蓚蓨蓧龆樤蜩銚調鋚鞗髫鲦鯈鎥齠鰷",
+  "tiǎo": "宨晀朓脁窕誂斢窱嬥",
+  "tiào": "啁眺粜絩覜趒糶",
+  "tiē": "怗贴萜聑貼跕",
+  "tié": "",
+  "tiě": "铁蛈鉄僣銕鐡鐵驖",
+  "tiè": "呫飻餮",
+  "tīng": "厅庁汀听庍耓厛烃桯烴渟綎鞓聴聼廰聽廳",
+  "tíng": "邒廷亭庭莛停婷嵉渟筳葶蜓楟榳閮霆聤蝏諪鼮",
+  "tǐng": "圢甼町侹侱娗挺涏梃烶珽脡铤艇颋誔鋌閮頲",
+  "tìng": "忊梃濎",
+  "tōng": "囲炵通痌絧嗵蓪樋",
+  "tóng": "仝佟彤侗峂庝哃垌峒峝狪茼晍桐浵烔砼蚒偅痌眮秱铜硧童粡絧詷赨酮鉖僮勭鉵銅餇鲖潼獞曈朣橦氃燑犝膧瞳穜鮦",
+  "tǒng": "侗统捅桶筒統筩綂",
+  "tòng": "恸痛衕慟憅",
+  "tou": "",
+  "tōu": "偸偷婾媮緰鋀鍮",
+  "tóu": "亠投骰頭",
+  "tǒu": "妵紏敨飳斢黈蘣",
+  "tòu": "透埱",
+  "tu": "汢",
+  "tū": "凸宊禿秃怢突涋捸堗湥痜葖嶀鋵鵚鼵",
+  "tú": "図图凃峹庩徒悇捈涂荼莵途啚屠梌菟揬稌趃塗嵞瘏筡腯蒤鈯圗圖廜摕潳瑹跿酴墿馟檡鍎駼鵌鶟鷋鷵",
+  "tǔ": "土圡钍唋釷",
+  "tù": "兎迌兔唋莵堍菟鋀鵵",
+  "tuān": "湍猯圕煓貒",
+  "tuán": "団团抟剸團塼慱摶漙槫篿檲鏄糰鷒鷻",
+  "tuǎn": "畽墥疃",
+  "tuàn": "彖湪猯褖貒",
+  "tuī": "忒推蓷藬讉",
+  "tuí": "弚颓僓隤墤尵橔頺頹頽魋穨蘈蹪",
+  "tuǐ": "俀聉腿僓蹆骽",
+  "tuì": "侻退娧煺蛻蜕螁駾",
+  "tūn": "吞呑旽涒啍朜焞噋憞暾",
+  "tún": "坉庉忳芚饨蛌豘豚軘飩鲀魨霕黗臀臋",
+  "tǔn": "氽",
+  "tùn": "",
+  "tuō": "乇仛讬托扡汑饦杔侂咃咜拕拖沰挩捝莌袉袥託啴涶脫脱飥馲魠鮵",
+  "tuó": "阤驮佗陀陁坨岮沱沲狏驼侻柁砤砣袉铊鸵紽堶媠詑跎酡碢鉈馱槖駄鋖駞駝橐鮀鴕鼧騨鼍驒驝鼉",
+  "tuǒ": "彵妥庹椭楕嫷撱橢鵎鰖",
+  "tuò": "杝柝毤唾涶萚跅毻嶞箨蘀籜",
+  "wa": "哇",
+  "wā": "屲穵呙劸咼哇徍挖洼娲畖窊唲啘媧窐嗗瓾蛙搲溛漥窪鼃攨韈",
+  "wá": "娃",
+  "wǎ": "佤邷咓砙瓸搲",
+  "wà": "帓袜婠聉嗢搲腽膃韎襪韤",
+  "wai": "",
+  "wāi": "呙咼歪喎竵瀤",
+  "wǎi": "崴",
+  "wài": "外顡",
+  "wān": "毌夗弯剜埦婠帵捥塆湾睕蜿潫豌鋺彎壪灣",
+  "wán": "丸刓汍纨芄完岏忨抏杬玩笂紈捖蚖顽烷琓貦頑翫",
+  "wǎn": "夘夗倇唍挽盌莞莬埦婉惋捥晚晥梚涴绾脘菀萖惌晩晼椀琬皖畹碗箢綩綰輓踠鋔鋺",
+  "wàn": "卍卐妧杤捥脕掔腕萬絻綄輐槾澫鋄瞣薍錽蟃贃鎫贎",
+  "wāng": "尣尫尪汪尩瀇",
+  "wáng": "亾兦仼莣蚟朚",
+  "wǎng": "罓罒网彺忹抂徃往枉罖罔迬惘菵暀棢蛧辋網蝄誷輞瀇魍",
+  "wàng": "妄忘迋旺盳徍望暀朢",
+  "wēi": "厃危威倭烓偎逶隇隈喴媙崴嵔愄揋揻葨葳微椳楲溦煨詴蜲縅蝛覣嶶薇燰鳂癐癓巍鰃鰄霺",
+  "wéi": "囗韦圩囲围帏沩违闱隹峗峞洈為韋桅涠唯帷惟硙维喡圍媁嵬幃湋溈爲琟違潍維蓶鄬撝潙潿醀濰鍏闈鮠壝矀覹犩欈",
+  "wěi": "伟伪纬芛苇炜玮洧娓屗捤浘荱诿偉偽唩崣捼梶痏硊萎隗骩媁嵔廆徫愇渨猥葦蒍骫骪暐椲煒瑋痿腲艉韪僞嶉撱碨磈鲔寪緯蔿諉踓韑頠薳儰濻鍡鮪瀢韙颹韡亹瓗斖",
+  "wèi": "卫未位味苿為畏胃叞軎猚硙菋谓喂喡媦渭爲猬煟墛瞆碨蔚蜼慰熭犚磑緭蝟衛懀罻衞謂餧鮇螱褽餵魏藯轊鏏霨鳚蘶饖瓗讆躗讏躛",
+  "wēn": "昷塭温缊榅殟溫瑥辒韫榲瘟緼縕豱輼轀鎾饂鳁鞰鰛鰮",
+  "wén": "文彣芠炆玟闻紋蚉蚊珳阌雯瘒聞馼駇魰鳼鴍螡閺閿蟁闅鼤繧闦",
+  "wěn": "伆刎吻呅忟抆呡忞歾肳紊桽脗稳穏穩",
+  "wèn": "问妏汶紋莬問渂揾搵絻顐璺",
+  "wēng": "翁嗡滃鹟聬螉鎓鶲",
+  "wěng": "勜奣塕嵡滃蓊暡瞈攚",
+  "wèng": "瓮蕹甕罋齆",
+  "wō": "挝倭莴唩涹渦猧萵喔窝窩蜗撾濄緺蝸踒薶",
+  "wǒ": "呙我咼婑婐捰",
+  "wò": "仴沃肟卧枂臥偓捾涴媉幄握渥焥硪楃腛斡瞃濣瓁臒龌馧龏齷",
+  "wū": "乌圬弙扜扝汚汙污邬呜巫杅杇於屋洿诬钨烏剭窏釫惡鄔嗚誈僫歍誣箼鋘螐鴮鎢鰞",
+  "wú": "无毋吳吴吾呉芜郚唔娪峿洖浯茣莁梧珸祦無铻鹀蜈墲蕪鋙鋘橆璑蟱鯃鵐譕鼯鷡",
+  "wǔ": "乄五午仵伍妩庑忤怃迕旿武玝侮倵娒捂逜陚啎娬牾堥珷摀碔鹉熓瑦舞嫵廡憮潕儛甒膴瞴鵡躌",
+  "wù": "兀勿务戊阢屼扤坞岉杌沕芴忢旿物矹俉卼敄柮误務唔娪悟悞悮粅趶晤焐婺嵍惡渞痦隖靰骛塢奦嵨溩雺雾僫寤熃誤鹜鋈窹霚鼿霧齀蘁騖鶩",
+  "xī": "夕兮邜吸忚扱汐西希扸卥昔析矽穸肸肹俙咥咭徆怸恓诶郗饻唏奚娭屖息悕氥浠牺狶莃唽悉惜晞桸欷淅渓烯焁焈琋硒羛菥赥釸傒惁晰晳焟焬犀睎稀粞翖翕舾鄎厀嵠徯溪煕皙碏蒠裼锡僖榽熄熈熙獡緆蜥覡誒豨閪餏嘻噏嬆嬉嶲憘潝瘜磎膝凞暿樨橀歙熻熺熹窸羲螅螇錫燨犠瞦礂蟋豀谿豯貕蹊巂糦繥釐雟鯑鵗觹譆醯鏭鐊隵嚱巇曦爔犧酅饎觽鼷蠵鸂觿鑴",
+  "xí": "习郋席習袭觋雭喺媳椺蒵蓆嶍漝趘槢薂隰檄謵鎴霫鳛飁騱騽鰼襲驨",
+  "xǐ": "杫枲玺徙喜葈葸鈢鉩鉨屣漇蓰銑憘憙暿橲歖禧諰壐縰謑鳃蟢蹝釐璽鰓瓕鱚囍矖纚躧",
+  "xì": "匸卌扢屃忾饩呬忥怬细郄钑係恄欪盻郤屓欯绤細釳阋傒摡椞舃舄趇隙愾慀滊禊綌蒵赩隟墍熂犔稧戯潟澙蕮覤戱縘黖戲磶虩餼鬩繫闟霼屭衋",
+  "xiā": "呷虲疨虾谺傄閕煆颬瘕瞎蝦鰕",
+  "xiá": "匣侠狎俠峡柙炠狭陜埉峽烚狹珨祫捾硖笚翈舺陿徦硤遐敮暇瑕筪舝瘕碬辖磍蕸縖螛赮魻轄鍜霞鎋黠騢鶷",
+  "xiǎ": "閕閜",
+  "xià": "丅下乤圷芐疜夏梺廈睱諕嚇懗罅夓鎼鏬",
+  "xiān": "仚仙屳先奾佡忺氙杴欦祆秈苮姺枮籼珗莶掀铦搟綅跹酰锨僊僲嘕摻銛暹銽韯嬐憸薟鍁繊褼韱鮮蹮馦孅廯攕醶纎鶱襳躚纖鱻",
+  "xián": "伭咞闲咁妶弦臤贤咸唌挦涎玹盷胘娴娹婱絃舷蚿衔啣湺痫蛝閑閒鹇嗛嫌溓衘甉銜嫻嫺憪撏澖稴羬誸賢諴輱醎癇癎瞯藖礥鹹麙贒鑦鷴鷼鷳",
+  "xiǎn": "彡冼狝显险崄毨烍猃蚬険赻筅尟尠搟禒蜆跣銑箲險嶮獫獮藓鍌鮮燹顕幰攇櫶蘚譣玁韅顯灦",
+  "xiàn": "咞岘苋見现线臽限姭宪県陥哯垷娊峴涀莧軐陷埳晛現硍馅睍絤綖缐羡塪搚溓献粯羨腺僩僴槏綫誢憪撊線鋧憲橌橺縣錎餡壏懢豏麲瀗臔獻糮鏾霰鼸",
+  "xiāng": "乡芗香郷厢啍鄉鄊廂湘缃萫葙鄕楿稥薌箱緗膷襄儴勷忀骧麘欀瓖镶鱜纕鑲驤",
+  "xiáng": "夅瓨佭庠羏栙祥絴翔詳跭",
+  "xiǎng": "享亯响蚃饷晑飨想銄餉鲞蠁鮝鯗響饗饟鱶",
+  "xiàng": "向姠项珦象缿衖項像勨嶑潒銗閧曏橡襐闂嚮蟓鐌鱌",
+  "xiāo": "灲灱呺枭侾哓枵骁宯宵庨消烋绡莦虓逍鸮婋梟焇猇萧痚痟睄硣硝窙翛销嗃揱綃蛸嘐歊潇熇箫踃嘵憢撨獟獢箾銷霄骹彇膮蕭颵魈鴞穘簘藃蟂蟏鴵嚣瀟簫蟰髇櫹嚻囂髐鷍蠨驍毊虈",
+  "xiáo": "姣洨郩崤淆訤殽誵",
+  "xiǎo": "小晓暁筱筿皛曉篠謏皢",
+  "xiào": "孝効咲恔俲哮效涍笑啸傚敩殽嗃詨嘋嘨誟嘯薂歗熽斅斆",
+  "xiē": "娎揳猲楔歇滊獦蝎蠍",
+  "xié": "劦协旪協胁垥奊峫恊拹挾脇脅脋衺偕斜梋谐絜翓颉嗋愶慀搚携瑎綊熁膎鲑勰撷擕緳縀缬蝢鞋諧燲鮭嚡擷鞵儶襭孈攜讗龤",
+  "xiě": "写冩寫藛",
+  "xiè": "伳灺泻祄绁缷卸枻洩炨炧卨屑栧偞偰徢械烲焎禼紲亵媟屟渫絏絬谢僁塮觟觧榍榝榭褉靾噧寫屧暬樧碿緤嶰廨懈澥獬糏薤薢邂韰燮褻謝夑瀉鞢韘瀣爕繲蟹蠏齘齛纈齥齂躠躞",
+  "xīn": "忄心邤妡忻辛昕杺欣盺俽莘惞訢鈊锌新歆廞鋅噺噷嬜薪馨鑫馫",
+  "xín": "枔襑镡礥鐔",
+  "xǐn": "伈",
+  "xìn": "阠伩囟孞炘軐脪衅訫愖焮馸顖舋釁",
+  "xīng": "狌星垶骍惺猩煋瑆腥觪箵篂興謃鮏曐觲騂皨鯹",
+  "xíng": "刑邢饧巠形陉侀郉哘型洐荥钘陘娙硎铏鈃蛵滎鉶銒鋞餳",
+  "xǐng": "睲醒擤",
+  "xìng": "杏姓幸性荇倖莕婞悻涬葕睲緈鋞嬹臖",
+  "xiōng": "凶匂兄兇匈芎讻忷汹哅恟洶胷胸訩詾賯",
+  "xióng": "雄熊熋",
+  "xiǒng": "焽焸",
+  "xiòng": "诇詗夐敻",
+  "xiū": "俢修咻庥烌烋羞脩脙鸺臹貅馐樇銝髤髹鎀鮴鵂鏅饈鱃飍",
+  "xiú": "苬",
+  "xiǔ": "朽滫潃糔",
+  "xiù": "秀岫峀珛绣袖琇锈嗅溴綉璓褏褎銹螑嚊繍鏅繡鏥鏽齅",
+  "xū": "圩戌旴姁疞盱欨砉胥须眗訏顼偦虗虚裇許谞媭揟欻湏湑虛須楈綇頊嘘墟稰蓲需魆噓嬃歔緰縃蕦蝑歘藇諝燸譃魖驉鑐鬚",
+  "xú": "俆冔徐禑蒣",
+  "xǔ": "呴姁诩浒栩珝喣湑蛡暊詡滸稰鄦糈諿醑盨",
+  "xù": "旭伵序旴汿芧侐卹妶怴沀叙恓恤昫朐洫垿晇欰殈烅珬勗勖喐惐掝敍敘淢烼绪续蚼酗壻婿朂溆矞絮聓訹慉滀煦続蓄賉槒漵潊盢瞁緒聟蓿銊嘼獝稸緖藇藚續鱮",
+  "xuān": "吅轩昍咺宣弲晅軒梋谖喧塇媗愃愋揎萲萱暄煊瑄蓒睻儇禤箮翧蝖鋗嬛懁蕿諠諼鞙駨鍹駽矎翾藼蘐蠉譞鰚讂",
+  "xuán": "玄伭妶玹痃悬琁蜁嫙漩暶璇縣檈璿懸",
+  "xuǎn": "咺选烜喛暅選癣癬",
+  "xuàn": "怰泫昡炫绚眩袨铉琄眴衒渲絢楥楦鉉夐敻碹蔙镟颴縼繏鏇贙",
+  "xuē": "疶蒆靴薛辥辪鞾",
+  "xué": "穴斈乴学峃茓泶袕鸴敩踅噱壆學嶨澩燢觷鷽",
+  "xuě": "彐雪樰膤艝轌鳕鱈",
+  "xuè": "吷坹岤怴泬狘疦桖谑滈趐謔瞲瀥",
+  "xūn": "坃勋埙焄勛塤煇窨勲勳薫嚑壎獯薰曛燻臐矄蘍壦爋纁醺",
+  "xún": "廵寻巡旬杊畃询郇咰姰峋恂洵浔紃荀荨栒桪毥珣偱眴尋循揗詢鄩鲟噚潯蕁攳樳燅燖璕駨蟫蟳爓鱘鱏灥",
+  "xùn": "卂训讯伨汛迅驯侚巺徇狥迿逊孫殉毥浚訊訓訙奞巽殾稄遜馴愻噀潠蕈濬爋顨鶽鑂",
+  "ya": "",
+  "yā": "丫圧吖亞庘押枒垭鸦桠鸭啞孲铔椏鴉錏鴨壓鵶鐚",
+  "yá": "牙伢厑岈芽厓拁琊笌蚜堐崕崖涯猚釾睚衙漄齖",
+  "yǎ": "疋厊庌挜疨唖啞掗痖雅瘂蕥",
+  "yà": "劜圠轧亚冴襾覀讶亜犽迓亞玡軋姶娅挜砑俹氩埡婭掗訝铔揠氬猰聐圔椻稏碣窫潝磍壓瓛齾",
+  "yān": "恹剦烟珚胭崦淊淹焑焉菸阉殗渰湮傿歅煙硽鄢嫣漹嶖樮醃橪閹閼嬮懨篶懕臙黫黰",
+  "yán": "讠厃延闫严妍芫訁言岩昖沿炏炎郔唌埏姸娫狿莚娮梴盐啱琂硏訮閆阎喦嵓嵒筵綖蜒塩揅楌詽碞蔅羬颜厳虤閻檐顏顔嚴壛巌簷櫩壧巖巗欕礹鹽麣",
+  "yǎn": "夵抁沇乵兖俨兗匽弇衍剡偃厣掞掩眼萒郾酓隁嵃愝扊揜晻棪渰渷琰遃隒椼硽罨裺演褗戭窴蝘魇噞嬐躽縯檿黡厴甗鰋鶠黤儼黬黭龑孍顩鼴巘巚曮魘鼹礹齴黶",
+  "yàn": "厌妟觃牪匽姲彥彦洝砚唁宴晏烻艳覎验偐掞焔猏硏谚隁喭堰敥棪殗焱焰猒硯雁傿椻溎滟豣鳫厭墕暥熖酽鳱嬊谳餍鴈燄諺赝鬳嚈嬮曕鴳酀騐験嚥嬿艶贋軅曣爓醶騴齞鷃灔贗囐觾讌醼饜驗鷰艷灎釅驠灧讞豓豔灩",
+  "yāng": "央姎抰泱柍殃胦眏秧鸯鉠雵鞅鍈鴦",
+  "yáng": "扬阦阳旸杨炀玚飏佯劷氜疡钖垟徉昜洋羏烊珜眻陽婸崵崸愓揚蛘敭暘楊煬瑒禓瘍諹輰鍚鴹颺鰑霷鸉",
+  "yǎng": "卬佒咉坱岟养柍炴氧眏痒紻傟勜楧軮慃氱蝆飬養駚懩攁瀁癢礢",
+  "yàng": "怏柍恙样烊羕楧詇煬様漾鞅樣瀁",
+  "yāo": "幺夭吆妖枖殀祅約訞喓葽楆腰鴁撽邀鴢",
+  "yáo": "爻尧匋尭肴垚姚峣恌轺倄烑珧皐窕窑铫隃傜堯揺殽谣軺嗂媱徭愮搖摇滧猺遙遥僥摿暚榣瑤瑶銚飖餆嶢嶤徺磘窯窰餚繇謡謠鎐鳐颻蘨邎顤鰩鱙",
+  "yǎo": "仸宎岆抭杳枖狕苭咬柼眑窅窈舀偠婹崾溔蓔榚闄騕齩鷕",
+  "yào": "怮穾药烄袎窔筄葯詏愮熎瘧覞靿樂獟箹鹞薬鼼曜燿艞藥矅耀纅鷂讑",
+  "ye": "亪",
+  "yē": "吔耶倻椰暍歋窫噎潱擨蠮",
+  "yé": "爷耶峫捓揶铘爺瑘釾鋣鎁",
+  "yě": "也冶埜野嘢漜壄",
+  "yè": "业曳页曵邺夜抴亱拽枼洂頁捙晔枽烨液焆谒堨揲殗腋葉墷楪業煠痷馌僷曅燁璍擖擛曄皣瞱緤鄴靥嶪嶫澲謁餣擫曗瞸鍱擪爗礏鎑饁鵺鐷靨驜瓛鸈",
+  "yi": "弬",
+  "yī": "一乊弌辷衤伊衣医吚壱依祎咿洢悘渏猗畩郼铱壹揖蛜禕嫛漪稦銥嬄撎噫夁瑿鹥繄檹毉醫黟譩鷖黳",
+  "yí": "乁仪匜圯夷彵迆冝宐杝沂诒侇宜怡沶狏狋迤迱饴咦姨峓恞拸柂洟珆瓵荑贻迻宧巸扅栘桋眙胰袘貤痍移萓釶椬羠蛦詒貽遗媐暆椸煕誃跠頉颐飴儀熪箷遺嶬彛彜螔頥頤寲嶷簃顊鮧鴺彞彝謻鏔籎觺讉",
+  "yǐ": "乚乛乙已以扡迆钇佁攺矣苡叕苢迤迱庡舣蚁釔倚扆笖逘酏偯猗崺攲敧旑鈘鉯鳦裿旖輢嬟敼螘檥礒艤蟻顗轙齮",
+  "yì": "乂义亿弋刈忆艺仡匇肊艾议阣亦伇屹异忔芅伿佚劮呓坄役抑杙耴苅译邑佾呭呹妷峄怈怿易枍欥泆炈秇绎衪诣驿俋奕帟帠弈昳枻浂玴疫羿轶唈垼悒挹栺栧欭浥浳益袘袣谊貤勚埶埸悘悥掜殹異羛翊翌萟訳訲豙豛逸釴隿幆敡晹棭殔湙焲焬蛡詍跇軼鄓鈠骮亄兿嗌意溢獈痬睪竩缢義肄裔裛詣勩嫕廙榏潩瘗膉蓺蜴駅億槸毅熠熤熼瘞篒誼镒鹝鹢黓儗劓圛墿嬑嶧憶懌曀殪澺燚瘱瞖穓縊艗薏螠褹寱懝斁曎檍歝燡燱翳翼臆貖鮨癔藝藙贀鎰镱繶繹豷霬鯣鶃鶂鶍瀷蘙議譯醳醷饐囈鐿鷁鷊懿襼驛鷧虉鸃鷾讛齸",
+  "yīn": "囙因阥阴侌垔姻洇茵荫音骃栶欭氤陰凐秵裀铟陻隂喑堙婣愔湮筃絪歅溵禋蒑蔭慇瘖銦磤緸鞇諲霒駰噾濦闉霠齗韾",
+  "yín": "冘乑伒吟圻犾苂斦烎垠泿圁峾狺珢荶訔訚唫婬寅崟崯淫訡银鈝龂滛碒鄞夤蔩銀龈噖殥璌誾嚚檭蟫霪齦鷣",
+  "yǐn": "廴尹引吲饮粌蚓硍赺淾鈏飲隠靷飮朄輑磤趛檃瘾隱嶾濥縯螾檼蘟櫽癮讔",
+  "yìn": "廴印茚洕胤荫垽梀堷湚猌飲廕隠飮窨酳慭癊憗憖隱鮣懚",
+  "yīng": "応旲英柍荥偀桜珱莺啨婴媖愥渶绬朠楧焽焸煐瑛嫈碤锳嘤撄甇緓缨罂蝧賏樱璎噟罃褮霙鴬鹦嬰應膺韺甖鹰鶑鶧嚶孆孾攖瀴罌蘡譍櫻瓔礯譻鶯鑍纓蠳鷪軈鷹鸎鸚",
+  "yíng": "夃盁迎茔盈荧浧耺莹営桯萤萦营蛍溁溋萾僌塋嵤楹滢蓥滎潆熒蝇瑩禜蝿嬴營縈螢濙濚濴藀覮謍赢瀅爃蠅鎣巆攍瀛瀠瀯櫿贏灐籝灜籯",
+  "yǐng": "矨郢浧梬颍颕颖摬影潁瘿穎頴覮巊廮瀴鐛癭",
+  "yìng": "応映眏暎硬媵膡鞕應瀴鱦",
+  "yo": "喲",
+  "yō": "唷喲",
+  "yōng": "拥痈邕庸傭嗈鄘雍墉嫞慵滽槦牅牗銿噰壅擁澭郺镛臃癕雝鏞鳙廱灉饔鱅鷛癰",
+  "yóng": "喁揘颙顒鰫",
+  "yǒng": "永甬咏怺泳俑勈勇栐埇悀柡恿惥愑湧硧詠塎嵱彮愹蛹慂踊鲬噰澭踴鯒",
+  "yòng": "用苚砽蒏醟",
+  "yōu": "优妋忧攸呦怮泑幽峳浟逌悠羪麀滺憂優鄾嚘懮瀀獶櫌纋耰獿",
+  "yóu": "尢冘尤由甴汼沋犹邮怞油肬怣斿柚疣庮秞莜莤莸郵铀偤蚰訧逰揂游猶遊鱿楢猷鈾鲉輏駀蕕蝣魷輶鮋繇櫾",
+  "yǒu": "友丣卣苃酉羑栯莠梄聈铕湵楢禉蜏銪槱牖牗黝懮",
+  "yòu": "又右幼佑佦侑孧泑狖哊囿姷宥峟柚牰祐诱迶唀梎痏蚴亴貁釉酭誘鼬櫾",
+  "yū": "込扜扝纡迃迂穻陓紆唹淤盓瘀箊",
+  "yú": "丂亐于邘伃余妤扵杅欤玗玙於盂臾衧鱼乻俞兪捓禺竽舁茰虶娛娯娪娱桙狳谀酑馀渔萸釪隃隅雩魚堣堬婾媀媮崳嵎嵛揄楰渝湡畬腴萮逾骬愚楡榆歈牏瑜艅虞觎漁睮窬舆褕歶羭蕍蝓諛雓餘魣嬩懙澞覦踰歟璵螸輿鍝謣髃鮽旟籅騟鯲蘛轝鰅鷠鸆齵",
+  "yǔ": "伛宇屿羽穻俁俣挧禹圄祤偊匬圉庾敔鄅斞萭傴寙楀瑀瘐與語窳頨龉噳嶼懙貐斔穥麌齬",
+  "yù": "肀玉驭圫聿芌芋吾妪忬汩灹饫欥育郁俞昱狱禺秗茟俼叞峪彧栯浴砡钰预域堉悆惐捥欲淢淯痏粖翑袬谕逳阈喅喩喻媀寓庽御棛棜棫焴琙琟矞硢硲裕遇飫馭鹆奧愈滪煜稢罭艈蒮蓣誉鈺預僪嫗嶎戫毓澚獄瘉緎蜟蜮語輍銉隩慾潏熨稶蓹薁豫遹鋊鳿澦燏燠蕷藇諭錥閾鴧鴪鴥儥礇禦魊鹬癒礖礜篽醧鵒櫲饇蘌譽鐭霱雤欎驈鬻籞鱊鷸鸒欝軉鬰鬱灪籲爩",
+  "yuān": "夗囦肙鸢剈冤弲悁眢鸳寃涴渆渁渊渕惌淵葾棩蒬蜎裷鹓箢鳶蜵駌鋺鴛嬽鵷灁鼘鼝",
+  "yuán": "元円贠邧园妧沅芫杬茒垣爰貟原員圆笎蚖袁厡酛傆喛圎媛援湲猨缘鈨鼋園圓塬媴嫄楥溒源猿蒝榞榬辕緣縁蝝蝯褤魭圜橼羱薗螈黿謜轅鎱櫞邍騵鶢鶰厵",
+  "yuǎn": "盶逺遠薳鋺",
+  "yuàn": "夗妴苑怨院垸衏傆媛掾瑗禐愿裫褑噮願",
+  "yuē": "曰曱扚約啘箹矱",
+  "yuě": "哕噦",
+  "yuè": "月戉兊刖兌妜岄抈礿岳枂泧玥恱栎哾悅悦蚏蚎軏钺阅捳跀跃粤越鈅楽粵鉞說説樂閲閱嬳樾篗髺嶽臒龠擽矆櫟籆瀹蘥黦爚禴趯躍籥鑰鸑籰鸙",
+  "yūn": "涒缊蒀暈氲煴蒕氳熅煾奫緼蝹縕赟馧贇",
+  "yún": "云勻匀伝囩妘抣沄纭芸昀畇眃秐貟郧員涢紜耘耺鄖雲愪溳筠筼蒷熉澐蕓鋆橒篔縜",
+  "yǔn": "允阭夽抎狁玧陨荺殒喗鈗隕煴殞熅馻磒賱霣齫齳",
+  "yùn": "孕贠运枟郓恽貟員菀鄆酝傊惲愠缊運慍暈榅煇腪韫韵褞熨緷緼蕰蕴縕薀醖醞餫藴鞰韗韞蘊韻",
+  "zā": "帀匝沞迊咂拶桚紥紮鉔噈魳臜臢",
+  "zá": "杂沯砸偺喒韴雑襍雜囃囋囐雥",
+  "zǎ": "咋偺喒",
+  "zāi": "災灾甾哉栽烖畠菑渽溨睵賳",
+  "zǎi": "宰崽",
+  "zài": "再在扗抂洅傤載酨儎縡",
+  "zān": "兂撍糌橵篸簪簮鵤鐕鐟",
+  "zán": "偺喒",
+  "zǎn": "拶昝桚寁揝噆撍儧攅儹攢趱趲",
+  "zàn": "暂暫賛赞錾鄼濽蹔酂瓉贊鏩鏨瓒酇囋灒讃瓚禶穳襸讚饡",
+  "zāng": "匨牂羘赃賍臧賘贓髒贜",
+  "zǎng": "驵駔",
+  "zàng": "奘弉脏塟葬臧蔵銺臓臟",
+  "zāo": "傮遭糟蹧醩",
+  "záo": "凿鑿",
+  "zǎo": "早枣栆蚤棗璅澡璪薻藻",
+  "zào": "灶皁皂唣唕造梍喿慥煰艁噪簉燥竃竈譟趮躁",
+  "zé": "则択沢咋泎责迮則唶啧帻笮舴責溭滜睪矠飵嘖嫧幘箦蔶樍歵諎赜擇澤皟瞔簀耫礋襗謮賾蠌灂齚齰鸅",
+  "zè": "仄庂汄昃昗捑側崱稄",
+  "zéi": "贼戝賊鲗蠈鰂鱡",
+  "zēn": "撍",
+  "zěn": "怎",
+  "zèn": "谮譖",
+  "zēng": "曽増鄫增憎缯橧璔縡矰磳竲罾繒譄鱛",
+  "zěng": "",
+  "zèng": "锃綜缯鋥熷甑赠繒鬵贈囎",
+  "zi": "嗭",
+  "zī": "孖孜甾茊兹呲咨姕姿茲栥玆畠紎赀资崰淄秶缁菑谘赼嗞孳嵫椔湽滋粢葘辎鄑孶禌觜訾貲資趑锱稵緕緇鈭镃龇輜鼒澬薋諮趦輺錙髭鲻鍿鎡璾頾頿鯔鶅齍纃鰦齜",
+  "zí": "蓻",
+  "zǐ": "子吇芓姉姊杍沝矷秄胏呰秭籽耔茈虸笫梓釨啙紫滓訿榟橴",
+  "zì": "字自芓秄洓茡荢倳剚恣牸渍眦眥菑胔胾漬",
+  "zōng": "宗枞倧骔堫嵏嵕惾棕猣腙葼朡椶潈稯綜緃樅熧緵翪蝬踨踪磫繌鍐豵蹤騌鬃騣鬉鬷鯮鯼鑁",
+  "zǒng": "总倊偬捴惣揔搃焧傯蓗嵸摠潀稯総熜緫縂燪縱總",
+  "zòng": "昮疭從猔碂粽潨糉緵瘲縦縱繌糭",
+  "zōu": "邹驺诹郰陬掫菆棸棷鄒箃緅諏鄹鲰鯫黀騶齱齺",
+  "zǒu": "赱走搊鯐",
+  "zòu": "奏揍媰楱",
+  "zū": "怚柤租菹葅蒩",
+  "zú": "卆足倅哫崒崪族椊稡箤踤镞鎐鏃",
+  "zǔ": "诅阻组俎柤爼珇祖唨組詛靻鎺",
+  "zù": "",
+  "zuān": "鉆劗躜鑚躦鑽",
+  "zuǎn": "繤缵纂纉籫纘",
+  "zuàn": "揝篹賺攥",
+  "zuī": "厜朘嗺樶蟕纗",
+  "zuí": "",
+  "zuǐ": "咀觜嶊嘴噿濢璻",
+  "zuì": "冣栬絊酔晬最祽睟稡罪辠槜酻蕞醉嶵檇鋷錊檌欈",
+  "zūn": "尊噂墫嶟遵樽繜罇鶎鐏鳟鱒鷷",
+  "zǔn": "僔撙繜譐",
+  "zùn": "拵捘栫袸銌瀳",
+  "zuo": "咗",
+  "zuō": "嘬穝",
+  "zuó": "苲昨柮秨莋捽笮稓筰鈼",
+  "zuǒ": "左佐繓",
+  "zuò": "作坐阼岝岞怍侳柞祚胙唑座袏做葄葃酢蓙飵諎糳",
+  "zhā": "吒咋抯挓柤査哳紥偧紮揸渣楂飵劄摣潳皶樝觰皻譇齄齇",
+  "zhá": "札甴軋闸剳蚻铡喋煠牐閘劄箚霅耫鍘譗",
+  "zhǎ": "厏拃苲眨砟鲊鲝諎鮓鮺",
+  "zhà": "乍吒灹诈怍咤奓柞宱痄蚱喥溠詐搾鲊榨鮓醡",
+  "zhāi": "亝哜夈粂捚斋側斎摘榸齊嚌擿齋",
+  "zhái": "厇宅翟擇檡",
+  "zhǎi": "厏抧窄鉙",
+  "zhài": "责债砦責債寨瘵",
+  "zhān": "岾怗枬沾毡旃栴粘蛅飦惉詀趈詹閚谵鳽噡嶦薝邅霑氈氊瞻覱鹯旜譫饘鳣驙魙鱣鸇",
+  "zhán": "讝",
+  "zhǎn": "斩飐展盏斬琖搌盞嶃嶄榐辗颭嫸醆橏輾皽黵",
+  "zhàn": "佔战栈桟站偡绽菚嵁棧湛戦碊僝綻嶘戰虥虦覱轏譧欃蘸驏",
+  "zhāng": "弡张張章傽鄣嫜彰慞漳獐粻蔁遧暲樟璋餦蟑鏱騿鱆麞",
+  "zhǎng": "仉仧兏長掌漲幥礃鞝",
+  "zhàng": "丈仗扙帐杖胀账粀帳涱脹痮障墇嶂幛漲賬瘬瘴瞕",
+  "zhāo": "佋钊妱巶招昭炤釗啁釽鉊鳭駋鍣皽",
+  "zháo": "",
+  "zhǎo": "爫找沼菬瑵",
+  "zhào": "兆诏枛垗炤狣赵笊肁啅旐棹罀詔照罩箌肈肇趙曌濯燳鮡櫂瞾羄",
+  "zhe": "嗻",
+  "zhē": "嗻嫬遮螫",
+  "zhé": "乇厇扸杔歽矺砓籷虴哲埑粍袩啠悊晢晣辄喆棏聑蛰詟搩蜇谪馲摺輒慹磔輙銸辙蟄嚞謫謺鮿轍讁讋",
+  "zhě": "者乽啫锗赭踷褶鍺襵",
+  "zhè": "柘浙這淛嗻蔗樜鹧蟅鷓",
+  "zhèi": "",
+  "zhēn": "贞针侦侲帧枮浈珎珍胗貞帪桢眞真砧祯針偵酙寊幀揕湞葴遉嫃搸斟椹楨溱獉甄禎蒖蓁鉁榛槙殝瑧碪禛潧箴樼澵臻薽錱轃鍼籈鱵",
+  "zhén": "",
+  "zhěn": "诊抮枕姫弫昣轸屒畛疹眕袗紾聄萙竧裖覙診軫嫃缜槙稹駗縝縥辴鬒黰",
+  "zhèn": "圳阵纼甽侲挋陣鸩振朕栚紖桭眹赈塦揕絼榐瑱誫賑鋴镇震鴆鎮鎭",
+  "zhēng": "凧争佂姃征怔爭糽埩峥炡狰烝眐脀钲埥崝崢掙猙睁聇铮媜揁筝徰睜蒸踭鉦徴箏綪錚徵篜鬇癥鏳",
+  "zhěng": "氶抍糽拯掟晸愸撜整",
+  "zhèng": "氶证诤郑政徎钲掙幁証塣諍靕鄭憕鴊證",
+  "zhī": "之支卮汁芝巵汥呮泜肢栀祗秓胑胝衼倁栺疷祬脂隻梔菭椥臸搘稙綕榰蜘馶憄鳷鴲織鼅蘵",
+  "zhí": "执侄妷直秇姪郦値值聀釞埴執淔职戠植犆禃絷臷跖瓡摕摭馽嬂慹漐潪踯樴膱縶職蟙蹠軄躑",
+  "zhǐ": "夂止凪劧旨阯坁址帋扺汦沚纸芷坧抧杫祇祉茋咫恉指枳洔砋秖衹轵淽疻紙蚔訨趾軹黹禔筫絺酯墌徴徵槯藢襧",
+  "zhì": "至芖坁志忮扻豸制厔垁帙帜斦治炙质迣郅俧峙庢庤挃柣栉洷祑陟娡徏挚捗晊桎歭狾秩致袟贽轾乿偫剬徝掷梽楖猘畤痓痔眰秲秷窒紩翐袠觗貭铚鸷傂崻彘智滞痣蛭骘寘廌搱滍稚筫置跱輊锧雉墆滯潌疐瘈聜製覟誌銍幟憄摨摯潪熫稺膣觯質踬銴鋕擳旘瀄璏緻隲駤鴙儨劕懥擲擿櫛穉螲懫織贄櫍瓆觶騭鯯礩豑鶨騺驇躓鷙鑕豒",
+  "zhōng": "夂伀汷刣妐彸忪忠泈炂终柊盅衳钟舯衷終鈡幒蔠蜙锺銿螤鴤螽鍾斔鼨蹱鐘籦",
+  "zhǒng": "肿冢喠尰塚歱煄腫瘇種徸踵穜",
+  "zhòng": "仲众妕狆祌茽衶蚛偅眾堹媑筗衆種緟諥",
+  "zhōu": "州舟诌侜周洲炿诪烐珘辀郮啁婤徟掫淍矪週鸼喌赒輈翢銂賙輖霌駲嚋盩謅鵃騆譸",
+  "zhóu": "妯軸碡",
+  "zhǒu": "肘帚疛胕菷晭睭箒鯞",
+  "zhòu": "纣伷呪咒宙绉冑咮昼紂胄荮皱酎晝粙椆葤詋軸甃僽皺駎噣縐繇薵骤籀籕籒驟",
+  "zhū": "侏诛邾洙茱株珠诸猪硃秼袾铢絑蛛誅跦槠潴蕏蝫銖橥諸豬駯鮢鴸瀦藸鼄櫧櫫鯺蠩",
+  "zhú": "朮竹竺炢笁茿烛窋逐笜舳逫瘃蓫敱磩築篴斀燭蠋躅鱁劚孎灟斸曯欘爥蠾钃",
+  "zhǔ": "丶主劯宔拄砫罜陼帾渚煑煮詝褚嘱濐燝麈瞩屬囑鸀矚",
+  "zhù": "伫佇住纻芧苎坾拀杼注苧贮迬驻乼壴柱柷殶炷祝疰眝砫祩竚莇紵紸羜蛀尌嵀註貯跓軴铸筯鉒飳馵嗻墸箸翥樦澍鋳駐築篫麆簗櫡鑄",
+  "zhuā": "抓挝撾檛膼簻髽",
+  "zhuǎ": "爫",
+  "zhuāi": "拽",
+  "zhuǎi": "跩",
+  "zhuài": "拽睉",
+  "zhuān": "专叀専恮砖耑專剸鄟塼嫥漙瑼甎磗膞颛磚諯篿蟤顓鱄",
+  "zhuǎn": "孨転膞竱轉",
+  "zhuàn": "灷啭転堟蒃傳瑑腞僎僝赚撰篆馔篹縳襈賺簨贃譔饌囀籑",
+  "zhuāng": "妆庄妝庒荘娤桩莊梉湷粧装裝樁糚",
+  "zhuǎng": "奘",
+  "zhuàng": "壮壯状狀壵焋僮漴撞戅戆戇",
+  "zhuī": "隹骓锥錐騅鵻",
+  "zhuǐ": "沝",
+  "zhuì": "坠笍奞娷缀隊惴甀缒腏畷硾膇墜綴赘縋諈醊錣礈贅鑆",
+  "zhūn": "圫宒忳迍肫窀谆啍諄衠",
+  "zhǔn": "准埻凖準稕綧",
+  "zhùn": "旽訰稕綧",
+  "zhuō": "拙炪倬捉桌梲棁涿淖棳棹焯窧槕穛鐯穱",
+  "zhuó": "圴彴汋犳灼卓叕妰茁斫浊丵剢捔浞烵诼酌啄啅娺聉斱斮晫椓琸硺窡罬蓔墌撯擆斲禚劅諁諑趠鋜噣濁燋篧擢斀斵濯藋櫡謶镯繳鵫灂蠗鐲籗鷟蠿籱",
+  "zhuò": "",
+  "chǎng,ān,hàn": "厂",
+  "dīng,zhēng": "丁",
+  "bǔ,bo": "卜",
+  "jǐ,jī": "几",
+  "le,liǎo": "了",
+  "gān,gàn": "干",
+  "dà,dài,tài": "大",
+  "yǔ,yù,yú": "与",
+  "shàng,shǎng": "上",
+  "wàn,mò": "万",
+  "gè,gě": "个各",
+  "me,mó,ma,yāo": "么",
+  "guǎng,ān": "广",
+  "wáng,wú": "亡",
+  "nǚ,rǔ": "女",
+  "chā,chá,chǎ": "叉",
+  "wáng,wàng": "王",
+  "fū,fú": "夫",
+  "zhā,zā,zhá": "扎",
+  "bù,fǒu": "不",
+  "qū,ōu": "区",
+  "chē,jū": "车",
+  "qiè,qiē": "切",
+  "wǎ,wà": "瓦",
+  "tún,zhūn": "屯",
+  "shǎo,shào": "少",
+  "zhōng,zhòng": "中",
+  "nèi,nà": "内",
+  "jiàn,xiàn": "见",
+  "cháng,zhǎng": "长",
+  "shén,shí": "什",
+  "piàn,piān": "片",
+  "pú,pū": "仆",
+  "huà,huā": "化",
+  "chóu,qiú": "仇",
+  "zhuǎ,zhǎo": "爪",
+  "jǐn,jìn": "仅",
+  "fù,fǔ": "父",
+  "cóng,zòng": "从",
+  "fēn,fèn": "分",
+  "shì,zhī": "氏",
+  "fēng,fěng": "风",
+  "gōu,gòu": "勾",
+  "liù,lù": "六",
+  "dǒu,dòu": "斗",
+  "wèi,wéi": "为",
+  "chǐ,chě": "尺",
+  "yǔ,yú": "予",
+  "dǎ,dá": "打",
+  "zhèng,zhēng": "正症挣",
+  "bā,pá": "扒",
+  "jié,jiē": "节结",
+  "shù,shú,zhú": "术",
+  "kě,kè": "可",
+  "shí,dàn": "石",
+  "kǎ,qiǎ": "卡",
+  "běi,bèi": "北",
+  "zhàn,zhān": "占",
+  "qiě,jū": "且",
+  "yè,xié": "叶",
+  "hào,háo": "号",
+  "zhī,zhǐ": "只",
+  "dāo,tāo": "叨",
+  "zǎi,zǐ,zī": "仔",
+  "lìng,líng,lǐng": "令",
+  "lè,yuè": "乐",
+  "jù,gōu": "句",
+  "chù,chǔ": "处",
+  "tóu,tou": "头",
+  "níng,nìng,zhù": "宁",
+  "zhào,shào": "召",
+  "fā,fà": "发",
+  "tái,tāi": "台苔",
+  "káng,gāng": "扛",
+  "dì,de": "地",
+  "sǎo,sào": "扫",
+  "chǎng,cháng": "场",
+  "pǔ,pò,pō,piáo": "朴",
+  "guò,guo,guō": "过",
+  "yā,yà": "压",
+  "yǒu,yòu": "有",
+  "kuā,kuà": "夸",
+  "xié,yá,yé,yú,xú": "邪",
+  "jiá,jiā,gā,xiá": "夹",
+  "huà,huá": "划",
+  "dāng,dàng": "当",
+  "tù,tǔ": "吐",
+  "xià,hè": "吓",
+  "tóng,tòng": "同",
+  "qū,qǔ": "曲",
+  "ma,má,mǎ": "吗",
+  "qǐ,kǎi": "岂",
+  "zhū,shú": "朱",
+  "chuán,zhuàn": "传",
+  "xiū,xǔ": "休",
+  "rèn,rén": "任",
+  "huá,huà,huā": "华",
+  "jià,jiè,jie": "价",
+  "fèn,bīn": "份",
+  "yǎng,áng": "仰",
+  "xiě,xuè": "血",
+  "sì,shì": "似",
+  "háng,xíng": "行",
+  "huì,kuài": "会",
+  "hé,gě": "合",
+  "chuàng,chuāng": "创",
+  "chōng,chòng": "冲",
+  "qí,jì,zī,zhāi": "齐",
+  "yáng,xiáng": "羊",
+  "bìng,bīng": "并",
+  "hàn,hán": "汗",
+  "tāng,shāng": "汤",
+  "xīng,xìng": "兴",
+  "xǔ,hǔ": "许",
+  "lùn,lún": "论",
+  "nà,nǎ,nèi,nā": "那",
+  "jìn,jǐn": "尽",
+  "sūn,xùn": "孙",
+  "xì,hū": "戏",
+  "hǎo,hào": "好",
+  "tā,jiě": "她",
+  "guān,guàn": "观冠",
+  "hóng,gōng": "红",
+  "xiān,qiàn": "纤",
+  "jì,jǐ": "纪济",
+  "yuē,yāo": "约",
+  "nòng,lòng": "弄",
+  "yuǎn,yuàn": "远",
+  "huài,pēi,pī,péi": "坏",
+  "zhé,shé,zhē": "折",
+  "qiǎng,qiāng,chēng": "抢",
+  "ké,qiào": "壳",
+  "fāng,fáng": "坊",
+  "bǎ,bà": "把",
+  "gān,gǎn": "杆",
+  "sū,sù": "苏",
+  "gàng,gāng": "杠",
+  "gèng,gēng": "更",
+  "lì,lí": "丽",
+  "hái,huán": "还",
+  "fǒu,pǐ": "否",
+  "xiàn,xuán": "县",
+  "zhù,chú": "助",
+  "ya,yā": "呀",
+  "chǎo,chāo": "吵",
+  "yuán,yún,yùn": "员",
+  "ba,bā": "吧",
+  "bié,biè": "别",
+  "dīng,dìng": "钉",
+  "gū,gù": "估",
+  "hé,hē,hè": "何",
+  "tǐ,tī,bèn": "体",
+  "bó,bǎi,bà": "伯",
+  "yòng,yōng": "佣",
+  "fó,fú,bì,bó": "佛",
+  "dù,dǔ": "肚",
+  "guī,jūn,qiū": "龟",
+  "jiǎo,jué": "角",
+  "tiáo,tiāo": "条",
+  "xì,jì": "系",
+  "yìng,yīng": "应",
+  "zhè,zhèi": "这",
+  "jiān,jiàn": "间监",
+  "mēn,mèn": "闷",
+  "dì,tì,tuí": "弟",
+  "shā,shà": "沙",
+  "shà,shā": "煞",
+  "méi,mò": "没",
+  "shěn,chén": "沈",
+  "shí,zhì": "识",
+  "niào,suī": "尿",
+  "wěi,yǐ": "尾",
+  "ē,ā": "阿",
+  "jìn,jìng": "劲",
+  "zòng,zǒng": "纵",
+  "wén,wèn": "纹",
+  "mǒ,mò,mā": "抹",
+  "dān,dàn,dǎn": "担",
+  "chāi,cā": "拆",
+  "jū,gōu": "拘",
+  "lā,lá": "拉",
+  "bàn,pàn": "拌",
+  "zé,zhái": "择",
+  "qí,jī": "其奇",
+  "ruò,rě": "若",
+  "píng,pēng": "苹",
+  "zhī,qí": "枝",
+  "guì,jǔ": "柜",
+  "sàng,sāng": "丧",
+  "cì,cī": "刺",
+  "yǔ,yù": "雨语",
+  "bēn,bèn": "奔",
+  "qī,qì": "妻",
+  "zhuǎn,zhuàn,zhuǎi": "转",
+  "xiē,suò": "些",
+  "ne,ní": "呢",
+  "tiě,tiē,tiè,": "帖",
+  "lǐng,líng": "岭",
+  "zhī,zhì": "知织",
+  "hé,hè,huó,huò,hú": "和",
+  "gòng,gōng": "供共",
+  "wěi,wēi": "委",
+  "cè,zè,zhāi": "侧",
+  "pò,pǎi": "迫",
+  "de,dì,dí": "的",
+  "cǎi,cài": "采",
+  "fú,fù": "服",
+  "dǐ,de": "底",
+  "jìng,chēng": "净",
+  "juàn,juǎn": "卷",
+  "quàn,xuàn": "券",
+  "dān,shàn,chán": "单",
+  "qiǎn,jiān": "浅",
+  "xiè,yì": "泄",
+  "pō,bó": "泊",
+  "pào,pāo": "泡",
+  "ní,nì": "泥",
+  "zé,shì": "泽",
+  "kōng,kòng,kǒng": "空",
+  "láng,làng": "郎",
+  "xiáng,yáng": "详",
+  "lì,dài": "隶",
+  "shuā,shuà": "刷",
+  "jiàng,xiáng": "降",
+  "cān,shēn,cēn,sān": "参",
+  "dú,dài": "毒",
+  "kuà,kū": "挎",
+  "dǎng,dàng": "挡",
+  "kuò,guā": "括",
+  "shí,shè": "拾",
+  "tiāo,tiǎo": "挑",
+  "shèn,shén": "甚",
+  "xiàng,hàng": "巷",
+  "nán,nā": "南",
+  "xiāng,xiàng": "相",
+  "chá,zhā": "查",
+  "bǎi,bó,bò": "柏",
+  "yào,yāo": "要",
+  "yán,yàn": "研",
+  "qì,qiè": "砌",
+  "bèi,bēi": "背",
+  "shěng,xǐng": "省",
+  "xiāo,xuē": "削",
+  "hǒng,hōng,hòng": "哄",
+  "mào,mò": "冒",
+  "yǎ,yā": "哑",
+  "sī,sāi": "思",
+  "mǎ,mā,mà": "蚂",
+  "huá,huā": "哗",
+  "yè,yàn,yān": "咽",
+  "zán,zǎ": "咱",
+  "hā,hǎ,hà": "哈",
+  "nǎ,něi,na,né": "哪",
+  "hāi,ké": "咳",
+  "gǔ,gū": "骨",
+  "gāng,gàng": "钢",
+  "yào,yuè": "钥",
+  "kàn,kān": "看",
+  "zhòng,zhǒng,chóng": "种",
+  "biàn,pián": "便",
+  "zhòng,chóng": "重",
+  "xìn,shēn": "信",
+  "zhuī,duī": "追",
+  "dài,dāi": "待",
+  "shí,sì,yì": "食",
+  "mài,mò": "脉",
+  "jiāng,jiàng": "将浆",
+  "dù,duó": "度",
+  "qīn,qìng": "亲",
+  "chà,chā,chāi,cī": "差",
+  "zhà,zhá": "炸",
+  "pào,páo,bāo": "炮",
+  "sǎ,xǐ": "洒",
+  "xǐ,xiǎn": "洗",
+  "jué,jiào": "觉",
+  "biǎn,piān": "扁",
+  "shuō,shuì,yuè": "说",
+  "lǎo,mǔ": "姥",
+  "gěi,jǐ": "给",
+  "luò,lào": "络",
+  "zǎi,zài": "载",
+  "mái,mán": "埋",
+  "shāo,shào": "捎稍",
+  "dū,dōu": "都",
+  "ái,āi": "挨",
+  "mò,mù": "莫",
+  "è,wù,ě,wū": "恶",
+  "xiào,jiào": "校",
+  "hé,hú": "核",
+  "yūn,yùn": "晕",
+  "huàng,huǎng": "晃",
+  "ài,āi": "唉",
+  "ā,á,ǎ,à,a": "啊",
+  "bà,ba,pí": "罢",
+  "zuàn,zuān": "钻",
+  "qiān,yán": "铅",
+  "chéng,shèng": "乘",
+  "mì,bì": "秘泌",
+  "chēng,chèn,chèng": "称",
+  "dào,dǎo": "倒",
+  "tǎng,cháng": "倘",
+  "chàng,chāng": "倡",
+  "chòu,xiù": "臭",
+  "shè,yè,yì": "射",
+  "gē,gé": "胳搁",
+  "shuāi,cuī": "衰",
+  "liáng,liàng": "凉量",
+  "chù,xù": "畜",
+  "páng,bàng": "旁磅",
+  "zhǎng,zhàng": "涨",
+  "yǒng,chōng": "涌",
+  "qiāo,qiǎo": "悄",
+  "jiā,jia,jie": "迦家",
+  "dú,dòu": "读",
+  "shàn,shān": "扇",
+  "shān,shàn": "苫",
+  "bèi,pī": "被",
+  "tiáo,diào,zhōu": "调",
+  "bō,bāo": "剥",
+  "néng,nài": "能",
+  "nán,nàn,nuó": "难",
+  "pái,pǎi": "排",
+  "jiào,jiāo": "教",
+  "jù,jū": "据",
+  "zhù,zhuó,zhe": "著",
+  "jūn,jùn": "菌",
+  "lè,lēi": "勒",
+  "shāo,sào": "梢",
+  "fù,pì": "副",
+  "piào,piāo": "票",
+  "shèng,chéng": "盛",
+  "què,qiāo,qiǎo": "雀",
+  "chí,shi": "匙",
+  "mī,mí": "眯",
+  "la,lā": "啦",
+  "shé,yí": "蛇",
+  "lèi,léi,lěi": "累",
+  "zhǎn,chán": "崭",
+  "quān,juàn,juān": "圈",
+  "lóng,lǒng": "笼",
+  "dé,děi,de": "得",
+  "jiǎ,jià": "假",
+  "māo,máo": "猫",
+  "xuán,xuàn": "旋",
+  "zhe,zhuó,zháo,zhāo": "着",
+  "lǜ,shuài": "率",
+  "gài,gě,hé": "盖",
+  "lín,lìn": "淋",
+  "qú,jù": "渠",
+  "jiàn,jiān": "渐溅",
+  "hùn,hún": "混",
+  "sù,xiǔ,xiù": "宿",
+  "tán,dàn": "弹",
+  "yǐn,yìn": "隐",
+  "jǐng,gěng": "颈",
+  "lǜ,lù": "绿",
+  "qū,cù": "趋",
+  "tí,dī,dǐ": "提",
+  "jiē,qì": "揭",
+  "lǒu,lōu": "搂",
+  "qī,jī": "期",
+  "sàn,sǎn": "散",
+  "gě,gé": "葛",
+  "zhāo,cháo": "朝",
+  "luò,là,lào": "落",
+  "yǐ,yī": "椅",
+  "gùn,hùn": "棍",
+  "zhí,shi": "殖",
+  "xià,shà": "厦",
+  "liè,liě": "裂",
+  "jǐng,yǐng": "景",
+  "pēn,pèn": "喷",
+  "pǎo,páo": "跑",
+  "hē,hè,yè": "喝",
+  "pù,pū": "铺",
+  "zhù,zhú": "筑",
+  "dá,dā": "答",
+  "bǎo,bǔ,pù": "堡",
+  "ào,yù": "奥",
+  "fān,pān": "番",
+  "là,xī": "腊",
+  "gǎng,jiǎng": "港",
+  "céng,zēng": "曾",
+  "yú,tōu": "愉",
+  "qiáng,qiǎng,jiàng": "强",
+  "shǔ,zhǔ": "属",
+  "zhōu,yù": "粥",
+  "shè,niè": "摄",
+  "tián,zhèn": "填",
+  "méng,mēng,měng": "蒙",
+  "jìn,jīn": "禁",
+  "lù,liù": "碌",
+  "tiào,táo": "跳",
+  "é,yǐ": "蛾",
+  "jiě,jiè,xiè": "解",
+  "shù,shǔ,shuò": "数",
+  "liū,liù": "溜",
+  "sāi,sài,sè": "塞",
+  "pì,bì": "辟",
+  "fèng,féng": "缝",
+  "piě,piē": "撇",
+  "mó,mú": "模",
+  "bǎng,bàng": "榜",
+  "shang,cháng": "裳",
+  "xiān,xiǎn": "鲜",
+  "yí,nǐ": "疑",
+  "gāo,gào": "膏",
+  "piāo,piào,piǎo": "漂",
+  "suō,sù": "缩",
+  "qù,cù": "趣",
+  "sā,sǎ": "撒",
+  "tàng,tāng": "趟",
+  "héng,hèng": "横",
+  "mán,mén": "瞒",
+  "bào,pù": "暴",
+  "mó,mā": "摩",
+  "hú,hū,hù": "糊",
+  "pī,pǐ": "劈",
+  "yàn,yān": "燕",
+  "báo,bó,bò": "薄",
+  "mó,mò": "磨",
+  "jiǎo,zhuó": "缴",
+  "cáng,zàng": "藏",
+  "fán,pó": "繁",
+  "bì,bei": "臂",
+  "chàn,zhàn": "颤",
+  "jiāng,qiáng": "疆",
+  "jiáo,jué,jiào": "嚼",
+  "rǎng,rāng": "嚷",
+  "lù,lòu": "露",
+  "náng,nāng": "囊",
+  "hāng,bèn": "夯",
+  "āo,wā": "凹",
+  "féng,píng": "冯",
+  "xū,yù": "吁",
+  "lèi,lē": "肋",
+  "lūn,lún": "抡",
+  "jiè,gài": "芥",
+  "xīn,xìn": "芯",
+  "chā,chà": "杈",
+  "xiāo,xiào": "肖",
+  "zhī,zī": "吱",
+  "ǒu,ōu,òu": "呕",
+  "nà,nè": "呐",
+  "qiàng,qiāng": "呛",
+  "tún,dùn": "囤",
+  "kēng,háng": "吭",
+  "diàn,tián": "佃",
+  "sì,cì": "伺",
+  "diàn,tián,shèng": "甸",
+  "páo,bào": "刨",
+  "duì,ruì,yuè": "兑",
+  "kē,kě": "坷",
+  "tuò,tà,zhí": "拓",
+  "fú,bì": "拂",
+  "nǐng,níng,nìng": "拧",
+  "ào,ǎo,niù": "拗",
+  "kē,hē": "苛",
+  "yān,yǎn": "奄",
+  "hē,a,kē": "呵",
+  "gā,kā": "咖",
+  "jiǎo,yáo": "侥",
+  "chà,shā": "刹",
+  "nüè,yào": "疟",
+  "máng,méng": "氓",
+  "gē,yì": "疙",
+  "jǔ,jù": "沮",
+  "zú,cù": "卒",
+  "wǎn,yuān": "宛",
+  "mí,mǐ": "弥",
+  "qì,qiè,xiè": "契",
+  "xié,jiā": "挟",
+  "duò,duǒ": "垛",
+  "zhà,shān,shi,cè": "栅",
+  "bó,bèi": "勃",
+  "zhóu,zhòu": "轴",
+  "liē,liě,lié,lie": "咧",
+  "yo,yō": "哟",
+  "qiào,xiào": "俏",
+  "hóu,hòu": "侯",
+  "píng,bǐng": "屏",
+  "nà,nuó": "娜",
+  "pá,bà": "耙",
+  "qī,xī": "栖",
+  "jiǎ,gǔ": "贾",
+  "láo,lào": "唠",
+  "bàng,bèng": "蚌",
+  "gōng,zhōng": "蚣",
+  "li,lǐ,lī": "哩",
+  "juè,jué": "倔",
+  "yīn,yān,yǐn": "殷",
+  "wō,guō": "涡",
+  "lào,luò": "烙",
+  "niǎn,niē": "捻",
+  "yè,yē": "掖",
+  "chān,xiān,càn,shǎn": "掺",
+  "dǎn,shàn": "掸",
+  "fēi,fěi": "菲",
+  "qián,gān": "乾",
+  "shuò,shí": "硕",
+  "luō,luó,luo": "啰",
+  "hǔ,xià": "唬",
+  "dāng,chēng": "铛",
+  "xiǎn,xǐ": "铣",
+  "jiǎo,jiáo": "矫",
+  "kuǐ,guī": "傀",
+  "jì,zhài": "祭",
+  "tǎng,chǎng": "淌",
+  "chún,zhūn": "淳",
+  "wèi,yù": "尉",
+  "duò,huī": "堕",
+  "chuò,chāo": "绰",
+  "bēng,běng,bèng": "绷",
+  "zōng,zèng": "综",
+  "zhuó,zuó": "琢",
+  "chuǎi,chuài,chuāi,tuán,zhuī": "揣",
+  "péng,bāng": "彭",
+  "zhuī,chuí": "椎",
+  "léng,lēng,líng": "棱",
+  "qiào,qiáo": "翘",
+  "zhā,chā": "喳",
+  "há,gé": "蛤",
+  "qiàn,kàn": "嵌",
+  "yān,ā": "腌",
+  "dūn,duì": "敦",
+  "kuì,huì": "溃",
+  "sāo,sǎo": "骚",
+  "kǎi,jiē": "楷",
+  "pín,bīn": "频",
+  "liú,liù": "馏",
+  "nì,niào": "溺",
+  "jiǎo,chāo": "剿",
+  "áo,āo": "熬",
+  "màn,wàn": "蔓",
+  "chá,chā": "碴",
+  "xūn,xùn": "熏",
+  "da,dá": "瘩",
+  "tuì,tùn": "褪",
+  "liáo,liāo": "撩",
+  "cuō,zuǒ": "撮",
+  "cháo,zhāo": "嘲",
+  "hēi,mò": "嘿",
+  "zhuàng,chuáng": "幢",
+  "jī,qǐ": "稽",
+  "biě,biē": "瘪",
+  "liáo,lào,lǎo": "潦",
+  "chéng,dèng": "澄",
+  "lèi,léi": "擂",
+  "mò,má": "蟆",
+  "liáo,liǎo": "燎",
+  "liào,liǎo": "瞭",
+  "sào,sāo": "臊",
+  "mí,méi": "糜",
+  "huò,huō,huá": "豁",
+  "pù,bào": "瀑",
+  "zǎn,cuán": "攒",
+  "bò,bǒ": "簸",
+  "bó,bù": "簿" };
+
+/***/ }),
+/* 166 */
+/*!*************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/node_modules/pinyin/lib/pinyin.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}
+
+var assign = __webpack_require__(/*! object-assign */ 167);
+// XXX: Symbol when web support.
+var PINYIN_STYLE = {
+  NORMAL: 0, // 普通风格，不带声调。
+  TONE: 1, // 标准风格，声调在韵母的第一个字母上。
+  TONE2: 2, // 声调以数字形式在拼音之后，使用数字 0~4 标识。
+  TO3NE: 5, // 声调以数字形式在声母之后，使用数字 0~4 标识。
+  INITIALS: 3, // 仅需要声母部分。
+  FIRST_LETTER: 4 // 仅保留首字母。
+};
+var DEFAULT_OPTIONS = {
+  style: PINYIN_STYLE.TONE, // 风格
+  segment: false, // 分词。
+  heteronym: false // 多音字
+};
+
+// 声母表。
+var INITIALS = "b,p,m,f,d,t,n,l,g,k,h,j,q,x,r,zh,ch,sh,z,c,s".split(",");
+// 韵母表。
+//const FINALS = "ang,eng,ing,ong,an,en,in,un,er,ai,ei,ui,ao,ou,iu,ie,ve,a,o,e,i,u,v".split(",");
+// 带声调字符。
+var PHONETIC_SYMBOL = __webpack_require__(/*! ./phonetic-symbol */ 168);
+var RE_PHONETIC_SYMBOL = new RegExp("([" + Object.keys(PHONETIC_SYMBOL).join("") + "])", "g");
+var RE_TONE2 = /([aeoiuvnm])([0-4])$/;
+
+/*
+                                        * 格式化拼音为声母（Initials）形式。
+                                        * @param {String}
+                                        * @return {String}
+                                        */
+function initials(pinyin) {
+  for (var i = 0, l = INITIALS.length; i < l; i++) {
+    if (pinyin.indexOf(INITIALS[i]) === 0) {
+      return INITIALS[i];
+    }
+  }
+  return "";
+}var
+
+Pinyin = /*#__PURE__*/function () {
+  function Pinyin(dict) {_classCallCheck(this, Pinyin);
+    this._dict = dict;
+  }
+
+  // @param {String} hans 要转为拼音的目标字符串（汉字）。
+  // @param {Object} options, 可选，用于指定拼音风格，是否启用多音字。
+  // @return {Array} 返回的拼音列表。
+  _createClass(Pinyin, [{ key: "convert", value: function convert(hans, options) {
+
+      if (typeof hans !== "string") {
+        return [];
+      }
+
+      options = assign({}, DEFAULT_OPTIONS, options);
+
+      var pys = [];
+      var nohans = "";
+
+      for (var i = 0, firstCharCode, words, l = hans.length; i < l; i++) {
+
+        words = hans[i];
+        firstCharCode = words.charCodeAt(0);
+
+        if (this._dict[firstCharCode]) {
+
+          // ends of non-chinese words.
+          if (nohans.length > 0) {
+            pys.push([nohans]);
+            nohans = ""; // reset non-chinese words.
+          }
+
+          pys.push(this.single_pinyin(words, options));
+
+        } else {
+          nohans += words;
+        }
+      }
+
+      // 清理最后的非中文字符串。
+      if (nohans.length > 0) {
+        pys.push([nohans]);
+        nohans = ""; // reset non-chinese words.
+      }
+      return pys;
+    }
+
+    // 单字拼音转换。
+    // @param {String} han, 单个汉字
+    // @return {Array} 返回拼音列表，多音字会有多个拼音项。
+  }, { key: "single_pinyin", value: function single_pinyin(han, options) {
+
+      if (typeof han !== "string") {
+        return [];
+      }
+      if (han.length !== 1) {
+        return this.single_pinyin(han.charAt(0), options);
+      }
+
+      var hanCode = han.charCodeAt(0);
+
+      if (!this._dict[hanCode]) {
+        return [han];
+      }
+
+      var pys = this._dict[hanCode].split(",");
+      if (!options.heteronym) {
+        return [Pinyin.toFixed(pys[0], options.style)];
+      }
+
+      // 临时存储已存在的拼音，避免多音字拼音转换为非注音风格出现重复。
+      var py_cached = {};
+      var pinyins = [];
+      for (var i = 0, py, l = pys.length; i < l; i++) {
+        py = Pinyin.toFixed(pys[i], options.style);
+        if (py_cached.hasOwnProperty(py)) {
+          continue;
+        }
+        py_cached[py] = py;
+
+        pinyins.push(py);
+      }
+      return pinyins;
+    }
+
+    /**
+       * 格式化拼音风格。
+       *
+       * @param {String} pinyin TONE 风格的拼音。
+       * @param {ENUM} style 目标转换的拼音风格。
+       * @return {String} 转换后的拼音。
+       */ }, { key: "compare",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+                                * 比较两个汉字转成拼音后的排序顺序，可以用作默认的拼音排序算法。
+                                *
+                                * @param {String} hanA 汉字字符串 A。
+                                * @return {String} hanB 汉字字符串 B。
+                                * @return {Number} 返回 -1，0，或 1。
+                                */value: function compare(
+    hanA, hanB) {
+      var pinyinA = this.convert(hanA, DEFAULT_OPTIONS);
+      var pinyinB = this.convert(hanB, DEFAULT_OPTIONS);
+      return String(pinyinA).localeCompare(String(pinyinB));
+    } }], [{ key: "toFixed", value: function toFixed(pinyin, style) {var tone = ""; // 声调。
+      var first_letter;var py;switch (style) {case PINYIN_STYLE.INITIALS:return initials(pinyin);case PINYIN_STYLE.FIRST_LETTER:first_letter = pinyin.charAt(0);if (PHONETIC_SYMBOL.hasOwnProperty(first_letter)) {first_letter = PHONETIC_SYMBOL[first_letter].charAt(0);}return first_letter;case PINYIN_STYLE.NORMAL:return pinyin.replace(RE_PHONETIC_SYMBOL, function ($0, $1_phonetic) {return PHONETIC_SYMBOL[$1_phonetic].replace(RE_TONE2, "$1");});case PINYIN_STYLE.TO3NE:return pinyin.replace(RE_PHONETIC_SYMBOL, function ($0, $1_phonetic) {return PHONETIC_SYMBOL[$1_phonetic];});case PINYIN_STYLE.TONE2:py = pinyin.replace(RE_PHONETIC_SYMBOL, function ($0, $1) {// 声调数值。
+            tone = PHONETIC_SYMBOL[$1].replace(RE_TONE2, "$2");return PHONETIC_SYMBOL[$1].replace(RE_TONE2, "$1");});return py + tone;case PINYIN_STYLE.TONE:default:return pinyin;}} }, { key: "STYLE_NORMAL", get: function get() {
+      return PINYIN_STYLE.NORMAL;
+    } }, { key: "STYLE_TONE", get: function get()
+    {
+      return PINYIN_STYLE.TONE;
+    } }, { key: "STYLE_TONE2", get: function get()
+    {
+      return PINYIN_STYLE.TONE2;
+    } }, { key: "STYLE_TO3NE", get: function get()
+    {
+      return PINYIN_STYLE.TO3NE;
+    } }, { key: "STYLE_INITIALS", get: function get()
+    {
+      return PINYIN_STYLE.INITIALS;
+    } }, { key: "STYLE_FIRST_LETTER", get: function get()
+    {
+      return PINYIN_STYLE.FIRST_LETTER;
+    } }, { key: "DEFAULT_OPTIONS", get: function get()
+    {
+      return DEFAULT_OPTIONS;
+    } }]);return Pinyin;}();
+
+
+module.exports = Pinyin;
+
+/***/ }),
+/* 167 */
+/*!*********************************************!*\
+  !*** ./node_modules/object-assign/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+
+/***/ }),
 /* 168 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-navbar/props.js ***!
-  \***********************************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/node_modules/pinyin/lib/phonetic-symbol.js ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// 带声调字符。
+module.exports = {
+  "ā": "a1",
+  "á": "a2",
+  "ǎ": "a3",
+  "à": "a4",
+  "ē": "e1",
+  "é": "e2",
+  "ě": "e3",
+  "è": "e4",
+  "ō": "o1",
+  "ó": "o2",
+  "ǒ": "o3",
+  "ò": "o4",
+  "ī": "i1",
+  "í": "i2",
+  "ǐ": "i3",
+  "ì": "i4",
+  "ū": "u1",
+  "ú": "u2",
+  "ǔ": "u3",
+  "ù": "u4",
+  "ü": "v0",
+  "ǘ": "v2",
+  "ǚ": "v3",
+  "ǜ": "v4",
+  "ń": "n2",
+  "ň": "n3",
+  "": "m2" };
+
+/***/ }),
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */
+/*!*************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/node_modules/image-tools/index.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.pathToBase64 = pathToBase64;exports.base64ToPath = base64ToPath;function getLocalFilePath(path) {
+  if (path.indexOf('_www') === 0 || path.indexOf('_doc') === 0 || path.indexOf('_documents') === 0 || path.indexOf('_downloads') === 0) {
+    return path;
+  }
+  if (path.indexOf('file://') === 0) {
+    return path;
+  }
+  if (path.indexOf('/storage/emulated/0/') === 0) {
+    return path;
+  }
+  if (path.indexOf('/') === 0) {
+    var localFilePath = plus.io.convertAbsoluteFileSystem(path);
+    if (localFilePath !== path) {
+      return localFilePath;
+    } else {
+      path = path.substr(1);
+    }
+  }
+  return '_www/' + path;
+}
+
+function dataUrlToBase64(str) {
+  var array = str.split(',');
+  return array[array.length - 1];
+}
+
+var index = 0;
+function getNewFileId() {
+  return Date.now() + String(index++);
+}
+
+function biggerThan(v1, v2) {
+  var v1Array = v1.split('.');
+  var v2Array = v2.split('.');
+  var update = false;
+  for (var index = 0; index < v2Array.length; index++) {
+    var diff = v1Array[index] - v2Array[index];
+    if (diff !== 0) {
+      update = diff > 0;
+      break;
+    }
+  }
+  return update;
+}
+
+function pathToBase64(path) {
+  return new Promise(function (resolve, reject) {
+    if (typeof window === 'object' && 'document' in window) {
+      if (typeof FileReader === 'function') {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', path, true);
+        xhr.responseType = 'blob';
+        xhr.onload = function () {
+          if (this.status === 200) {
+            var fileReader = new FileReader();
+            fileReader.onload = function (e) {
+              resolve(e.target.result);
+            };
+            fileReader.onerror = reject;
+            fileReader.readAsDataURL(this.response);
+          }
+        };
+        xhr.onerror = reject;
+        xhr.send();
+        return;
+      }
+      var canvas = document.createElement('canvas');
+      var c2x = canvas.getContext('2d');
+      var img = new Image();
+      img.onload = function () {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        c2x.drawImage(img, 0, 0);
+        resolve(canvas.toDataURL());
+        canvas.height = canvas.width = 0;
+      };
+      img.onerror = reject;
+      img.src = path;
+      return;
+    }
+    if (typeof plus === 'object') {
+      plus.io.resolveLocalFileSystemURL(getLocalFilePath(path), function (entry) {
+        entry.file(function (file) {
+          var fileReader = new plus.io.FileReader();
+          fileReader.onload = function (data) {
+            resolve(data.target.result);
+          };
+          fileReader.onerror = function (error) {
+            reject(error);
+          };
+          fileReader.readAsDataURL(file);
+        }, function (error) {
+          reject(error);
+        });
+      }, function (error) {
+        reject(error);
+      });
+      return;
+    }
+    if (typeof wx === 'object' && wx.canIUse('getFileSystemManager')) {
+      wx.getFileSystemManager().readFile({
+        filePath: path,
+        encoding: 'base64',
+        success: function success(res) {
+          resolve('data:image/png;base64,' + res.data);
+        },
+        fail: function fail(error) {
+          reject(error);
+        } });
+
+      return;
+    }
+    reject(new Error('not support'));
+  });
+}
+
+function base64ToPath(base64) {
+  return new Promise(function (resolve, reject) {
+    if (typeof window === 'object' && 'document' in window) {
+      base64 = base64.split(',');
+      var type = base64[0].match(/:(.*?);/)[1];
+      var str = atob(base64[1]);
+      var n = str.length;
+      var array = new Uint8Array(n);
+      while (n--) {
+        array[n] = str.charCodeAt(n);
+      }
+      return resolve((window.URL || window.webkitURL).createObjectURL(new Blob([array], { type: type })));
+    }
+    var extName = base64.split(',')[0].match(/data\:\S+\/(\S+);/);
+    if (extName) {
+      extName = extName[1];
+    } else {
+      reject(new Error('base64 error'));
+    }
+    var fileName = getNewFileId() + '.' + extName;
+    if (typeof plus === 'object') {
+      var basePath = '_doc';
+      var dirPath = 'uniapp_temp';
+      var filePath = basePath + '/' + dirPath + '/' + fileName;
+      if (!biggerThan(plus.os.name === 'Android' ? '1.9.9.80627' : '1.9.9.80472', plus.runtime.innerVersion)) {
+        plus.io.resolveLocalFileSystemURL(basePath, function (entry) {
+          entry.getDirectory(dirPath, {
+            create: true,
+            exclusive: false },
+          function (entry) {
+            entry.getFile(fileName, {
+              create: true,
+              exclusive: false },
+            function (entry) {
+              entry.createWriter(function (writer) {
+                writer.onwrite = function () {
+                  resolve(filePath);
+                };
+                writer.onerror = reject;
+                writer.seek(0);
+                writer.writeAsBinary(dataUrlToBase64(base64));
+              }, reject);
+            }, reject);
+          }, reject);
+        }, reject);
+        return;
+      }
+      var bitmap = new plus.nativeObj.Bitmap(fileName);
+      bitmap.loadBase64Data(base64, function () {
+        bitmap.save(filePath, {}, function () {
+          bitmap.clear();
+          resolve(filePath);
+        }, function (error) {
+          bitmap.clear();
+          reject(error);
+        });
+      }, function (error) {
+        bitmap.clear();
+        reject(error);
+      });
+      return;
+    }
+    if (typeof wx === 'object' && wx.canIUse('getFileSystemManager')) {
+      var filePath = wx.env.USER_DATA_PATH + '/' + fileName;
+      wx.getFileSystemManager().writeFile({
+        filePath: filePath,
+        data: dataUrlToBase64(base64),
+        encoding: 'base64',
+        success: function success() {
+          resolve(filePath);
+        },
+        fail: function fail(error) {
+          reject(error);
+        } });
+
+      return;
+    }
+    reject(new Error('not support'));
+  });
+}
+
+/***/ }),
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-navbar/props.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17080,17 +22163,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-avatar/props.js ***!
-  \***********************************************************************************************/
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-avatar/props.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17173,17 +22256,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-icon/icons.js ***!
-  \*********************************************************************************************/
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-icon/icons.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17403,10 +22486,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   'uicon-en': "\uE692" };exports.default = _default;
 
 /***/ }),
-/* 185 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-icon/props.js ***!
-  \*********************************************************************************************/
+/* 254 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-icon/props.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17500,17 +22583,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-list/props.js ***!
-  \*********************************************************************************************/
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-list/props.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17592,17 +22675,102 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */
-/*!**************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-list-item/props.js ***!
-  \**************************************************************************************************/
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-notice-bar/props.js ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 显示的内容，数组
+    text: {
+      type: [Array, String],
+      default: uni.$u.props.noticeBar.text },
+
+    // 通告滚动模式，row-横向滚动，column-竖向滚动
+    direction: {
+      type: String,
+      default: uni.$u.props.noticeBar.direction },
+
+    // direction = row时，是否使用步进形式滚动
+    step: {
+      type: Boolean,
+      default: uni.$u.props.noticeBar.step },
+
+    // 是否显示左侧的音量图标
+    icon: {
+      type: String,
+      default: uni.$u.props.noticeBar.icon },
+
+    // 通告模式，link-显示右箭头，closable-显示右侧关闭图标
+    mode: {
+      type: String,
+      default: uni.$u.props.noticeBar.mode },
+
+    // 文字颜色，各图标也会使用文字颜色
+    color: {
+      type: String,
+      default: uni.$u.props.noticeBar.color },
+
+    // 背景颜色
+    bgColor: {
+      type: String,
+      default: uni.$u.props.noticeBar.bgColor },
+
+    // 水平滚动时的滚动速度，即每秒滚动多少px(px)，这有利于控制文字无论多少时，都能有一个恒定的速度
+    speed: {
+      type: [String, Number],
+      default: uni.$u.props.noticeBar.speed },
+
+    // 字体大小
+    fontSize: {
+      type: [String, Number],
+      default: uni.$u.props.noticeBar.fontSize },
+
+    // 滚动一个周期的时间长，单位ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.noticeBar.duration },
+
+    // 是否禁止用手滑动切换
+    // 目前HX2.6.11，只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序
+    disableTouch: {
+      type: Boolean,
+      default: uni.$u.props.noticeBar.disableTouch },
+
+    // 跳转的页面路径
+    url: {
+      type: String,
+      default: uni.$u.props.noticeBar.url },
+
+    // 页面跳转的类型
+    linkType: {
+      type: String,
+      default: uni.$u.props.noticeBar.linkType } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-list-item/props.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17616,17 +22784,104 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-text/props.js ***!
-  \*********************************************************************************************/
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-badge/props.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 是否显示圆点
+    isDot: {
+      type: Boolean,
+      default: uni.$u.props.badge.isDot },
+
+    // 显示的内容
+    value: {
+      type: [Number, String],
+      default: uni.$u.props.badge.value },
+
+    // 是否显示
+    show: {
+      type: Boolean,
+      default: uni.$u.props.badge.show },
+
+    // 最大值，超过最大值会显示 '{max}+'
+    max: {
+      type: [Number, String],
+      default: uni.$u.props.badge.max },
+
+    // 主题类型，error|warning|success|primary
+    type: {
+      type: String,
+      default: uni.$u.props.badge.type },
+
+    // 当数值为 0 时，是否展示 Badge
+    showZero: {
+      type: Boolean,
+      default: uni.$u.props.badge.showZero },
+
+    // 背景颜色，优先级比type高，如设置，type参数会失效
+    bgColor: {
+      type: [String, null],
+      default: uni.$u.props.badge.bgColor },
+
+    // 字体颜色
+    color: {
+      type: [String, null],
+      default: uni.$u.props.badge.color },
+
+    // 徽标形状，circle-四角均为圆角，horn-左下角为直角
+    shape: {
+      type: String,
+      default: uni.$u.props.badge.shape },
+
+    // 设置数字的显示方式，overflow|ellipsis|limit
+    // overflow会根据max字段判断，超出显示`${max}+`
+    // ellipsis会根据max判断，超出显示`${max}...`
+    // limit会依据1000作为判断条件，超出1000，显示`${value/1000}K`，比如2.2k、3.34w，最多保留2位小数
+    numberType: {
+      type: String,
+      default: uni.$u.props.badge.numberType },
+
+    // 设置badge的位置偏移，格式为 [x, y]，也即设置的为top和right的值，absolute为true时有效
+    offset: {
+      type: Array,
+      default: uni.$u.props.badge.offset },
+
+    // 是否反转背景和字体颜色
+    inverted: {
+      type: Boolean,
+      default: uni.$u.props.badge.inverted },
+
+    // 是否绝对定位
+    absolute: {
+      type: Boolean,
+      default: uni.$u.props.badge.absolute } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-text/props.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17678,11 +22933,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     call: {
       type: Boolean,
       default: uni.$u.props.text.call },
-
-    // 是否对mode=phone|name类型文本进行脱敏，用*号替换部分文本
-    encrypt: {
-      type: Boolean,
-      default: uni.$u.props.text.encrypt },
 
     // 小程序的打开方式
     openType: {
@@ -17751,15 +23001,89 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-form/props.js ***!
-  \*********************************************************************************************/
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-empty/props.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 内置图标名称，或图片路径，建议绝对路径
+    icon: {
+      type: String,
+      default: uni.$u.props.empty.icon },
+
+    // 提示文字
+    text: {
+      type: String,
+      default: uni.$u.props.empty.text },
+
+    // 文字颜色
+    textColor: {
+      type: String,
+      default: uni.$u.props.empty.textColor },
+
+    // 文字大小
+    textSize: {
+      type: [String, Number],
+      default: uni.$u.props.empty.textSize },
+
+    // 图标的颜色
+    iconColor: {
+      type: String,
+      default: uni.$u.props.empty.iconColor },
+
+    // 图标的大小
+    iconSize: {
+      type: [String, Number],
+      default: uni.$u.props.empty.iconSize },
+
+    // 选择预置的图标类型
+    mode: {
+      type: String,
+      default: uni.$u.props.empty.mode },
+
+    //  图标宽度，单位px
+    width: {
+      type: [String, Number],
+      default: uni.$u.props.empty.width },
+
+    // 图标高度，单位px
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.empty.height },
+
+    // 是否显示组件
+    show: {
+      type: Boolean,
+      default: uni.$u.props.empty.show },
+
+    // 组件距离上一个元素之间的距离，默认px单位
+    marginTop: {
+      type: [String, Number],
+      default: uni.$u.props.empty.marginTop } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-form/props.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17776,10 +23100,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       type: [Object, Function, Array],
       default: uni.$u.props.form.rules },
 
-    // 有错误时的提示方式，message-提示信息，border-如果input设置了边框，变成呈红色，
+    // 有错误时的提示方式，message-提示信息，toast-进行toast提示
     // border-bottom-下边框呈现红色，none-无提示
     errorType: {
-      type: Array,
+      type: String,
       default: uni.$u.props.form.errorType },
 
     // 是否显示表单域的下划线边框
@@ -17809,15 +23133,15 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */
-/*!**************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-form-item/props.js ***!
-  \**************************************************************************************************/
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-form-item/props.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17861,22 +23185,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */
-/*!**********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-input/props.js ***!
-  \**********************************************************************************************/
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-input/props.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default = {
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
   props: {
     // 输入的值
     value: {
@@ -17894,9 +23218,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
     // 如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true，
     // 兼容性：微信小程序、百度小程序、字节跳动小程序、QQ小程序
-    fixed: _defineProperty({
-      default: Boolean }, "default",
-    uni.$u.props.input.fixed),
+    fixed: {
+      type: Boolean,
+      default: uni.$u.props.input.fixed },
 
     // 是否禁用输入框
     disabled: {
@@ -18006,11 +23330,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       type: String,
       default: uni.$u.props.input.inputAlign },
 
-    // 是否自适应内容高度，只对type=textarea有效，可传入对象,如{ maxHeight: 100, minHeight: 50 }
-    autosize: {
-      type: Boolean,
-      default: uni.$u.props.input.autosize },
-
     // 输入框字体的大小
     fontSize: {
       type: [String, Number],
@@ -18063,15 +23382,15 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */
-/*!***************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/mixin/button.js ***!
-  \***************************************************************************************/
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */
+/*!*********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/mixin/button.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18089,10 +23408,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     openType: String } };exports.default = _default;
 
 /***/ }),
-/* 236 */
-/*!*****************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/mixin/openType.js ***!
-  \*****************************************************************************************/
+/* 329 */
+/*!***********************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/mixin/openType.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18122,10 +23441,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     } } };exports.default = _default;
 
 /***/ }),
-/* 237 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-button/props.js ***!
-  \***********************************************************************************************/
+/* 330 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-button/props.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18286,17 +23605,24 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-index-list/props.js ***!
-  \***************************************************************************************************/
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-index-list/props.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18330,17 +23656,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-cell-group/props.js ***!
-  \***************************************************************************************************/
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-cell-group/props.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18359,17 +23685,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-cell/props.js ***!
-  \*********************************************************************************************/
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-cell/props.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18483,17 +23809,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-index-item/props.js ***!
-  \***************************************************************************************************/
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-index-item/props.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18502,17 +23828,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   props: {} };exports.default = _default;
 
 /***/ }),
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */
-/*!*****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-index-anchor/props.js ***!
-  \*****************************************************************************************************/
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */
+/*!***********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-index-anchor/props.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18546,17 +23872,582 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-popup/props.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 是否展示弹窗
+    show: {
+      type: Boolean,
+      default: uni.$u.props.popup.show },
+
+    // 是否显示遮罩
+    overlay: {
+      type: Boolean,
+      default: uni.$u.props.popup.overlay },
+
+    // 弹出的方向，可选值为 top bottom right left center
+    mode: {
+      type: String,
+      default: uni.$u.props.popup.mode },
+
+    // 动画时长，单位ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.popup.duration },
+
+    // 是否显示关闭图标
+    closeable: {
+      type: Boolean,
+      default: uni.$u.props.popup.closeable },
+
+    // 自定义遮罩的样式
+    overlayStyle: {
+      type: [Object, String],
+      default: uni.$u.props.popup.overlayStyle },
+
+    // 点击遮罩是否关闭弹窗
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: uni.$u.props.popup.closeOnClickOverlay },
+
+    // 层级
+    zIndex: {
+      type: [String, Number],
+      default: uni.$u.props.popup.zIndex },
+
+    // 是否为iPhoneX留出底部安全距离
+    safeAreaInsetBottom: {
+      type: Boolean,
+      default: uni.$u.props.popup.safeAreaInsetBottom },
+
+    // 是否留出顶部安全距离（状态栏高度）
+    safeAreaInsetTop: {
+      type: Boolean,
+      default: uni.$u.props.popup.safeAreaInsetTop },
+
+    // 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角
+    closeIconPos: {
+      type: String,
+      default: uni.$u.props.popup.closeIconPos },
+
+    // 是否显示圆角
+    round: {
+      type: [Boolean, String, Number],
+      default: uni.$u.props.popup.round },
+
+    // mode=center，也即中部弹出时，是否使用缩放模式
+    zoom: {
+      type: Boolean,
+      default: uni.$u.props.popup.zoom },
+
+    // 弹窗背景色，设置为transparent可去除白色背景
+    bgColor: {
+      type: String,
+      default: uni.$u.props.popup.bgColor },
+
+    // 遮罩的透明度，0-1之间
+    overlayOpacity: {
+      type: [Number, String],
+      default: uni.$u.props.popup.overlayOpacity } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */
+/*!**************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-gap/props.js ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 背景颜色（默认transparent）
+    bgColor: {
+      type: String,
+      default: uni.$u.props.gap.bgColor },
+
+    // 分割槽高度，单位px（默认30）
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.gap.height },
+
+    // 与上一个组件的距离
+    marginTop: {
+      type: [String, Number],
+      default: uni.$u.props.gap.marginTop },
+
+    // 与下一个组件的距离
+    marginBottom: {
+      type: [String, Number],
+      default: uni.$u.props.gap.marginBottom } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-search/props.js ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 搜索框形状，round-圆形，square-方形
+    shape: {
+      type: String,
+      default: uni.$u.props.search.shape },
+
+    // 搜索框背景色，默认值#f2f2f2
+    bgColor: {
+      type: String,
+      default: uni.$u.props.search.bgColor },
+
+    // 占位提示文字
+    placeholder: {
+      type: String,
+      default: uni.$u.props.search.placeholder },
+
+    // 是否启用清除控件
+    clearabled: {
+      type: Boolean,
+      default: uni.$u.props.search.clearabled },
+
+    // 是否自动聚焦
+    focus: {
+      type: Boolean,
+      default: uni.$u.props.search.focus },
+
+    // 是否在搜索框右侧显示取消按钮
+    showAction: {
+      type: Boolean,
+      default: uni.$u.props.search.showAction },
+
+    // 右边控件的样式
+    actionStyle: {
+      type: Object,
+      default: uni.$u.props.search.actionStyle },
+
+    // 取消按钮文字
+    actionText: {
+      type: String,
+      default: uni.$u.props.search.actionText },
+
+    // 输入框内容对齐方式，可选值为 left|center|right
+    inputAlign: {
+      type: String,
+      default: uni.$u.props.search.inputAlign },
+
+    // input输入框的样式，可以定义文字颜色，大小等，对象形式
+    inputStyle: {
+      type: Object,
+      default: uni.$u.props.search.inputStyle },
+
+    // 是否启用输入框
+    disabled: {
+      type: Boolean,
+      default: uni.$u.props.search.disabled },
+
+    // 边框颜色
+    borderColor: {
+      type: String,
+      default: uni.$u.props.search.borderColor },
+
+    // 搜索图标的颜色，默认同输入框字体颜色
+    searchIconColor: {
+      type: String,
+      default: uni.$u.props.search.searchIconColor },
+
+    // 输入框字体颜色
+    color: {
+      type: String,
+      default: uni.$u.props.search.color },
+
+    // placeholder的颜色
+    placeholderColor: {
+      type: String,
+      default: uni.$u.props.search.placeholderColor },
+
+    // 左边输入框的图标，可以为uView图标名称或图片路径
+    searchIcon: {
+      type: String,
+      default: uni.$u.props.search.searchIcon },
+
+    // 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30px"、"30px 20px"等写法
+    margin: {
+      type: String,
+      default: uni.$u.props.search.margin },
+
+    // 开启showAction时，是否在input获取焦点时才显示
+    animation: {
+      type: Boolean,
+      default: uni.$u.props.search.animation },
+
+    // 输入框的初始化内容
+    value: {
+      type: String,
+      default: uni.$u.props.search.value },
+
+    // 输入框最大能输入的长度，-1为不限制长度(来自uniapp文档)
+    maxlength: {
+      type: [String, Number],
+      default: uni.$u.props.search.maxlength },
+
+    // 搜索框高度，单位px
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.search.height },
+
+    // 搜索框左侧文本
+    label: {
+      type: [String, Number, null],
+      default: uni.$u.props.search.label } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */
+/*!****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-modal/props.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 是否展示modal
+    show: {
+      type: Boolean,
+      default: uni.$u.props.modal.show },
+
+    // 标题
+    title: {
+      type: [String],
+      default: uni.$u.props.modal.title },
+
+    // 弹窗内容
+    content: {
+      type: String,
+      default: uni.$u.props.modal.content },
+
+    // 确认文案
+    confirmText: {
+      type: String,
+      default: uni.$u.props.modal.confirmText },
+
+    // 取消文案
+    cancelText: {
+      type: String,
+      default: uni.$u.props.modal.cancelText },
+
+    // 是否显示确认按钮
+    showConfirmButton: {
+      type: Boolean,
+      default: uni.$u.props.modal.showConfirmButton },
+
+    // 是否显示取消按钮
+    showCancelButton: {
+      type: Boolean,
+      default: uni.$u.props.modal.showCancelButton },
+
+    // 确认按钮颜色
+    confirmColor: {
+      type: String,
+      default: uni.$u.props.modal.confirmColor },
+
+    // 取消文字颜色
+    cancelColor: {
+      type: String,
+      default: uni.$u.props.modal.cancelColor },
+
+    // 对调确认和取消的位置
+    buttonReverse: {
+      type: Boolean,
+      default: uni.$u.props.modal.buttonReverse },
+
+    // 是否开启缩放效果
+    zoom: {
+      type: Boolean,
+      default: uni.$u.props.modal.zoom },
+
+    // 是否异步关闭，只对确定按钮有效
+    asyncClose: {
+      type: Boolean,
+      default: uni.$u.props.modal.asyncClose },
+
+    // 是否允许点击遮罩关闭modal
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: uni.$u.props.modal.closeOnClickOverlay },
+
+    // 给一个负的margin-top，往上偏移，避免和键盘重合的情况
+    negativeTop: {
+      type: [String, Number],
+      default: uni.$u.props.modal.negativeTop },
+
+    // modal宽度，不支持百分比，可以数值，px，rpx单位
+    width: {
+      type: [String, Number],
+      default: uni.$u.props.modal.width },
+
+    // 确认按钮的样式，circle-圆形，square-方形，如设置，将不会显示取消按钮
+    confirmButtonShape: {
+      type: String,
+      default: uni.$u.props.modal.confirmButtonShape } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */
+/*!*******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-textarea/props.js ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 输入框的内容
+    value: {
+      type: [String, Number],
+      default: uni.$u.props.textarea.value },
+
+    // 输入框为空时占位符
+    placeholder: {
+      type: [String, Number],
+      default: uni.$u.props.textarea.placeholder },
+
+    // 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/
+    placeholderClass: {
+      type: String,
+      default: uni.$u.props.input.placeholderClass },
+
+    // 指定placeholder的样式
+    placeholderStyle: {
+      type: [String, Object],
+      default: uni.$u.props.input.placeholderStyle },
+
+    // 输入框高度
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.textarea.height },
+
+    // 设置键盘右下角按钮的文字，仅微信小程序，App-vue和H5有效
+    confirmType: {
+      type: String,
+      default: uni.$u.props.textarea.confirmType },
+
+    // 是否禁用
+    disabled: {
+      type: Boolean,
+      default: uni.$u.props.textarea.disabled },
+
+    // 是否显示统计字数
+    count: {
+      type: Boolean,
+      default: uni.$u.props.textarea.count },
+
+    // 是否自动获取焦点，nvue不支持，H5取决于浏览器的实现
+    focus: {
+      type: Boolean,
+      default: uni.$u.props.textarea.focus },
+
+    // 是否自动增加高度
+    autoHeight: {
+      type: Boolean,
+      default: uni.$u.props.textarea.autoHeight },
+
+    // 如果textarea是在一个position:fixed的区域，需要显示指定属性fixed为true
+    fixed: {
+      type: Boolean,
+      default: uni.$u.props.textarea.fixed },
+
+    // 指定光标与键盘的距离
+    cursorSpacing: {
+      type: Number,
+      default: uni.$u.props.textarea.cursorSpacing },
+
+    // 指定focus时的光标位置
+    cursor: {
+      type: [String, Number],
+      default: uni.$u.props.textarea.cursor },
+
+    // 是否显示键盘上方带有”完成“按钮那一栏，
+    showConfirmBar: {
+      type: Boolean,
+      default: uni.$u.props.textarea.showConfirmBar },
+
+    // 光标起始位置，自动聚焦时有效，需与selection-end搭配使用
+    selectionStart: {
+      type: Number,
+      default: uni.$u.props.textarea.selectionStart },
+
+    // 光标结束位置，自动聚焦时有效，需与selection-start搭配使用
+    selectionEnd: {
+      type: Number,
+      default: uni.$u.props.textarea.selectionEnd },
+
+    // 键盘弹起时，是否自动上推页面
+    adjustPosition: {
+      type: Boolean,
+      default: uni.$u.props.textarea.adjustPosition },
+
+    // 是否去掉 iOS 下的默认内边距，只微信小程序有效
+    disableDefaultPadding: {
+      type: Boolean,
+      default: uni.$u.props.textarea.disableDefaultPadding },
+
+    // focus时，点击页面的时候不收起键盘，只微信小程序有效
+    holdKeyboard: {
+      type: Boolean,
+      default: uni.$u.props.textarea.holdKeyboard },
+
+    // 最大输入长度，设置为 -1 的时候不限制最大长度
+    maxlength: {
+      type: [String, Number],
+      default: uni.$u.props.textarea.maxlength },
+
+    // 边框类型，surround-四周边框，bottom-底部边框
+    border: {
+      type: String,
+      default: uni.$u.props.textarea.border },
+
+    // 用于处理或者过滤输入框内容的方法
+    formatter: {
+      type: [Function, null],
+      default: uni.$u.props.textarea.formatter } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */
 /*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-status-bar/props.js ***!
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-grid/props.js ***!
   \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 分成几列
+    col: {
+      type: [String, Number],
+      default: uni.$u.props.grid.col },
+
+    // 是否显示边框
+    border: {
+      type: Boolean,
+      default: uni.$u.props.grid.border },
+
+    // 宫格对齐方式，表现为数量少的时候，靠左，居中，还是靠右
+    align: {
+      type: String,
+      default: uni.$u.props.grid.align } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */
+/*!********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-grid-item/props.js ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 宫格的name
+    name: {
+      type: [String, Number, null],
+      default: uni.$u.props.gridItem.name },
+
+    // 背景颜色
+    bgColor: {
+      type: String,
+      default: uni.$u.props.gridItem.bgColor } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */,
+/* 453 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-status-bar/props.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18569,17 +24460,141 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-text/value.js ***!
-  \*********************************************************************************************/
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */
+/*!************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-column-notice/props.js ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 显示的内容，字符串
+    text: {
+      type: [Array],
+      default: uni.$u.props.columnNotice.text },
+
+    // 是否显示左侧的音量图标
+    icon: {
+      type: String,
+      default: uni.$u.props.columnNotice.icon },
+
+    // 通告模式，link-显示右箭头，closable-显示右侧关闭图标
+    mode: {
+      type: String,
+      default: uni.$u.props.columnNotice.mode },
+
+    // 文字颜色，各图标也会使用文字颜色
+    color: {
+      type: String,
+      default: uni.$u.props.columnNotice.color },
+
+    // 背景颜色
+    bgColor: {
+      type: String,
+      default: uni.$u.props.columnNotice.bgColor },
+
+    // 字体大小，单位px
+    fontSize: {
+      type: [String, Number],
+      default: uni.$u.props.columnNotice.fontSize },
+
+    // 水平滚动时的滚动速度，即每秒滚动多少px(px)，这有利于控制文字无论多少时，都能有一个恒定的速度
+    speed: {
+      type: [String, Number],
+      default: uni.$u.props.columnNotice.speed },
+
+    // direction = row时，是否使用步进形式滚动
+    step: {
+      type: Boolean,
+      default: uni.$u.props.columnNotice.step },
+
+    // 滚动一个周期的时间长，单位ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.columnNotice.duration },
+
+    // 是否禁止用手滑动切换
+    // 目前HX2.6.11，只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序
+    disableTouch: {
+      type: Boolean,
+      default: uni.$u.props.columnNotice.disableTouch } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 462 */,
+/* 463 */,
+/* 464 */,
+/* 465 */,
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-row-notice/props.js ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 显示的内容，字符串
+    text: {
+      type: String,
+      default: uni.$u.props.rowNotice.text },
+
+    // 是否显示左侧的音量图标
+    icon: {
+      type: String,
+      default: uni.$u.props.rowNotice.icon },
+
+    // 通告模式，link-显示右箭头，closable-显示右侧关闭图标
+    mode: {
+      type: String,
+      default: uni.$u.props.rowNotice.mode },
+
+    // 文字颜色，各图标也会使用文字颜色
+    color: {
+      type: String,
+      default: uni.$u.props.rowNotice.color },
+
+    // 背景颜色
+    bgColor: {
+      type: String,
+      default: uni.$u.props.rowNotice.bgColor },
+
+    // 字体大小，单位px
+    fontSize: {
+      type: [String, Number],
+      default: uni.$u.props.rowNotice.fontSize },
+
+    // 水平滚动时的滚动速度，即每秒滚动多少px(rpx)，这有利于控制文字无论多少时，都能有一个恒定的速度
+    speed: {
+      type: [String, Number],
+      default: uni.$u.props.rowNotice.speed } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */,
+/* 474 */,
+/* 475 */,
+/* 476 */,
+/* 477 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-text/value.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18637,8 +24652,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
           return format(text);
         }if (format === 'encrypt') {
           // 如果format为encrypt，则将姓名进行星号加密处理
-          // return text.replace(/(?<=.)./g, '*').substring(0, 3)
-          return text;
+          return this.formatName(text);
         }
         return text;
       }if (mode === 'link') {
@@ -18647,21 +24661,39 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         return text;
       }
       return text;
+    } },
+
+  methods: {
+    // 默认的姓名脱敏规则
+    formatName: function formatName(name) {
+      var value = '';
+      if (name.length === 2) {
+        value = name.substr(0, 1) + '*';
+      } else if (name.length > 2) {
+        var char = '';
+        for (var i = 0, len = name.length - 2; i < len; i++) {
+          char += '*';
+        }
+        value = name.substr(0, 1) + char + name.substr(-1, 1);
+      } else {
+        value = name;
+      }
+      return value;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */
-/*!***********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/libs/util/async-validator.js ***!
-  \***********************************************************************************************/
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */,
+/* 485 */
+/*!*****************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/libs/util/async-validator.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18688,7 +24720,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var formatRegExp = /%[sdj%]/g;
 var warning = function warning() {}; // don't print warning message when in production env or node runtime
 
-if (typeof process !== 'undefined' && Object({"VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}) && "development" !== 'production' && typeof window !==
+if (typeof process !== 'undefined' && Object({"NODE_ENV":"development","VUE_APP_NAME":"close chat","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}) && "development" !== 'production' && typeof window !==
 'undefined' && typeof document !== 'undefined') {
   warning = function warning(type, errors) {
     if (typeof console !== 'undefined' && console.warn) {
@@ -18980,7 +25012,7 @@ var types = {
   integer: function integer(value) {
     return types.number(value) && parseInt(value, 10) === value;
   },
-  float: function _float(value) {
+  float: function float(value) {
     return types.number(value) && !types.integer(value);
   },
   array: function array(value) {
@@ -20010,10 +26042,10 @@ Schema.messages = messages;var _default =
 Schema;
 // # sourceMappingURL=index.js.map
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../HBuilderX.3.1.18.20210609.full/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 302)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../HBuilderX.3.1.18.20210609.full/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 486)))
 
 /***/ }),
-/* 302 */
+/* 486 */
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -20044,7 +26076,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 303);
+        if (!path) path = __webpack_require__(/*! path */ 487);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -20057,7 +26089,7 @@ exports.features = {};
 
 
 /***/ }),
-/* 303 */
+/* 487 */
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -20367,18 +26399,18 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 302)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 486)))
 
 /***/ }),
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-line/props.js ***!
-  \*********************************************************************************************/
+/* 488 */,
+/* 489 */,
+/* 490 */,
+/* 491 */,
+/* 492 */,
+/* 493 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-line/props.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20416,24 +26448,24 @@ var substr = 'ab'.substr(-1) === 'b'
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */
-/*!*****************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-loading-icon/props.js ***!
-  \*****************************************************************************************************/
+/* 494 */,
+/* 495 */,
+/* 496 */,
+/* 497 */,
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */,
+/* 506 */,
+/* 507 */,
+/* 508 */
+/*!***********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-loading-icon/props.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20497,17 +26529,56 @@ var substr = 'ab'.substr(-1) === 'b'
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 325 */,
-/* 326 */,
-/* 327 */,
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */
-/*!***************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-transition/props.js ***!
-  \***************************************************************************************************/
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */,
+/* 513 */,
+/* 514 */,
+/* 515 */,
+/* 516 */
+/*!******************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-overlay/props.js ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {
+    // 是否显示遮罩
+    show: {
+      type: Boolean,
+      default: uni.$u.props.overlay.show },
+
+    // 层级z-index
+    zIndex: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.zIndex },
+
+    // 遮罩的过渡时间，单位为ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.duration },
+
+    // 不透明度值，当做rgba的第四个参数
+    opacity: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.opacity } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 517 */,
+/* 518 */,
+/* 519 */,
+/* 520 */,
+/* 521 */,
+/* 522 */,
+/* 523 */,
+/* 524 */
+/*!*********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-transition/props.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20536,18 +26607,18 @@ var substr = 'ab'.substr(-1) === 'b'
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 333 */
-/*!********************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-transition/transition.js ***!
-  \********************************************************************************************************/
+/* 525 */
+/*!**************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-transition/transition.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 37));
 
 
-var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 334));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 526));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} // 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
 var nextTick = function nextTick() {return new Promise(function (resolve) {return setTimeout(resolve, 1000 / 50);});}; // nvue动画模块实现细节抽离在外部文件
 
 // 定义类名，通过给元素动态切换类名，赋予元素一定的css动画样式
@@ -20583,14 +26654,17 @@ var getClassNames = function getClassNames(name) {return {
       this.inited = true;
       this.display = true;
       this.classes = classNames.enter;
-      this.$nextTick(function () {
-        // 组件动画进入后触发的事件
-        _this.$emit('afterEnter');
-        // 标识动画尚未结束
-        _this.transitionEnded = false;
-        // 赋予组件enter-to类名
-        _this.classes = classNames['enter-to'];
-      });
+      this.$nextTick( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+
+
+
+                // 组件动画进入后触发的事件
+                _this.$emit('afterEnter');
+                // 标识动画尚未结束
+                _this.transitionEnded = false;
+                // 赋予组件enter-to类名
+                _this.classes = classNames['enter-to'];case 3:case "end":return _context.stop();}}}, _callee);})));
+
     },
     // 动画离场处理
     vueLeave: function vueLeave() {var _this2 = this;
@@ -20696,10 +26770,10 @@ var getClassNames = function getClassNames(name) {return {
     } } };exports.default = _default;
 
 /***/ }),
-/* 334 */
-/*!**********************************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
-  \**********************************************************************************************************/
+/* 526 */
+/*!****************************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20772,17 +26846,43 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     'leave-to': { opacity: 0, transform: 'scale(0.95)' } } };exports.default = _default;
 
 /***/ }),
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */
-/*!*********************************************************************************************!*\
-  !*** E:/project/HbiuldXProjects/close chat/uni_modules/uview-ui/components/u-link/props.js ***!
-  \*********************************************************************************************/
+/* 527 */,
+/* 528 */,
+/* 529 */,
+/* 530 */,
+/* 531 */,
+/* 532 */,
+/* 533 */,
+/* 534 */
+/*!**********************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-safe-bottom/props.js ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  props: {} };exports.default = _default;
+
+/***/ }),
+/* 535 */,
+/* 536 */,
+/* 537 */,
+/* 538 */,
+/* 539 */,
+/* 540 */,
+/* 541 */,
+/* 542 */,
+/* 543 */,
+/* 544 */,
+/* 545 */,
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */
+/*!***************************************************************************************************!*\
+  !*** E:/project/HbiuldXProjects/close-chat-front/uni_modules/uview-ui/components/u-link/props.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

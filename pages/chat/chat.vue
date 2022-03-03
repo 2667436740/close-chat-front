@@ -10,12 +10,12 @@
 				<!-- 对方 -->
 				<view class="opposite" v-if="item.fromId != uid">
 					<view class="opposite-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)">
+						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)">
 						</u-avatar>
 					</view>
 					<view class="opposite-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="opposite-message-img" v-if="item.types == 1">
-						<image :src="`${BASE_URL}/chat/${item.message}`" mode="widthFix" class="chat-img"
+						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
 							@click="previewImage(item.message)">
 						</image>
 					</view>
@@ -34,12 +34,12 @@
 				<!-- 自己 -->
 				<view class="me" v-if="item.fromId == uid">
 					<view class="me-avatar">
-						<u-avatar :src="`${BASE_URL}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)">
+						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)">
 						</u-avatar>
 					</view>
 					<view class="me-message" v-if="item.types == 0">{{item.message}}</view>
 					<view class="me-message-img" v-if="item.types == 1">
-						<image :src="`${BASE_URL}/chat/${item.message}`" mode="widthFix" class="chat-img"
+						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
 							@click="previewImage(item.message)">
 						</image>
 					</view>
@@ -200,7 +200,7 @@
 			previewImage(currentMessage) {
 				console.log(currentMessage)
 				uni.previewImage({
-					current: `${this.BASE_URL}/chat/${currentMessage}`, //传当前点击图片的url
+					current: `${this.baseUrl}/chat/${currentMessage}`, //传当前点击图片的url
 					urls: this.preImgs,
 					longPressActions: {
 						itemList: ['发送给朋友', '保存图片', '收藏'],
@@ -280,7 +280,7 @@
 					if (res.data.status == 200) {
 						imgUrl = res.data.result.fileName //   xxxxxx.png
 						this.addMsg(imgUrl, types)
-						this.preImgs.push(`${this.BASE_URL}/chat/${imgUrl}`)
+						this.preImgs.push(`${this.baseUrl}/chat/${imgUrl}`)
 						const msgObj = [{
 							message: imgUrl,
 							types: types
@@ -315,7 +315,7 @@
 						break;
 					case 1: //图片
 						this.send(message, types)
-						// this.preImgs.push(`${this.BASE_URL}/chat/${message}`)
+						// this.preImgs.push(`${this.baseUrl}/chat/${message}`)
 						break;
 					case 2: //音频
 						// uni.$u.toast('功能开发中')
@@ -408,7 +408,7 @@
 				//准备预览图片列表
 				this.preImgs = []
 				for (let item of this.sortMsgs) {
-					if (item.types == 1) this.preImgs.push(`${this.BASE_URL}/chat/${item.message}`)
+					if (item.types == 1) this.preImgs.push(`${this.baseUrl}/chat/${item.message}`)
 				}
 				this.nowPage++
 			},
@@ -423,7 +423,7 @@
 						}
 						if (msgObj[0].types == 1) { //图片
 							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
-							this.preImgs.push(`${this.BASE_URL}/chat/${msgObj[0].message}`)
+							this.preImgs.push(`${this.baseUrl}/chat/${msgObj[0].message}`)
 						}
 						if (msgObj[0].types == 3) { //定位
 							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)

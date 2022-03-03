@@ -1,4 +1,8 @@
 {
+  "componentGenerics": {
+    "scoped-slots-prefix": true,
+    "scoped-slots-suffix": true
+  },
   "component": true,
   "usingComponents": {
     "uv-input": "/uni_modules/uview-ui/components/u-input/u-input"

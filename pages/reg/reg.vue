@@ -126,7 +126,7 @@
 			},
 			reg() {
 				this.$refs.regForm.validate().then(res => {
-					console.log('ok')
+					// console.log('ok')
 					if (this.canUserReg && this.canEmailReg) {
 						const params = {
 							email: this.model1.userInfo.email,

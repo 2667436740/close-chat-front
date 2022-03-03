@@ -1,12 +1,16 @@
 {
   "navigationBarTitleText": "uni-app",
   "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "u-navbar": "/uni_modules/uview-ui/components/u-navbar/u-navbar",
     "u-avatar": "/uni_modules/uview-ui/components/u-avatar/u-avatar",
     "u-icon": "/uni_modules/uview-ui/components/u-icon/u-icon",
     "u-list": "/uni_modules/uview-ui/components/u-list/u-list",
+    "u-notice-bar": "/uni_modules/uview-ui/components/u-notice-bar/u-notice-bar",
     "u-list-item": "/uni_modules/uview-ui/components/u-list-item/u-list-item",
-    "u--text": "/uni_modules/uview-ui/components/u--text/u--text"
+    "u-badge": "/uni_modules/uview-ui/components/u-badge/u-badge",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty"
   }
 }

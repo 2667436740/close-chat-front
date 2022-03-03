@@ -25,89 +25,43 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* 间隔、下划线 颜色 */
-view, scroll-view, swiper-item {
-  display: -webkit-box;
-  display: -webkit-flex;
+view.data-v-067e4733, scroll-view.data-v-067e4733, swiper-item.data-v-067e4733 {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-          flex-grow: 0;
-  -webkit-flex-basis: auto;
-          flex-basis: auto;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-          align-items: stretch;
-  -webkit-align-content: flex-start;
-          align-content: flex-start;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
 }
-.u-form-item {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-form-item.data-v-067e4733 {
   display: flex;
-
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 14px;
   color: #303133;
 }
-.u-form-item__body {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-form-item__body.data-v-067e4733 {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   padding: 10px 0;
 }
-.u-form-item__body__left {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-form-item__body__left.data-v-067e4733 {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
-.u-form-item__body__left__content {
+.u-form-item__body__left__content.data-v-067e4733 {
   position: relative;
-
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   padding-right: 10rpx;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-.u-form-item__body__left__content__icon {
+.u-form-item__body__left__content__icon.data-v-067e4733 {
   margin-right: 8rpx;
 }
-.u-form-item__body__left__content__required {
+.u-form-item__body__left__content__required.data-v-067e4733 {
   position: absolute;
   left: -9px;
   color: #f56c6c;
@@ -115,58 +69,32 @@ view, scroll-view, swiper-item {
   font-size: 20px;
   top: 3px;
 }
-.u-form-item__body__left__content__label {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-form-item__body__left__content__label.data-v-067e4733 {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
   color: #303133;
   font-size: 15px;
 }
-.u-form-item__body__right {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+.u-form-item__body__right.data-v-067e4733 {
+  flex: 1;
 }
-.u-form-item__body__right__content {
-
-  display: -webkit-box;
-  display: -webkit-flex;
+.u-form-item__body__right__content.data-v-067e4733 {
   display: flex;
-
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
 }
-.u-form-item__body__right__content__slot {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+.u-form-item__body__right__content__slot.data-v-067e4733 {
+  flex: 1;
 }
-.u-form-item__body__right__content__icon {
+.u-form-item__body__right__content__icon.data-v-067e4733 {
   margin-left: 10rpx;
   color: #c0c4cc;
   font-size: 30rpx;
 }
-.u-form-item__body__right__message {
+.u-form-item__body__right__message.data-v-067e4733 {
   font-size: 12px;
   line-height: 12px;
   color: #f56c6c;

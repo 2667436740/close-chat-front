@@ -6,10 +6,10 @@
 				<span>头像:</span>
 				<view class="cell-content">
 					<avatar selWidth="200px" selHeight="400upx" @upload="myUpload"
-						:avatarSrc="`${BASE_URL}/avatar/${imgUrl}`"
+						:avatarSrc="`${baseUrl}/avatar/${imgUrl}`"
 						avatarStyle="width: 120rpx; height: 120rpx; border-radius: 20%;" v-if="id==uid">
 					</avatar>
-					<img :src="`${BASE_URL}/avatar/${imgUrl}`"
+					<img :src="`${baseUrl}/avatar/${imgUrl}`"
 						style="width: 120upx; height: 120upx; border-radius: 20%;" v-if="id!=uid">
 					</img>
 				</view>
