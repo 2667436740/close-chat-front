@@ -3,7 +3,7 @@
 		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick(fid)" @leftClick="leftClick"
 			fixed :placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
 		<view class="message-box" @touchstart="closeToolsBox">
-			<view v-for="(item,index) in sortMsgs">
+			<view v-for="(item,index) in sortMsgs" :key="item.id">
 				<view class="time" v-if="hideSpaceTime(index)">
 					{{changeTime(item.time)}}
 				</view>

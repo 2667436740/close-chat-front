@@ -1,7 +1,7 @@
 <template>
 	<view class="user-add">
 		<view class="avatar-box">
-			<image :src="`${BASE_URL}/avatar/${userInfo.imgUrl}`" mode="" class="avatar"></image>
+			<image :src="`${baseUrl}/avatar/${userInfo.imgUrl}`" mode="" class="avatar"></image>
 		</view>
 		<view class="info-box">
 			<view class="info">
@@ -21,9 +21,7 @@
 
 		<u-modal :show="isShowApplyBox" :showCancelButton="true" confirmText="发送申请" @confirm="addUser"
 			@cancel="()=> {isShowApplyBox = false}" confirmColor="#23c248">
-			<view class="slot-content">
 				<u--textarea v-model="msg" placeholder="请输入申请消息" style="width: 500rpx"></u--textarea>
-			</view>
 		</u-modal>
 
 		<u-toast ref="uToast"></u-toast>
@@ -43,12 +41,13 @@
 				userInfo: {},
 				fid: '',
 				isShowApplyBox: false,
-				msg: `加好友~~`,
+				msg: '',
 			};
 		},
 		mixins: [getUserStorage],
 		onLoad(option) {
 			this.fid = option.fid
+			this.msg = `你好，我是${this.username}`
 		},
 		onShow() {
 			this.getFriendDetail()

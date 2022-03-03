@@ -1,5 +1,8 @@
 <template>
 	<view>
+		<!-- #ifdef MP -->
+		<view class="top-MP" />
+		<!-- #endif -->
 		<view class="head-box">
 			<view class="info-box">
 				<view class="name">
@@ -127,6 +130,10 @@
 </script>
 
 <style lang="scss">
+	.top-MP {
+		height: 60px;
+	}
+	
 	.head-box {
 		font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
 		border-bottom: 1px solid $uni-color-border;

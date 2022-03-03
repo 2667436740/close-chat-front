@@ -9,6 +9,16 @@
 
 		<u-index-list :index-list="indexList" :customNavHeight="80">
 			<u-cell-group slot="header">
+				
+				<!-- #ifdef MP -->
+				<navigator url="../search/search">
+					<u-cell title="搜索好友">
+						<u-avatar slot="icon" shape="square" size="35" icon="search" fontSize="26" randomBgColor
+							customStyle="margin: -3px 5px -3px 0"></u-avatar>
+					</u-cell>
+				</navigator>
+				<!-- #endif -->
+				
 				<navigator url="../addrequest/addrequest">
 					<u-cell title="新的朋友">
 						<u-avatar slot="icon" shape="square" size="35" icon="man-add-fill" fontSize="26" randomBgColor

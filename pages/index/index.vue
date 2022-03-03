@@ -38,7 +38,9 @@
 					<view class="avatar">
 						<u-avatar shape="square" size="40" :src="`${baseUrl}/avatar/${item.imgUrl}`"
 							customStyle="margin: 0 10px 0 0"></u-avatar>
-						<u-badge type="error" max="99" :value="item.unReadNum" class="badge"></u-badge>
+						<view class="badge">
+							<u-badge type="error" max="99" :value="item.unReadNum"></u-badge>
+						</view>
 					</view>
 					<view class="item-text">
 						<view class="item-title">
