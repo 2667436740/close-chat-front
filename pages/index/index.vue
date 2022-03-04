@@ -98,8 +98,6 @@
 			this.getAddRequestList()
 			this.clearUnreadMsg()
 			this.delFriend()
-			this.join()
-			this.socketTest()
 			this.listenMsg()
 		},
 		//下拉刷新
@@ -211,16 +209,6 @@
 					})
 					this.indexList = indexList
 				}
-			},
-			//用户登录socket注册
-			join() {
-				this.socket.emit('login', this.uid)
-			},
-			//服务器消息接收
-			socketTest() {
-				this.socket.on('login', id => {
-					console.log('接收到了消息,' + id)
-				})
 			},
 			//监听接收socket传来的消息
 			listenMsg() {

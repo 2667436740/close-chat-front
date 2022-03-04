@@ -24,7 +24,8 @@ require('./config/request.js')(app)
 // Vue.prototype.BASE_URL = 'http://192.168.1.106:3000' //全局后端地址
 Vue.prototype.BASE_URL = 'http://124.221.144.134:3000' //全局后端地址
 
-Vue.prototype.socket = io('http://124.221.144.134:8082',{
+// Vue.prototype.socket = io('http://192.168.1.106:8082',{ //socket地址
+Vue.prototype.socket = io('http://124.221.144.134:8082',{ //socket地址
   query: {},
   transports: [ 'websocket', 'polling' ], //必须，web端为轮询，小程序app端为websocket
   timeout: 5000,
