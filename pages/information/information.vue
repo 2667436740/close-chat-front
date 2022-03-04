@@ -9,8 +9,8 @@
 						:avatarSrc="`${baseUrl}/avatar/${imgUrl}`"
 						avatarStyle="width: 120rpx; height: 120rpx; border-radius: 20%;" v-if="id==uid">
 					</avatar>
-					<img :src="`${baseUrl}/avatar/${imgUrl}`"
-						style="width: 120upx; height: 120upx; border-radius: 20%;" v-if="id!=uid">
+					<img :src="`${baseUrl}/avatar/${imgUrl}`" style="width: 120upx; height: 120upx; border-radius: 20%;"
+						v-if="id!=uid">
 					</img>
 				</view>
 			</view>
@@ -46,7 +46,7 @@
 
 			<u-popup :show="isShowEditIntro" mode="center" :closeable="true" @close="closePopup">
 				<view class="pop">
-					<u--textarea v-model="explain" placeholder="请写下你的个签" height="200px" :count="true" maxlength="200"
+					<u--textarea v-model="explain" placeholder="请写下你的个签" height="200px" :count="true" maxlength="50"
 						style="padding-top: 40px;"></u--textarea>
 					<button type="default" @click="saveIntro">确定</button>
 				</view>
@@ -114,11 +114,13 @@
 		methods: {
 			//返回
 			leftClick() {
-				this.isChangeAvatar == true ? uni.reLaunch({
-					url: '../index/index'
-				}) : uni.switchTab({
-					url: '../index/index'
-				});
+				if (this.isChangeAvatar) {
+					uni.reLaunch({
+						url: '../index/index'
+					})
+				} else {
+					uni.navigateBack()
+				}
 			},
 			//获取用户详情
 			async getInformation(id) {
@@ -303,9 +305,9 @@
 
 			.cell-content {
 				max-width: 75%;
-				white-space: nowrap;
-				text-overflow: ellipsis;
-				overflow: hidden;
+				// white-space: nowrap;
+				// text-overflow: ellipsis;
+				// overflow: hidden;
 			}
 		}
 	}

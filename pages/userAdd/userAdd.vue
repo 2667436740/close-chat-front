@@ -3,25 +3,27 @@
 		<view class="avatar-box">
 			<image :src="`${baseUrl}/avatar/${userInfo.imgUrl}`" mode="" class="avatar"></image>
 		</view>
+		<view class="name">
+			{{userInfo.username}}
+		</view>
+		<view class="email">
+			{{userInfo.email}}
+		</view>
 		<view class="info-box">
 			<view class="info">
-				<view class="name">
-					{{userInfo.username}}
-				</view>
 				<view class="intro">
-					<u--text :lines="4"
-						:text="showExplain">
-					</u--text>
+					{{showExplain}}
 				</view>
-				<button class="btn-cancel" @click="cancel">返回</button>
+				<u-button type="default" class="btn-cancel" style="border: 1px solid #bababa;" @click="cancel">返回
+				</u-button>
 				<u-button type="success" @click="()=>{isShowApplyBox = true}">添加</u-button>
 			</view>
 		</view>
-		
+
 
 		<u-modal :show="isShowApplyBox" :showCancelButton="true" confirmText="发送申请" @confirm="addUser"
 			@cancel="()=> {isShowApplyBox = false}" confirmColor="#23c248">
-				<u--textarea v-model="msg" placeholder="请输入申请消息" style="width: 500rpx"></u--textarea>
+			<u--textarea v-model="msg" placeholder="请输入申请消息" style="width: 500rpx" :focus="true" :cursor="msg.length"></u--textarea>
 		</u-modal>
 
 		<u-toast ref="uToast"></u-toast>
@@ -54,7 +56,7 @@
 		},
 		computed: {
 			showExplain() {
-				return this.userInfo.explain ? this.userInfo.explain: '此用户暂无个签~' ;
+				return this.userInfo.explain ? this.userInfo.explain : '此用户暂无个签~';
 			}
 		},
 		methods: {
@@ -85,7 +87,7 @@
 					id: this.fid,
 					token: this.token
 				})
-				if(res.data.status == 200) {
+				if (res.data.status == 200) {
 					this.userInfo = res.data.result
 				}
 			}
@@ -100,10 +102,10 @@
 	}
 
 	.avatar-box {
-		height: 500rpx;
+		height: 200px;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-end;
 
 		.avatar {
 			width: 160px;
@@ -115,29 +117,41 @@
 		}
 	}
 
+	.name {
+		margin: auto;
+		font-size: 30px;
+		padding-top: 15px;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.email {
+		margin: auto;
+		font-size: 18px;
+		padding: 10px;
+		text-align: center;
+		font-weight: 600;
+	}
+
 	.info-box {
 		border-radius: 26px 26px 0 0;
 		background-color: white;
-		height: calc(100vh - 500rpx);
+		height: calc(100vh - 200px);
 
 		.info {
 			margin: auto;
 			width: 80%;
 			font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+			padding-top: 40px;
 
-			.name {
-				margin: auto;
-				font-size: 30px;
-				padding: 15px;
-				text-align: center;
-				font-weight: 600;
-			}
 
 			.intro {
-				padding: 8px;
-				margin-bottom: 20px;
+				padding: 12px;
+				margin-bottom: 40px;
 				border-radius: 10px;
 				background-color: #eee;
+				line-height: 21px;
+				height: 84px;
 			}
 		}
 	}

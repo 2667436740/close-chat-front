@@ -1,13 +1,5 @@
 <template>
 	<view class="search">
-		<!-- <u-navbar :safeAreaInsetTop="true" fixed :placeholder="true">
-			<view slot="left"/>
-			<view slot="right" class="right-bar">
-				<u-search :show-action="true" shape="square" actionText="取消" @custom="backPageJump"
-					placeholder="请输入要搜索的用户名或邮箱" @change="$u.debounce(compareName, 500)" v-model="searchWord" class="search">
-				</u-search>
-			</view>
-		</u-navbar> -->
 		<u-navbar :safeAreaInsetTop="true" fixed :placeholder="true" title="搜索">
 			<view slot="left"/>
 		</u-navbar>

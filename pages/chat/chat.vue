@@ -503,7 +503,7 @@
 
 			.me-message {
 				max-width: 60%;
-				background-color: #40ce40;
+				background-color: #41d641;
 				border-radius: 10px 0 10px 10px;
 				padding: 8px;
 				float: right;
