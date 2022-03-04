@@ -66,14 +66,14 @@
 						:adjustPosition='true'></u--textarea>
 				</view>
 				<view class="send-btns">
-					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)">发送</u-button>
+					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)" class="send-btn">发送</u-button>
 					<u-icon name="plus-circle" color="#616161" size="30" @click="moreClick"></u-icon>
 				</view>
 			</view>
 
 			<view class="tools-box" v-if="isShowToolsBox" ref="toolsbox">
 				<u-grid :border="false" col="4" class="grid" v-if="isShowGrid">
-					<u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex" @click="toolClick(listIndex)">
+					<u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex" @click="toolClick(listIndex)" class="grid-item">
 						<u-icon :customStyle="{paddingTop:20+'rpx'}" :name="listItem.name" :size="35"></u-icon>
 						<text class="grid-text">{{listItem.title}}</text>
 					</u-grid-item>
@@ -471,7 +471,7 @@
 			}
 
 			.opposite-message {
-				max-width: 65%;
+				max-width: 60%;
 				border: 1px solid #b3b3b3;
 				border-radius: 0 10px 10px 10px;
 				padding: 8px;
@@ -480,9 +480,14 @@
 			}
 
 			.opposite-message-img {
-				max-width: 65%;
+				max-width: 50%;
 				padding: 8px;
 				float: left;
+				
+				// image {
+				// 	max-height: 50%;
+				// 	max-width: 50%;
+				// }
 			}
 		}
 
@@ -497,7 +502,7 @@
 			}
 
 			.me-message {
-				max-width: 65%;
+				max-width: 60%;
 				background-color: #40ce40;
 				border-radius: 10px 0 10px 10px;
 				padding: 8px;
@@ -506,7 +511,7 @@
 			}
 
 			.me-message-img {
-				max-width: 65%;
+				max-width: 50%;
 				padding: 8px;
 				float: right;
 			}
@@ -527,7 +532,7 @@
 
 	.send-tool-bar {
 		min-height: 40px;
-		padding: 4px 0;
+		padding: 6px 0;
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
@@ -546,18 +551,30 @@
 		.send-btns {
 			width: 100px;
 			padding-left: 5px;
-			padding-right: 10px;
+			padding-right: 5px;
 			display: flex;
+			
+			.send-btn {
+				margin: 0 4px;
+			}
 		}
 	}
 
 	.tools-box {
-		height: 160px;
+		height: 320rpx;
 		display: flex;
 		width: 100%;
+		background-color: #f4f4f4;
 
 		.grid {
-			width: 100%;
+			margin: 0 10px 5px 10px;
+			width: calc(100% - 20px);
+			background-color: white;
+			border-radius: 4px;
+			
+			.grid-item {
+				margin: 5px 0;
+			}
 		}
 
 		.phiz {
