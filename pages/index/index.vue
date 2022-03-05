@@ -32,7 +32,7 @@
 					</view>
 				</u-list-item>
 			</navigator>
-			
+
 			<u-list-item v-for="(item, index) in indexList" :key="item.id">
 				<view class="item-style" @click="chatPageJump(item)">
 					<view class="avatar">
@@ -99,6 +99,7 @@
 			this.clearUnreadMsg()
 			this.delFriend()
 			this.listenMsg()
+			this.listenDraft()
 		},
 		//下拉刷新
 		onPullDownRefresh() {
@@ -266,6 +267,34 @@
 					if (this.uid == toId) {
 						this.getFriend()
 						this.getAddRequestList()
+					}
+				})
+			},
+			//监听聊天页返回是否有草稿
+			async listenDraft() {
+				uni.$on('draft',async data => {
+					console.log(data)
+					if (data.draftType == 1) {
+						this.indexList.map(e => {
+							if (e.id == data.draftId) {
+								e.message = '[草稿]  '+ data.message
+							}
+						})
+					} else if (data.draftType == 0) {
+						const params = {
+							uid: this.uid,
+							fid: data.draftId,
+							token: this.token
+						}
+						const resMsg = await postGetLastMsg(params)
+						if (resMsg.data.status == 200) {
+							this.indexList.map(e => {
+								if (e.id == data.draftId) {
+									e.message = resMsg.data.result.message
+									e.types = resMsg.data.result.types
+								}
+							})
+						}
 					}
 				})
 			}

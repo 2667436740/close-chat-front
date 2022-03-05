@@ -66,14 +66,16 @@
 						:adjustPosition='true'></u--textarea>
 				</view>
 				<view class="send-btns">
-					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)" class="send-btn">发送</u-button>
+					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)"
+						class="send-btn">发送</u-button>
 					<u-icon name="plus-circle" color="#616161" size="30" @click="moreClick"></u-icon>
 				</view>
 			</view>
 
 			<view class="tools-box" v-if="isShowToolsBox" ref="toolsbox">
 				<u-grid :border="false" col="4" class="grid" v-if="isShowGrid">
-					<u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex" @click="toolClick(listIndex)" class="grid-item">
+					<u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex" @click="toolClick(listIndex)"
+						class="grid-item">
 						<u-icon :customStyle="{paddingTop:20+'rpx'}" :name="listItem.name" :size="35"></u-icon>
 						<text class="grid-text">{{listItem.title}}</text>
 					</u-grid-item>
@@ -148,6 +150,7 @@
 			this.fusername = option.username
 			this.getChatMsg(this.nowPage, this.pageSize)
 			this.listenMsg()
+			this.getDraftMsg()
 		},
 		onShow() {
 			//进入页面时，直接页面底部
@@ -163,6 +166,12 @@
 			}, 1000)
 		},
 		methods: {
+			//获取缓存是否有草稿
+			getDraftMsg() {
+				const value = uni.getStorageSync(this.fid)
+				if(value) this.message = value.message
+				uni.removeStorageSync(this.fid)
+			},
 			//跳转个人信息页
 			infoPageJump(id) {
 				uni.navigateTo({
@@ -180,6 +189,22 @@
 				if (res.data.status == 200) {
 					uni.$emit('clearUnreadNum', {
 						clearId: this.fid
+					})
+				}
+				//返回保留草稿消息
+				if (this.message != '') {
+					uni.setStorageSync(this.fid, {
+						message: this.message
+					})
+					uni.$emit('draft', {
+						draftId: this.fid,
+						draftType: 1, //有草稿
+						message: this.message
+					})
+				} else {
+					uni.$emit('draft', {
+						draftId: this.fid,
+						draftType: 0 //无草稿
 					})
 				}
 				uni.switchTab({
@@ -483,7 +508,7 @@
 				max-width: 50%;
 				padding: 8px;
 				float: left;
-				
+
 				// image {
 				// 	max-height: 50%;
 				// 	max-width: 50%;
@@ -553,7 +578,7 @@
 			padding-left: 5px;
 			padding-right: 5px;
 			display: flex;
-			
+
 			.send-btn {
 				margin: 0 4px;
 			}
@@ -571,7 +596,7 @@
 			width: calc(100% - 20px);
 			background-color: white;
 			border-radius: 4px;
-			
+
 			.grid-item {
 				margin: 5px 0;
 			}
