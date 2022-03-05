@@ -138,6 +138,7 @@
 				fusername: '',
 				nowPage: 0,
 				pageSize: 20,
+				noexebshowFalg: true, //不允许再次触发onshow这个声明周期
 			};
 		},
 		components: {
@@ -153,10 +154,12 @@
 			this.getDraftMsg()
 		},
 		onShow() {
-			//进入页面时，直接页面底部
-			setTimeout(() => {
-				this.pageScrollToBottom(0)
-			}, 500)
+			if (this.noexebshowFalg) {
+				//进入页面时，直接页面底部
+				setTimeout(() => {
+					this.pageScrollToBottom(0)
+				}, 500)
+			}
 		},
 		//下拉加载数据
 		onPullDownRefresh() {
@@ -169,7 +172,7 @@
 			//获取缓存是否有草稿
 			getDraftMsg() {
 				const value = uni.getStorageSync(this.fid)
-				if(value) this.message = value.message
+				if (value) this.message = value.message
 				uni.removeStorageSync(this.fid)
 			},
 			//跳转个人信息页
@@ -223,7 +226,8 @@
 			},
 			//预览图片
 			previewImage(currentMessage) {
-				console.log(currentMessage)
+				// console.log(currentMessage)
+				this.noexebshowFalg = false; //不允许再次触发onshow这个声明周期
 				uni.previewImage({
 					current: `${this.baseUrl}/chat/${currentMessage}`, //传当前点击图片的url
 					urls: this.preImgs,

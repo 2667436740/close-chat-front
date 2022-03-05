@@ -273,7 +273,7 @@
 			//监听聊天页返回是否有草稿
 			async listenDraft() {
 				uni.$on('draft',async data => {
-					console.log(data)
+					// console.log(data)
 					if (data.draftType == 1) {
 						this.indexList.map(e => {
 							if (e.id == data.draftId) {
