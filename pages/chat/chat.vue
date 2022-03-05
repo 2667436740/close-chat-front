@@ -254,7 +254,7 @@
 					time: new Date().getTime(),
 				}
 				this.sortMsgs.push(data)
-				this.message = ''
+				fromId == this.fid ? null : this.message = '' //对方发来的输入框消息不清空
 
 				this.pageScrollToBottom(200)
 			},
