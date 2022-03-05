@@ -26,7 +26,8 @@
 						<view class="address">
 							{{JSON.parse(item.message).address}}
 						</view>
-						<map style="max-width: 100%; height: 150px;" :latitude="JSON.parse(item.message).latitude"
+						<map style="max-width: 100%; height: 150px;z-index: 1;"
+							:latitude="JSON.parse(item.message).latitude"
 							:longitude="JSON.parse(item.message).longitude" :markers="covers(JSON.parse(item.message))">
 						</map>
 					</view>
@@ -466,7 +467,7 @@
 
 <style lang="scss">
 	.navbar {
-		z-index: 999;
+		z-index: 9999;
 	}
 
 	.map-name {

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<!-- #ifdef MP -->
+		<!-- #ifdef APP-PLUS || MP -->
 		<view class="top-MP" />
 		<!-- #endif -->
 		<view class="head-box">
@@ -131,7 +131,7 @@
 
 <style lang="scss">
 	.top-MP {
-		height: 60px;
+		height: 50px;
 	}
 	
 	.head-box {

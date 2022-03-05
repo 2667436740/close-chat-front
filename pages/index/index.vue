@@ -90,26 +90,57 @@
 				indexList: [],
 				newRequestNum: 0,
 				noticeMsg: '本项目试测验中，（温馨提示）聊天内容或许有可能在服务器到期后清空，不要交流重要消息喔~',
+				appBadgeNum: 0, //手机应用角标数
 			}
 		},
 		mixins: [getUserStorage],
 		onLoad() {
 			this.getFriend()
 			this.getAddRequestList()
+			// this.countNums()
 			this.clearUnreadMsg()
 			this.delFriend()
 			this.listenMsg()
 			this.listenDraft()
 		},
+		onShow() {
+			const value = uni.getStorageSync('hideApp')
+			if (value) {
+				this.getFriend()
+				this.getAddRequestList()
+				// this.countNums()
+			}
+			uni.removeStorageSync('hideApp')
+		},
 		//下拉刷新
 		onPullDownRefresh() {
 			this.getFriend()
 			this.getAddRequestList()
+			// this.countNums()
 			setTimeout(() => {
 				uni.stopPullDownRefresh()
 			}, 1000)
 		},
+		watch: {
+			appBadgeNum: {
+				handler(newName, oldName) {
+					console.log(newName)
+					// #ifdef APP-PLUS
+					plus.runtime.setBadgeNumber(newName)
+					// #endif
+					// uni.setBadgeNumber(newName)
+				},
+				immediate: true
+			}
+		},
 		methods: {
+			//重新统计未读数
+			countNums() {
+				this.appBadgeNum = 0
+				this.indexList.map(e => {
+					this.appBadgeNum += e.unReadNum
+				})
+			},
 			//聊天页返回时，清空对应好友未读数
 			clearUnreadMsg() {
 				uni.$on('clearUnreadNum', data => {
@@ -121,6 +152,7 @@
 						})
 					}
 				})
+				this.countNums()
 			},
 			//删除好友操作返回主页时，前端删除对应好友
 			delFriend() {
@@ -176,6 +208,7 @@
 				if (res.data.status == 200) {
 					item.unReadNum = 0
 				}
+				this.countNums()
 			},
 			//获取首页好友列
 			async getFriend() {
@@ -209,14 +242,16 @@
 						return b.lastTime - a.lastTime
 					})
 					this.indexList = indexList
+					this.countNums()
 				}
 			},
 			//监听接收socket传来的消息
 			listenMsg() {
-				this.socket.on('msg', (msgObj, fromId) => {
+				this.socket.on('msg', (msgObj, fromId, tip) => {
 					this.indexList.map((e, i) => {
 						//前端更新 对方发来的消息
-						if (e.id == fromId) {
+						if (e.id == fromId && tip == 0) {
+							// uni.vibrateLong()
 							switch (msgObj[0].types) {
 								case 0: //文字
 									e.message = msgObj[0].message
@@ -235,6 +270,7 @@
 							e.lastTime = new Date().getTime()
 							this.indexList.splice(i, 1)
 							this.indexList.unshift(e)
+							this.countNums()
 						}
 						//前端更新 自己主页的消息
 						if (this.uid == fromId) {
@@ -272,12 +308,12 @@
 			},
 			//监听聊天页返回是否有草稿
 			async listenDraft() {
-				uni.$on('draft',async data => {
+				uni.$on('draft', async data => {
 					// console.log(data)
 					if (data.draftType == 1) {
 						this.indexList.map(e => {
 							if (e.id == data.draftId) {
-								e.message = '[草稿]  '+ data.message
+								e.message = '[草稿]  ' + data.message
 							}
 						})
 					} else if (data.draftType == 0) {
