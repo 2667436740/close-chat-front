@@ -97,7 +97,6 @@
 		onLoad() {
 			this.getFriend()
 			this.getAddRequestList()
-			// this.countNums()
 			this.clearUnreadMsg()
 			this.delFriend()
 			this.listenMsg()
@@ -105,10 +104,10 @@
 		},
 		onShow() {
 			const value = uni.getStorageSync('hideApp')
-			if (value) {
+			// console.log(value)
+			if (value == 1) {
 				this.getFriend()
 				this.getAddRequestList()
-				// this.countNums()
 			}
 			uni.removeStorageSync('hideApp')
 		},
@@ -116,7 +115,6 @@
 		onPullDownRefresh() {
 			this.getFriend()
 			this.getAddRequestList()
-			// this.countNums()
 			setTimeout(() => {
 				uni.stopPullDownRefresh()
 			}, 1000)
@@ -128,7 +126,6 @@
 					// #ifdef APP-PLUS
 					plus.runtime.setBadgeNumber(newName)
 					// #endif
-					// uni.setBadgeNumber(newName)
 				},
 				immediate: true
 			}
@@ -194,14 +191,14 @@
 					url: '../information/information?id=' + id
 				})
 			},
-			//聊天页跳转
+			//跳转到聊天页
 			async chatPageJump(item) {
 				uni.navigateTo({
 					url: `../chat/chat?id=${item.id}&imgUrl=${item.imgUrl}&username=${item.username}`
 				})
 				const params = {
-					uid: this.uid,
-					fid: item.id,
+					uid: item.id,
+					fid: this.uid,
 					token: this.token
 				}
 				const res = await postClearUnreadMsg(params)

@@ -4,20 +4,20 @@
 			console.log('App Launch')
 			// #ifdef APP-PLUS
 			//收到通知消息
-			plus.push.addEventListener('click',message => {
+			plus.push.addEventListener('click', message => {
 				let payload = message.payload
-				try{
-					
-				}catch(e){
+				try {
+
+				} catch (e) {
 					//TODO handle the exception
 				}
 			})
 			//收到透传消息
-			plus.push.addEventListener('receive',message => {
+			plus.push.addEventListener('receive', message => {
 				let payload = message.payload
-				try{
-					
-				}catch(e){
+				try {
+
+				} catch (e) {
 					//TODO handle the exception
 				}
 			})
@@ -25,13 +25,22 @@
 		},
 		onShow: function() {
 			console.log('App Show')
+			uni.connectSocket({
+				url: 'http://124.221.144.134:8082',
+				success: res => {
+					// uni.showToast({
+					// 	title: 'websocket 连接了',
+					// 	duration: 2000
+					// });
+					console.log('websocket 连接了')
+				}
+			});
 		},
 		onHide: function() {
 			console.log('App Hide')
-			uni.setStorageSync('hideApp',1)
+			uni.setStorageSync('hideApp', 1)
 		},
-		methods: {
-		}
+		methods: {}
 	}
 </script>
 
@@ -40,5 +49,4 @@
 	@import './static/css/uni.css';
 
 	/*每个页面公共css */
-	
 </style>
