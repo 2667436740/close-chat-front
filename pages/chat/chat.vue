@@ -13,7 +13,9 @@
 						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)">
 						</u-avatar>
 					</view>
-					<view class="opposite-message" v-if="item.types == 0">{{item.message}}</view>
+					<view class="opposite-message" v-if="item.types == 0">
+						<u--text :text="item.message" wordWrap="anywhere"></u--text>
+					</view>
 					<view class="opposite-message-img" v-if="item.types == 1">
 						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
 							@click="previewImage(item.message)">
@@ -38,7 +40,9 @@
 						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)">
 						</u-avatar>
 					</view>
-					<view class="me-message" v-if="item.types == 0">{{item.message}}</view>
+					<view class="me-message" v-if="item.types == 0">
+						<u--text :text="item.message" wordWrap="anywhere"></u--text>
+					</view>
 					<view class="me-message-img" v-if="item.types == 1">
 						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
 							@click="previewImage(item.message)">
