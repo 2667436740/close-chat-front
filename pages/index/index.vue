@@ -290,6 +290,7 @@
 									e.message = '[位置]'
 									break;
 							}
+							// console.log('/////////////////')
 							e.lastTime = new Date().getTime()
 							this.indexList.splice(i, 1)
 							this.indexList.unshift(e)
@@ -312,13 +313,13 @@
 			async listenDraft() {
 				uni.$on('draft', async data => {
 					// console.log(data)
-					if (data.draftType == 1) {
+					if (data.draftType == 1) { //有草稿
 						this.indexList.map(e => {
 							if (e.id == data.draftId) {
 								e.message = '[草稿]  ' + data.message
 							}
 						})
-					} else if (data.draftType == 0) {
+					} else if (data.draftType == 0) { //无草稿
 						const params = {
 							uid: this.uid,
 							fid: data.draftId,
@@ -330,6 +331,7 @@
 								if (e.id == data.draftId) {
 									e.message = resMsg.data.result.message
 									e.types = resMsg.data.result.types
+									e.lastTime = new Date(resMsg.data.result.time).valueOf()
 								}
 							})
 						}

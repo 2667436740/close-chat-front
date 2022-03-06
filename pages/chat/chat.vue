@@ -537,7 +537,7 @@
 
 			.me-message {
 				max-width: 60%;
-				background-color: #41d641;
+				background-color: #4fd653;
 				border-radius: 10px 0 10px 10px;
 				padding: 8px;
 				float: right;
