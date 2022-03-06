@@ -72,7 +72,7 @@
 				</view>
 				<view class="send-btns">
 					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)"
-						class="send-btn">发送</u-button>
+						class="send-btn" v-if="message != ''">发送</u-button>
 					<u-icon name="plus-circle" color="#616161" size="30" @click="moreClick"></u-icon>
 				</view>
 			</view>
@@ -583,13 +583,13 @@
 
 			.input {
 				background-color: white;
-			  max-height: 150px;
+				max-height: 150px;
 				overflow-y: scroll;
 			}
 		}
 
 		.send-btns {
-			width: 100px;
+			max-width: 100px;
 			padding-left: 5px;
 			padding-right: 5px;
 			display: flex;
