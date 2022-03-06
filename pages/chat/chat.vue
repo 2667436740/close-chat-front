@@ -575,6 +575,8 @@
 
 			.input {
 				background-color: white;
+			  max-height: 150px;
+				overflow-y: scroll;
 			}
 		}
 

@@ -51,7 +51,7 @@
 								{{changeTime(item.lastTime)}}
 							</view>
 						</view>
-						<u--text :lines="1" :text="item.message" color="#666666" size="14" v-if="item.types == 0">
+						<u--text :lines="1" :text="removeBr(item.message)" color="#666666" size="14" v-if="item.types == 0">
 						</u--text>
 						<u--text :lines="1" text="[图片]" color="#666666" size="14" v-if="item.types == 1"></u--text>
 						<u--text :lines="1" text="[语音]" color="#666666" size="14" v-if="item.types == 2"></u--text>
@@ -131,6 +131,11 @@
 			}
 		},
 		methods: {
+			//去掉msg里的 \n ,即浏览器里的 <br>
+			removeBr(msg) {
+				// console.log(msg)
+				return msg.replace(/\n/g," ")
+			},
 			//重新统计未读数
 			countNums() {
 				this.appBadgeNum = 0
