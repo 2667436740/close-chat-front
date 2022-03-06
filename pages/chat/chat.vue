@@ -144,6 +144,7 @@
 				nowPage: 0,
 				pageSize: 20,
 				noexebshowFalg: true, //不允许再次触发onshow这个声明周期
+				isClickSend: false, //自己是否 点发送 并 成功发送消息
 			};
 		},
 		components: {
@@ -345,10 +346,12 @@
 					case 0: //文字
 						if (this.message != '') {
 							this.send(message, types)
+							this.isClickSend = true
 						}
 						break;
 					case 1: //图片
 						this.send(message, types)
+						this.isClickSend = true
 						// this.preImgs.push(`${this.baseUrl}/chat/${message}`)
 						break;
 					case 2: //音频
@@ -356,7 +359,8 @@
 						break;
 					case 3: //定位
 						this.send(message, types)
-						console.log(message)
+						this.isClickSend = true
+						// console.log(message)
 						break;
 				}
 			},

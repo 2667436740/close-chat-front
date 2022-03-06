@@ -327,11 +327,17 @@
 						}
 						const resMsg = await postGetLastMsg(params)
 						if (resMsg.data.status == 200) {
-							this.indexList.map(e => {
+							this.indexList.map((e,i) => {
 								if (e.id == data.draftId) {
-									e.message = resMsg.data.result.message
-									e.types = resMsg.data.result.types
-									e.lastTime = new Date(resMsg.data.result.time).valueOf()
+									const result = resMsg.data.result
+									//新获取的最后一条消息 和 之前 不一致，更新
+									if(e.message != result.message) {
+										e.message = result.message
+										e.types = result.types
+										e.lastTime = new Date(result.time).valueOf()
+										this.indexList.splice(i, 1)
+										this.indexList.unshift(e)
+									}
 								}
 							})
 						}
