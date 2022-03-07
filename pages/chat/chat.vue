@@ -2,7 +2,7 @@
 	<view>
 		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick(fid)" @leftClick="leftClick"
 			fixed :placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
-		<view class="message-box" @touchstart="closeToolsBox">
+		<view class="message-box" @touchstart="closeToolsBox" :style="{'padding-bottom': dynamicBoxHeight + 'px'}">
 			<view v-for="(item,index) in sortMsgs" :key="item.id">
 				<view class="time" v-if="hideSpaceTime(index)">
 					{{changeTime(item.time)}}
@@ -63,12 +63,12 @@
 			</view>
 		</view>
 
-		<view class="dynamic-box" ref="dynamicbox">
+		<view class="dynamic-box" ref="dynamicbox" id="dynamicbox">
 			<view class="send-tool-bar">
 				<view class="input-msg">
 					<!-- <u--input v-model="message" shape='circle' size="small" class="input" :autosize="true" type="textarea"></u--input> -->
 					<u--textarea v-model="message" autoHeight class="input" :fixed='true' maxlength='-1'
-						:adjustPosition='true'></u--textarea>
+						:adjustPosition='true' @confirm="sendMessage(message,0)"></u--textarea>
 				</view>
 				<view class="send-btns">
 					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)"
@@ -145,6 +145,7 @@
 				pageSize: 20,
 				noexebshowFalg: true, //不允许再次触发onshow这个声明周期
 				isClickSend: false, //自己是否 点发送 并 成功发送消息
+				dynamicBoxHeight: 52, //输入栏高度
 			};
 		},
 		components: {
@@ -166,6 +167,9 @@
 					this.pageScrollToBottom(0)
 				}, 500)
 			}
+		},
+		onReady() {
+			// this.getDynamicBoxHeight()
 		},
 		//下拉加载数据
 		onPullDownRefresh() {
@@ -253,7 +257,7 @@
 				if (index == 0) return true
 				else return myfun.spaceTime(this.sortMsgs[index - 1].time, this.sortMsgs[index].time) == '' ? false : true
 			},
-			// 加号‘+’点击
+			//输入栏加号‘+’点击
 			moreClick() {
 				this.isShowToolsBox = !this.isShowToolsBox
 				if (this.isShowToolsBox == true) {
@@ -262,6 +266,20 @@
 						this.isShowPhiz = false
 					})
 				} else {}
+				this.getDynamicBoxHeight()
+			},
+			//获取dynamicbox高度并保存
+			getDynamicBoxHeight() {
+				this.$nextTick(function() {
+					const query = uni.createSelectorQuery().in(this);
+					query.select('#dynamicbox').boundingClientRect(data => {
+						// console.log(data)
+						this.dynamicBoxHeight = data.height
+					}).exec();
+					this.$nextTick(function() {
+						this.pageScrollToBottom(100)
+					})
+				})
 			},
 			//滚动到页面底部
 			pageScrollToBottom(delay) {
@@ -273,8 +291,9 @@
 				})
 			},
 			closeToolsBox() {
-				if (this.isShowToolsBox == true) {
+				if (this.isShowToolsBox) {
 					this.isShowToolsBox = false
+					this.getDynamicBoxHeight()
 				}
 			},
 			//本地消息列添加消息
@@ -489,7 +508,7 @@
 	}
 
 	.message-box {
-		padding-bottom: 44px;
+		padding-bottom: 52px;
 
 		.time {
 			text-align: center;
