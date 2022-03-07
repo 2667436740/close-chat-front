@@ -68,7 +68,7 @@
 				<view class="input-msg">
 					<!-- <u--input v-model="message" shape='circle' size="small" class="input" :autosize="true" type="textarea"></u--input> -->
 					<u--textarea v-model="message" autoHeight class="input" :fixed='true' maxlength='-1'
-						:adjustPosition='true' @confirm="sendMessage(message,0)"></u--textarea>
+						:adjustPosition='true' @confirm="sendMessage(message,0)" @linechange="linechange"></u--textarea>
 				</view>
 				<view class="send-btns">
 					<u-button type="success" shape='circle' size="small" @click="sendMessage(message,0)"
@@ -152,6 +152,17 @@
 			emoji
 		},
 		mixins: [getUserStorage],
+		watch: {
+			dynamicBoxHeight: {
+				handler(newName, oldName) {
+					console.log(newName)
+					this.$nextTick(function() {
+						this.pageScrollToBottom(100)
+					})
+				},
+				immediate: true
+			}
+		},
 		onLoad(option) {
 			this.fid = option.id
 			this.fimgUrl = option.imgUrl
@@ -179,6 +190,11 @@
 			}, 1000)
 		},
 		methods: {
+			//输入框行数变化
+			linechange(e) {
+				console.log(e)
+				this.getDynamicBoxHeight()
+			},
 			//获取缓存是否有草稿
 			getDraftMsg() {
 				const value = uni.getStorageSync(this.fid)
@@ -276,9 +292,6 @@
 						// console.log(data)
 						this.dynamicBoxHeight = data.height
 					}).exec();
-					this.$nextTick(function() {
-						this.pageScrollToBottom(100)
-					})
 				})
 			},
 			//滚动到页面底部
