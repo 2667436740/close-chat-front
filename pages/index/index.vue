@@ -6,7 +6,12 @@
 			</view>
 			<view slot="right" class="icons">
 				<u-icon name="search" size="20" class="icon-1" @click="searchPageJump"></u-icon>
-				<u-icon name="list" size="20"></u-icon>
+				<u-icon name="list" size="20" @click="showMoreCard"></u-icon>
+				<view class="more-card" v-if="isShowMordCard">
+					<view class="card-item" @click="clearAllUnreadNum">
+						一键已读
+					</view>
+				</view>
 			</view>
 		</u-navbar>
 
@@ -51,7 +56,8 @@
 								{{changeTime(item.lastTime)}}
 							</view>
 						</view>
-						<u--text :lines="1" :text="removeBr(item.message)" color="#666666" size="14" v-if="item.types == 0">
+						<u--text :lines="1" :text="removeBr(item.message)" color="#666666" size="14"
+							v-if="item.types == 0">
 						</u--text>
 						<u--text :lines="1" text="[图片]" color="#666666" size="14" v-if="item.types == 1"></u--text>
 						<u--text :lines="1" text="[语音]" color="#666666" size="14" v-if="item.types == 2"></u--text>
@@ -91,6 +97,7 @@
 				newRequestNum: 0,
 				noticeMsg: '本项目试测验中，（温馨提示）聊天内容或许有可能在服务器到期后清空，不要交流重要消息喔~',
 				appBadgeNum: 0, //手机应用角标数
+				isShowMordCard: false,
 			}
 		},
 		mixins: [getUserStorage],
@@ -103,6 +110,7 @@
 			this.listenDraft()
 		},
 		onShow() {
+			this.socket.emit('login', this.uid)
 			const value = uni.getStorageSync('hideApp')
 			// console.log(value)
 			if (value == 1) {
@@ -131,10 +139,30 @@
 			}
 		},
 		methods: {
+			//右上角更多按钮点击
+			showMoreCard() {
+				this.isShowMordCard = !this.isShowMordCard
+			},
+			//清除所有未读数
+			async clearAllUnreadNum() {
+				this.indexList.map(async e => {
+					e.unReadNum = 0
+					if (e.unReadNum != 0) {
+						const params = {
+							uid: e.id,
+							fid: this.uid,
+							token: this.token
+						}
+						const res = await postClearUnreadMsg(params)
+					}
+				})
+				this.appBadgeNum = 0
+				this.isShowMordCard = false
+			},
 			//去掉msg里的 \n ,即浏览器里的 <br>
 			removeBr(msg) {
 				// console.log(msg)
-				return msg.replace(/\n/g," ")
+				return msg.replace(/\n/g, " ")
 			},
 			//重新统计未读数
 			countNums() {
@@ -327,11 +355,11 @@
 						}
 						const resMsg = await postGetLastMsg(params)
 						if (resMsg.data.status == 200) {
-							this.indexList.map((e,i) => {
+							this.indexList.map((e, i) => {
 								if (e.id == data.draftId) {
 									const result = resMsg.data.result
 									//新获取的最后一条消息 和 之前 不一致，更新
-									if(e.message != result.message) {
+									if (e.message != result.message) {
 										e.message = result.message
 										e.types = result.types
 										e.lastTime = new Date(result.time).valueOf()
@@ -357,9 +385,27 @@
 	.icons {
 		display: flex;
 		flex-direction: row;
+		// position: relative;
 
 		.icon-1 {
 			padding-right: 10px;
+		}
+
+		.more-card {
+			position: absolute;
+			width: 100px;
+			background-color: pink;
+			right: 10px;
+			top: 44px;
+			border-radius: 10px;
+			padding: 5px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			background: #fff;
+
+			.card-item {
+				padding: 5px;
+				text-align: center;
+			}
 		}
 	}
 

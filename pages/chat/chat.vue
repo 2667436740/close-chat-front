@@ -15,6 +15,7 @@
 					</view>
 					<view class="opposite-message" v-if="item.types == 0">
 						<u--text :text="item.message" wordWrap="anywhere"></u--text>
+						<!-- <u--text :text="item.message" wordWrap="anywhere" v-if="isUrl(item.message)" mode="link" :href="item.message"></u--text> -->
 					</view>
 					<view class="opposite-message-img" v-if="item.types == 1">
 						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
@@ -44,6 +45,9 @@
 						<u--text :text="item.message" wordWrap="anywhere"></u--text>
 					</view>
 					<view class="me-message-img" v-if="item.types == 1">
+						<view class="overlay" v-if="!isImgSendSuccess">
+							<u-loading-icon class="loading-icon"></u-loading-icon>
+						</view>
 						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
 							@click="previewImage(item.message)">
 						</image>
@@ -146,6 +150,7 @@
 				noexebshowFalg: true, //不允许再次触发onshow这个声明周期
 				isClickSend: false, //自己是否 点发送 并 成功发送消息
 				dynamicBoxHeight: 52, //输入栏高度
+				isImgSendSuccess: true,
 			};
 		},
 		components: {
@@ -157,7 +162,7 @@
 				handler(newName, oldName) {
 					console.log(newName)
 					this.$nextTick(function() {
-						this.pageScrollToBottom(100)
+						this.pageScrollToBottom(200)
 					})
 				},
 				immediate: true
@@ -172,6 +177,7 @@
 			this.getDraftMsg()
 		},
 		onShow() {
+			this.socket.emit('login', this.uid)
 			if (this.noexebshowFalg) {
 				//进入页面时，直接页面底部
 				setTimeout(() => {
@@ -190,6 +196,9 @@
 			}, 1000)
 		},
 		methods: {
+			isUrl(msg) {
+				return uni.$u.test.url(msg) ? true : false
+			},
 			//输入框行数变化
 			linechange(e) {
 				console.log(e)
@@ -322,11 +331,12 @@
 				}
 				this.sortMsgs.push(data)
 				fromId == this.fid ? null : this.message = '' //对方发来的输入框消息不清空
-
+				this.dynamicBoxHeight = 52
 				this.pageScrollToBottom(200)
 			},
 			//本地消息列添加消息 和 通过socket发送到服务器
 			async send(message, types) {
+				this.isClickSend = true
 				//socket提交
 				if (types == 0) { //文字
 					this.addMsg(message, types)
@@ -353,6 +363,7 @@
 							types: types
 						}]
 						this.socket.emit('msg', msgObj, this.uid, this.fid)
+						this.isImgSendSuccess = true
 					}
 				}
 				if (types == 3) { //定位
@@ -378,12 +389,10 @@
 					case 0: //文字
 						if (this.message != '') {
 							this.send(message, types)
-							this.isClickSend = true
 						}
 						break;
 					case 1: //图片
 						this.send(message, types)
-						this.isClickSend = true
 						// this.preImgs.push(`${this.baseUrl}/chat/${message}`)
 						break;
 					case 2: //音频
@@ -391,7 +400,6 @@
 						break;
 					case 3: //定位
 						this.send(message, types)
-						this.isClickSend = true
 						// console.log(message)
 						break;
 				}
@@ -584,6 +592,25 @@
 				max-width: 50%;
 				padding: 8px;
 				float: right;
+				position: relative;
+
+				.overlay {
+					width: calc(100% - 16px);
+					height: calc(100% - 20px);
+					background-color: #d9d9d9 ;
+					border-radius: 10px;
+					opacity: 0.7;
+					position: absolute;
+					z-index: 90;
+					
+					.loading-icon {
+						position: absolute;
+						z-index: 99;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+					}
+				}
 			}
 		}
 
