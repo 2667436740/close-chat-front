@@ -34,7 +34,8 @@
 					// });
 					console.log('websocket 连接了')
 				}
-			});
+			})
+			// uni.$emit('reNew')
 		},
 		onHide: function() {
 			console.log('App Hide')

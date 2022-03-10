@@ -43,6 +43,7 @@
 					<view class="avatar">
 						<u-avatar shape="square" size="40" :src="`${baseUrl}/avatar/${item.imgUrl}`"
 							customStyle="margin: 0 10px 0 0"></u-avatar>
+						<view class="offline" v-if="!item.isOnline" />
 						<view class="badge">
 							<u-badge type="error" max="99" :value="item.unReadNum"></u-badge>
 						</view>
@@ -50,6 +51,7 @@
 					<view class="item-text">
 						<view class="item-title">
 							<view class="name">
+								<span v-if="item.isOnline">[在线] </span>
 								{{item.username}}
 							</view>
 							<view class="time">
@@ -102,12 +104,14 @@
 		},
 		mixins: [getUserStorage],
 		onLoad() {
+			this.listenMsg()
+			this.listenDraft()
+			this.listenOnline()
 			this.getFriend()
 			this.getAddRequestList()
 			this.clearUnreadMsg()
 			this.delFriend()
-			this.listenMsg()
-			this.listenDraft()
+			// this.listenReNew()
 		},
 		onShow() {
 			this.socket.emit('login', this.uid)
@@ -252,6 +256,7 @@
 					let indexList = res.data.result
 					//获取每个好友的最后一条消息和消息未读数
 					for (let item of indexList) {
+						item.isOnline = false
 						const params = {
 							uid: this.uid,
 							fid: item.id,
@@ -273,6 +278,7 @@
 					})
 					this.indexList = indexList
 					this.countNums()
+					this.socket.emit('getOnline', this.uid)
 				}
 			},
 			//监听接收socket传来的消息
@@ -371,7 +377,34 @@
 						}
 					}
 				})
-			}
+			},
+			//监听在线用户改变并更改
+			listenOnline() {
+				this.socket.on('onlineUsers', data => {
+					// console.log('onlineUsers', data)
+					let onlineUsers = JSON.parse(data)
+					// console.log(onlineUsers)
+					this.indexList = this.indexList.map((e, j) => {
+						e.isOnline = false
+						return e
+					})
+					onlineUsers.map((item, i) => {
+						this.indexList = this.indexList.map((e, j) => {
+							if (e.id == item.id) {
+								// console.log(e.id + '在线')
+								e.isOnline = true
+							}
+							return e
+						})
+					})
+				})
+			},
+			// //监听页面回来
+			// listenReNew() {
+			// 	uni.$on('reNew',()=>{
+
+			// 	})
+			// }
 		}
 	}
 </script>
@@ -416,6 +449,7 @@
 		align-items: center;
 		padding: 5px 15px;
 		border-bottom: 1px $uni-color-border solid;
+		position: relative;
 
 		.avatar {
 			position: relative;
@@ -426,6 +460,17 @@
 				right: 0;
 				transform: translateY(-40%);
 			}
+		}
+
+		.offline {
+			width: 40px;
+			height: 40px;
+			border-radius: 4px;
+			position: absolute;
+			background: gray;
+			opacity: 0.5;
+			top: 0;
+			z-index: 99;
 		}
 	}
 
@@ -449,6 +494,13 @@
 		.name {
 			font-size: 18px;
 			font-weight: 500;
+			display: flex;
+			align-items: center;
+
+			span {
+				font-size: 14px;
+				color: red;
+			}
 		}
 
 		.time {

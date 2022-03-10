@@ -4418,7 +4418,7 @@
 				this.$emit('emoji', e)
 			},
 			click(data) {
-				console.log(data);
+				// console.log(data);
 				this.type = data.index
 			}
 		}
