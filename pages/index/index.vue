@@ -150,7 +150,6 @@
 			//清除所有未读数
 			async clearAllUnreadNum() {
 				this.indexList.map(async e => {
-					e.unReadNum = 0
 					if (e.unReadNum != 0) {
 						const params = {
 							uid: e.id,
@@ -159,6 +158,7 @@
 						}
 						const res = await postClearUnreadMsg(params)
 					}
+					e.unReadNum = 0
 				})
 				this.appBadgeNum = 0
 				this.isShowMordCard = false
