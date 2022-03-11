@@ -13,26 +13,29 @@
 						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)">
 						</u-avatar>
 					</view>
-					<view class="opposite-message" v-if="item.types == 0">
-						<u--text :text="item.message" wordWrap="anywhere"></u--text>
-						<!-- <u--text :text="item.message" wordWrap="anywhere" v-if="isUrl(item.message)" mode="link" :href="item.message"></u--text> -->
-					</view>
-					<view class="opposite-message-img" v-if="item.types == 1">
-						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
-							@click="previewImage(item.message)">
-						</image>
-					</view>
-					<view class="opposite-message" v-if="item.types == 3">
-						<view class="map-name">
-							{{JSON.parse(item.message).name}}
+					<view class="msg-box" @longpress="onClick_msg(item)">
+						<view class="opposite-message" v-if="item.types == 0">
+							<u--text :text="item.message" wordWrap="anywhere"></u--text>
+							<!-- <u--text :text="item.message" wordWrap="anywhere" v-if="isUrl(item.message)" mode="link" :href="item.message"></u--text> -->
 						</view>
-						<view class="address">
-							{{JSON.parse(item.message).address}}
+						<view class="opposite-message-img" v-if="item.types == 1">
+							<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
+								@click="previewImage(item.message)">
+							</image>
 						</view>
-						<map style="max-width: 100%; height: 150px;z-index: 1;"
-							:latitude="JSON.parse(item.message).latitude"
-							:longitude="JSON.parse(item.message).longitude" :markers="covers(JSON.parse(item.message))">
-						</map>
+						<view class="opposite-message" v-if="item.types == 3">
+							<view class="map-name">
+								{{JSON.parse(item.message).name}}
+							</view>
+							<view class="address">
+								{{JSON.parse(item.message).address}}
+							</view>
+							<map style="max-width: 100%; height: 150px;z-index: 1;"
+								:latitude="JSON.parse(item.message).latitude"
+								:longitude="JSON.parse(item.message).longitude"
+								:markers="covers(JSON.parse(item.message))">
+							</map>
+						</view>
 					</view>
 				</view>
 				<!-- 自己 -->
@@ -41,27 +44,30 @@
 						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)">
 						</u-avatar>
 					</view>
-					<view class="me-message" v-if="item.types == 0">
-						<u--text :text="item.message" wordWrap="anywhere"></u--text>
-					</view>
-					<view class="me-message-img" v-if="item.types == 1">
-						<view class="overlay" v-if="!isImgSendSuccess">
-							<u-loading-icon class="loading-icon"></u-loading-icon>
+					<view class="msg-box" @longpress="onClick_msg(item)">
+						<view class="me-message" v-if="item.types == 0">
+							<u--text :text="item.message" wordWrap="anywhere"></u--text>
 						</view>
-						<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
-							@click="previewImage(item.message)">
-						</image>
-					</view>
-					<view class="me-message" v-if="item.types == 3">
-						<view class="map-name">
-							{{JSON.parse(item.message).name}}
+						<view class="me-message-img" v-if="item.types == 1">
+							<view class="overlay" v-if="!isImgSendSuccess">
+								<u-loading-icon class="loading-icon"></u-loading-icon>
+							</view>
+							<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
+								@click="previewImage(item.message)">
+							</image>
 						</view>
-						<view class="address">
-							{{JSON.parse(item.message).address}}
+						<view class="me-message" v-if="item.types == 3">
+							<view class="map-name">
+								{{JSON.parse(item.message).name}}
+							</view>
+							<view class="address">
+								{{JSON.parse(item.message).address}}
+							</view>
+							<map style="max-width: 100%; height: 150px;" :latitude="JSON.parse(item.message).latitude"
+								:longitude="JSON.parse(item.message).longitude"
+								:markers="covers(JSON.parse(item.message))">
+							</map>
 						</view>
-						<map style="max-width: 100%; height: 150px;" :latitude="JSON.parse(item.message).latitude"
-							:longitude="JSON.parse(item.message).longitude" :markers="covers(JSON.parse(item.message))">
-						</map>
 					</view>
 				</view>
 			</view>
@@ -160,7 +166,7 @@
 		watch: {
 			dynamicBoxHeight: {
 				handler(newName, oldName) {
-					console.log(newName)
+					// console.log(newName)
 					this.$nextTick(function() {
 						this.pageScrollToBottom(200)
 					})
@@ -196,12 +202,17 @@
 			}, 1000)
 		},
 		methods: {
+			//长按消息
+			onClick_msg(item) {
+				console.log(item)
+			},
+			//是否为url
 			isUrl(msg) {
 				return uni.$u.test.url(msg) ? true : false
 			},
 			//输入框行数变化
 			linechange(e) {
-				console.log(e)
+				// console.log(e)
 				this.getDynamicBoxHeight()
 			},
 			//获取缓存是否有草稿
@@ -597,12 +608,12 @@
 				.overlay {
 					width: calc(100% - 16px);
 					height: calc(100% - 20px);
-					background-color: #d9d9d9 ;
+					background-color: #d9d9d9;
 					border-radius: 10px;
 					opacity: 0.7;
 					position: absolute;
 					z-index: 90;
-					
+
 					.loading-icon {
 						position: absolute;
 						z-index: 99;

@@ -134,7 +134,7 @@
 		watch: {
 			appBadgeNum: {
 				handler(newName, oldName) {
-					console.log(newName)
+					// console.log(newName)
 					// #ifdef APP-PLUS
 					plus.runtime.setBadgeNumber(newName)
 					// #endif
