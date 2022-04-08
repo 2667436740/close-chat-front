@@ -4,7 +4,7 @@
 		<view class="set-item">
 			<u-cell-group>
 				<u-cell size="large" title="聊天背景" icon="https://cdn.uviewui.com/uview/example/tag.png"
-					:iconStyle="iconStyle" @click="setChatBg"></u-cell>
+					:iconStyle="iconStyle" @click="setChatBg" :isLink="true"></u-cell>
 			</u-cell-group>
 		</view>
 		<u-toast ref="uToast"></u-toast>

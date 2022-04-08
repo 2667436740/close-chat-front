@@ -170,7 +170,6 @@
 		watch: {
 			dynamicBoxHeight: {
 				handler(newName, oldName) {
-					// console.log(newName)
 					this.$nextTick(function() {
 						this.pageScrollToBottom(200)
 					})
@@ -185,7 +184,6 @@
 			this.getChatMsg(this.nowPage, this.pageSize)
 			this.listenMsg()
 			this.getDraftMsg()
-			console.log(`${this.baseUrl}/bg/${this.bgUrl}`)
 		},
 		onShow() {
 			this.socket.emit('login', this.uid)
@@ -323,7 +321,6 @@
 				this.$nextTick(function() {
 					const query = uni.createSelectorQuery().in(this);
 					query.select('#dynamicbox').boundingClientRect(data => {
-						// console.log(data)
 						this.dynamicBoxHeight = data.height
 					}).exec();
 				})
@@ -520,7 +517,7 @@
 				this.socket.on('msg', (msgObj, fromId, tip) => {
 					//一对一判断,只有对方发来的才更新消息
 					if (fromId == this.fid && tip == 0) {
-						console.log('接收到了消息,' + msgObj + fromId)
+						// console.log('接收到了消息,' + msgObj + fromId)
 						if (msgObj[0].types == 0) { //文字
 							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
 						}
@@ -554,19 +551,20 @@
 	}
 
 	.bg {
-		top: 40px;
-		height: calc(100vh - 44px - 48px);
+		top: 44px;
+		height: calc(100vh - 44px - 52px);
 		position: absolute;
 		width: 100%;
 		position: fixed;
 		z-index: -1;
 		background-size: cover;
+		background-position: center;
 	}
 
 	.message-box {
 		// position: relative;
 		padding-bottom: 52px;
-		min-height: calc(100vh - 52px - 44px);
+		// min-height: calc(100vh - 52px - 44px);
 		background-size: cover;
 		// margin-top: 40px;
 

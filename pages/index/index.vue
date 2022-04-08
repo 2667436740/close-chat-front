@@ -116,7 +116,6 @@
 		onShow() {
 			this.socket.emit('login', this.uid)
 			const value = uni.getStorageSync('hideApp')
-			// console.log(value)
 			if (value == 1) {
 				this.getFriend()
 				this.getAddRequestList()
@@ -134,7 +133,6 @@
 		watch: {
 			appBadgeNum: {
 				handler(newName, oldName) {
-					// console.log(newName)
 					// #ifdef APP-PLUS
 					plus.runtime.setBadgeNumber(newName)
 					// #endif
@@ -165,7 +163,6 @@
 			},
 			//去掉msg里的 \n ,即浏览器里的 <br>
 			removeBr(msg) {
-				// console.log(msg)
 				return msg.replace(/\n/g, " ")
 			},
 			//重新统计未读数
@@ -324,7 +321,6 @@
 									e.message = '[位置]'
 									break;
 							}
-							// console.log('/////////////////')
 							e.lastTime = new Date().getTime()
 							this.indexList.splice(i, 1)
 							this.indexList.unshift(e)
@@ -346,7 +342,6 @@
 			//监听聊天页返回是否有草稿
 			async listenDraft() {
 				uni.$on('draft', async data => {
-					// console.log(data)
 					if (data.draftType == 1) { //有草稿
 						this.indexList.map(e => {
 							if (e.id == data.draftId) {
@@ -361,7 +356,6 @@
 								fid: data.draftId,
 								token: this.token
 							}
-							console.log(params)
 							const resMsg = await postGetLastMsg(params)
 							if (resMsg.data.status == 200) {
 								this.indexList.map((e, i) => {
@@ -387,7 +381,6 @@
 				this.socket.on('onlineUsers', data => {
 					// console.log('onlineUsers', data)
 					let onlineUsers = JSON.parse(data)
-					// console.log(onlineUsers)
 					this.indexList = this.indexList.map((e, j) => {
 						e.isOnline = false
 						return e
@@ -395,7 +388,6 @@
 					onlineUsers.map((item, i) => {
 						this.indexList = this.indexList.map((e, j) => {
 							if (e.id == item.id) {
-								// console.log(e.id + '在线')
 								e.isOnline = true
 							}
 							return e
