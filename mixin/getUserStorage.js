@@ -5,7 +5,8 @@ export default {
 			imgUrl: "",
 			token: "",
 			username: "",
-			baseUrl: ''
+			baseUrl: '',
+			bgUrl: ''
 		}
 	},
 	onLoad() {
@@ -25,6 +26,7 @@ export default {
 				this.imgUrl = `${this.BASE_URL}/avatar/${value.imgUrl}`
 				this.token = value.token
 				this.username = value.username
+				this.bgUrl = value.bgUrl
 			} else {
 				uni.redirectTo({
 					url: '../login/login'

@@ -28,12 +28,13 @@ module.exports = (vm) => {
 					url: '../login/login'
 				})
 			}, 2000)
-		} else if (data.status == 500) {
-			uni.showToast({
-				title: '网络出错啦!',
-				duration: 1000,
-				icon: 'error',
-			});
+		} 
+		if (data.status == 500) {
+			// uni.showToast({
+			// 	title: '网络出错啦!',
+			// 	duration: 1000,
+			// 	icon: 'error',
+			// });
 		}
 		return response
 	}, (response) => {

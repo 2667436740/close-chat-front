@@ -201,7 +201,8 @@
 								id: this.uid,
 								username: this.username,
 								imgUrl: imgUrl,
-								token: this.token
+								token: this.token,
+								bgUrl: this.bgUrl,
 							});
 							this.$refs.uToast.show({
 								type: 'success',

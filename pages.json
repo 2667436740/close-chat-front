@@ -86,6 +86,13 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/sysSet/sysSet",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

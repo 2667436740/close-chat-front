@@ -2,7 +2,11 @@
 	<view>
 		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick(fid)" @leftClick="leftClick"
 			fixed :placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
-		<view class="message-box" @touchstart="closeToolsBox" :style="{'padding-bottom': dynamicBoxHeight + 'px'}">
+
+		<view class="bg" :style="{'background-image': `url(${baseUrl}/bg/${bgUrl})`}" v-if="bgUrl"/>
+		
+		<view class="message-box" @touchstart="closeToolsBox" :style="activeStyle">
+
 			<view v-for="(item,index) in sortMsgs" :key="item.id">
 				<view class="time" v-if="hideSpaceTime(index)">
 					{{changeTime(item.time)}}
@@ -181,6 +185,7 @@
 			this.getChatMsg(this.nowPage, this.pageSize)
 			this.listenMsg()
 			this.getDraftMsg()
+			console.log(`${this.baseUrl}/bg/${this.bgUrl}`)
 		},
 		onShow() {
 			this.socket.emit('login', this.uid)
@@ -200,6 +205,15 @@
 			setTimeout(() => {
 				uni.stopPullDownRefresh()
 			}, 1000)
+		},
+		computed: {
+			activeStyle() {
+				// const bg = this.bgUrl ? `url(${this.baseUrl}/bg/${this.bgUrl})` : ''
+				return {
+					'padding-bottom': this.dynamicBoxHeight + 'px',
+					// 'background-image': bg
+				}
+			}
 		},
 		methods: {
 			//长按消息
@@ -539,8 +553,22 @@
 		color: #333333;
 	}
 
+	.bg {
+		top: 40px;
+		height: calc(100vh - 44px - 48px);
+		position: absolute;
+		width: 100%;
+		position: fixed;
+		z-index: -1;
+		background-size: cover;
+	}
+
 	.message-box {
+		// position: relative;
 		padding-bottom: 52px;
+		min-height: calc(100vh - 52px - 44px);
+		background-size: cover;
+		// margin-top: 40px;
 
 		.time {
 			text-align: center;
@@ -562,6 +590,7 @@
 			.opposite-message {
 				max-width: 60%;
 				border: 1px solid #b3b3b3;
+				background-color: rgb(255,255,255);
 				border-radius: 0 10px 10px 10px;
 				padding: 8px;
 				float: left;

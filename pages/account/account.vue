@@ -110,9 +110,10 @@
 					message: "功能开发中~"
 				})
 			},
+			//设置页跳转
 			setClick() {
-				this.$refs.uToast.show({
-					message: "功能开发中~"
+				uni.navigateTo({
+					url: '../sysSet/sysSet'
 				})
 			},
 			//查看大图头像

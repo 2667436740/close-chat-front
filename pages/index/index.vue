@@ -353,13 +353,15 @@
 								e.message = '[草稿]  ' + data.message
 							}
 						})
-					} else if (data.draftType == 0) { //无草稿
+					}
+					if (data.draftType == 0) { //无草稿
 						if(this.uid && this.token) {
 							const params = {
 								uid: this.uid,
 								fid: data.draftId,
 								token: this.token
 							}
+							console.log(params)
 							const resMsg = await postGetLastMsg(params)
 							if (resMsg.data.status == 200) {
 								this.indexList.map((e, i) => {

@@ -70,7 +70,8 @@
 							id: back.id,
 							username: back.username,
 							imgUrl: back.imgUrl,
-							token: back.token
+							token: back.token,
+							bgUrl: back.bgUrl
 						});
 					} catch (e) {
 						console.log('数据存储出错')
