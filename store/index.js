@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import global from '../config/global.js'
+
 Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
-			// BASE_URL: 'http://192.168.1.106:3000',
-			// BASE_URL: 'http://192.168.8.84:3000',
-			BASE_URL: 'http://124.221.144.134:3000',
+			BASE_URL: global.BASE_URL, //后台地址
+			SOCKET_URL: global.SOCKET_URL, //socket地址
 		},
     mutations: {},
     actions: {}

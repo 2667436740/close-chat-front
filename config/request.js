@@ -1,3 +1,5 @@
+import global from './global.js'
+
 module.exports = (vm) => {
 	// 初始化请求配置
 	uni.$u.http.setConfig((config) => {
@@ -6,9 +8,7 @@ module.exports = (vm) => {
 		config.baseURL = '/api'; /* H5 */
 		// #endif
 		// #ifdef APP-PLUS ||MP
-		// config.baseURL = 'http://192.168.1.106:3000'; /* 安卓 */
-		// config.baseURL = 'http://192.168.8.84:3000'; /* 安卓 */
-		config.baseURL = 'http://124.221.144.134:3000'; /* 安卓 */
+		config.baseURL = global.BASE_URL; /* 安卓 */
 		// #endif
 
 		return config
@@ -18,20 +18,22 @@ module.exports = (vm) => {
 	uni.$u.http.interceptors.response.use((response) => {
 		const data = response.data
 		if (data.status == 300) {
-			// this.$refs.uToast.show({
-			// 	type: 'error',
-			// 	message: "登录状态失效!"
-			// })
+			uni.showToast({
+				title: '登录状态失效!',
+				duration: 1000,
+				icon: 'error',
+			});
 			setTimeout(() => {
 				uni.redirectTo({
 					url: '../login/login'
 				})
 			}, 2000)
 		} else if (data.status == 500) {
-			// this.$refs.uToast.show({
-			// 	type: 'error',
-			// 	message: "服务器出错啦!"
-			// })
+			uni.showToast({
+				title: '网络出错啦!',
+				duration: 1000,
+				icon: 'error',
+			});
 		}
 		return response
 	}, (response) => {

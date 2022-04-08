@@ -26,7 +26,7 @@
 		onShow: function() {
 			console.log('App Show')
 			uni.connectSocket({
-				url: 'http://124.221.144.134:8082',
+				url: this.$store.state.SOCKET_URL,
 				success: res => {
 					// uni.showToast({
 					// 	title: 'websocket 连接了',

@@ -14,9 +14,9 @@
 				</view>
 			</view>
 		</u-navbar>
+			<u-notice-bar :text="noticeMsg" mode="closable"></u-notice-bar>
 
 		<u-list>
-			<u-notice-bar :text="noticeMsg" mode="closable"></u-notice-bar>
 			<navigator url="../addrequest/addrequest">
 				<u-list-item v-if="newRequestNum != 0">
 					<view class="item-style">
@@ -97,7 +97,7 @@
 				token: '',
 				indexList: [],
 				newRequestNum: 0,
-				noticeMsg: '本项目试测验中，（温馨提示）聊天内容或许有可能在服务器到期后清空，不要交流重要消息喔~',
+				noticeMsg: '本项目试测验中 ~ 绿色上网 ~ 文明交流 ~',
 				appBadgeNum: 0, //手机应用角标数
 				isShowMordCard: false,
 			}
@@ -354,26 +354,28 @@
 							}
 						})
 					} else if (data.draftType == 0) { //无草稿
-						const params = {
-							uid: this.uid,
-							fid: data.draftId,
-							token: this.token
-						}
-						const resMsg = await postGetLastMsg(params)
-						if (resMsg.data.status == 200) {
-							this.indexList.map((e, i) => {
-								if (e.id == data.draftId) {
-									const result = resMsg.data.result
-									//新获取的最后一条消息 和 之前 不一致，更新
-									if (e.message != result.message) {
-										e.message = result.message
-										e.types = result.types
-										e.lastTime = new Date(result.time).valueOf()
-										this.indexList.splice(i, 1)
-										this.indexList.unshift(e)
+						if(this.uid && this.token) {
+							const params = {
+								uid: this.uid,
+								fid: data.draftId,
+								token: this.token
+							}
+							const resMsg = await postGetLastMsg(params)
+							if (resMsg.data.status == 200) {
+								this.indexList.map((e, i) => {
+									if (e.id == data.draftId) {
+										const result = resMsg.data.result
+										//新获取的最后一条消息 和 之前 不一致，更新
+										if (e.message != result.message) {
+											e.message = result.message
+											e.types = result.types
+											e.lastTime = new Date(result.time).valueOf()
+											this.indexList.splice(i, 1)
+											this.indexList.unshift(e)
+										}
 									}
-								}
-							})
+								})
+							}
 						}
 					}
 				})

@@ -1,11 +1,15 @@
 import App from './App'
 import Vue from 'vue'
+
 //引入weapp.socket.io
 import io from '@hyoga/uni-socket.io'
+
 //引入vuex
 import store from './store'
 //把vuex定义成全局组件
 Vue.prototype.$store = store
+
+import global from './config/global.js'
 
 Vue.config.productionTip = false
 
@@ -21,13 +25,9 @@ const app = new Vue({
 // 引入请求封装，将app参数传递到配置中
 require('./config/request.js')(app)
 
-// Vue.prototype.BASE_URL = 'http://192.168.1.106:3000' //全局后端地址
-// Vue.prototype.BASE_URL = 'http://192.168.8.84:3000' //全局后端地址
-Vue.prototype.BASE_URL = 'http://124.221.144.134:3000' //全局后端地址
+Vue.prototype.BASE_URL = global.BASE_URL //全局后端地址
 
-// Vue.prototype.socket = io('http://192.168.1.106:8082',{ //socket地址
-// Vue.prototype.socket = io('http://192.168.8.84:8082',{ //socket地址
-Vue.prototype.socket = io('http://124.221.144.134:8082',{ //socket地址
+Vue.prototype.socket = io(global.SOCKET_URL,{ //socket地址
   query: {},
   transports: [ 'websocket', 'polling' ], //必须，web端为轮询，小程序app端为websocket
   timeout: 5000,
