@@ -111,7 +111,7 @@
 
 <script>
 	import myfun from '../../commons/util/myfun.js'
-	import emoji from '../../components/emoji.vue'
+	import emoji from '../../components/emoji/emoji.vue'
 	import getUserStorage from '../../mixin/getUserStorage.js'
 	import {
 		getMsg,

@@ -39,6 +39,11 @@
 			</navigator>
 
 			<u-list-item v-for="(item, index) in indexList" :key="item.id">
+				<!-- <u-swipe-action>
+				        <u-swipe-action-item
+				          :options="options1"
+									v-for="(item, index) in indexList" :key="item.id"
+				        > -->
 				<view class="item-style" @click="chatPageJump(item)">
 					<view class="avatar">
 						<u-avatar shape="square" size="40" :src="`${baseUrl}/avatar/${item.imgUrl}`"
@@ -66,6 +71,8 @@
 						<u--text :lines="1" text="[位置]" color="#666666" size="14" v-if="item.types == 3"></u--text>
 					</view>
 				</view>
+								<!-- </u-swipe-action-item>
+				</u-swipe-action> -->
 			</u-list-item>
 
 			<view class="empty">
@@ -100,6 +107,9 @@
 				noticeMsg: '本项目试测验中 ~ 绿色上网 ~ 文明交流 ~',
 				appBadgeNum: 0, //手机应用角标数
 				isShowMordCard: false,
+				options1: [{
+				   text: '删除'
+				}]
 			}
 		},
 		mixins: [getUserStorage],
