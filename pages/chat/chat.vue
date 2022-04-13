@@ -3,8 +3,8 @@
 		<u-navbar :title="fusername" rightIcon="more-dot-fill" @rightClick="rightClick(fid)" @leftClick="leftClick"
 			fixed :placeholder="true" :safeAreaInsetTop="true" class="navbar"></u-navbar>
 
-		<view class="bg" :style="{'background-image': `url(${baseUrl}/bg/${bgUrl})`}" v-if="bgUrl"/>
-		
+		<view class="bg" :style="{'background-image': `url(${baseUrl}/bg/${bgUrl})`}" v-if="bgUrl" />
+
 		<view class="message-box" @touchstart="closeToolsBox" :style="activeStyle">
 
 			<view v-for="(item,index) in sortMsgs" :key="item.id">
@@ -23,9 +23,11 @@
 							<!-- <u--text :text="item.message" wordWrap="anywhere" v-if="isUrl(item.message)" mode="link" :href="item.message"></u--text> -->
 						</view>
 						<view class="opposite-message-img" v-if="item.types == 1">
-							<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
-								@click="previewImage(item.message)">
-							</image>
+							<u-image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix"
+								@click="previewImage(item.message)" width="380rpx" height="380rpx" radius="10px"
+								loadingIcon="reload">
+								<u-loading-icon slot="loading" color="red"></u-loading-icon>
+							</u-image>
 						</view>
 						<view class="opposite-message" v-if="item.types == 3">
 							<view class="map-name">
@@ -34,7 +36,7 @@
 							<view class="address">
 								{{JSON.parse(item.message).address}}
 							</view>
-							<map style="max-width: 100%; height: 150px;z-index: 1;"
+							<map style="max-width: 100%; height: 150px;"
 								:latitude="JSON.parse(item.message).latitude"
 								:longitude="JSON.parse(item.message).longitude"
 								:markers="covers(JSON.parse(item.message))">
@@ -56,9 +58,10 @@
 							<view class="overlay" v-if="!isImgSendSuccess">
 								<u-loading-icon class="loading-icon"></u-loading-icon>
 							</view>
-							<image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix" class="chat-img"
-								@click="previewImage(item.message)">
-							</image>
+							<u-image :src="`${baseUrl}/chat/${item.message}`" mode="widthFix"
+								@click="previewImage(item.message)" width="380rpx" height="380rpx" radius="10px">
+								<u-loading-icon slot="loading" color="red"></u-loading-icon>
+							</u-image>
 						</view>
 						<view class="me-message" v-if="item.types == 3">
 							<view class="map-name">
@@ -588,7 +591,7 @@
 			.opposite-message {
 				max-width: 60%;
 				border: 1px solid #b3b3b3;
-				background-color: rgb(255,255,255);
+				background-color: rgb(255, 255, 255);
 				border-radius: 0 10px 10px 10px;
 				padding: 8px;
 				float: left;

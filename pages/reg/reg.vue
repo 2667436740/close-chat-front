@@ -75,8 +75,8 @@
 					}],
 					'userInfo.password': {
 						required: true,
-						message: '请填写不少于6位密码',
-						min: 6,
+						message: '请填写不少于8位密码',
+						min: 8,
 						trigger: ['blur', 'change']
 					}
 				},

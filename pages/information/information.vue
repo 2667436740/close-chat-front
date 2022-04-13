@@ -58,7 +58,7 @@
 				<view class="slot-content">
 					<u--input placeholder="请输入原密码" border="surround" v-model="oldPwd" :password="true"></u--input>
 					<u--input placeholder="请输入新密码" border="surround" v-model="newPwd" :password="true"></u--input>
-					<u--text type="error" text=" tip: 新密码应不少于6位" v-if="newPwd.length<6"></u--text>
+					<u--text type="error" text=" tip: 请填写不少于8位新密码" v-if="newPwd.length<8"></u--text>
 				</view>
 			</u-modal>
 			<u-modal :show="isShowDelFriend" title="是否删除该好友?" @confirm="delFriend" confirmColor="#cf0000"
@@ -227,7 +227,7 @@
 			},
 			//确认修改密码
 			async changePwd() {
-				if (this.newPwd.length >= 6) {
+				if (this.newPwd.length >= 8) {
 					const params = {
 						id: this.uid,
 						data: this.newPwd,
