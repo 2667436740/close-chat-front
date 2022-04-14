@@ -3,14 +3,14 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app",
+				"navigationBarTitleText": "Close Chat",
 				"navigationStyle": "custom",
 				"enablePullDownRefresh": true
 			}
 		}, {
 			"path": "pages/login/login",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "登录CloseChat",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom" //去除头部区域
 			}
@@ -18,7 +18,7 @@
 		}, {
 			"path": "pages/friends/friends",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "朋友",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -26,7 +26,7 @@
 		}, {
 			"path": "pages/account/account",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "我的",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -34,14 +34,14 @@
 		}, {
 			"path": "pages/reg/reg",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "注册CloseChat",
 				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/search/search",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "搜索好友",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -49,7 +49,7 @@
 		}, {
 			"path": "pages/userAdd/userAdd",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "好友添加",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -57,7 +57,7 @@
 		}, {
 			"path": "pages/information/information",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "个人信息",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -65,7 +65,7 @@
 		}, {
 			"path": "pages/addrequest/addrequest",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "好友申请",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -73,7 +73,7 @@
 		}, {
 			"path": "pages/chat/chat",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "聊天~~",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom",
 				"enablePullDownRefresh": true
@@ -89,7 +89,7 @@
 		}, {
 			"path": "pages/sysSet/sysSet",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "设置",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -97,7 +97,7 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "Close Chat",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
