@@ -5,7 +5,7 @@
 
 		<view class="bg" :style="{'background-image': `url(${baseUrl}/bg/${bgUrl})`}" v-if="bgUrl" />
 
-		<view class="message-box" @touchstart="closeToolsBox" :style="activeStyle">
+		<view class="message-box" @touchstart="closeToolsBox" :style="activeStyle" id="messageBox">
 
 			<view v-for="(item,index) in sortMsgs" :key="item.id">
 				<view class="time" v-if="hideSpaceTime(index)">
@@ -36,8 +36,7 @@
 							<view class="address">
 								{{JSON.parse(item.message).address}}
 							</view>
-							<map style="max-width: 100%; height: 150px;"
-								:latitude="JSON.parse(item.message).latitude"
+							<map style="max-width: 100%; height: 150px;" :latitude="JSON.parse(item.message).latitude"
 								:longitude="JSON.parse(item.message).longitude"
 								:markers="covers(JSON.parse(item.message))">
 							</map>
@@ -160,10 +159,11 @@
 				fusername: '',
 				nowPage: 0,
 				pageSize: 20,
-				noexebshowFalg: true, //不允许再次触发onshow这个声明周期
+				noexebshowFalg: true, //不允许再次触发onshow这个声明周期, 是否首次进入聊天页
 				isClickSend: false, //自己是否 点发送 并 成功发送消息
 				dynamicBoxHeight: 52, //输入栏高度
 				isImgSendSuccess: true,
+				messageBoxHeight: 0, //聊天盒高度
 			};
 		},
 		components: {
@@ -190,15 +190,17 @@
 		},
 		onShow() {
 			this.socket.emit('login', this.uid)
-			if (this.noexebshowFalg) {
-				//进入页面时，直接页面底部
-				setTimeout(() => {
-					this.pageScrollToBottom(0)
-				}, 500)
-			}
 		},
 		onReady() {
 			// this.getDynamicBoxHeight()
+		},
+		//数据最新状态
+		updated() {
+			if (this.noexebshowFalg) {
+				//进入页面时，直接页面底部
+				this.pageScrollToBottom(0)
+				this.noexebshowFalg = false
+			}
 		},
 		//下拉加载数据
 		onPullDownRefresh() {
@@ -328,11 +330,20 @@
 					}).exec();
 				})
 			},
+			//获取messageBox高度并保存
+			getMessageBoxHeight() {
+				this.$nextTick(function() {
+					const query = uni.createSelectorQuery().in(this);
+					query.select('#messageBox').boundingClientRect(data => {
+						this.messageBoxHeight = data.height - 44
+					}).exec();
+				})
+			},
 			//滚动到页面底部
-			pageScrollToBottom(delay) {
+			pageScrollToBottom(delay, top = 99999999999) {
 				this.$nextTick(function() {
 					uni.pageScrollTo({
-						scrollTop: 99999999999,
+						scrollTop: top,
 						duration: delay //滚动延时
 					});
 				})
