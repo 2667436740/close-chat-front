@@ -11,13 +11,16 @@
 				<view class="time" v-if="hideSpaceTime(index)">
 					{{changeTime(item.time)}}
 				</view>
+				<view class="withdraw" v-if="item.types == -1">
+					{{showDelTip(item.isOwnDel)}}
+				</view>
 				<!-- 对方 -->
 				<view class="opposite" v-if="item.fromId != uid">
-					<view class="opposite-avatar">
+					<view class="opposite-avatar" v-if="item.types != -1">
 						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(fid)">
 						</u-avatar>
 					</view>
-					<view class="msg-box" @longpress="onClick_msg(item)">
+					<view class="msg-box">
 						<view class="opposite-message" v-if="item.types == 0">
 							<u--text :text="item.message" wordWrap="anywhere"></u--text>
 							<!-- <u--text :text="item.message" wordWrap="anywhere" v-if="isUrl(item.message)" mode="link" :href="item.message"></u--text> -->
@@ -49,7 +52,7 @@
 						<u-avatar :src="`${baseUrl}/avatar/${item.imgUrl}`" shape="square" @click="infoPageJump(uid)">
 						</u-avatar>
 					</view>
-					<view class="msg-box" @longpress="onClick_msg(item)">
+					<view class="msg-box" @longpress="onClick_msg(item, $event)">
 						<view class="me-message" v-if="item.types == 0">
 							<u--text :text="item.message" wordWrap="anywhere"></u--text>
 						</view>
@@ -108,6 +111,15 @@
 			</view>
 		</view>
 
+		<u-overlay :show="isShowTooltip" @click="isShowTooltip = false" opacity="0" duration="100">
+			<view class="tooltip" :style="{top: tooltipLocation.clientY + 'px', left: tooltipLocation.clientX + 'px'}">
+				<view class="tool-item" @click="withdraw">
+					撤回
+				</view>
+			</view>
+		</u-overlay>
+
+		<u-toast ref="uToast"></u-toast>
 	</view>
 </template>
 
@@ -119,6 +131,7 @@
 		getMsg,
 		uploadAvatar,
 		postClearUnreadMsg,
+		deleteMsg,
 	} from '../../config/api.js'
 	import {
 		pathToBase64
@@ -127,7 +140,7 @@
 	export default {
 		data() {
 			return {
-				sortMsgs: [],
+				sortMsgs: [], //经过时间排序后 的 消息列表
 				preImgs: [],
 				message: '',
 				isShowToolsBox: false,
@@ -164,6 +177,12 @@
 				dynamicBoxHeight: 52, //输入栏高度
 				isImgSendSuccess: true,
 				messageBoxHeight: 0, //聊天盒高度
+				tooltipLocation: {
+					clientX: 100,
+					clientY: 1700
+				}, //鼠标点击的位置信息
+				isShowTooltip: false,
+				withdrawId: '', //需要撤回的消息id
 			};
 		},
 		components: {
@@ -186,6 +205,7 @@
 			this.fusername = option.username
 			this.getChatMsg(this.nowPage, this.pageSize)
 			this.listenMsg()
+			this.listenDelMsg()
 			this.getDraftMsg()
 		},
 		onShow() {
@@ -219,9 +239,52 @@
 			}
 		},
 		methods: {
-			//长按消息
-			onClick_msg(item) {
-				console.log(item)
+			showDelTip(isOwnDel) {
+				return isOwnDel ? '撤回了一条消息' : '对方撤回了一条消息'
+			},
+			//长按消息显示 ‘撤回’ 等功能的tooltip
+			onClick_msg(item, e) {
+				this.withdrawId = item.uuid
+				this.tooltipLocation.clientX = e.touches[0].clientX - 50
+				this.tooltipLocation.clientY = e.touches[0].clientY - 40
+				this.isShowTooltip = true
+			},
+			//撤回消息
+			async withdraw() {
+				// let msg = this.sortMsgs.filter(e => {
+				// 	return e.uuid == this.withdrawId
+				// })[0]
+				// let msgTime = ''
+				// if (msg.id) msgTime = new Date(msg.time).valueOf() //加载的历史消息，含id，其中的时间为ISO格式的时间需要转换
+				// else msgTime = msg.time
+				// let nowTime = new Date().getTime()
+				// console.log(nowTime)
+				// console.log(msgTime) //有问题
+				// if (Math.abs(nowTime - msgTime) > 5 * 60 * 1000) {
+				// 	this.$refs.uToast.show({
+				// 		message: "时间超过五分钟，不可撤回"
+				// 	})
+				// } else {
+					const params = {
+						uuid: this.withdrawId
+					}
+					const res = await deleteMsg(params)
+					if (res.data.status == 200) {
+						//告诉对方撤回
+						this.socket.emit('delmsg', this.withdrawId, this.fid)
+						//撤回前端视觉上的消息
+						this.sortMsgs.map((e, i) => {
+							if (e.uuid == this.withdrawId) {
+								this.sortMsgs.splice(i, 1, {
+									types: -1,
+									isOwnDel: true
+								})
+							}
+						})
+					}
+				// }
+				this.withdrawId = ''
+				this.isShowTooltip = false
 			},
 			//是否为url
 			isUrl(msg) {
@@ -355,7 +418,7 @@
 				}
 			},
 			//本地消息列添加消息
-			addMsg(message, types, fromId) {
+			addMsg(message, types, uuid, fromId) {
 				let data = {
 					fromId: fromId == this.fid ? this.fid : this.uid,
 					imgUrl: fromId == this.fid ? this.fimgUrl : this.imgUrl.replace(/(.*\/)*([^.]+).*/ig, "$2") + '.' +
@@ -364,6 +427,7 @@
 					message: message,
 					types: types,
 					time: new Date().getTime(),
+					uuid: uuid,
 				}
 				this.sortMsgs.push(data)
 				fromId == this.fid ? null : this.message = '' //对方发来的输入框消息不清空
@@ -373,12 +437,14 @@
 			//本地消息列添加消息 和 通过socket发送到服务器
 			async send(message, types) {
 				this.isClickSend = true
+				let uuid = myfun.getUuid()
 				//socket提交
 				if (types == 0) { //文字
-					this.addMsg(message, types)
+					this.addMsg(message, types, uuid)
 					const msgObj = [{
 						message: message,
-						types: types
+						types: types,
+						uuid: uuid
 					}]
 					this.socket.emit('msg', msgObj, this.uid, this.fid)
 				}
@@ -392,21 +458,23 @@
 					})
 					if (res.data.status == 200) {
 						imgUrl = res.data.result.fileName //   xxxxxx.png
-						this.addMsg(imgUrl, types)
+						this.addMsg(imgUrl, types, uuid)
 						this.preImgs.push(`${this.baseUrl}/chat/${imgUrl}`)
 						const msgObj = [{
 							message: imgUrl,
-							types: types
+							types: types,
+							uuid: uuid
 						}]
 						this.socket.emit('msg', msgObj, this.uid, this.fid)
 						this.isImgSendSuccess = true
 					}
 				}
 				if (types == 3) { //定位
-					this.addMsg(JSON.stringify(message), types)
+					this.addMsg(JSON.stringify(message), types, uuid)
 					const msgObj = [{
 						message: JSON.stringify(message),
-						types: types
+						types: types,
+						uuid: uuid
 					}]
 					this.socket.emit('msg', msgObj, this.uid, this.fid)
 				}
@@ -533,16 +601,30 @@
 					if (fromId == this.fid && tip == 0) {
 						// console.log('接收到了消息,' + msgObj + fromId)
 						if (msgObj[0].types == 0) { //文字
-							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+							this.addMsg(msgObj[0].message, msgObj[0].types, msgObj[0].uuid, fromId)
 						}
 						if (msgObj[0].types == 1) { //图片
-							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+							this.addMsg(msgObj[0].message, msgObj[0].types, msgObj[0].uuid, fromId)
 							this.preImgs.push(`${this.baseUrl}/chat/${msgObj[0].message}`)
 						}
 						if (msgObj[0].types == 3) { //定位
-							this.addMsg(msgObj[0].message, msgObj[0].types, fromId)
+							this.addMsg(msgObj[0].message, msgObj[0].types, msgObj[0].uuid, fromId)
 						}
 					}
+				})
+			},
+			//监听对方撤回消息
+			listenDelMsg() {
+				this.socket.on('delmsg', (msgId) => {
+					//撤回前端视觉上的消息
+					this.sortMsgs.map((e, i) => {
+						if (e.uuid == msgId) {
+							this.sortMsgs.splice(i, 1, {
+								types: -1,
+								isOwnDel: true
+							})
+						}
+					})
 				})
 			}
 		},
@@ -586,6 +668,12 @@
 			text-align: center;
 			padding: 10px 0;
 			font-size: 14px;
+			color: gray;
+		}
+
+		.withdraw {
+			text-align: center;
+			font-size: 12px;
 			color: gray;
 		}
 
@@ -670,6 +758,7 @@
 			max-width: 100%;
 			border-radius: 10px;
 		}
+
 	}
 
 	.dynamic-box {
@@ -736,5 +825,21 @@
 
 	.high-box {
 		padding-bottom: 144px;
+	}
+
+	.tooltip {
+		position: absolute;
+		height: 30px;
+		background-color: white;
+		z-index: 999;
+		display: flex;
+		align-items: center;
+		border-radius: 4px;
+		border: 1px solid #cecece;
+		font-size: 13px;
+
+		.tool-item {
+			padding: 10px;
+		}
 	}
 </style>

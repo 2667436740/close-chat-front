@@ -45,3 +45,5 @@ export const postClearUnreadMsg = (params, config = {}) => http.post('/index/cle
 export const uploadAvatar = (params, config = {}) => http.post('/avatar/upload', params, config)
 //获取聊天一对一分页消息
 export const getMsg = (params, config = {}) => http.post('/chat/msg', params, config)
+//撤回消息
+export const deleteMsg = (params, config = {}) => http.post('/chat/deletemsg', params, config)

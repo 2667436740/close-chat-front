@@ -81,6 +81,10 @@ function formatTime2(fmt, timestamp) {
 }
 
 export default {
+	//生成一个用不重复的ID
+	getUuid(randomLength){
+	 return Number(Math.random().toString().substr(2) + new Date().getTime()).toString(36)
+	},
 	//首页列表时间转化
 	dateTime(e) {
 		let old = new Date(e)
