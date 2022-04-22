@@ -136,6 +136,7 @@
 	import {
 		pathToBase64
 	} from 'image-tools'
+	// import gcoord from 'gcoord'
 
 	export default {
 		data() {
@@ -251,20 +252,18 @@
 			},
 			//撤回消息
 			async withdraw() {
-				// let msg = this.sortMsgs.filter(e => {
-				// 	return e.uuid == this.withdrawId
-				// })[0]
-				// let msgTime = ''
-				// if (msg.id) msgTime = new Date(msg.time).valueOf() //加载的历史消息，含id，其中的时间为ISO格式的时间需要转换
-				// else msgTime = msg.time
-				// let nowTime = new Date().getTime()
-				// console.log(nowTime)
-				// console.log(msgTime) //有问题
-				// if (Math.abs(nowTime - msgTime) > 5 * 60 * 1000) {
-				// 	this.$refs.uToast.show({
-				// 		message: "时间超过五分钟，不可撤回"
-				// 	})
-				// } else {
+				let msg = this.sortMsgs.filter(e => {
+					return e.uuid == this.withdrawId
+				})[0]
+				let msgTime = msg.time
+				let nowTime = new Date().getTime()
+				console.log(nowTime)
+				console.log(msgTime) //有问题
+				if (Math.abs(nowTime - msgTime) > 3 * 60 * 1000) {
+					this.$refs.uToast.show({
+						message: "时间超过三分钟，不可撤回"
+					})
+				} else {
 					const params = {
 						uuid: this.withdrawId
 					}
@@ -282,7 +281,7 @@
 							}
 						})
 					}
-				// }
+				}
 				this.withdrawId = ''
 				this.isShowTooltip = false
 			},
@@ -551,9 +550,31 @@
 			},
 			//选择定位
 			chooseLocation() {
+				let longitude = ''
+				let latitude = ''
+				uni.getLocation({
+					type: 'gcj02',
+					isHighAccuracy: true,
+					accuracy: 'best',
+					geocode: true,
+					timeout: '10',
+					success: function(res) {
+						// console.log('当前位置的经度：' + res.longitude);
+						// console.log('当前位置的纬度：' + res.latitude);
+						longitude = res.longitude
+						latitude = res.latitude
+						// var result = gcoord.transform([res.latitude, res.longitude], // 经纬度坐标
+						// 	gcoord.WGS84, // 当前坐标系
+						// 	gcoord.GCJ02 // 目标坐标系
+						// )
+						// console.log(result)
+					}
+				});
 				uni.chooseLocation({
+					longitude: longitude,
+					latitude: latitude,
 					success: (res) => {
-						let data = {
+						const data = {
 							name: res.name,
 							address: res.address,
 							latitude: res.latitude,
@@ -621,7 +642,7 @@
 						if (e.uuid == msgId) {
 							this.sortMsgs.splice(i, 1, {
 								types: -1,
-								isOwnDel: true
+								isOwnDel: false
 							})
 						}
 					})

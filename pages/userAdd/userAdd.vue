@@ -31,6 +31,7 @@
 </template>
 
 <script>
+	import myfun from '../../commons/util/myfun.js'
 	import {
 		postUserDetail,
 		postApplyFriend
@@ -69,6 +70,7 @@
 					uid: this.uid,
 					fid: this.fid,
 					msg: this.msg,
+					uuid: myfun.getUuid(),
 					token: this.token
 				}
 				const res = await postApplyFriend(params)

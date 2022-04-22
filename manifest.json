@@ -2,8 +2,8 @@
     "name" : "Close Chat",
     "appid" : "__UNI__BB0992A",
     "description" : "个人毕设系统-closechat",
-    "versionName" : "1.0.1",
-    "versionCode" : 101,
+    "versionName" : "1.1.0",
+    "versionCode" : 110,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -19,23 +19,20 @@
         /* 模块配置 */
         "modules" : {
             "Maps" : {},
-            "Push" : {}
+            "Push" : {},
+            "Geolocation" : {}
         },
         /* 应用发布信息 */
         "distribute" : {
             /* android打包配置 */
             "android" : {
                 "permissions" : [
-                    "<uses-feature android:name=\"android.hardware.camera\"/>",
-                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
                     "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
                     "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
                     "<uses-permission android:name=\"android.permission.INTERNET\"/>",
                     "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
@@ -58,7 +55,16 @@
                         "appkey_android" : "3ad0f11bc3b36a0b477b4f70ea6a4bca"
                     }
                 },
-                "geolocation" : {},
+                "geolocation" : {
+                    "amap" : {
+                        "__platform__" : [ "android" ],
+                        "appkey_ios" : "",
+                        "appkey_android" : "3ad0f11bc3b36a0b477b4f70ea6a4bca"
+                    },
+                    "system" : {
+                        "__platform__" : [ "android" ]
+                    }
+                },
                 "push" : {
                     "unipush" : {}
                 },
@@ -127,10 +133,10 @@
             "disableHostCheck" : true, //调试时允许内网穿透，让外网的人访问到本地调试的H5页面
             "proxy" : {
                 "/api" : {
-                    "target" : "http://124.222.244.60:3000", // 服务器后台域名
+                    // "target" : "http://124.222.244.60:3000", // 服务器后台域名
 
                     // "target": "http://192.168.1.103:3000", // 需要代理的域名
-                    // "target" : "http://192.168.8.84:3000", // 需要代理的域名
+                    "target" : "http://192.168.8.84:3000", // 需要代理的域名
                     // "target": "http://192.168.68.94:3000", // 需要代理的域名
                     "ws" : false, // 是否启用websockets
                     "changeOrigin" : true, //开启代理

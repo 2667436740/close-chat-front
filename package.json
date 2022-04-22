@@ -19,6 +19,7 @@
   "dependencies": {
     "@dcloudio/uni-helper-json": "^1.0.13",
     "@hyoga/uni-socket.io": "^3.0.4",
+    "gcoord": "^0.3.2",
     "image-tools": "^1.4.0",
     "pinyin": "^2.10.2"
   }

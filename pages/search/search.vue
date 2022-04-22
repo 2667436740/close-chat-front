@@ -89,7 +89,7 @@
 						item.isFriend = resIsFriend.data.status == 200 ? true : false
 					}
 					this.showUserArr = this.userArr
-					console.log(this.showUserArr)
+					// console.log(this.showUserArr)
 				}
 			},
 			//添加好友
