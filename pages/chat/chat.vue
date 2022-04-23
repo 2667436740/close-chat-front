@@ -136,7 +136,7 @@
 	import {
 		pathToBase64
 	} from 'image-tools'
-	// import gcoord from 'gcoord'
+	import gcoord from 'gcoord'
 
 	export default {
 		data() {
@@ -257,8 +257,6 @@
 				})[0]
 				let msgTime = msg.time
 				let nowTime = new Date().getTime()
-				console.log(nowTime)
-				console.log(msgTime) //有问题
 				if (Math.abs(nowTime - msgTime) > 3 * 60 * 1000) {
 					this.$refs.uToast.show({
 						message: "时间超过三分钟，不可撤回"
@@ -557,10 +555,7 @@
 					isHighAccuracy: true,
 					accuracy: 'best',
 					geocode: true,
-					timeout: '10',
 					success: function(res) {
-						// console.log('当前位置的经度：' + res.longitude);
-						// console.log('当前位置的纬度：' + res.latitude);
 						longitude = res.longitude
 						latitude = res.latitude
 						// var result = gcoord.transform([res.latitude, res.longitude], // 经纬度坐标
@@ -689,7 +684,7 @@
 			text-align: center;
 			padding: 10px 0;
 			font-size: 14px;
-			color: gray;
+			color: #5e5e5e;
 		}
 
 		.withdraw {
@@ -722,11 +717,6 @@
 				max-width: 50%;
 				padding: 8px;
 				float: left;
-
-				// image {
-				// 	max-height: 50%;
-				// 	max-width: 50%;
-				// }
 			}
 		}
 
