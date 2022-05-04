@@ -1,27 +1,34 @@
 <template>
 	<view>
 		<view class="content">
+			<u-transition :show="showLogo" mode="fade" duration="800">
 			<view class="logo">
 				<image src="../../static/img/logo2.png" mode=""></image>
 			</view>
-			<span>Welcome to Close Chat!</span>
+			</u-transition>
 
-			<u--form class="form" ref="loginForm" :rules="rules" :model="model1">
-				<u-form-item borderBottom prop="userInfo.username">
-					<u--input placeholder="请填写用户名/邮箱" v-model="model1.userInfo.username" border="none"
-						prefixIcon="account">
-					</u--input>
-				</u-form-item>
-				<u-form-item borderBottom prop="userInfo.password">
-					<u--input placeholder="请填写密码" v-model="model1.userInfo.password" border="none" :password="true"
-						prefixIcon="lock"></u--input>
-				</u-form-item>
-			</u--form>
+			<u-transition :show="showBox" mode="slide-up">
+				<view class="login-box">
+					<span class="wel-txt">Welcome to Close Chat!</span>
 
-			<view class="btns">
-				<u-button text="登录" size="normal" type="success" @click="login"></u-button>
-				<u-button text="注册" size="normal" class="btn-reg" @click="regPageJump"></u-button>
-			</view>
+					<u--form class="form" ref="loginForm" :rules="rules" :model="model1">
+						<u-form-item borderBottom prop="userInfo.username">
+							<u--input placeholder="请填写用户名/邮箱" v-model="model1.userInfo.username" border="none"
+								prefixIcon="account">
+							</u--input>
+						</u-form-item>
+						<u-form-item borderBottom prop="userInfo.password">
+							<u--input placeholder="请填写密码" v-model="model1.userInfo.password" border="none"
+								:password="true" prefixIcon="lock"></u--input>
+						</u-form-item>
+					</u--form>
+
+					<view class="btns">
+						<u-button text="登录" size="normal" type="success" @click="login"></u-button>
+						<u-button text="注册" size="normal" class="btn-reg" @click="regPageJump"></u-button>
+					</view>
+				</view>
+			</u-transition>
 		</view>
 
 		<u-toast ref="uToast"></u-toast>
@@ -54,7 +61,13 @@
 						trigger: ['blur', 'change']
 					}
 				},
+				showBox: false,
+				showLogo: false
 			};
+		},
+		onReady() {
+			this.showBox = true
+			this.showLogo = true
 		},
 		methods: {
 			async login() {
@@ -104,10 +117,15 @@
 </script>
 
 <style lang="scss">
-	.content {
+	.content,
+	.login-box {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		.wel-txt {
+			font-weight: 600;
+			font-size: 20px;
+		}
 	}
 
 	.logo {
